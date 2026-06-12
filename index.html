@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.A.A.R.E. | Protocolo de Certificación Algorítmica</title>
+    <style>
+        :root {
+            --primary: #0d233a;
+            --secondary: #d32f2f;
+            --dark: #1a2530;
+            --light: #f5f7f8;
+            --accent: #ffebee;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: var(--dark); line-height: 1.6; background-color: #ffffff; }
+        
+        /* Navbar */
+        nav { background: var(--primary); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 4px solid var(--secondary); }
+        .logo { color: #fff; font-weight: bold; font-size: 1.5rem; letter-spacing: 1px; }
+        .badge { background: var(--secondary); color: white; padding: 0.2rem 0.6rem; font-size: 0.8rem; border-radius: 4px; margin-left: 0.5rem; vertical-align: middle; }
+        
+        /* Hero Section */
+        header { padding: 5rem 5%; text-align: center; background: radial-gradient(circle at top, #1a3a5f 0%, var(--primary) 100%); color: white; }
+        header h1 { font-size: 2.8rem; margin-bottom: 1rem; font-weight: 800; }
+        header p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem auto; color: #cfd8dc; }
+        .cta-btn { background: var(--secondary); color: white; padding: 0.8rem 2rem; border: none; font-size: 1.1rem; font-weight: bold; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.3s; }
+        .cta-btn:hover { background: #b71c1c; }
+        
+        /* Alert Box */
+        .alert-container { padding: 2rem 5%; background: var(--light); }
+        .alert-box { background: var(--accent); border-left: 4px solid var(--secondary); padding: 1.5rem; max-width: 1000px; margin: 0 auto; border-radius: 0 4px 4px 0; }
+        .alert-box h3 { color: #c62828; margin-bottom: 0.5rem; font-size: 1.2rem; }
+        
+        /* Features */
+        .features { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { padding: 2rem; border: 1px solid #cfd8dc; border-radius: 6px; background: #fff; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.3rem; }
+        
+        /* Comparison Table */
+        .comparison { padding: 4rem 5%; background: var(--light); text-align: center; }
+        .comparison h2 { margin-bottom: 2rem; color: var(--primary); }
+        .table-wrapper { max-width: 900px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 1rem 1.5rem; border-bottom: 1px solid #cfd8dc; }
+        th { background: var(--primary); color: white; font-weight: 600; }
+        tr:last-child td { border-bottom: none; }
+        .highlight-td { background: rgba(211, 47, 47, 0.03); font-weight: 600; color: var(--secondary); }
+        
+        /* Footer */
+        footer { background: var(--primary); color: #fff; padding: 3rem 5%; text-align: center; font-size: 0.9rem; border-top: 4px solid var(--secondary); }
+        footer p { color: #90a4ae; margin-top: 0.5rem; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            th, td { padding: 0.8rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">S.A.A.R.E. <span class="badge">Protocolo Activo</span></div>
+    </nav>
+
+    <header>
+        <h1>Infraestructura de Control Perimetral Inmutable para IA</h1>
+        <p>Asegure el cumplimiento estricto ex-ante de la Ley Orgánica de Gobernanza de la IA. Mitigue el riesgo reputacional y evite sanciones multimillonarias mediante verificación matemática determinista.</p>
+        <a href="mailto:info@saare.io" class="cta-btn">Solicitar Sesión Técnica (12 Min)</a>
+    </header>
+
+    <section class="alert-container">
+        <div class="alert-box">
+            <h3>⚠️ RÉGIMEN SANCIONADOR EN VIGOR (ESPAÑA 2026)</h3>
+            <p>La normativa impone la obligación de garantizar la supervisión humana efectiva y la auditoría ex-ante en sistemas integrados en el tejido productivo y la administración. Las infracciones muy graves acarrean multas de hasta <strong>35 millones de euros o el 7% del volumen de negocio global anual</strong>.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>Coste Cero (Sin Tokens)</h3>
+            <p>Al operar como una capa perimetral externa y desacoplada del modelo lingüístico, realiza la validación mediante restricciones algorítmicas locales. No genera re-llamadas de auditoría a LLMs ni añade carga de inferencia en la nube.</p>
+        </div>
+        <div class="card">
+            <h3>Cero Sesgo Humano</h3>
+            <p>Auditoría automatizada y determinista basada en restricciones matemáticas estrictas. Elimina por completo el factor de fatiga, el error informático o el sesgo del factor humano en los flujos de validación de datos.</p>
+        </div>
+        <div class="card">
+            <h3>Trazabilidad Inmutable</h3>
+            <p>Clava la desviación lógica por debajo del umbral crítico requerido (<span style="font-family: serif; font-style: italic; font-weight: bold; color: var(--secondary);">&Delta; &lt; 0.01%</span>). Preconstituye de forma nativa la prueba de diligencia debida ex-ante exigida por la AESIA.</p>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <h2>La Soledad Técnica del Protocolo</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Filtros Internos / RAG Básicos</th>
+                        <th>Protocolo S.A.A.R.E.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Capa de Control</strong></td>
+                        <td>Embebida (Interna/Probabilística)</td>
+                        <td class="highlight-td">Perimetral Externa (Determinista)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consumo de Tokens</strong></td>
+                        <td>Alto e Impredecible (Re-evaluaciones)</td>
+                        <td class="highlight-td">Indexado a Cero Tokens (Fijo Local)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Riesgo de Alucinación</strong></td>
+                        <td>Mitigado parcialmente</td>
+                        <td class="highlight-td">Eliminado de raíz formalmente</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Auditoría Ex-Ante</strong></td>
+                        <td>Compleja / Post-procesamiento</td>
+                        <td class="highlight-td">Nativa automatizada (Aduana)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>S.A.A.R.E.</strong> | Sistema Autónomo de Auditoría y Restricción de Entropía</p>
+        <p>© 2026 Infraestructura Determinista de Certificación. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
