@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS3V S.A.A.R.E. | Motor Lógico Perimetral</title>
     
-    <!-- FAVICON OFICIAL CONFIGURADO CON TU ARCHIVO SUBIDO -->
     <link rel="icon" type="image/png" href="LOGO NAVEGADOR.png">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
         /* Navbar */
@@ -26,7 +25,7 @@
         .btn-blue:hover { background: #0369a1; }
         
         /* Animación de Pulso Naranja (Licencia) */
-        .btn-orange { background: #ea580c; color: #ffffff; animation: pulseOrange 2s infinite; }
+        .btn-orange { background: #ea580c; color: #ffffff; animation: pulseOrange 2s infinite; cursor: pointer; }
         .btn-orange:hover { background: #c2410c; }
         
         /* Animación de Pulso Verde (WhatsApp Soporte) */
@@ -86,6 +85,25 @@
         .precaution-card h4 { color: #ffffff; font-size: 1rem; margin-bottom: 8px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
         .precaution-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
 
+        /* SECCIÓN DE REQUISITO LEGAL CONTRACTUAL (CONTRATO Y RGPD) */
+        .legal-compliance-section { background: #0b0f19; padding: 60px 0; border-bottom: 1px solid #1e293b; }
+        .legal-tabs-container { max-width: 900px; margin: 0 auto; background: #111827; border: 1px solid #334155; border-radius: 8px; padding: 30px; }
+        .legal-tabs-container h2 { font-size: 1.6rem; color: #ffffff; margin-bottom: 20px; text-align: center; font-weight: 700; }
+        .legal-scrollbox { background: #0f172a; border: 1px solid #1e293b; padding: 20px; height: 180px; overflow-y: scroll; border-radius: 6px; font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; line-height: 1.6; }
+        .legal-scrollbox h3 { color: #ffffff; font-size: 1rem; margin: 15px 0 5px 0; font-weight: bold; border-bottom: 1px solid #334155; padding-bottom: 3px; }
+        .legal-scrollbox h3:first-child { margin-top: 0; }
+        
+        /* Checkbox */
+        .checkbox-wrapper { display: flex; align-items: flex-start; gap: 12px; background: rgba(234, 88, 12, 0.05); border: 1px solid rgba(234, 88, 12, 0.2); padding: 20px; border-radius: 6px; margin-bottom: 25px; }
+        .checkbox-wrapper input[type="checkbox"] { width: 22px; height: 22px; cursor: pointer; accent-color: #ea580c; margin-top: 2px; flex-shrink: 0; }
+        .checkbox-label { font-size: 0.9rem; color: #cbd5e1; cursor: pointer; font-weight: 500; }
+        .checkbox-label span { color: #ea580c; font-weight: bold; }
+        
+        .legal-actions { text-align: center; }
+        .btn-large-gate { display: inline-flex; align-items: center; gap: 10px; background: #ea580c; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 1.1rem; padding: 16px 36px; border-radius: 6px; transition: all 0.3s ease; cursor: pointer; border: none; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3); }
+        .btn-large-gate:hover { background: #c2410c; transform: translateY(-1px); }
+        .btn-large-gate.disabled { background: #475569 !important; box-shadow: none !important; cursor: not-allowed; transform: none !important; opacity: 0.5; pointer-events: none; }
+
         /* Matriz de Arquitectura Corporativa */
         .matrix-section { padding: 60px 0; background: #1e293b; border-bottom: 1px solid #0f172a; }
         .matrix-section h2 { text-align: center; margin-bottom: 35px; color: #ffffff; font-size: 2rem; font-weight: 700; }
@@ -105,7 +123,7 @@
         .ethics-badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
         .ethics-tag { background: rgba(2, 132, 199, 0.1); border: 1px solid #0284c7; color: #38bdf8; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-family: monospace; }
 
-        /* Apartado de Precaución Estratégica: Eslóganes y Demo Abierta */
+        /* Apartado de Precaución Estratégica */
         .slogan-section { background: #0f172a; padding: 40px 0 60px 0; border-bottom: 2px solid #ea580c; text-align: center; }
         .slogan-container { max-width: 900px; margin: 0 auto; background: rgba(234, 88, 12, 0.03); border: 1px dashed rgba(234, 88, 12, 0.3); padding: 40px 30px; border-radius: 6px; }
         
@@ -149,7 +167,6 @@
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
         <div class="logo-area">
             <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Mesa de trabajo 1.jpeg'; this.onerror=null;">
@@ -160,7 +177,7 @@
                 📄 Ver Informe Técnico
             </a>
             
-            <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-nav btn-orange" rel="noopener">
+            <a href="#aduana-legal" class="btn-nav btn-orange" id="nav-btn-gate" rel="noopener">
                 ⚡ Emitir Licencia Automatizada
             </a>
             
@@ -170,7 +187,6 @@
         </div>
     </nav>
 
-    <!-- SECCIÓN HERO PRINCIPAL -->
     <header class="hero">
         <div class="container">
             <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
@@ -193,7 +209,6 @@
         </div>
     </header>
 
-    <!-- LOG REPORTE DE SEGURIDAD -->
     <section class="security-report">
         <div class="container">
             <div class="report-box">
@@ -215,7 +230,6 @@
         </div>
     </section>
 
-    <!-- DESGLOSE DE TARIFAS ACTUALIZADO PARA REGULAR EL MERCADO -->
     <section class="rates-section">
         <div class="container">
             <h2>Modelos de Licencia por Volumen Estructural</h2>
@@ -239,7 +253,6 @@
         </div>
     </section>
 
-    <!-- CONTEXTO NORMATIVO -->
     <section class="risk-section">
         <div class="container">
             <div class="risk-alert-box">
@@ -251,7 +264,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE BLINDAJE Y PRECAUCIÓN LEGAL -->
     <section class="precaution-section">
         <div class="container">
             <div class="precaution-grid">
@@ -271,7 +283,37 @@
         </div>
     </section>
 
-    <!-- MATRIZ COMPARATIVA DE ARQUITECTURA -->
+    <section class="legal-compliance-section" id="aduana-legal">
+        <div class="container">
+            <div class="legal-tabs-container">
+                <h2>Aduana Legal de Contratación Corporativa</h2>
+                <div class="legal-scrollbox">
+                    <h3>1. TÉRMINOS DE LA LICENCIA DE SOFTWARE ANUAL S.A.A.R.E.</h3>
+                    <p><strong>1.1 Objeto y Declaración Ex-Ante:</strong> Al rellenar el formulario de emisión y efectuar el pago, el Licenciatario suscribe una declaración técnica forense ex-ante estimando de buena fe su flujo de tráfico diario perimetral. La tarifa anual seleccionada constituye un límite volumétrico regulado de mercado (Tarifa Baja: 1.500 interacciones/día; Tarifa Media: 10.000 interacciones/día; Tarifa Alta: más de 100.000 interacciones/día).</p>
+                    <p><strong>1.2 Cláusula de Continuidad Industrial y Regularización:</strong> El Protocolo MS3V S.A.A.R.E. prioriza la disponibilidad operativa del cliente. En caso de superarse el umbral de flujo contratado debido a picos puntuales de tráfico, el servicio NO será interrumpido. No obstante, si el exceso es sostenido por más de treinta (30) días consecutivos, el sistema emitirá una alerta de gobernanza y el Licenciatario se obliga a formalizar un ajuste contractual dinámico (upgrade) o a liquidar la diferencia económica correspondiente en la ventana de renovación anual.</p>
+                    <p><strong>1.3 Extinción del Derecho de Desistimiento B2B:</strong> De conformidad con el artículo 103, apartado m) del Real Decreto Legislativo 1/2007 de Consumo, las partes acuerdan explícitamente que al tratarse de un suministro de contenido digital, claves criptográficas Crypto-ID de nodo local e informes automatizados de alineamiento regulatorio emitidos inmediatamente después de procesar el pago seguro en la pasarela Stripe, la ejecución técnica comenzará de inmediato, perdiéndose de forma definitiva cualquier derecho de desistimiento.</p>
+                    
+                    <h3>2. POLÍTICA DE PRIVACIDAD, RGPD Y SOBERANÍA ALGORÍTMICA</h3>
+                    <p><strong>2.1 Principio de Privacidad por Diseño (Privacy-by-Design):</strong> El Protocolo S.A.A.R.E. funciona como un framework perimetral externo y desacoplado localmente en la infraestructura del Licenciatario. El desarrollador responsable (Alfonso Ferrer Torres) certifica que el sistema indexa a cero tokens recurrentes y que NO recopila, extrae, almacena ni transfiere datos de carácter personal, consultas empresariales ni información confidencial hacia servidores de terceros o modelos lingüísticos públicos de IA.</p>
+                    <p><strong>2.2 Responsabilidad del Tratamiento:</strong> El control de accesos e inferencia es enteramente local. Corresponde en exclusiva a la empresa licenciataria velar por que los flujos informáticos cumplan con el Reglamento General de Protección de Datos (RGPD) en sus capas de cara al usuario final. Toda firma y Hash digital inmutable emitido sirve únicamente como prueba forense de integridad ex-ante ante inspecciones normativas.</p>
+                </div>
+
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="legal-agreement-checkbox" onchange="toggleLegalGate()">
+                    <label for="legal-agreement-checkbox" class="checkbox-label">
+                        Doy fe y acepto expresamente los <strong>Términos de Licencia de Software Corporativo</strong> (incluyendo la política de continuidad de flujo a los 30 días), la <strong>Política de Privacidad y Tratamiento de Datos Local</strong>, y confirmo la pérdida de desistimiento B2B al recibir el contenido criptográfico ex-ante de inmediato.
+                    </label>
+                </div>
+
+                <div class="legal-actions">
+                    <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" id="main-gate-btn" class="btn-large-gate disabled" rel="noopener">
+                        🔒 Proceder a la Emisión de Licencia en Fillout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="matrix-section">
         <div class="container">
             <h2>Matriz Corporativa de Arquitectura</h2>
@@ -309,7 +351,6 @@
         </div>
     </section>
 
-    <!-- APARTADO: UNIDAD GLOBAL, ÉTICA Y PRIVACIDAD -->
     <section class="global-ethics">
         <div class="container">
             <div class="ethics-box">
@@ -330,7 +371,6 @@
         </div>
     </section>
 
-    <!-- APARTADO DE PRECAUCIÓN ESTRATÉGICA: ESLÓGANES Y ACCESO A DEMO COMPARTIDA -->
     <section class="slogan-section">
         <div class="container">
             <div class="slogan-container">
@@ -343,7 +383,6 @@
                     <img src="NO_TE_DEJES_ENGANAR.png" alt="🛡️" class="slogan-logo-img" onerror="this.style.display='none'">
                 </div>
                 
-                <!-- BOTÓN EXCLUSIVO UNIFICADO CON TU ENLACE PÚBLICO REAL DE GEMINI -->
                 <a href="https://gemini.google.com/share/c8fbe4822068" target="_blank" class="btn-demo-gemini" rel="noopener">
                     🔍 Auditar Conversación Abierta en Gemini
                 </a>
@@ -356,7 +395,6 @@
         </div>
     </section>
 
-    <!-- MODELO DE NEGOCIO Y FINANCIACIÓN ESTATAL -->
     <section class="licensing">
         <div class="container">
             <h2>Pilares del Protocolo y Oportunidad Estratégica</h2>
@@ -381,14 +419,13 @@
                     <span class="icon">🌍</span>
                     <h3>Activo Intangible Seguro</h3>
                     <p>
-                        Al estructurarse como una infraestructura local y perimetral de ciberseguridad industrial, S.A.A.R.E. no genera gastos operativos variables (OpEx). Clasifica directamente como una inversión en activos intangibles de ciberseguridad y gobernanza algorítmica responsable.
+                        Al estruturarse como una infraestructura local y perimetral de ciberseguridad industrial, S.A.A.R.E. no genera gastos operativos variables (OpEx). Clasifica directamente como una inversión en activos intangibles de ciberseguridad y gobernanza algorítmica responsable.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer>
         <div class="container">
             <div class="footer-links">
@@ -405,6 +442,30 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        function toggleLegalGate() {
+            var checkbox = document.getElementById('legal-agreement-checkbox');
+            var mainBtn = document.getElementById('main-gate-btn');
+            var navBtn = document.getElementById('nav-btn-gate');
+            
+            if (checkbox.checked) {
+                // Al aceptar, quitamos la restricción visual y asignamos el enlace externo real a ambos botones
+                mainBtn.classList.remove('disabled');
+                
+                // Modificamos el comportamiento del menú de navegación superior para que vaya directo a Fillout
+                navBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
+                navBtn.setAttribute('target', '_blank');
+            } else {
+                // Si desmarcan, vuelve el bloqueo perimetral de seguridad
+                mainBtn.classList.add('disabled');
+                
+                // El botón de navegación superior vuelve a apuntar al ancla local para forzar la lectura
+                navBtn.setAttribute('href', '#aduana-legal');
+                navBtn.removeAttribute('target');
+            }
+        }
+    </script>
 
 </body>
 </html>
