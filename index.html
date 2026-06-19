@@ -14,8 +14,22 @@
         .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-img { height: 50px; width: auto; border-radius: 4px; }
         .logo-text { color: #ffffff; font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
-        .btn-contact { color: #f8fafc; text-decoration: none; font-size: 0.95rem; background: #25d366; padding: 10px 18px; border-radius: 4px; font-weight: bold; transition: background 0.3s ease; display: flex; align-items: center; gap: 8px; }
-        .btn-contact:hover { background: #128c7e; }
+        
+        /* Grupo de botones de la cabecera */
+        .nav-buttons { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        .btn-nav { color: #f8fafc; text-decoration: none; font-size: 0.85rem; padding: 10px 16px; border-radius: 4px; font-weight: bold; transition: background 0.3s ease; display: flex; align-items: center; gap: 6px; }
+        .btn-blue { background: #0284c7; }
+        .btn-blue:hover { background: #0369a1; }
+        .btn-orange { background: #ea580c; color: #ffffff; animation: pulse 2s infinite; }
+        .btn-orange:hover { background: #c2410c; }
+        .btn-whatsapp { background: #25d366; color: #ffffff; }
+        .btn-whatsapp:hover { background: #128c7e; }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(234, 88, 12, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
+        }
 
         /* Hero Section */
         .hero { padding: 80px 0; text-align: center; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
@@ -34,13 +48,13 @@
         .report-line { margin-bottom: 10px; color: #cbd5e1; }
         .report-accent { color: #22c55e; font-weight: bold; }
 
-        /* NUEVO APARTADO: Diagnóstico de Riesgo Crítico AESIA */
+        /* Diagnóstico de Riesgo Crítico AESIA */
         .risk-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .risk-alert-box { background: #7f1d1d; border-left: 6px solid #ef4444; padding: 25px; border-radius: 6px; margin-bottom: 40px; }
         .risk-alert-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
-        .risk-alert-box p { color: #fecaca; font-size: 1rem; }
+        .risk-alert-box p { color: #fecaca; font-size: 1rem; line-height: 1.7; }
 
-        /* NUEVO APARTADO: Matriz de Arquitectura Corporativa */
+        /* Matriz de Arquitectura Corporativa */
         .matrix-section { padding: 60px 0; background: #1e293b; border-bottom: 1px solid #0f172a; }
         .matrix-section h2 { text-align: center; margin-bottom: 35px; color: #ffffff; font-size: 2rem; font-weight: 700; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #0f172a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
@@ -49,6 +63,15 @@
         tr:hover { background: #1e293b; }
         .td-highlight { color: #38bdf8; font-weight: 600; }
         .td-saare { color: #22c55e; font-weight: bold; background: rgba(34, 197, 94, 0.05); }
+
+        /* Tarifas de Flujo */
+        .rates-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
+        .rates-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .rate-card { background: #1e293b; border: 1px solid #374151; border-radius: 6px; padding: 25px; text-align: center; }
+        .rate-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #ffffff; }
+        .rate-price { font-size: 1.8rem; color: #ea580c; font-weight: bold; margin-bottom: 15px; }
+        .rate-card p { font-size: 0.9rem; color: #cbd5e1; }
 
         /* Dual Licensing Section */
         .licensing { padding: 80px 0; background-color: #f8fafc; color: #0f172a; }
@@ -82,9 +105,16 @@
             <img src="Mesa de trabajo 1.jpg" alt="🛡️" class="logo-img" onerror="this.src='Logo + Cumplimiento.jfif'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
-        <div>
-            <a href="https://api.whatsapp.com/send?phone=34633886506&text=Hola%20Alfonso,%20he%20estado%20revisando%20la%20infraestructura%20perimetral%20MS3V%20S.A.A.R.E.%20y%20solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo." target="_blank" class="btn-contact">
-                💬 Solicitar Soporte Técnico Comercial
+        <div class="nav-buttons">
+            <a href="Informe_Alineamiento_Regulatorio_SAARE.pdf" download class="btn-nav btn-blue">
+                📄 Ver Informe Técnico
+            </a>
+            <!-- BOTÓN AUTOMATIZADO CON COBERTURA DE MERCADO INSTANTÁNEA -->
+            <a href="https://api.whatsapp.com/send?phone=34633886506&text=Hola%20Alfonso,%20solicito%20acceso%20al%20formulario%20de%20Alta%20Automatizada%20de%20Contrato%20de%20Flujo." target="_blank" class="btn-nav btn-orange">
+                ⚡ Emitir Licencia Automatizada
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=34633886506&text=Hola%20Alfonso,%20he%20estado%20revisando%20la%20infraestructura%20perimetral%20MS3V%20S.A.A.R.E.%20y%20solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo." target="_blank" class="btn-nav btn-whatsapp">
+                💬 Soporte Inmediato
             </a>
         </div>
     </nav>
@@ -94,9 +124,9 @@
         <div class="container">
             <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
             <h1>INFORME DE ALINEAMIENTO REGULATORIO Y AUDITORÍA EX-ANTE</h1>
-            <p style="color: #38bdf8; font-weight: bold; margin-bottom: 15px;">COMPLIANCE: MARCO REGULATORIO ESPAÑA 2026 | ESTADO: EMISION POSITIVA</p>
+            <p style="color: #38bdf8; font-weight: bold; margin-bottom: 15px;">S.A.A.R.E. PROTOCOLO DE CERTIFICACIÓN | ESTADO: EMISIÓN POSITIVA</p>
             <p>
-                S.A.A.R.E. es una infraestructura perimetral desacoplada y de confinamiento lógico por código, diseñada de forma nativa para blindar sistemas de IA de Alto Riesgo, certificar flujos generativos y preconstituir pruebas forenses de diligencia debida.
+                Infraestructura perimetral externa y completamente desacoplada del modelo lingüístico convencional, diseñada para mitigar el riesgo de deriva lógica (alucinaciones) y preconstituir de forma nativa e inmutable la prueba técnica forense de diligencia debida ex-ante exigida por las autoridades competentes[cite: 4].
             </p>
 
             <div class="badge-img-container">
@@ -106,7 +136,7 @@
         </div>
     </header>
 
-    <!-- LOG SISTEMA: REPORTE DE SEGURIDAD CRÍTICA -->
+    <!-- LOG REPORTE DE SEGURIDAD -->
     <section class="security-report">
         <div class="container">
             <div class="report-box">
@@ -128,19 +158,43 @@
         </div>
     </section>
 
-    <!-- APARTADO NUEVO 1: ZONA DE RIESGO CRÍTICO (AESIA 2026) -->
+    <!-- DESGLOSE DE TARIFAS SEGÚN EL FLUJO DE INFRAESTRUCTURA -->
+    <section class="rates-section">
+        <div class="container">
+            <h2>Modelos de Licencia por Volumen Estructural</h2>
+            <div class="rates-grid">
+                <div class="rate-card">
+                    <h3>1. Alto Flujo (Enterprise)</h3>
+                    <div class="rate-price">12.000 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
+                    <p>Diseñado para entornos financieros, bancarios y multinacionales con tráfico masivo recurrente y auditoría simultánea.</p>
+                </div>
+                <div class="rate-card" style="border: 2px solid #ea580c;">
+                    <h3>2. Medio Flujo (Corporate)</h3>
+                    <div class="rate-price">5.500 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
+                    <p>Ideal para medianas empresas y plataformas web consolidadas que requieren blindaje frente a inspecciones de mercado.</p>
+                </div>
+                <div class="rate-card">
+                    <h3>3. Bajo Flujo (Standard)</h3>
+                    <div class="rate-price">2.500 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
+                    <p>Optimizado para startups y entornos locales enfocados en mitigar el riesgo inicial sin sobrecostes variables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTEXTO NORMATIVO -->
     <section class="risk-section">
         <div class="container">
             <div class="risk-alert-box">
-                <h3>⚠️ ZONA DE RIESGO CRÍTICO (MARCO SANCIONADOR)</h3>
+                <h3>■ ZONA DE RIESGO CRÍTICO (MARCO SANCIONADOR):</h3>
                 <p>
-                    Con la consolidación operativa de la <strong>AESIA</strong> (Agencia Española de Supervisión de Inteligencia Artificial) y la plena aplicación del <strong>RIA</strong> (Reglamento Europeo de Inteligencia Artificial), las organizaciones se enfrentan a un estricto marco de diligencia. Las infracciones calificadas como muy graves acarrean <strong>sanciones financieras disruptivas de hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> de la organización infractora si se integran modelos algorítmicos probabilísticos sin una infraestructura de control preventivo y auditoría ex-ante. Las inspecciones de mercado exigen demostrar de forma fehaciente que los sistemas están exentos de sesgos perjudiciales y riesgo de deriva lógica (alucinaciones).
+                    Con la consolidación operativa de la AESIA y la plena aplicación del RIA, las organizaciones en España se enfrentan a un estricto marco de diligencia[cite: 4]. Las infracciones calificadas como muy graves bajo este ecosistema normativo acarrean sanciones financieras de <strong>hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> si se integran modelos algorítmicos sin una infraestructura de control preventivo[cite: 4]. Las inspecciones exigen demostrar de forma fehaciente la ausencia de riesgo de deriva lógica[cite: 4].
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- APARTADO NUEVO 2: MATRIZ CORPORATIVA DE ARQUITECTURA -->
+    <!-- MATRIZ COMPARATIVA DE ARQUITECTURA -->
     <section class="matrix-section">
         <div class="container">
             <h2>Matriz Corporativa de Arquitectura</h2>
@@ -178,37 +232,32 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE MODELO DE NEGOCIO (LICENCIAMIENTO DUAL & FINANCIACIÓN) -->
+    <!-- MODELO DE NEGOCIO Y FINANCIACIÓN ESTATAL -->
     <section class="licensing">
         <div class="container">
-            <h2>Modelo de Licenciamiento Dual e Infraestructura Global</h2>
-            <p class="subtitle">Estrategia descentralizada para el blindaje industrial y la captación de fondos públicos</p>
+            <h2>Pilares del Protocolo y Oportunidad Estratégica</h2>
+            <p class="subtitle">Estrategia descentralizada para el desarrollo experimental y la adopción de Inteligencia Artificial segura</p>
             
             <div class="grid-3">
-                <!-- Pilar 1: Cero Sesgo Humano -->
                 <div class="pilar-card border-grey">
-                    <span class="icon">🌍</span>
-                    <h3>Cero Sesgo Humano</h3>
+                    <span class="icon">📉</span>
+                    <h3>Coste Cero (Sin Tokens)</h3>
                     <p>
-                        Auditoría automatizada y determinista basada en restricciones matemáticas estrictas (Open Access para la comunidad). Elimina por completo el factor de fatiga, el error informático o el sesgo del factor humano en los flujos de validación de datos corporativos, forzando la trazabilidad por debajo del umbral del 0.01%.
+                        S.A.A.R.E. opera mediante restricciones algorítmicas locales, eliminando la carga de inferencia y las re-llamadas de auditoría en la nube[cite: 4]. Fija la desviación por debajo del umbral del 0.01% para preconstituir de forma nativa la prueba técnica forense[cite: 4].
                     </p>
                 </div>
-
-                <!-- Pilar 2: Financiación Estatal -->
                 <div class="pilar-card border-orange">
                     <span class="icon">🛡️</span>
-                    <h3 class="text-orange">Oportunidad de Subvención</h3>
+                    <h3 class="text-orange">■ FINANCIACIÓN ESTATAL (SUBVENCIONES):</h3>
                     <p>
-                        Este proyecto de gobernanza se encuadra en la línea oficial de ayudas vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>). Permite acceder a una **financiación de hasta el 100% del coste del despliegue**, con plazos de amortización de 1 a 7 años y hasta 2 años de carencia, clasificando nativamente como activo intangible de ciberseguridad industrial.
+                        Este proyecto se encuadra en la línea de ayudas oficiales vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>)[cite: 4]. Permite financiar hasta el 100% del coste del despliegue del protocolo con plazos de amortización flexibles[cite: 4].
                     </p>
                 </div>
-
-                <!-- Pilar 3: La Ventaja del Coste Fijo -->
                 <div class="pilar-card border-dark">
-                    <span class="icon">📉</span>
-                    <h3>Indexación a Cero Tokens</h3>
+                    <span class="icon">🌍</span>
+                    <h3>Activo Intangible Seguro</h3>
                     <p>
-                        Al operar localmente y de manera perimetral, S.A.A.R.E. no genera gastos operativos variables (OpEx) de tokens en plataformas extranjeras. Cumple de forma nativa con los exigentes criterios de asignación técnica del Ministerio de Transformación Digital, asegurando predictibilidad presupuestaria absoluta.
+                        Al estructurarse como una infraestructura local y perimetral de ciberseguridad industrial, S.A.A.R.E. no genera gastos operativos variables (OpEx)[cite: 4]. Clasifica directamente como una inversión en activos intangibles de ciberseguridad y gobernanza algorítmica responsable[cite: 4].
                     </p>
                 </div>
             </div>
@@ -218,11 +267,11 @@
     <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer>
         <div class="container">
-            <div class="sys-hash">SISTEMA COMPLIANT: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B | Entidad Certificadora: Protocolo S.A.A.R.E.</div>
+            <div class="sys-hash">Firma Digital: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B | Entidad Certificadora: Protocolo S.A.A.R.E.[cite: 4]</div>
             <p>© 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.</p>
             <p>
-                Para solicitudes de despliegue enterprise, soporte técnico inmediato o canales de auditoría corporativa, contacte en: 
-                <a href="mailto:alfonso@saare.es">alfonso@saare.es</a> o vía WhatsApp directo en el menú superior.
+                Para solicitudes de despliegue enterprise o canales de auditoría corporativa, contacte en: 
+                <a href="mailto:alfonso@saare.es">alfonso@saare.es</a> o use los accesos directos superiores.
             </p>
         </div>
     </footer>
