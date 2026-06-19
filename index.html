@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS3V S.A.A.R.E. | Motor Lógico Perimetral</title>
     
-    <!-- ENLACE DEL FAVICON OFICIAL EN FORMATO PNG COMPATIBLE -->
     <link rel="icon" type="image/png" href="favicon.png">
     
     <style>
@@ -53,11 +52,27 @@
         .report-line { margin-bottom: 10px; color: #cbd5e1; }
         .report-accent { color: #22c55e; font-weight: bold; }
 
-        /* Diagnóstico de Riesgo Crítico AESIA */
+        /* Tarifas de Flujo */
+        .rates-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
+        .rates-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .rate-card { background: #1e293b; border: 1px solid #374151; border-radius: 6px; padding: 25px; text-align: center; }
+        .rate-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #ffffff; }
+        .rate-price { font-size: 1.8rem; color: #ea580c; font-weight: bold; margin-bottom: 15px; }
+        .rate-card p { font-size: 0.9rem; color: #cbd5e1; }
+
+        /* CONTEXTO NORMATIVO */
         .risk-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .risk-alert-box { background: #7f1d1d; border-left: 6px solid #ef4444; padding: 25px; border-radius: 6px; margin-bottom: 40px; }
         .risk-alert-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
         .risk-alert-box p { color: #fecaca; font-size: 1rem; line-height: 1.7; }
+
+        /* SECCIÓN DE PRECAUCIÓN LEGAL Y OPERATIVA (BLINDAJE ANTE RECLAMACIONES) */
+        .precaution-section { padding: 40px 0; background: #111827; border-bottom: 1px solid #1e293b; }
+        .precaution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .precaution-card { background: #1e293b; border-left: 4px solid #eab308; padding: 20px; border-radius: 4px; }
+        .precaution-card h4 { color: #ffffff; font-size: 1rem; margin-bottom: 8px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+        .precaution-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
 
         /* Matriz de Arquitectura Corporativa */
         .matrix-section { padding: 60px 0; background: #1e293b; border-bottom: 1px solid #0f172a; }
@@ -68,15 +83,6 @@
         tr:hover { background: #1e293b; }
         .td-highlight { color: #38bdf8; font-weight: 600; }
         .td-saare { color: #22c55e; font-weight: bold; background: rgba(34, 197, 94, 0.05); }
-
-        /* Tarifas de Flujo */
-        .rates-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
-        .rates-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
-        .rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .rate-card { background: #1e293b; border: 1px solid #374151; border-radius: 6px; padding: 25px; text-align: center; }
-        .rate-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #ffffff; }
-        .rate-price { font-size: 1.8rem; color: #ea580c; font-weight: bold; margin-bottom: 15px; }
-        .rate-card p { font-size: 0.9rem; color: #cbd5e1; }
 
         /* Sección: Unidad Global y Privacidad Ética */
         .global-ethics { background: #0f172a; padding: 60px 0; border-top: 1px solid #1e293b; border-bottom: 2px solid #ea580c; }
@@ -114,7 +120,6 @@
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
         <div class="logo-area">
             <img src="Mesa de trabajo 1.jpg" alt="🛡️" class="logo-img" onerror="this.src='Logo + Cumplimiento.jfif'; this.onerror=null;">
@@ -124,16 +129,15 @@
             <a href="Informe_Alineamiento_Regulatorio_SAARE.pdf" download="Informe_Alineamiento_Regulatorio_SAARE.pdf" class="btn-nav btn-blue">
                 📄 Ver Informe Técnico
             </a>
-            <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-nav btn-orange">
+            <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-nav btn-orange" rel="noopener">
                 ⚡ Emitir Licencia Automatizada
             </a>
-            <a href="https://api.whatsapp.com/send?phone=34633886506&text=Hola%20Alfonso,%20he%20estado%20revisando%20la%20infraestructura%20perimetral%20MS3V%20S.A.A.R.E.%20y%20solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo." target="_blank" class="btn-nav btn-whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=34633886506&text=Hola%20Alfonso,%20he%20estado%20revisando%20la%20infraestructura%20perimetral%20MS3V%20S.A.A.R.E.%20y%20solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo." target="_blank" class="btn-nav btn-whatsapp" rel="noopener">
                 💬 Soporte Inmediato
             </a>
         </div>
     </nav>
 
-    <!-- SECCIÓN HERO PRINCIPAL -->
     <header class="hero">
         <div class="container">
             <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
@@ -156,7 +160,6 @@
         </div>
     </header>
 
-    <!-- LOG REPORTE DE SEGURIDAD -->
     <section class="security-report">
         <div class="container">
             <div class="report-box">
@@ -178,7 +181,6 @@
         </div>
     </section>
 
-    <!-- DESGLOSE DE TARIFAS SEGÚN EL FLUJO DE INFRAESTRUCTURA -->
     <section class="rates-section">
         <div class="container">
             <h2>Modelos de Licencia por Volumen Estructural</h2>
@@ -186,7 +188,7 @@
                 <div class="rate-card">
                     <h3>1. Alto Flujo (Enterprise)</h3>
                     <div class="rate-price">12.000 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
-                    <p>Diseñado para entornos financieros, bancarios y multinacionales con tráfico masivo recurrentes y auditoría simultánea.</p>
+                    <p>Diseñado para entornos financieros, bancarios y multinacionales con tráfico masivo recurrente y auditoría simultánea.</p>
                 </div>
                 <div class="rate-card" style="border: 2px solid #ea580c;">
                     <h3>2. Medio Flujo (Corporate)</h3>
@@ -202,7 +204,6 @@
         </div>
     </section>
 
-    <!-- CONTEXTO NORMATIVO -->
     <section class="risk-section">
         <div class="container">
             <div class="risk-alert-box">
@@ -214,7 +215,25 @@
         </div>
     </section>
 
-    <!-- MATRIZ COMPARATIVA DE ARQUITECTURA -->
+    <section class="precaution-section">
+        <div class="container">
+            <div class="precaution-grid">
+                <div class="precaution-card">
+                    <h4>⚠️ Exención de Responsabilidad Técnica</h4>
+                    <p>El Protocolo S.A.A.R.E. actúa como una capa analítica perimetral externa de validación lógica determinista. La emisión del informe y la concesión de licencias constituyen un diagnóstico técnico forense de soporte basado en restricciones ex-ante, correspondiendo en exclusiva a la entidad licenciataria la ejecución última del cumplimiento normativo ante las autoridades correspondientes.</p>
+                </div>
+                <div class="precaution-card" style="border-left-color: #0284c7;">
+                    <h4>💳 Entorno de Pago Seguro de Alta Integridad</h4>
+                    <p>Toda transacción se procesa bajo el estándar estricto de cifrado PCI-DSS mediante pasarela Stripe en producción conectada directamente a cuenta bancaria titular. No se almacenan datos financieros corporativos ni claves de tarjeta en servidores locales.</p>
+                </div>
+                <div class="precaution-card" style="border-left-color: #ea580c;">
+                    <h4>📦 Política de Exclusión de Desistimiento B2B</h4>
+                    <p>Conforme al artículo 103 del Real Decreto Legislativo 1/2007 de Consumo, al tratarse de un suministro de contenido digital e informes criptográficos automatizados ejecutados y entregados de forma inmediata tras el pago, el derecho de desistimiento no será aplicable a estas licencias anuales de flujo corporativo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="matrix-section">
         <div class="container">
             <h2>Matriz Corporativa de Arquitectura</h2>
@@ -252,7 +271,6 @@
         </div>
     </section>
 
-    <!-- APARTADO: UNIDAD GLOBAL, ÉTICA Y PRIVACIDAD -->
     <section class="global-ethics">
         <div class="container">
             <div class="ethics-box">
@@ -273,7 +291,6 @@
         </div>
     </section>
 
-    <!-- MODELO DE NEGOCIO Y FINANCIACIÓN ESTATAL -->
     <section class="licensing">
         <div class="container">
             <h2>Pilares del Protocolo y Oportunidad Estratégica</h2>
@@ -305,13 +322,12 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Pol%C3%ADtica%20de%20Privacidad%20y%20Uso%20de%20Datos%20MS3V%20S.A.A.R.E." target="_blank">Políticas de Privacidad e Inferencia</a>
-                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20T%C3%A9rminos%20de%20Gobernanza%20y%20Uso%20de%20Datos%20Global" target="_blank">Derechos de Uso y Soberanía Algorítmica</a>
-                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Manual%20de%20Buenas%20Pr%C3%A1cticas%20y%20Cumplimiento%20AESIA" target="_blank">Manual de Buenas Prácticas S.A.A.R.E.</a>
+                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Pol%C3%ADtica%20de%20Privacidad%20y%20Uso%20de%20Datos%20MS3V%20S.A.A.R.E." target="_blank" rel="noopener">Políticas de Privacidad e Inferencia</a>
+                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20T%C3%A9rminos%20de%20Gobernanza%20y%20Uso%20de%20Datos%20Global" target="_blank" rel="noopener">Derechos de Uso y Soberanía Algorítmica</a>
+                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Manual%20de%20Buenas%20Pr%C3%A1cticas%20y%20Cumplimiento%20AESIA" target="_blank" rel="noopener">Manual de Buenas Prácticas S.A.A.R.E.</a>
             </div>
 
             <div class="sys-hash">Firma Digital: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B | Entidad Certificadora: Protocolo S.A.A.R.E.</div>
