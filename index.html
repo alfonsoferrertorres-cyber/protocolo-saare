@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS3V S.A.A.R.E. | Motor Lógico Perimetral</title>
     
-    <!-- ENLACE DEL FAVICON OFICIAL CON TU ARCHIVO REAL CORREGIDO A .PNG -->
-    <link rel="icon" type="image/png" href="Mesa de trabajo 1.png">
+    <link rel="icon" type="image/png" href="LOGO NAVEGADOR.png">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,15 +23,25 @@
         .btn-nav { color: #f8fafc; text-decoration: none; font-size: 0.85rem; padding: 10px 16px; border-radius: 4px; font-weight: bold; transition: background 0.3s ease; display: flex; align-items: center; gap: 6px; }
         .btn-blue { background: #0284c7; }
         .btn-blue:hover { background: #0369a1; }
-        .btn-orange { background: #ea580c; color: #ffffff; animation: pulse 2s infinite; }
+        
+        /* Animación de Pulso Naranja (Licencia) */
+        .btn-orange { background: #ea580c; color: #ffffff; animation: pulseOrange 2s infinite; }
         .btn-orange:hover { background: #c2410c; }
-        .btn-whatsapp { background: #25d366; color: #ffffff; }
+        
+        /* Animación de Pulso Verde (WhatsApp Soporte) */
+        .btn-whatsapp { background: #25d366; color: #ffffff; animation: pulseGreen 2s infinite; }
         .btn-whatsapp:hover { background: #128c7e; }
 
-        @keyframes pulse {
+        @keyframes pulseOrange {
             0% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4); }
             70% { box-shadow: 0 0 0 10px rgba(234, 88, 12, 0); }
             100% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
+        }
+
+        @keyframes pulseGreen {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         /* Hero Section */
@@ -49,6 +58,7 @@
         /* Reporte de Seguridad Sección */
         .security-report { padding: 50px 0; background: #0b0f19; border-bottom: 1px solid #1e293b; }
         .report-box { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 30px; font-family: monospace; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5); }
+        .report-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
         .report-header { border-bottom: 1px solid #374151; padding-bottom: 15px; margin-bottom: 15px; color: #38bdf8; }
         .report-line { margin-bottom: 10px; color: #cbd5e1; }
         .report-accent { color: #22c55e; font-weight: bold; }
@@ -62,13 +72,13 @@
         .rate-price { font-size: 1.8rem; color: #ea580c; font-weight: bold; margin-bottom: 15px; }
         .rate-card p { font-size: 0.9rem; color: #cbd5e1; }
 
-        /* CONTEXTO NORMATIVO */
+        /* Contexto Normativo */
         .risk-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .risk-alert-box { background: #7f1d1d; border-left: 6px solid #ef4444; padding: 25px; border-radius: 6px; margin-bottom: 40px; }
         .risk-alert-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
         .risk-alert-box p { color: #fecaca; font-size: 1rem; line-height: 1.7; }
 
-        /* SECCIÓN DE PRECAUCIÓN LEGAL Y OPERATIVA (BLINDAJE ANTE RECLAMACIONES) */
+        /* Sección de Precaución Legal y Operativa */
         .precaution-section { padding: 40px 0; background: #111827; border-bottom: 1px solid #1e293b; }
         .precaution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .precaution-card { background: #1e293b; border-left: 4px solid #eab308; padding: 20px; border-radius: 4px; }
@@ -86,13 +96,25 @@
         .td-saare { color: #22c55e; font-weight: bold; background: rgba(34, 197, 94, 0.05); }
 
         /* Sección: Unidad Global y Privacidad Ética */
-        .global-ethics { background: #0f172a; padding: 60px 0; border-top: 1px solid #1e293b; border-bottom: 2px solid #ea580c; }
+        .global-ethics { background: #0f172a; padding: 60px 0; border-top: 1px solid #1e293b; }
         .ethics-box { background: linear-gradient(135deg, #111827 0%, #1e293b 100%); border: 1px solid #334155; padding: 35px; border-radius: 8px; text-align: center; max-width: 900px; margin: 0 auto; }
         .ethics-emblem { font-size: 3rem; margin-bottom: 15px; }
         .ethics-box h3 { font-size: 1.6rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
         .ethics-box p { color: #94a3b8; font-size: 1rem; max-width: 750px; margin: 0 auto 20px auto; line-height: 1.7; }
         .ethics-badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
         .ethics-tag { background: rgba(2, 132, 199, 0.1); border: 1px solid #0284c7; color: #38bdf8; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-family: monospace; }
+
+        /* Apartado de Precaución Estratégica: Eslóganes */
+        .slogan-section { background: #0f172a; padding: 40px 0 60px 0; border-bottom: 2px solid #ea580c; text-align: center; }
+        .slogan-container { max-width: 900px; margin: 0 auto; background: rgba(234, 88, 12, 0.03); border: 1px dashed rgba(234, 88, 12, 0.3); padding: 40px 30px; border-radius: 6px; }
+        
+        .slogan-block-visual { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 25px; flex-wrap: wrap; }
+        .slogan-logo-img { height: 90px; width: auto; object-fit: contain; }
+        .slogan-text-center { display: flex; flex-direction: column; align-items: center; }
+        
+        .slogan-main { font-size: 2.4rem; font-weight: 900; color: #ffffff; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+        .slogan-sub { font-size: 1.8rem; font-weight: 700; color: #ea580c; text-transform: uppercase; }
+        .demo-commitment { font-size: 0.95rem; color: #94a3b8; font-style: italic; border-top: 1px solid #1e293b; padding-top: 15px; display: inline-block; max-width: 650px; width: 100%; }
 
         /* Dual Licensing Section */
         .licensing { padding: 80px 0; background-color: #f8fafc; color: #0f172a; }
@@ -121,11 +143,9 @@
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
         <div class="logo-area">
-            <!-- SECCIÓN CORREGIDA: APUNTA COMPLETA Y CORRECTAMENTE A TU ARCHIVO .PNG -->
-            <img src="Mesa de trabajo 1.png" alt="🛡️" class="logo-img" onerror="this.src='Logo + Cumplimiento.jfif'; this.onerror=null;">
+            <img src="Mesa de trabajo 1.png" alt="🛡️" class="logo-img" onerror="this.src='Logo + Cumplimiento.png'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
         <div class="nav-buttons">
@@ -141,7 +161,6 @@
         </div>
     </nav>
 
-    <!-- SECCIÓN HERO PRINCIPAL -->
     <header class="hero">
         <div class="container">
             <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
@@ -153,19 +172,17 @@
 
             <div class="badge-img-container">
                 <div class="logo-box-fallback">
-                    <!-- ENLACES DE CONTENIDO CORREGIDOS CON .PNG -->
-                    <img src="Mesa de trabajo 1.png" alt="[MS3V Logo]" class="badge-certified" onerror="this.parentNode.style.border='1px solid #ea580c'">
-                    <span>NODO PRINCIPAL S.A.A.R.E.</span>
+                    <img src="Mesa de trabajo 1.png" alt="[MS3V Logo]" class="badge-certified">
+                    <span>LOGOTIPO PRINCIPAL S.A.A.R.E.</span>
                 </div>
                 <div class="logo-box-fallback">
-                    <img src="Logo + Cumplimiento.jfif" alt="[Compliance Sello]" class="badge-certified" onerror="this.parentNode.style.border='1px solid #ea580c'">
+                    <img src="Logo + Cumplimiento.png" alt="[Compliance Sello]" class="badge-certified" onerror="this.src='Mesa de trabajo 1.png'">
                     <span>CERTIFICACIÓN DE MERCADO EX-ANTE</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- LOG REPORTE DE SEGURIDAD -->
     <section class="security-report">
         <div class="container">
             <div class="report-box">
@@ -187,7 +204,6 @@
         </div>
     </section>
 
-    <!-- DESGLOSE DE TARIFAS SEGÚN EL FLUJO DE INFRAESTRUCTURA -->
     <section class="rates-section">
         <div class="container">
             <h2>Modelos de Licencia por Volumen Estructural</h2>
@@ -211,7 +227,6 @@
         </div>
     </section>
 
-    <!-- CONTEXTO NORMATIVO -->
     <section class="risk-section">
         <div class="container">
             <div class="risk-alert-box">
@@ -223,7 +238,6 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE BLINDAJE Y PRECAUCIÓN LEGAL -->
     <section class="precaution-section">
         <div class="container">
             <div class="precaution-grid">
@@ -243,7 +257,6 @@
         </div>
     </section>
 
-    <!-- MATRIZ COMPARATIVA DE ARQUITECTURA -->
     <section class="matrix-section">
         <div class="container">
             <h2>Matriz Corporativa de Arquitectura</h2>
@@ -281,7 +294,6 @@
         </div>
     </section>
 
-    <!-- APARTADO: UNIDAD GLOBAL, ÉTICA Y PRIVACIDAD -->
     <section class="global-ethics">
         <div class="container">
             <div class="ethics-box">
@@ -302,7 +314,27 @@
         </div>
     </section>
 
-    <!-- MODELO DE NEGOCIO Y FINANCIACIÓN ESTATAL -->
+    <section class="slogan-section">
+        <div class="container">
+            <div class="slogan-container">
+                <div class="slogan-block-visual">
+                    <img src="HAZLO_TU_MISMO.png" alt="🛠️" class="slogan-logo-img" onerror="this.style.display='none'">
+                    
+                    <div class="slogan-text-center">
+                        <div class="slogan-main">Hazlo tú mismo</div>
+                        <div class="slogan-sub">No te dejes engañar</div>
+                    </div>
+                    
+                    <img src="NO_TE_DEJES_ENGANAR.png" alt="🛡️" class="slogan-logo-img" onerror="this.style.display='none'">
+                </div>
+                
+                <div class="demo-commitment">
+                    * Compromiso de Transparencia Tecnológica S.A.A.R.E.: Cualquier demostración perimetral o evaluación algorítmica ex-ante se ejecuta de forma directa y abierta, garantizando que la empresa audite de forma autónoma la eficiencia real del framework sin intermediaciones opacas.
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="licensing">
         <div class="container">
             <h2>Pilares del Protocolo y Oportunidad Estratégica</h2>
@@ -334,13 +366,12 @@
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Pol%C3%ADtica%20de%20Privacidad%20y%20Uso%20de%20Datos%20MS3V%20S.A.A.R.E." target="_blank" rel="noopener">Políticas de Privacidad e Inferencia</a>
-                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20T%C3%A9rminos%20de%20Gobernanza%20y%20Uso%20de%20Datos%20Global" target="_blank" rel="noopener">Derechos de Uso y Soberanía Algorítmica</a>
-                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Manual%20de%20Buenas%20Pr%C3%A1cticas%20y%20Cumplimiento%20AESIA" target="_blank" rel="noopener">Manual de Buenas Prácticas S.A.A.R.E.</a>
+                <a href="Politicas_Privacidad_e_Inferencia_SAARE.pdf" target="_blank" rel="noopener">Políticas de Privacidad e Inferencia</a>
+                <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" rel="noopener">Derechos de Uso y Soberanía Algorítmica</a>
+                <a href="Manual_Buenas_Practicas_SAARE.pdf" target="_blank" rel="noopener">Manual de Buenas Prácticas S.A.A.R.E.</a>
             </div>
 
             <div class="sys-hash">Firma Digital: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B | Entidad Certificadora: Protocolo S.A.A.R.E.</div>
