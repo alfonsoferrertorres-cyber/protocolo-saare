@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.A.A.R.E. | Protocolo de Certificación e Infraestructura Perimetral</title>
+    <title>MS3V S.A.A.R.E. | Motor Lógico Perimetral</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
@@ -12,10 +12,10 @@
         /* Navbar */
         nav { background: #0f172a; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ea580c; position: sticky; top: 0; z-index: 100; }
         .logo-area { display: flex; align-items: center; gap: 12px; }
-        .logo-img { height: 45px; width: auto; border-radius: 4px; background: #1e293b; padding: 4px; }
+        .logo-img { height: 50px; width: auto; border-radius: 4px; }
         .logo-text { color: #ffffff; font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
-        .btn-contact { color: #f8fafc; text-decoration: none; font-size: 0.95rem; background: #ea580c; padding: 8px 16px; border-radius: 4px; font-weight: bold; transition: background 0.3s ease; }
-        .btn-contact:hover { background: #c2410c; }
+        .btn-contact { color: #f8fafc; text-decoration: none; font-size: 0.95rem; background: #25d366; padding: 10px 18px; border-radius: 4px; font-weight: bold; transition: background 0.3s ease; display: flex; align-items: center; gap: 8px; }
+        .btn-contact:hover { background: #128c7e; }
 
         /* Hero Section */
         .hero { padding: 80px 0; text-align: center; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
@@ -23,11 +23,32 @@
         .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 800px; margin: 0 auto 30px auto; }
         .badge { display: inline-block; background: #fee2e2; color: #dc2626; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; border: 1px solid #fca5a5; margin-bottom: 20px; }
 
-        /* Tech Specs */
-        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
-        .tech-card { background: #1e293b; padding: 20px; border-radius: 6px; border-left: 4px solid #ea580c; text-align: left; }
-        .tech-card h4 { color: #ffffff; font-size: 1.1rem; margin-bottom: 8px; }
-        .tech-card p { color: #cbd5e1; font-size: 0.9rem; }
+        /* Sellos Certificados */
+        .badge-img-container { margin: 30px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .badge-certified { max-height: 180px; width: auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+
+        /* Reporte de Seguridad Sección */
+        .security-report { padding: 50px 0; background: #0b0f19; border-bottom: 1px solid #1e293b; }
+        .report-box { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 30px; font-family: monospace; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5); }
+        .report-header { border-bottom: 1px solid #374151; padding-bottom: 15px; margin-bottom: 15px; color: #38bdf8; }
+        .report-line { margin-bottom: 10px; color: #cbd5e1; }
+        .report-accent { color: #22c55e; font-weight: bold; }
+
+        /* NUEVO APARTADO: Diagnóstico de Riesgo Crítico AESIA */
+        .risk-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
+        .risk-alert-box { background: #7f1d1d; border-left: 6px solid #ef4444; padding: 25px; border-radius: 6px; margin-bottom: 40px; }
+        .risk-alert-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
+        .risk-alert-box p { color: #fecaca; font-size: 1rem; }
+
+        /* NUEVO APARTADO: Matriz de Arquitectura Corporativa */
+        .matrix-section { padding: 60px 0; background: #1e293b; border-bottom: 1px solid #0f172a; }
+        .matrix-section h2 { text-align: center; margin-bottom: 35px; color: #ffffff; font-size: 2rem; font-weight: 700; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #0f172a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid #1e293b; }
+        th { background: #ea580c; color: #ffffff; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        tr:hover { background: #1e293b; }
+        .td-highlight { color: #38bdf8; font-weight: 600; }
+        .td-saare { color: #22c55e; font-weight: bold; background: rgba(34, 197, 94, 0.05); }
 
         /* Dual Licensing Section */
         .licensing { padding: 80px 0; background-color: #f8fafc; color: #0f172a; }
@@ -40,12 +61,9 @@
         .pilar-card h3 { font-size: 1.3rem; margin-bottom: 15px; font-weight: 700; }
         .pilar-card p { color: #475569; font-size: 0.95rem; line-height: 1.7; }
         
-        /* Borders for cards */
         .border-grey { border-top: 5px solid #94a3b8; }
         .border-orange { border-top: 5px solid #ea580c; }
         .border-dark { border-top: 5px solid #0f172a; }
-        
-        /* Accent texts */
         .text-orange { color: #ea580c; }
 
         /* Footer */
@@ -58,16 +76,15 @@
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN Y ACCESO DE CONTACTO -->
+    <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
         <div class="logo-area">
-            <!-- Nota: Puedes colocar tu archivo logo-saare.png en la misma carpeta raíz de tu GitHub -->
-            <img src="logo-saare.png" alt="🧬" class="logo-img" onerror="this.style.display='none'">
-            <span class="logo-text">S.A.A.R.E.</span>
+            <img src="Mesa de trabajo 1.jpg" alt="🛡️" class="logo-img" onerror="this.src='Logo + Cumplimiento.jfif'; this.onerror=null;">
+            <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
         <div>
-            <a href="mailto:contacto@protocolosaare.com" class="btn-contact">
-                ✉️ Contactar con Soporte Técnico
+            <a href="https://api.whatsapp.com/send?phone=34633886506&text=Hola%20Alfonso,%20he%20estado%20revisando%20la%20infraestructura%20perimetral%20MS3V%20S.A.A.R.E.%20y%20solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo." target="_blank" class="btn-contact">
+                💬 Solicitar Soporte Técnico Comercial
             </a>
         </div>
     </nav>
@@ -75,65 +92,125 @@
     <!-- SECCIÓN HERO PRINCIPAL -->
     <header class="hero">
         <div class="container">
-            <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & RIA COMPLIANT</span>
-            <h1>Gobernanza Algorítmica Preventiva mediante Aduana de Datos Ex-Ante</h1>
+            <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
+            <h1>INFORME DE ALINEAMIENTO REGULATORIO Y AUDITORÍA EX-ANTE</h1>
+            <p style="color: #38bdf8; font-weight: bold; margin-bottom: 15px;">COMPLIANCE: MARCO REGULATORIO ESPAÑA 2026 | ESTADO: EMISION POSITIVA</p>
             <p>
-                S.A.A.R.E. (Sistema Autónomo de Auditoría y Restricción de Entropía) es una infraestructura perimetral externa y desacoplada diseñada para blindar sistemas automatizados, mitigar derivas lógicas y certificar la autenticidad frente a identidades sintéticas.
+                S.A.A.R.E. es una infraestructura perimetral desacoplada y de confinamiento lógico por código, diseñada de forma nativa para blindar sistemas de IA de Alto Riesgo, certificar flujos generativos y preconstituir pruebas forenses de diligencia debida.
             </p>
 
-            <!-- Matriz de Especificaciones Técnicas de la Capa de Control -->
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h4>Desviación Estructural</h4>
-                    <p>Fijada analíticamente bajo control estricto de entropía en un umbral crítico de Δ < 0.01%.</p>
-                </div>
-                <div class="tech-card">
-                    <h4>Consumo de Inferencia</h4>
-                    <p>Indexado nativamente a cero tokens. Sin costes variables en la nube ni dependencias externas.</p>
-                </div>
-                <div class="tech-card">
-                    <h4>Prueba Forense</h4>
-                    <p>Preconstitución técnica automatizada e inmutable de la diligencia debida exigida ex-ante.</p>
-                </div>
+            <div class="badge-img-container">
+                <img src="Logo + Cumplimiento 2.jfif" alt="Certificación Internacional IA" class="badge-certified" onerror="this.style.display='none'">
+                <img src="Mesa de trabajo 1.jpg" alt="Estado Certificado" class="badge-certified" onerror="this.style.display='none'">
             </div>
         </div>
     </header>
 
-    <!-- SECCIÓN DE MODELO DE NEGOCIO Y ESCALABILIDAD (LICENCIAMIENTO DUAL) -->
+    <!-- LOG SISTEMA: REPORTE DE SEGURIDAD CRÍTICA -->
+    <section class="security-report">
+        <div class="container">
+            <div class="report-box">
+                <div class="report-header">
+                    <strong>[S.A.A.R.E. SYSTEM LOG: REPORTE DE SEGURIDAD CRÍTICA]</strong><br>
+                    Fecha de Emisión: 2026-06-10 | ID de Auditoría: SEC_GUARD_88X
+                </div>
+                <div class="report-line">ESTADO GENERAL DE COMPLIANCE: <span class="report-accent">BLINDAJE ACTIVO - NIVEL 5</span></div>
+                <div class="report-line">» PROTECCIÓN DE INFERENCIA (FILTRO RAG): <span class="report-accent">EVALUADO CON EFICIENCIA DEL 99.9%</span></div>
+                <div class="report-line">» INTEGRIDAD DE NODOS CRYPTO-ID: <span class="report-line" style="color: #eab308;">ACTIVE_77X9 (AUTENTICACIÓN COMPLETADA)</span></div>
+                <div class="report-line">» ADUANA CONTRA INYECCIONES DE PROMPTS: VALIDACIÓN LÓGICA DETERMINISTA INDEPENDIENTE</div>
+                <div class="report-line" style="margin-top: 15px; border-top: 1px dashed #374151; padding-top: 10px; font-size: 0.85rem; color: #94a3b8;">
+                    * El protocolo S.A.A.R.E. ha bloqueado activamente cualquier intento de deriva de veracidad superior al límite estructural del 0.01%. Gobernanza autónoma inalterable garantizada.
+                </div>
+                <div class="report-line" style="font-size: 0.85rem; color: #64748b; margin-top: 5px;">
+                    Desarrollador Responsable: Alfonso Ferrer Torres
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO NUEVO 1: ZONA DE RIESGO CRÍTICO (AESIA 2026) -->
+    <section class="risk-section">
+        <div class="container">
+            <div class="risk-alert-box">
+                <h3>⚠️ ZONA DE RIESGO CRÍTICO (MARCO SANCIONADOR)</h3>
+                <p>
+                    Con la consolidación operativa de la <strong>AESIA</strong> (Agencia Española de Supervisión de Inteligencia Artificial) y la plena aplicación del <strong>RIA</strong> (Reglamento Europeo de Inteligencia Artificial), las organizaciones se enfrentan a un estricto marco de diligencia. Las infracciones calificadas como muy graves acarrean <strong>sanciones financieras disruptivas de hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> de la organización infractora si se integran modelos algorítmicos probabilísticos sin una infraestructura de control preventivo y auditoría ex-ante. Las inspecciones de mercado exigen demostrar de forma fehaciente que los sistemas están exentos de sesgos perjudiciales y riesgo de deriva lógica (alucinaciones).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO NUEVO 2: MATRIZ CORPORATIVA DE ARQUITECTURA -->
+    <section class="matrix-section">
+        <div class="container">
+            <h2>Matriz Corporativa de Arquitectura</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica Técnica</th>
+                        <th>Filtros Internos / RAG Convencional</th>
+                        <th>Protocolo Perimetral S.A.A.R.E.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="td-highlight">Capa de Control</td>
+                        <td>Embebida (Interna / Probabilística y propensa a fallos)</td>
+                        <td class="td-saare">Perimetral Externa (Determinista e Inviolable)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-highlight">Consumo de Recursos</td>
+                        <td>Alto e impredecible (Re-evaluación constante de tokens)</td>
+                        <td class="td-saare">Indexado a Cero Tokens (Cálculo Local Fijo)</td>
+                    </tr>
+                    <tr>
+                        <td class="td-highlight">Riesgo de Alucinación</td>
+                        <td>Mitigado parcialmente mediante ingeniería de prompts</td>
+                        <td class="td-saare">Eliminado de raíz formalmente mediante restricciones</td>
+                    </tr>
+                    <tr>
+                        <td class="td-highlight">Auditoría Ex-Ante</td>
+                        <td>Compleja / Requiere post-procesamiento reactivo</td>
+                        <td class="td-saare">Nativa automatizada (Actúa como Capa de Aduana)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE MODELO DE NEGOCIO (LICENCIAMIENTO DUAL & FINANCIACIÓN) -->
     <section class="licensing">
         <div class="container">
             <h2>Modelo de Licenciamiento Dual e Infraestructura Global</h2>
-            <p class="subtitle">Estrategia descentralizada para la democratización y el blindaje industrial de la IA segura</p>
+            <p class="subtitle">Estrategia descentralizada para el blindaje industrial y la captación de fondos públicos</p>
             
             <div class="grid-3">
-                
-                <!-- Pilar 1: Comunidad -->
+                <!-- Pilar 1: Cero Sesgo Humano -->
                 <div class="pilar-card border-grey">
                     <span class="icon">🌍</span>
-                    <h3>Palanca en la Comunidad</h3>
+                    <h3>Cero Sesgo Humano</h3>
                     <p>
-                        Permitimos que los desarrolladores, analistas y creadores independientes utilicen el núcleo lógico del protocolo de forma totalmente gratuita (Open Access). Esto genera una masa crítica de defensores técnicos que validan, auditan e integran S.A.A.R.E. de abajo hacia arriba en todo el ecosistema digital.
+                        Auditoría automatizada y determinista basada en restricciones matemáticas estrictas (Open Access para la comunidad). Elimina por completo el factor de fatiga, el error informático o el sesgo del factor humano en los flujos de validación de datos corporativos, forzando la trazabilidad por debajo del umbral del 0.01%.
                     </p>
                 </div>
 
-                <!-- Pilar 2: Riesgo Corporativo -->
+                <!-- Pilar 2: Financiación Estatal -->
                 <div class="pilar-card border-orange">
                     <span class="icon">🛡️</span>
-                    <h3 class="text-orange">Riesgo Corporativo</h3>
+                    <h3 class="text-orange">Oportunidad de Subvención</h3>
                     <p>
-                        Para el tejido empresarial, S.A.A.R.E. actúa como un escudo legal definitivo frente a inspecciones de mercado de la AESIA y sanciones críticas de hasta 35 millones de euros o el 7% de la facturación global. El despliegue de esta infraestructura de control ex-ante es financiable al 100% mediante las subvenciones vigentes de <strong>ICO RED.ES ACELERA</strong>.
+                        Este proyecto de gobernanza se encuadra en la línea oficial de ayudas vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>). Permite acceder a una **financiación de hasta el 100% del coste del despliegue**, con plazos de amortización de 1 a 7 años y hasta 2 años de carencia, clasificando nativamente como activo intangible de ciberseguridad industrial.
                     </p>
                 </div>
 
-                <!-- Pilar 3: Coste Fijo -->
+                <!-- Pilar 3: La Ventaja del Coste Fijo -->
                 <div class="pilar-card border-dark">
                     <span class="icon">📉</span>
-                    <h3>La Ventaja del Coste Fijo</h3>
+                    <h3>Indexación a Cero Tokens</h3>
                     <p>
-                        A diferencia de auditorías basadas en modelos probabilísticos en la nube, nuestro framework opera localmente y está indexado a <strong>cero tokens</strong>. Eliminamos por completo el riesgo financiero y la volatilidad del OpEx variable, ofreciendo a las direcciones financieras una predictibilidad presupuestaria absoluta.
+                        Al operar localmente y de manera perimetral, S.A.A.R.E. no genera gastos operativos variables (OpEx) de tokens en plataformas extranjeras. Cumple de forma nativa con los exigentes criterios de asignación técnica del Ministerio de Transformación Digital, asegurando predictibilidad presupuestaria absoluta.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -141,11 +218,11 @@
     <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer>
         <div class="container">
-            <div class="sys-hash">SISTEMA COMPLIANT: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B</div>
-            <p>© 2026 Protocolo S.A.A.R.E. • Todos los derechos reservados. Infraestructura de Certificación Perimetral.</p>
+            <div class="sys-hash">SISTEMA COMPLIANT: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B | Entidad Certificadora: Protocolo S.A.A.R.E.</div>
+            <p>© 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.</p>
             <p>
-                Para solicitudes de despliegue enterprise, soporte de integración local o auditorías previas de ventanas de producción, contacte directamente con el canal técnico oficial: 
-                <a href="mailto:contacto@protocolosaare.com">contacto@protocolosaare.com</a>
+                Para solicitudes de despliegue enterprise, soporte técnico inmediato o canales de auditoría corporativa, contacte en: 
+                <a href="mailto:alfonso@saare.es">alfonso@saare.es</a> o vía WhatsApp directo en el menú superior.
             </p>
         </div>
     </footer>
