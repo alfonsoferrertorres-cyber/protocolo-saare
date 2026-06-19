@@ -37,9 +37,10 @@
         .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 800px; margin: 0 auto 30px auto; }
         .badge { display: inline-block; background: #fee2e2; color: #dc2626; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; border: 1px solid #fca5a5; margin-bottom: 20px; }
 
-        /* Sellos Certificados */
+        /* Fallback de Logos con CSS */
         .badge-img-container { margin: 30px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .badge-certified { max-height: 180px; width: auto; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+        .logo-box-fallback { background: #1e293b; border: 1px dashed #475569; padding: 15px 25px; border-radius: 6px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.85rem; font-weight: bold; }
+        .badge-certified { max-height: 120px; width: auto; border-radius: 4px; }
 
         /* Reporte de Seguridad Sección */
         .security-report { padding: 50px 0; background: #0b0f19; border-bottom: 1px solid #1e293b; }
@@ -89,12 +90,22 @@
         .border-dark { border-top: 5px solid #0f172a; }
         .text-orange { color: #ea580c; }
 
+        /* Nueva sección: Unidad Global y Privacidad Ética */
+        .global-ethics { background: #0f172a; padding: 60px 0; border-top: 1px solid #1e293b; border-bottom: 2px solid #ea580c; }
+        .ethics-box { background: linear-gradient(135deg, #111827 0%, #1e293b 100%); border: 1px solid #334155; padding: 35px; border-radius: 8px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .ethics-emblem { font-size: 3rem; margin-bottom: 15px; }
+        .ethics-box h3 { font-size: 1.6rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
+        .ethics-box p { color: #94a3b8; font-size: 1rem; max-width: 750px; margin: 0 auto 20px auto; line-height: 1.7; }
+        .ethics-badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
+        .ethics-tag { background: rgba(2, 132, 199, 0.1); border: 1px solid #0284c7; color: #38bdf8; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-family: monospace; }
+
         /* Footer */
-        footer { background: #0f172a; color: #94a3b8; padding: 60px 0 40px 0; text-align: center; font-size: 0.9rem; border-top: 1px solid #1e293b; }
+        footer { background: #0b0f19; color: #94a3b8; padding: 60px 0 40px 0; text-align: center; font-size: 0.9rem; }
         footer p { margin-bottom: 12px; }
-        .sys-hash { font-family: monospace; color: #64748b; background: #1e293b; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 20px; }
-        footer a { color: #ea580c; text-decoration: none; font-weight: bold; }
-        footer a:hover { text-decoration: underline; }
+        .sys-hash { font-family: monospace; color: #64748b; background: #1e293b; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 25px; }
+        .footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 25px; flex-wrap: wrap; font-size: 0.85rem; }
+        .footer-links a { color: #94a3b8; text-decoration: none; border-bottom: 1px dotted #475569; padding-bottom: 20px; transition: color 0.3s; }
+        .footer-links a:hover { color: #ea580c; border-bottom: 1px solid #ea580c; }
     </style>
 </head>
 <body>
@@ -102,6 +113,7 @@
     <!-- MENÚ DE NAVEGACIÓN -->
     <nav>
         <div class="logo-area">
+            <!-- Contenedor con fallback de imagen por si GitHub no la encuentra en local -->
             <img src="Mesa de trabajo 1.jpg" alt="🛡️" class="logo-img" onerror="this.src='Logo + Cumplimiento.jfif'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
@@ -109,7 +121,6 @@
             <a href="Informe_Alineamiento_Regulatorio_SAARE.pdf" download class="btn-nav btn-blue">
                 📄 Ver Informe Técnico
             </a>
-            <!-- ENLACE AUTOMATIZADO CON TU FORMULARIO EN VIVO -->
             <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-nav btn-orange">
                 ⚡ Emitir Licencia Automatizada
             </a>
@@ -129,9 +140,16 @@
                 Infraestructura perimetral externa y completamente desacoplada del modelo lingüístico convencional, diseñada para mitigar el riesgo de deriva lógica (alucinaciones) y preconstituir de forma nativa e inmutable la prueba técnica forense de diligencia debida ex-ante exigida por las autoridades competentes.
             </p>
 
+            <!-- Bloques heráldicos de los logos cargados en la raíz -->
             <div class="badge-img-container">
-                <img src="Logo + Cumplimiento 2.jfif" alt="Certificación Internacional IA" class="badge-certified" onerror="this.style.display='none'">
-                <img src="Mesa de trabajo 1.jpg" alt="Estado Certificado" class="badge-certified" onerror="this.style.display='none'">
+                <div class="logo-box-fallback">
+                    <img src="Mesa de trabajo 1.jpg" alt="[MS3V Logo]" class="badge-certified" onerror="this.style.display='none'">
+                    <span>NODO PRINCIPAL S.A.A.R.E.</span>
+                </div>
+                <div class="logo-box-fallback">
+                    <img src="Logo + Cumplimiento.jfif" alt="[Compliance Sello]" class="badge-certified" onerror="this.style.display='none'">
+                    <span>CERTIFICACIÓN DE MERCADO EX-ANTE</span>
+                </div>
             </div>
         </div>
     </header>
@@ -232,6 +250,27 @@
         </div>
     </section>
 
+    <!-- NUEVO APARTADO: UNIDAD GLOBAL, ÉTICA Y PRIVACIDAD -->
+    <section class="global-ethics">
+        <div class="container">
+            <div class="ethics-box">
+                <div class="ethics-emblem">🕊️ 🌍 🛡️</div>
+                <h3>Compromiso de Unidad Global, Privacidad y Soberanía de Datos</h3>
+                <p>
+                    El protocolo perimetral S.A.A.R.E. ha sido concebido bajo los principios fundamentales de la paz lógica y la unificación de estándares de ciberseguridad industrial. Al descentralizar la gobernanza algorítmica y operar bajo un modelo matemático local indexado a cero tokens, el framework erradica la exportación transfronteriza no autorizada de datos corporativos. 
+                </p>
+                <p style="font-size: 0.9rem; color: #64748b;">
+                    Garantizamos el derecho inalienable de las organizaciones a la privacidad absoluta, blindando el flujo informático frente a derivas analíticas sesgadas y asegurando que la Inteligencia Artificial opere como una herramienta de desarrollo armónico, seguro y equitativo a escala global.
+                </p>
+                <div class="ethics-badges">
+                    <span class="ethics-tag">PRIVACITY-BY-DESIGN</span>
+                    <span class="ethics-tag">GLOBAL-AI-SAFETY-STANDARDS</span>
+                    <span class="ethics-tag">ZERO-DATA-LEAKAGE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- MODELO DE NEGOCIO Y FINANCIACIÓN ESTATAL -->
     <section class="licensing">
         <div class="container">
@@ -267,11 +306,18 @@
     <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer>
         <div class="container">
+            <!-- Apartados específicos exigidos para políticas y derechos de uso corporativo -->
+            <div class="footer-links">
+                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Pol%C3%ADtica%20de%20Privacidad%20y%20Uso%20de%20Datos%20MS3V%20S.A.A.R.E." target="_blank">Políticas de Privacidad e Inferencia</a>
+                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20T%C3%A9rminos%20de%20Gobernanza%20y%20Uso%20de%20Datos%20Global" target="_blank">Derechos de Uso y Soberanía Algorítmica</a>
+                <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20Manual%20de%20Buenas%20Pr%C3%A1cticas%20y%20Cumplimiento%20AESIA" target="_blank">Manual de Buenas Prácticas S.A.A.R.E.</a>
+            </div>
+
             <div class="sys-hash">Firma Digital: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B | Entidad Certificadora: Protocolo S.A.A.R.E.</div>
             <p>© 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.</p>
             <p>
                 Para solicitudes de despliegue enterprise o canales de auditoría corporativa, contacte en: 
-                <a href="mailto:alfonso@saare.es">alfonso@saare.es</a> o use los accesos directos superiores.
+                <a href="mailto:alfonso@saare.es" style="color: #ea580c; text-decoration: none; font-weight: bold;">alfonso@saare.es</a> o use los accesos directos superiores.
             </p>
         </div>
     </footer>
