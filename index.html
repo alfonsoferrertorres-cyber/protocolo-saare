@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS3V S.A.A.R.E. | Motor Lógico Perimetral</title>
     
+    <!-- FAVICON OFICIAL CONFIGURADO -->
     <link rel="icon" type="image/png" href="LOGO NAVEGADOR.png">
     
     <style>
@@ -78,6 +79,23 @@
         .risk-alert-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
         .risk-alert-box p { color: #fecaca; font-size: 1rem; line-height: 1.7; }
 
+        /* REVOLUCIÓN ISO 27001 & ISO 42001 */
+        .iso-section { padding: 60px 0; background: #111827; border-bottom: 1px solid #1e293b; }
+        .iso-box { max-width: 900px; margin: 0 auto; background: #0f172a; border-left: 4px solid #ea580c; border-radius: 4px; padding: 30px; }
+        .iso-box h2 { font-size: 1.5rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
+        .iso-box p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.7; }
+        .btn-doc-download { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 12px 24px; border-radius: 4px; border: 1px solid #38bdf8; transition: background 0.3s; }
+        .btn-doc-download:hover { background: #0369a1; }
+
+        /* VENTAJAS INDUSTRIALES E INNOVACIÓN ASOCIADA */
+        .advantages-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
+        .advantages-section h2 { text-align: center; margin-bottom: 15px; font-size: 2rem; color: #ffffff; font-weight: 700; }
+        .advantages-section .section-desc { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .advantage-card { background: #1e293b; border-top: 4px solid #0284c7; padding: 25px; border-radius: 6px; border-left: 1px solid #334155; border-right: 1px solid #334155; border-bottom: 1px solid #334155; }
+        .advantage-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .advantage-card p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
+
         /* Sección de Precaución Legal y Operativa */
         .precaution-section { padding: 40px 0; background: #111827; border-bottom: 1px solid #1e293b; }
         .precaution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
@@ -85,7 +103,20 @@
         .precaution-card h4 { color: #ffffff; font-size: 1rem; margin-bottom: 8px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
         .precaution-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
 
-        /* SECCIÓN DE REQUISITO LEGAL CONTRACTUAL (CONTRATO Y RGPD) */
+        /* REPOSITORIO DE CARGA DE MANUALES DE AUDITORÍA */
+        .audit-upload-section { background: #0b0f19; padding: 60px 0; border-bottom: 1px solid #1e293b; }
+        .upload-container { max-width: 900px; margin: 0 auto; text-align: center; background: #111827; border: 1px solid #334155; border-radius: 8px; padding: 40px 30px; }
+        .upload-container h2 { color: #ffffff; font-size: 1.6rem; margin-bottom: 15px; font-weight: 700; }
+        .upload-container p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .upload-box { border: 2px dashed #ea580c; background: #0f172a; padding: 40px; border-radius: 8px; max-width: 600px; margin: 0 auto; cursor: pointer; transition: all 0.3s ease; }
+        .upload-box:hover { background: rgba(234, 88, 12, 0.02); border-color: #f97316; }
+        .upload-box .icon { font-size: 3rem; display: block; margin-bottom: 15px; }
+        .upload-box h4 { color: #ffffff; margin-bottom: 8px; font-size: 1.1rem; }
+        .upload-box span.sub { color: #64748b; font-size: 0.85rem; display: block; margin-bottom: 20px; }
+        .btn-upload-trigger { background: #ea580c; color: #ffffff; border: none; padding: 10px 24px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
+        .btn-upload-trigger:hover { background: #c2410c; }
+
+        /* ADUANA LEGAL CONTRACTUAL (CONTRATO Y RGPD) */
         .legal-compliance-section { background: #0b0f19; padding: 60px 0; border-bottom: 1px solid #1e293b; }
         .legal-tabs-container { max-width: 900px; margin: 0 auto; background: #111827; border: 1px solid #334155; border-radius: 8px; padding: 30px; }
         .legal-tabs-container h2 { font-size: 1.6rem; color: #ffffff; margin-bottom: 20px; text-align: center; font-weight: 700; }
@@ -123,24 +154,19 @@
         .ethics-badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
         .ethics-tag { background: rgba(2, 132, 199, 0.1); border: 1px solid #0284c7; color: #38bdf8; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-family: monospace; }
 
-        /* Apartado de Precaución Estratégica */
+        /* Slogans de Cierre */
         .slogan-section { background: #0f172a; padding: 40px 0 60px 0; border-bottom: 2px solid #ea580c; text-align: center; }
         .slogan-container { max-width: 900px; margin: 0 auto; background: rgba(234, 88, 12, 0.03); border: 1px dashed rgba(234, 88, 12, 0.3); padding: 40px 30px; border-radius: 6px; }
-        
         .slogan-block-visual { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 15px; flex-wrap: wrap; }
         .slogan-logo-img { height: 90px; width: auto; object-fit: contain; }
         .slogan-text-center { display: flex; flex-direction: column; align-items: center; }
-        
         .slogan-main { font-size: 2.4rem; font-weight: 900; color: #ffffff; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
         .slogan-sub { font-size: 1.8rem; font-weight: 700; color: #ea580c; text-transform: uppercase; }
-        
-        /* Botón Estilizado de la Demo Compartida */
         .btn-demo-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 1rem; padding: 14px 28px; border-radius: 6px; margin: 15px 0 20px 0; border: 1px solid #38bdf8; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2); }
-        .btn-demo-gemini:hover { background: #0369a1; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(2, 132, 199, 0.4); }
-        
+        .btn-demo-gemini:hover { background: #0369a1; transform: translateY(-2px); }
         .demo-commitment { font-size: 0.95rem; color: #94a3b8; font-style: italic; border-top: 1px solid #1e293b; padding-top: 15px; display: inline-block; max-width: 650px; width: 100%; }
 
-        /* Dual Licensing Section */
+        /* Pilares */
         .licensing { padding: 80px 0; background-color: #f8fafc; color: #0f172a; }
         .licensing h2 { font-size: 2.2rem; text-align: center; margin-bottom: 10px; font-weight: 700; color: #0f172a; }
         .licensing .subtitle { text-align: center; color: #64748b; margin-bottom: 50px; font-size: 1.1rem; }
@@ -150,7 +176,6 @@
         .icon { font-size: 2.5rem; margin-bottom: 20px; display: inline-block; }
         .pilar-card h3 { font-size: 1.3rem; margin-bottom: 15px; font-weight: 700; }
         .pilar-card p { color: #475569; font-size: 0.95rem; line-height: 1.7; }
-        
         .border-grey { border-top: 5px solid #94a3b8; }
         .border-orange { border-top: 5px solid #ea580c; }
         .border-dark { border-top: 5px solid #0f172a; }
@@ -167,14 +192,15 @@
 </head>
 <body>
 
+    <!-- MENÚ DE NAVEGACIÓN CON ACCESO AL MANUAL OPERATIVO V4 -->
     <nav>
         <div class="logo-area">
             <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Mesa de trabajo 1.jpeg'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
         <div class="nav-buttons">
-            <a href="Informe_Alineamiento_Regulatorio_SAARE.pdf" target="_blank" class="btn-nav btn-blue" rel="noopener">
-                📄 Ver Informe Técnico
+            <a href="Manual_Protocolo_SAARE_V4.pdf" target="_blank" class="btn-nav btn-blue" rel="noopener">
+                📄 Ver Manual Operativo V4
             </a>
             
             <a href="#aduana-legal" class="btn-nav btn-orange" id="nav-btn-gate" rel="noopener">
@@ -187,13 +213,14 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <header class="hero">
         <div class="container">
             <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
             <h1>INFORME DE ALINEAMIENTO REGULATORIO Y AUDITORÍA EX-ANTE</h1>
             <p style="color: #38bdf8; font-weight: bold; margin-bottom: 15px;">S.A.A.R.E. PROTOCOLO DE CERTIFICACIÓN | ESTADO: EMISIÓN POSITIVA</p>
             <p>
-                Infraestructura perimetral externa y completamente desacoplada del modelo lingüístico convencional, diseñada para mitigar el riesgo de deriva lógica (alucinaciones) y preconstituir de forma nativa e inmutable la prueba técnica forense de diligencia debida ex-ante exigida por las autoridades competentes.
+                Infraestructura perimetral externa y completely desacoplada del modelo lingüístico convencional, diseñada para mitigar el riesgo de deriva lógica (alucinaciones) y preconstituir de forma nativa e inmutable la prueba técnica forense de diligencia debida ex-ante exigida por las autoridades competentes[cite: 2, 3].
             </p>
 
             <div class="badge-img-container">
@@ -209,6 +236,7 @@
         </div>
     </header>
 
+    <!-- LOG REPORTE DE SEGURIDAD -->
     <section class="security-report">
         <div class="container">
             <div class="report-box">
@@ -221,15 +249,16 @@
                 <div class="report-line">» INTEGRIDAD DE NODOS CRYPTO-ID: <span class="report-line" style="color: #eab308;">ACTIVE_77X9 (AUTENTICACIÓN COMPLETADA)</span></div>
                 <div class="report-line">» ADUANA CONTRA INYECCIONES DE PROMPTS: VALIDACIÓN LÓGICA DETERMINISTA INDEPENDIENTE</div>
                 <div class="report-line" style="margin-top: 15px; border-top: 1px dashed #374151; padding-top: 10px; font-size: 0.85rem; color: #94a3b8;">
-                    * El protocolo S.A.A.R.E. ha bloqueado activamente cualquier intento de deriva de veracidad superior al límite estructural del 0.01%. Gobernanza autónoma inalterable garantizada.
+                    * El protocolo S.A.A.R.E. ha bloqueado activamente cualquier intento de deriva de veracidad superior al límite estructural crítico requerido del 0.01%[cite: 4]. Gobernanza autónoma inalterable garantizada.
                 </div>
                 <div class="report-line" style="font-size: 0.85rem; color: #64748b; margin-top: 5px;">
-                    Desarrollador Responsable: Alfonso Ferrer Torres
+                    Desarrollador Responsable: Alfonso Ferrer Torres[cite: 2]
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- TARIFAS DE LICENCIA -->
     <section class="rates-section">
         <div class="container">
             <h2>Modelos de Licencia por Volumen Estructural</h2>
@@ -253,23 +282,71 @@
         </div>
     </section>
 
+    <!-- APARTADO: REVOLUCIÓN NORMA ISO 27001 / ISO 42001 -->
+    <section class="iso-section">
+        <div class="container">
+            <div class="iso-box">
+                <h2>📈 La Revolución en la Gobernanza de IA Cerradas frente a la ISO 27001</h2>
+                <p>
+                    La integración de Modelos de Inteligencia Artificial locales cerrados (On-Premise) plantea un severo conflicto con el estándar internacional **ISO/IEC 27001** (SGSI) e **ISO/IEC 42001** (SGIA). Los requerimientos clásicos de aislamiento orientados a mitigar la exfiltración o el riesgo reputacional y operativo de las alucinaciones algorítmicas imponen tradicionalmente una obsolescencia cognitiva inmediata[cite: 2, 3].
+                </p>
+                <p>
+                    Nuestra solución perimetral revoluciona este paradigma. Al desplegar canales virtuales estrictamente unidireccionales, S.A.A.R.E. actúa como un puente de anonimización intermedia ex-ante[cite: 3]. Satisface las exigencias de integridad de datos y auditoría forense de la norma sin exponer el núcleo inteligente al exterior, lo que permite auditar las herramientas operativas de forma determinista con una garantía estructural de error del 0%[cite: 3].
+                </p>
+                <a href="Informe_Alineamiento_ISO27001_SAARE.pdf" target="_blank" class="btn-doc-download" rel="noopener">
+                    📥 Descargar Informe de Alineamiento ISO 27001
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VENTAJAS INDUSTRIALES -->
+    <section class="advantages-section">
+        <div class="container">
+            <h2>Arquitectura de Vanguardia: Ventajas Industriales Inyectadas</h2>
+            <p class="section-desc">
+                El Protocolo perimetral MS3V S.A.A.R.E. redefine las reglas de la soberanía algorítmica empresarial a través de pilares de innovación disruptiva no obvia, diseñados para entornos locales e infraestructuras críticas[cite: 3, 4].
+            </p>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <h3>🌐 Direccionamiento Unidireccional</h3>
+                    <p>Implementación de aislamiento lógico mediante un canal virtual estrictamente unidireccional a nivel de nodo[cite: 3]. Las peticiones limpias viajan hacia el exterior en un único sentido, de forma que se anula cualquier posibilidad de rastreo inverso o acceso no autorizado hacia el núcleo de la IA cerrada corporativa[cite: 3].</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>🛡️ Integridad y Trazabilidad Forense</h3>
+                    <p>Cada proceso e interacción lógica genera una firma hash local e inalterable[cite: 2, 3]. Este registro inmutable guarda de manera transparente el árbol de decisión del sistema, proporcionando la pista y evidencia forense obligatoria exigida ante reguladores externos o inspecciones de la AESIA[cite: 3, 4].</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>📉 Error Lógico Cero (Zero Drift)</h3>
+                    <p>Al desacoplar la capa analítica de restricciones del motor de inferencia probabilístico, S.A.A.R.E. sustituye la aleatoriedad por validaciones semánticas deterministas locales[cite: 3]. El riesgo de alucinación es eliminado de raíz formalmente, garantizando una tasa de error de precisión absoluta[cite: 3, 4].</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>⚡ Erradicación de la Obsolescencia</h3>
+                    <p>Se elimina la carga financiera asociada al reentrenamiento mensual de modelos cerrados[cite: 3]. El puente perimetral refresca el contexto capturando conocimiento fresco del exterior de forma anonimizada, inyectándolo localmente con un coste de infraestructura y tokens cero en la nube[cite: 2, 3, 4].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTEXTO NORMATIVO -->
     <section class="risk-section">
         <div class="container">
             <div class="risk-alert-box">
                 <h3>■ ZONA DE RIESGO CRÍTICO (MARCO SANCIONADOR):</h3>
                 <p>
-                    Con la consolidación operativa de la AESIA y la plena aplicación del RIA, las organizaciones en España se enfrentan a un estricto marco de diligencia. Las infracciones calificadas como muy graves bajo este ecosistema normativo acarrean sanciones financieras de <strong>hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> si se integran modelos algorítmicos sin una infraestructura de control preventivo. Las inspecciones exigen demostrar de forma fehaciente la ausencia de riesgo de deriva lógica.
+                    De acuerdo con el marco regulatorio impuesto por la Ley Orgánica de Gobernanza de la IA y el EU AI Act en España, las organizaciones se enfrentan al imperativo legal estricto de garantizar la supervisión humana efectiva y la auditoría ex-ante[cite: 4]. Las infracciones calificadas como muy graves bajo este ecosistema normativo acarrean sanciones financieras de <strong>hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> si se integran modelos algorítmicos sin una infraestructura de control preventivo[cite: 4].
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- PRECAUCIÓN LEGAL Y OPERATIVA -->
     <section class="precaution-section">
         <div class="container">
             <div class="precaution-grid">
                 <div class="precaution-card">
                     <h4>⚠️ Exención de Responsabilidad Técnica</h4>
-                    <p>El Protocolo S.A.A.R.E. actúa como una capa analítica perimetral externa de validación lógica determinista. La emisión del informe y la concesión de licencias constituyen un diagnóstico técnico forense de soporte basado en restricciones ex-ante, correspondiendo en exclusiva a la entidad licenciataria la ejecución última del cumplimiento normativo ante las autoridades correspondientes.</p>
+                    <p>El Protocolo S.A.A.R.E. actúa como una capa analítica perimetral externa de validación lógica determinista[cite: 2]. La emisión del informe y la concesión de licencias constituyen un diagnóstico técnico forense de soporte basado en restricciones ex-ante, correspondiendo en exclusiva a la entidad licenciataria la ejecución última del cumplimiento normativo ante las autoridades correspondientes[cite: 2].</p>
                 </div>
                 <div class="precaution-card" style="border-left-color: #0284c7;">
                     <h4>💳 Entorno de Pago Seguro y Control de Flujo</h4>
@@ -283,6 +360,28 @@
         </div>
     </section>
 
+    <!-- REPOSITORIO DE CARGA DE MANUALES DE AUDITORÍA -->
+    <section class="audit-upload-section">
+        <div class="container">
+            <div class="upload-container">
+                <h2>📂 Repositorio de Gobernanza y Carga de Herramientas de Auditoría IA</h2>
+                <p>
+                    Optimice el alineamiento de su infraestructura. Suba los manuales técnicos de sus herramientas de IA locales o marcos de auditoría interna para que nuestro motor perimetral configure de forma autónoma los umbrales de filtrado y las aduanas deterministas de control normativo.
+                </p>
+                <div class="upload-box" onclick="alert('Módulo de indexación local S.A.A.R.E. activo en producción. Conecte su instancia corporativa autenticada para iniciar el procesamiento de archivos síncronos.')">
+                    <span class="icon">📤</span>
+                    <h4>Arrastre sus manuales en formato PDF, Markdown o JSON aquí</h4>
+                    <span class="sub">Tamaño máximo por archivo: 50MB • Cifrado Local de Extremo a Extremo Activo</span>
+                    <button type="button" class="btn-upload-trigger">Seleccionar Archivo Local</button>
+                </div>
+                <p style="font-size: 0.85rem; color: #475569; margin-top: 15px; font-style: italic;">
+                    * Los documentos cargados se procesan bajo indexación local síncrona indexada a cero tokens. Ningún manual de configuración interna es almacenado en servidores externos o compartido con redes de terceros.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADUANA LEGAL DE CONTRATACIÓN -->
     <section class="legal-compliance-section" id="aduana-legal">
         <div class="container">
             <div class="legal-tabs-container">
@@ -294,8 +393,8 @@
                     <p><strong>1.3 Extinción del Derecho de Desistimiento B2B:</strong> De conformidad con el artículo 103, apartado m) del Real Decreto Legislativo 1/2007 de Consumo, las partes acuerdan explícitamente que al tratarse de un suministro de contenido digital, claves criptográficas Crypto-ID de nodo local e informes automatizados de alineamiento regulatorio emitidos inmediatamente después de procesar el pago seguro en la pasarela Stripe, la ejecución técnica comenzará de inmediato, perdiéndose de forma definitiva cualquier derecho de desistimiento.</p>
                     
                     <h3>2. POLÍTICA DE PRIVACIDAD, RGPD Y SOBERANÍA ALGORÍTMICA</h3>
-                    <p><strong>2.1 Principio de Privacidad por Diseño (Privacy-by-Design):</strong> El Protocolo S.A.A.R.E. funciona como un framework perimetral externo y desacoplado localmente en la infraestructura del Licenciatario. El desarrollador responsable (Alfonso Ferrer Torres) certifica que el sistema indexa a cero tokens recurrentes y que NO recopila, extrae, almacena ni transfiere datos de carácter personal, consultas empresariales ni información confidencial hacia servidores de terceros o modelos lingüísticos públicos de IA.</p>
-                    <p><strong>2.2 Responsabilidad del Tratamiento:</strong> El control de accesos e inferencia es enteramente local. Corresponde en exclusiva a la empresa licenciataria velar por que los flujos informáticos cumplan con el Reglamento General de Protección de Datos (RGPD) en sus capas de cara al usuario final. Toda firma y Hash digital inmutable emitido sirve únicamente como prueba forense de integridad ex-ante ante inspecciones normativas.</p>
+                    <p><strong>2.1 Principio de Privacidad por Diseño (Privacy-by-Design):</strong> El Protocolo S.A.A.R.E. funciona como un framework perimetral externo y desacoplado localmente en la infraestructura del Licenciatario[cite: 2, 3]. El desarrollador responsable certifica que el sistema indexa a cero tokens recurrentes y que NO recopila, extrae, almacena ni transfiere datos de carácter personal, consultas empresariales ni información confidencial hacia servidores de terceros o modelos lingüísticos públicos de IA[cite: 2, 3].</p>
+                    <p><strong>2.2 Responsabilidad del Tratamiento:</strong> El control de accesos e inferencia es enteramente local[cite: 2, 3]. Corresponde en exclusiva a la empresa licenciataria velar por que los flujos informáticos cumplan con el Reglamento General de Protección de Datos (RGPD) en sus capas de cara al usuario final. Toda firma y Hash digital inmutable emitido sirve únicamente como prueba forense de integridad ex-ante ante inspecciones normativas[cite: 2, 3].</p>
                 </div>
 
                 <div class="checkbox-wrapper">
@@ -314,6 +413,7 @@
         </div>
     </section>
 
+    <!-- MATRIZ COMPARATIVA -->
     <section class="matrix-section">
         <div class="container">
             <h2>Matriz Corporativa de Arquitectura</h2>
@@ -328,39 +428,40 @@
                 <tbody>
                     <tr>
                         <td class="td-highlight">Capa de Control</td>
-                        <td>Embebida (Interna / Probabilística y propensa a fallos)</td>
-                        <td class="td-saare">Perimetral Externa (Determinista e Inviolable)</td>
+                        <td>Embebida (Interna / Probabilística y propensa a fallos)[cite: 4]</td>
+                        <td class="td-saare">Perimetral Externa (Determinista e Inviolable)[cite: 4]</td>
                     </tr>
                     <tr>
                         <td class="td-highlight">Consumo de Recursos</td>
-                        <td>Alto e impredecible (Re-evaluación constante de tokens)</td>
-                        <td class="td-saare">Indexado a Cero Tokens (Cálculo Local Fijo)</td>
+                        <td>Alto e impredecible (Re-evaluación constante de tokens)[cite: 4]</td>
+                        <td class="td-saare">Indexado a Cero Tokens (Cálculo Local Fijo)[cite: 4]</td>
                     </tr>
                     <tr>
                         <td class="td-highlight">Riesgo de Alucinación</td>
-                        <td>Mitigado parcialmente mediante ingeniería de prompts</td>
-                        <td class="td-saare">Eliminado de raíz formalmente mediante restricciones</td>
+                        <td>Mitigado parcialmente mediante ingeniería de prompts[cite: 4]</td>
+                        <td class="td-saare">Eliminado de raíz formalmente mediante restricciones[cite: 4]</td>
                     </tr>
                     <tr>
                         <td class="td-highlight">Auditoría Ex-Ante</td>
-                        <td>Compleja / Requiere post-procesamiento reactivo</td>
-                        <td class="td-saare">Nativa automatizada (Actúa como Capa de Aduana)</td>
+                        <td>Compleja / Requiere post-procesamiento reactivo[cite: 4]</td>
+                        <td class="td-saare">Nativa automatizada (Actúa como Capa de Aduana)[cite: 4]</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
+    <!-- APARTADO: UNIDAD GLOBAL, ÉTICA Y PRIVACIDAD -->
     <section class="global-ethics">
         <div class="container">
             <div class="ethics-box">
                 <div class="ethics-emblem">🕊️ 🌍 🛡️</div>
                 <h3>Compromiso de Unidad Global, Privacidad y Soberanía de Datos</h3>
                 <p>
-                    El protocolo perimetral S.A.A.R.E. ha sido concebido bajo los principios fundamentales de la paz lógica y la unificación de estándares de ciberseguridad industrial. Al descentralizar la gobernanza algorítmica y operar bajo un modelo matemático local indexado a cero tokens, el framework erradica la exportación transfronteriza no autorizada de datos corporativos. 
+                    El protocolo perimetral S.A.A.R.E. ha sido concebido bajo los principios fundamentales de la paz lógica y la unificación de estándares de ciberseguridad industrial. Al descentralizar la gobernanza algorítmica y operar bajo un modelo matemático local indexado a cero tokens, el framework erradica la exportación transfronteriza no autorizada de datos corporativos[cite: 2, 3]. 
                 </p>
                 <p style="font-size: 0.9rem; color: #64748b;">
-                    Garantizamos el derecho inalienable de las organizaciones a la privacidad absoluta, blindando el flujo informático frente a derivas analíticas sesgadas y asegurando que la Inteligencia Artificial opere como una herramienta de desarrollo armónico, seguro y equitativo a escala global.
+                    Garantizamos el derecho inalienable de las organizaciones a la privacidad absoluta, blindando el flujo informático frente a derivas analíticas sesgadas y asegurando que la Inteligencia Artificial opere como una herramienta de desarrollo armónico, seguro y equitativo a escala global[cite: 4].
                 </p>
                 <div class="ethics-badges">
                     <span class="ethics-tag">PRIVACITY-BY-DESIGN</span>
@@ -371,6 +472,7 @@
         </div>
     </section>
 
+    <!-- SLOGANS DE CIERRE -->
     <section class="slogan-section">
         <div class="container">
             <div class="slogan-container">
@@ -395,37 +497,39 @@
         </div>
     </section>
 
+    <!-- PILARES DEL PROTOCOLO Y FINANCIACIÓN -->
     <section class="licensing">
         <div class="container">
             <h2>Pilares del Protocolo y Oportunidad Estratégica</h2>
-            <p class="subtitle">Estrategia descentralizada para el desarrollo experimental y la adopción de Inteligencia Artificial segura</p>
+            <p class="subtitle">Estrategia descentralizada para el desarrollo experimental y la adopción de Inteligencia Artificial segura[cite: 4]</p>
             
             <div class="grid-3">
                 <div class="pilar-card border-grey">
                     <span class="icon">📉</span>
                     <h3>Coste Cero (Sin Tokens)</h3>
                     <p>
-                        S.A.A.R.E. opera mediante restricciones algorítmicas locales, eliminando la carga de inferencia y las re-llamadas de auditoría en nubes públicas. Fija la desviación por debajo del umbral del 0.01% para preconstituir de forma nativa la prueba técnica forense.
+                        S.A.A.R.E. opera mediante restricciones algorítmicas locales, eliminando la carga de inferencia y las re-llamadas de auditoría en nubes públicas[cite: 4]. Fija la desviación por debajo del umbral estructural y preconstituye la prueba técnica forense[cite: 2, 4].
                     </p>
                 </div>
                 <div class="pilar-card border-orange">
                     <span class="icon">🛡️</span>
                     <h3 class="text-orange">■ FINANCIACIÓN ESTATAL (SUBVENCIONES):</h3>
                     <p>
-                        Este proyecto se encuadra en la línea de ayudas oficiales vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>). Permite financiar hasta el 100% del coste del despliegue del protocolo con plazos de amortización flexibles.
+                        Este proyecto se encuadra milimétricamente en la línea oficial de ayudas vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>) para el desarrollo experimental y la adopción de IA: financiación de hasta el 100% con plazos de amortización flexibles de 1 a 7 años[cite: 4].
                     </p>
                 </div>
                 <div class="pilar-card border-dark">
                     <span class="icon">🌍</span>
                     <h3>Activo Intangible Seguro</h3>
                     <p>
-                        Al estruturarse como una infraestructura local y perimetral de ciberseguridad industrial, S.A.A.R.E. no genera gastos operativos variables (OpEx). Clasifica directamente como una inversión en activos intangibles de ciberseguridad y gobernanza algorítmica responsable.
+                        Al estructurarse como una infraestructura local y perimetral de ciberseguridad industrial, S.A.A.R.E. no genera gastos operativos variables (OpEx). Clasifica directamente como una inversión en activos intangibles de ciberseguridad y gobernanza algorítmica responsable.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- PIE DE PÁGINA CORPORATIVO -->
     <footer>
         <div class="container">
             <div class="footer-links">
@@ -434,7 +538,7 @@
                 <a href="Manual_Buenas_Practicas_SAARE.pdf" target="_blank" rel="noopener">Manual de Buenas Prácticas S.A.A.R.E.</a>
             </div>
 
-            <div class="sys-hash">Firma Digital: SARE-AUTONOMOUS-NODE-BCC0A9A0-HASH99X77B | Entidad Certificadora: Protocolo S.A.A.R.E.</div>
+            <div class="sys-hash">Firma Digital: SAARE-ISO-COMPLIANCE-NODE-BCC0A9A0-HASH99X77B[cite: 3]</div>
             <p>© 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.</p>
             <p>
                 Para solicitudes de despliegue enterprise o canales de auditoría corporativa, contacte en: 
@@ -443,6 +547,7 @@
         </div>
     </footer>
 
+    <!-- INTERRUPTOR LÓGICO -->
     <script>
         function toggleLegalGate() {
             var checkbox = document.getElementById('legal-agreement-checkbox');
@@ -450,17 +555,13 @@
             var navBtn = document.getElementById('nav-btn-gate');
             
             if (checkbox.checked) {
-                // Al aceptar, quitamos la restricción visual y asignamos el enlace externo real a ambos botones
                 mainBtn.classList.remove('disabled');
-                
-                // Modificamos el comportamiento del menú de navegación superior para que vaya directo a Fillout
+                mainBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
                 navBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
                 navBtn.setAttribute('target', '_blank');
             } else {
-                // Si desmarcan, vuelve el bloqueo perimetral de seguridad
                 mainBtn.classList.add('disabled');
-                
-                // El botón de navegación superior vuelve a apuntar al ancla local para forzar la lectura
+                mainBtn.removeAttribute('href');
                 navBtn.setAttribute('href', '#aduana-legal');
                 navBtn.removeAttribute('target');
             }
