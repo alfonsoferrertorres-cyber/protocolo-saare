@@ -20,9 +20,14 @@
         
         /* Grupo de botones de la cabecera */
         .nav-buttons { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-        .btn-nav { color: #f8fafc; text-decoration: none; font-size: 0.85rem; padding: 10px 16px; border-radius: 4px; font-weight: bold; transition: background 0.3s ease; display: flex; align-items: center; gap: 6px; }
+        .btn-nav { color: #f8fafc; text-decoration: none; font-size: 0.85rem; padding: 10px 16px; border-radius: 4px; font-weight: bold; transition: all 0.3s ease; display: flex; align-items: center; gap: 6px; }
+        
         .btn-blue { background: #0284c7; }
         .btn-blue:hover { background: #0369a1; }
+
+        /* Nuevo Botón de Auditorías (Amarillo) */
+        .btn-yellow { background: #ffcc00; color: #1a1a1a; border: 2px solid #e6b800; animation: pulseYellow 2s infinite; }
+        .btn-yellow:hover { background: #e6b800; transform: translateY(-1px); }
         
         /* Animación de Pulso Naranja (Licencia) */
         .btn-orange { background: #ea580c; color: #ffffff; animation: pulseOrange 2s infinite; cursor: pointer; }
@@ -31,6 +36,12 @@
         /* Animación de Pulso Verde (WhatsApp Soporte) */
         .btn-whatsapp { background: #25d366; color: #ffffff; animation: pulseGreen 2s infinite; }
         .btn-whatsapp:hover { background: #128c7e; }
+
+        @keyframes pulseYellow {
+            0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 204, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
+        }
 
         @keyframes pulseOrange {
             0% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4); }
@@ -198,11 +209,15 @@
         </div>
         <div class="nav-buttons">
             <a href="Manual_Protocolo_SAARE_V4.pdf" target="_blank" class="btn-nav btn-blue" rel="noopener">
-                📄 Ver Manual Operativo V4
+                📄 Uso Blindaje Abierto
+            </a>
+            
+            <a href="Manual_Ejecución_Profesional.pdf" target="_blank" class="btn-nav btn-yellow" rel="noopener">
+                ⚡ Auditorías
             </a>
             
             <a href="#aduana-legal" class="btn-nav btn-orange" id="nav-btn-gate" rel="noopener">
-                ⚡ Emitir Licencia Automatizada
+                🔥 Emitir Licencia Automatizada
             </a>
             
             <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo%20del%20cl%C3%BAster%20S.A.A.R.E." target="_blank" class="btn-nav btn-whatsapp" rel="noopener">
@@ -211,7 +226,27 @@
         </div>
     </nav>
 
-    <header class="hero">
+    <div class="container">
+        <div style="background-color: #1e293b; color: #ffffff; padding: 25px; border-radius: 8px; margin: 25px 0 10px 0; border: 2px solid #ffcc00; font-family: sans-serif; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <span style="background-color: #ffcc00; color: #1a1a1a; padding: 4px 10px; font-weight: bold; font-size: 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Portal Profesional</span>
+                <h2 style="color: #ffcc00; margin: 0; font-size: 20px; font-weight: bold; text-transform: uppercase;">Exclusivo para Auditores de Sistemas y Consultoras de TI</h2>
+            </div>
+            <p style="color: #f1f5f9; font-size: 16px; margin: 0 0 15px 0; line-height: 1.5;">
+                Acceda a la suite ejecutable del <strong>Protocolo MS3V S.A.A.R.E.</strong>, la primera herramienta analítica de auditoría automatizada diseñada para certificar la robustez perimetral y asegurar el cumplimiento estricto del <strong>Reglamento Europeo de IA (EU AI Act)</strong> en infraestructuras locales corporativas.
+            </p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; color: #cbd5e1; font-size: 14px; background-color: #0f172a; padding: 12px; border-radius: 6px;">
+                <div>🎯 <strong>Validación:</strong> Cero alucinaciones lógicas.</div>
+                <div>🛡️ <strong>Blindaje:</strong> Aislamiento perimetral local sin fugas de datos.</div>
+                <div>📁 <strong>Gobernanza:</strong> Trazabilidad criptográfica inmutable corporativa.</div>
+            </div>
+            <p style="color: #94a3b8; font-size: 13px; margin: 15px 0 0 0; font-style: italic;">
+                🔒 Los scripts de explotación, entornos de testeo y las guías avanzadas se liberan mediante descarga directa del <strong>Manual de Ejecución Profesional</strong> exclusivamente tras validar la licencia comercial mediante el botón amarillo superior <strong>"Auditorías"</strong>.
+            </p>
+        </div>
+    </div>
+
+    <header class="hero" style="padding-top: 40px;">
         <div class="container">
             <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
             <h1>INFORME DE ALINEAMIENTO REGULATORIO Y AUDITORÍA EX-ANTE</h1>
@@ -298,7 +333,7 @@
         <div class="container">
             <h2>Arquitectura de Vanguardia: Ventajas Industriales Inyectadas</h2>
             <p class="section-desc">
-                El Protocolo perimetral MS3V S.A.A.R.E. redefine las reglas de la soberanía algorítmica empresarial a través de cuatro pilares de innovación disruptiva no obvia, diseñados para entornos locales e infraestructuras críticas.
+                El Protocolo perimetral MS3V S.A.A.R.E. redefine las rules de la soberanía algorítmica empresarial a través de cuatro pilares de innovación disruptiva no obvia, diseñados para entornos locales e infraestructuras críticas.
             </p>
             <div class="advantages-grid">
                 <div class="advantage-card">
