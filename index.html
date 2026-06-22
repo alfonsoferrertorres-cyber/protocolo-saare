@@ -12,142 +12,61 @@
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        /* Navbar */
+        /* Navbar Minimalista Purificado */
         nav { background: #0f172a; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ea580c; position: sticky; top: 0; z-index: 100; }
         .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-img { height: 50px; width: auto; border-radius: 4px; }
         .logo-text { color: #ffffff; font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
-        
-        /* Grupo de botones de la cabecera */
-        .nav-buttons { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-        .btn-nav { color: #f8fafc; text-decoration: none; font-size: 0.85rem; padding: 10px 16px; border-radius: 4px; font-weight: bold; transition: all 0.3s ease; display: flex; align-items: center; gap: 6px; }
-        
-        .btn-blue { background: #0284c7; }
-        .btn-blue:hover { background: #0369a1; }
 
-        /* Nuevo Botón de Auditorías (Amarillo) */
-        .btn-yellow { background: #ffcc00; color: #1a1a1a; border: 2px solid #e6b800; animation: pulseYellow 2s infinite; }
-        .btn-yellow:hover { background: #e6b800; transform: translateY(-1px); }
+        /* CABEZA DE CARTEL: SECCIÓN HERO UNIFICADA CON ADUANA LEGAL */
+        .hero-aduana-section { padding: 60px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
+        .badge { display: inline-block; background: #fee2e2; color: #dc2626; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; border: 1px solid #fca5a5; margin-bottom: 25px; text-transform: uppercase; }
         
-        /* Animación de Pulso Naranja (Licencia Directa Corporativa) */
-        .btn-orange { background: #ea580c; color: #ffffff; animation: pulseOrange 2s infinite; cursor: pointer; }
-        .btn-orange:hover { background: #c2410c; }
+        .aduana-panel { background: linear-gradient(145deg, #0b1329, #111827); border: 2px solid #ea580c; border-radius: 8px; padding: 35px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); max-width: 900px; margin: 0 auto; }
+        .aduana-panel h2 { font-size: 1.8rem; font-weight: bold; text-align: center; margin-bottom: 20px; color: #ffffff; letter-spacing: 0.5px; }
         
-        /* Animación de Pulso Verde (WhatsApp Soporte) */
-        .btn-whatsapp { background: #25d366; color: #ffffff; animation: pulseGreen 2s infinite; }
-        .btn-whatsapp:hover { background: #128c7e; }
+        .legal-scrollbox { background: #070d19; border: 1px solid #1e293b; padding: 20px; height: 220px; overflow-y: scroll; border-radius: 6px; font-size: 0.85rem; color: #94a3b8; margin-bottom: 25px; text-align: justify; line-height: 1.6; }
+        .legal-scrollbox h3 { color: #ffffff; font-size: 1rem; margin: 15px 0 5px 0; font-weight: bold; border-bottom: 1px solid #334155; padding-bottom: 3px; }
+        .legal-scrollbox h3:first-child { margin-top: 0; }
+        
+        /* Checkbox de Aceptación */
+        .checkbox-wrapper { display: flex; align-items: flex-start; gap: 12px; background: rgba(234, 88, 12, 0.05); border: 1px solid rgba(234, 88, 12, 0.2); padding: 20px; border-radius: 6px; margin-bottom: 30px; }
+        .checkbox-wrapper input[type="checkbox"] { width: 22px; height: 22px; cursor: pointer; accent-color: #ea580c; margin-top: 2px; flex-shrink: 0; }
+        .checkbox-label { font-size: 0.9rem; color: #cbd5e1; cursor: pointer; font-weight: 500; text-align: left; }
+        .checkbox-label strong { color: #ea580c; }
 
-        /* NUEVO ESTILO: CARD HIGHLIGHT PREMIUM PARA LICENCIAS */
-        .enterprise-highlight-card {
-            background: linear-gradient(145deg, #1e293b, #0b1329);
-            border: 2px solid #3b82f6;
-            border-radius: 8px;
-            padding: 30px;
-            margin: 25px 0;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .enterprise-card-text { flex: 1; min-width: 300px; }
-        .enterprise-card-text h3 { color: #38bdf8; font-size: 1.4rem; margin-bottom: 8px; font-weight: bold; }
-        .enterprise-card-text p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; }
-        .btn-giant-action {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-            color: #ffffff !important;
-            padding: 16px 32px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 6px;
-            box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4);
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-        .btn-giant-action:hover {
-            background: linear-gradient(135deg, #60a5fa, #2563eb);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
-            transform: scale(1.02);
-        }
-
-        /* NUEVA SECCIÓN: EMBUDO EXPRES PARA LEADS FRÍOS DE ANUNCIOS */
-        .express-funnel-section {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
-        }
-        .express-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .express-action-card {
-            background: #0f172a;
-            border: 1px solid #334155;
-            padding: 20px;
-            border-radius: 6px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .express-action-card h4 { font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; }
-        .express-action-card p { font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px; text-align: left; }
-        .btn-express {
-            width: 100%;
-            padding: 12px;
-            border-radius: 4px;
-            font-weight: bold;
-            text-decoration: none;
-            text-align: center;
-            font-size: 0.9rem;
-            transition: background 0.3s;
-        }
-
-        @keyframes pulseYellow {
-            0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(255, 204, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
-        }
+        /* Bloque de Acciones Integradas y Animadas */
+        .legal-actions { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        
+        .btn-orange-trigger { background: #ea580c; color: #ffffff; font-size: 1.15rem; font-weight: bold; text-decoration: none; padding: 16px 36px; border-radius: 6px; text-align: center; width: 100%; max-width: 550px; border: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4); display: inline-block; animation: pulseOrange 2s infinite; }
+        .btn-orange-trigger:hover { background: #c2410c; transform: translateY(-1px); }
+        
+        .btn-large-gate { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #1e293b; color: #cbd5e1; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 14px 30px; border-radius: 6px; transition: all 0.3s ease; width: 100%; max-width: 480px; border: 1px solid #334155; }
+        .btn-large-gate:hover { background: #334155; color: #ffffff; }
+        .btn-large-gate.disabled { background: #1e293b !important; color: #64748b !important; border-color: #1e293b !important; box-shadow: none !important; cursor: not-allowed; transform: none !important; opacity: 0.5; pointer-events: none; }
 
         @keyframes pulseOrange {
-            0% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(234, 88, 12, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(234, 88, 12, 0); }
             100% { box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
         }
 
-        @keyframes pulseGreen {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        /* Hero Section */
-        .hero { padding: 80px 0; text-align: center; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
-        .hero h1 { font-size: 2.8rem; color: #ffffff; margin-bottom: 15px; font-weight: 800; }
-        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 800px; margin: 0 auto 30px auto; }
-        .badge { display: inline-block; background: #fee2e2; color: #dc2626; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; border: 1px solid #fca5a5; margin-bottom: 20px; }
-
-        /* Fallback de Logos Estéticos */
-        .badge-img-container { margin: 30px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        /* Identificadores Visuales Intermedios */
+        .infosphere-header { padding: 40px 0 20px 0; text-align: center; background: #0f172a; }
+        .infosphere-header h1 { font-size: 2.2rem; color: #ffffff; margin-bottom: 10px; font-weight: 800; }
+        .infosphere-header p { font-size: 1.1rem; color: #38bdf8; font-weight: bold; text-transform: uppercase; }
+        .badge-img-container { margin: 25px 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .logo-box-fallback { background: #1e293b; border: 1px dashed #475569; padding: 15px 25px; border-radius: 6px; display: flex; flex-direction: column; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.85rem; font-weight: bold; }
         .badge-certified { max-height: 120px; width: auto; border-radius: 4px; }
 
-        /* Reporte de Seguridad Sección */
-        .security-report { padding: 50px 0; background: #0b0f19; border-bottom: 1px solid #1e293b; }
+        /* Reporte de Seguridad */
+        .security-report { padding: 40px 0; background: #0b0f19; border-bottom: 1px solid #1e293b; }
         .report-box { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 30px; font-family: monospace; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5); }
-        .report-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
         .report-header { border-bottom: 1px solid #374151; padding-bottom: 15px; margin-bottom: 15px; color: #38bdf8; }
         .report-line { margin-bottom: 10px; color: #cbd5e1; }
         .report-accent { color: #22c55e; font-weight: bold; }
 
-        /* Tarifas de Flujo Calibradas */
+        /* Tarifas */
         .rates-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .rates-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; }
         .rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
@@ -156,80 +75,48 @@
         .rate-price { font-size: 1.8rem; color: #ea580c; font-weight: bold; margin-bottom: 15px; }
         .rate-card p { font-size: 0.9rem; color: #cbd5e1; }
 
-        /* Contexto Normativo */
-        .risk-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
-        .risk-alert-box { background: #7f1d1d; border-left: 6px solid #ef4444; padding: 25px; border-radius: 6px; margin-bottom: 40px; }
-        .risk-alert-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
-        .risk-alert-box p { color: #fecaca; font-size: 1rem; line-height: 1.7; }
-
-        /* REVOLUCIÓN ISO 27001 & ISO 42001 */
+        /* ISO Sección */
         .iso-section { padding: 60px 0; background: #111827; border-bottom: 1px solid #1e293b; }
         .iso-box { max-width: 900px; margin: 0 auto; background: #0f172a; border-left: 4px solid #ea580c; border-radius: 4px; padding: 30px; }
         .iso-box h2 { font-size: 1.5rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
         .iso-box p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.7; }
-        .btn-doc-download { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 12px 24px; border-radius: 4px; border: 1px solid #38bdf8; transition: background 0.3s; }
-        .btn-doc-download:hover { background: #0369a1; }
 
-        /* VENTAJAS INDUSTRIALES E INNOVACIÓN ASOCIADA */
+        /* PORTAL PROFESIONAL MODIFICADO (RESTRICCIÓN CON TOKEN ANUAL) */
+        .portal-reconfigured-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
+        .portal-frame { border: 2px solid #ffcc00; background-color: #1e293b; padding: 35px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .portal-tag { background-color: #ffcc00; color: #1a1a1a; padding: 4px 10px; font-weight: bold; font-size: 12px; border-radius: 4px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .portal-frame h2 { color: #ffcc00; margin: 0 0 15px 0; font-size: 20px; font-weight: bold; text-transform: uppercase; }
+        .portal-frame p { color: #f1f5f9; font-size: 16px; margin-bottom: 20px; line-height: 1.5; }
+        .feature-box { display: flex; gap: 15px; flex-wrap: wrap; color: #cbd5e1; font-size: 14px; background-color: #0f172a; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
+        
+        .restriction-box { background-color: #110904; border-left: 4px solid #ea580c; padding: 20px; border-radius: 0 6px 6px 0; margin-top: 20px; }
+        .restriction-box h5 { color: #ea580c; margin: 0 0 10px 0; font-size: 15px; text-transform: uppercase; font-weight: bold; letter-spacing: 0.5px; }
+        .restriction-box p { color: #94a3b8; font-size: 0.9rem; margin: 0; line-height: 1.6; }
+
+        /* Ventajas e Índices Restantes */
         .advantages-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .advantages-section h2 { text-align: center; margin-bottom: 15px; font-size: 2rem; color: #ffffff; font-weight: 700; }
-        .advantages-section .section-desc { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .advantages-section .section-desc { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1rem; max-width: 800px; margin: 0 auto; }
         .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .advantage-card { background: #1e293b; border-top: 4px solid #0284c7; padding: 25px; border-radius: 6px; border-left: 1px solid #334155; border-right: 1px solid #334155; border-bottom: 1px solid #334155; }
-        .advantage-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+        .advantage-card { background: #1e293b; border-top: 4px solid #0284c7; padding: 25px; border-radius: 6px; border: 1px solid #334155; border-top: 4px solid #0284c7; }
+        .advantage-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 12px; font-weight: 700; }
         .advantage-card p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
 
-        /* Sección de Precaución Legal y Operativa */
-        .precaution-section { padding: 40px 0; background: #111827; border-bottom: 1px solid #1e293b; }
-        .precaution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .precaution-card { background: #1e293b; border-left: 4px solid #eab308; padding: 20px; border-radius: 4px; }
-        .precaution-card h4 { color: #ffffff; font-size: 1rem; margin-bottom: 8px; font-weight: bold; display: flex; align-items: center; gap: 8px; }
-        .precaution-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
+        .risk-section { padding: 50px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
+        .risk-alert-box { background: #7f1d1d; border-left: 6px solid #ef4444; padding: 25px; border-radius: 6px; }
+        .risk-alert-box h3 { color: #ffffff; margin-bottom: 10px; font-size: 1.4rem; font-weight: 700; }
+        .risk-alert-box p { color: #fecaca; font-size: 1rem; line-height: 1.7; }
 
-        /* REPOSITORIO DE CARGA DE MANUALES DE AUDITORÍA */
-        .audit-upload-section { background: #0b0f19; padding: 60px 0; border-bottom: 1px solid #1e293b; }
-        .upload-container { max-width: 900px; margin: 0 auto; text-align: center; background: #111827; border: 1px solid #334155; border-radius: 8px; padding: 40px 30px; }
-        .upload-container h2 { color: #ffffff; font-size: 1.6rem; margin-bottom: 15px; font-weight: 700; }
-        .upload-container p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .upload-box { border: 2px dashed #ea580c; background: #0f172a; padding: 40px; border-radius: 8px; max-width: 600px; margin: 0 auto; cursor: pointer; transition: all 0.3s ease; }
-        .upload-box:hover { background: rgba(234, 88, 12, 0.02); border-color: #f97316; }
-        .upload-box .icon { font-size: 3rem; display: block; margin-bottom: 15px; }
-        .upload-box h4 { color: #ffffff; margin-bottom: 8px; font-size: 1.1rem; }
-        .upload-box span.sub { color: #64748b; font-size: 0.85rem; display: block; margin-bottom: 20px; }
-        .btn-upload-trigger { background: #ea580c; color: #ffffff; border: none; padding: 10px 24px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s; }
-        .btn-upload-trigger:hover { background: #c2410c; }
-
-        /* ADUANA LEGAL CONTRACTUAL (CONTRATO Y RGPD) */
-        .legal-compliance-section { background: #0b0f19; padding: 60px 0; border-bottom: 1px solid #1e293b; }
-        .legal-tabs-container { max-width: 900px; margin: 0 auto; background: #111827; border: 1px solid #334155; border-radius: 8px; padding: 30px; }
-        .legal-tabs-container h2 { font-size: 1.6rem; color: #ffffff; margin-bottom: 20px; text-align: center; font-weight: 700; }
-        .legal-scrollbox { background: #0f172a; border: 1px solid #1e293b; padding: 20px; height: 180px; overflow-y: scroll; border-radius: 6px; font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; line-height: 1.6; }
-        .legal-scrollbox h3 { color: #ffffff; font-size: 1rem; margin: 15px 0 5px 0; font-weight: bold; border-bottom: 1px solid #334155; padding-bottom: 3px; }
-        .legal-scrollbox h3:first-child { margin-top: 0; }
-        
-        /* Checkbox */
-        .checkbox-wrapper { display: flex; align-items: flex-start; gap: 12px; background: rgba(234, 88, 12, 0.05); border: 1px solid rgba(234, 88, 12, 0.2); padding: 20px; border-radius: 6px; margin-bottom: 25px; }
-        .checkbox-wrapper input[type="checkbox"] { width: 22px; height: 22px; cursor: pointer; accent-color: #ea580c; margin-top: 2px; flex-shrink: 0; }
-        .checkbox-label { font-size: 0.9rem; color: #cbd5e1; cursor: pointer; font-weight: 500; }
-        .checkbox-label span { color: #ea580c; font-weight: bold; }
-        
-        .legal-actions { text-align: center; }
-        .btn-large-gate { display: inline-flex; align-items: center; gap: 10px; background: #ea580c; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 1.1rem; padding: 16px 36px; border-radius: 6px; transition: all 0.3s ease; cursor: pointer; border: none; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3); }
-        .btn-large-gate:hover { background: #c2410c; transform: translateY(-1px); }
-        .btn-large-gate.disabled { background: #475569 !important; box-shadow: none !important; cursor: not-allowed; transform: none !important; opacity: 0.5; pointer-events: none; }
-
-        /* Matriz de Arquitectura Corporativa */
         .matrix-section { padding: 60px 0; background: #1e293b; border-bottom: 1px solid #0f172a; }
         .matrix-section h2 { text-align: center; margin-bottom: 35px; color: #ffffff; font-size: 2rem; font-weight: 700; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #0f172a; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #0f172a; border-radius: 8px; overflow: hidden; }
         th, td { padding: 16px 20px; text-align: left; border-bottom: 1px solid #1e293b; }
-        th { background: #ea580c; color: #ffffff; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        th { background: #ea580c; color: #ffffff; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
         tr:hover { background: #1e293b; }
         .td-highlight { color: #38bdf8; font-weight: 600; }
         .td-saare { color: #22c55e; font-weight: bold; background: rgba(34, 197, 94, 0.05); }
 
-        /* Sección: Unidad Global y Privacidad Ética */
-        .global-ethics { background: #0f172a; padding: 60px 0; border-top: 1px solid #1e293b; }
+        .global-ethics { background: #0f172a; padding: 60px 0; }
         .ethics-box { background: linear-gradient(135deg, #111827 0%, #1e293b 100%); border: 1px solid #334155; padding: 35px; border-radius: 8px; text-align: center; max-width: 900px; margin: 0 auto; }
         .ethics-emblem { font-size: 3rem; margin-bottom: 15px; }
         .ethics-box h3 { font-size: 1.6rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
@@ -237,25 +124,20 @@
         .ethics-badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 15px; }
         .ethics-tag { background: rgba(2, 132, 199, 0.1); border: 1px solid #0284c7; color: #38bdf8; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; font-family: monospace; }
 
-        /* Slogans de Cierre */
-        .slogan-section { background: #0f172a; padding: 40px 0 60px 0; border-bottom: 2px solid #ea580c; text-align: center; }
+        .slogan-section { background: #0f172a; padding: 40px 0; text-align: center; }
         .slogan-container { max-width: 900px; margin: 0 auto; background: rgba(234, 88, 12, 0.03); border: 1px dashed rgba(234, 88, 12, 0.3); padding: 40px 30px; border-radius: 6px; }
         .slogan-block-visual { display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 15px; flex-wrap: wrap; }
-        .slogan-logo-img { height: 90px; width: auto; object-fit: contain; }
         .slogan-text-center { display: flex; flex-direction: column; align-items: center; }
-        .slogan-main { font-size: 2.4rem; font-weight: 900; color: #ffffff; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px; }
+        .slogan-main { font-size: 2.4rem; font-weight: 900; color: #ffffff; text-transform: uppercase; }
         .slogan-sub { font-size: 1.8rem; font-weight: 700; color: #ea580c; text-transform: uppercase; }
-        .btn-demo-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 1rem; padding: 14px 28px; border-radius: 6px; margin: 15px 0 20px 0; border: 1px solid #38bdf8; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2); }
-        .btn-demo-gemini:hover { background: #0369a1; transform: translateY(-2px); }
+        .btn-demo-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 1rem; padding: 14px 28px; border-radius: 6px; margin: 15px 0; border: 1px solid #38bdf8; }
         .demo-commitment { font-size: 0.95rem; color: #94a3b8; font-style: italic; border-top: 1px solid #1e293b; padding-top: 15px; display: inline-block; max-width: 650px; width: 100%; }
 
-        /* Pilares */
-        .licensing { padding: 80px 0; background-color: #f8fafc; color: #0f172a; }
+        .licensing { padding: 60px 0; background-color: #f8fafc; color: #0f172a; }
         .licensing h2 { font-size: 2.2rem; text-align: center; margin-bottom: 10px; font-weight: 700; color: #0f172a; }
         .licensing .subtitle { text-align: center; color: #64748b; margin-bottom: 50px; font-size: 1.1rem; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .pilar-card { background: #ffffff; padding: 35px; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-        .pilar-card:hover { transform: translateY(-5px); }
+        .pilar-card { background: #ffffff; padding: 35px; border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
         .icon { font-size: 2.5rem; margin-bottom: 20px; display: inline-block; }
         .pilar-card h3 { font-size: 1.3rem; margin-bottom: 15px; font-weight: 700; }
         .pilar-card p { color: #475569; font-size: 0.95rem; line-height: 1.7; }
@@ -264,13 +146,10 @@
         .border-dark { border-top: 5px solid #0f172a; }
         .text-orange { color: #ea580c; }
 
-        /* Footer */
         footer { background: #0b0f19; color: #94a3b8; padding: 60px 0 40px 0; text-align: center; font-size: 0.9rem; }
-        footer p { margin-bottom: 12px; }
         .sys-hash { font-family: monospace; color: #64748b; background: #1e293b; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 25px; }
         .footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 25px; flex-wrap: wrap; font-size: 0.85rem; }
-        .footer-links a { color: #94a3b8; text-decoration: none; border-bottom: 1px dotted #475569; padding-bottom: 5px; transition: color 0.3s; }
-        .footer-links a:hover { color: #ea580c; border-bottom: 1px solid #ea580c; }
+        .footer-links a { color: #94a3b8; text-decoration: none; border-bottom: 1px dotted #475569; padding-bottom: 5px; }
     </style>
 </head>
 <body>
@@ -280,91 +159,51 @@
             <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Mesa de trabajo 1.jpeg'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
-        <div class="nav-buttons">
-            <a href="Manual_Protocolo_SAARE_V4.pdf" target="_blank" class="btn-nav btn-blue" rel="noopener">
-                📄 Uso Blindaje Abierto
-            </a>
-            
-            <a href="Manual_Ejecución_Profesional.pdf" target="_blank" class="btn-nav btn-yellow" rel="noopener">
-                ⚡ Auditorías
-            </a>
-            
-            <a href="mailto:legal@saare.es?subject=Solicitud Urgente: Emisión de Licencia Corporativa SAARE" class="btn-nav btn-orange" rel="noopener">
-                🔥 Solicitar Licencia Corporativa
-            </a>
-            
-            <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo%20del%20cl%C3%BAster%20S.A.A.R.E." target="_blank" class="btn-nav btn-whatsapp" rel="noopener">
-                💬 Soporte Inmediato
-            </a>
-        </div>
     </nav>
 
-    <div class="container">
-        <div class="enterprise-highlight-card">
-            <div class="enterprise-card-text">
-                <h3>🛡️ Control de Cumplimiento y Módulo de Emisión Licencias Enterprise</h3>
-                <p>
-                    Despliegue centralizado del protocolo perimetral síncrono para entornos corporativos y auditorías ex-ante automatizadas. Active de forma inmediata el entorno de producción seguro y desacoplado a cero tokens.
-                </p>
-            </div>
-            <a href="mailto:legal@saare.es?subject=Solicitud de Licencia Corporativa / Demo Enterprise SAARE" class="btn-giant-action">
-                Solicitar Licencia Corporativa / Demo Enterprise
-            </a>
-        </div>
-
-        <div class="express-funnel-section">
-            <h3 style="color: #ffffff; font-size: 1.2rem; font-weight: bold; border-bottom: 1px solid #334155; padding-bottom: 10px;">⚡ Canales Rápidos de Acceso y Evaluación Ex-Ante</h3>
-            <div class="express-grid">
-                <div class="express-action-card">
-                    <div>
-                        <h4>📚 Dossier Técnico de Ingeniería</h4>
-                        <p>Solicite los planos de infraestructura perimetral, esquemas de nodos y modelos de restricciones deterministas locales.</p>
-                    </div>
-                    <a href="mailto:legal@saare.es?subject=Solicitud de Dossier Tecnico Completo - Protocolo SAARE" class="btn-express" style="background: #3b82f6; color: #ffffff;">Recibir Dossier PDF</a>
-                </div>
-                <div class="express-action-card">
-                    <div>
-                        <h4>🧠 Agenda de Demo (15 min)</h4>
-                        <p>Reserve una sesión síncrona cerrada con nuestro comité técnico para evaluar el alineamiento con la AESIA.</p>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=34633886506&text=Deseo%20agendar%20una%20reuni%C3%B3n%20tecnica%20de%20evaluaci%C3%B3n%20SAARE" target="_blank" class="btn-express" style="background: #22c55e; color: #ffffff;">Agendar Mesa Técnica</a>
-                </div>
-                <div class="express-action-card">
-                    <div>
-                        <h4>⚖️ Auditoría Forense Express</h4>
-                        <p>Acceda directamente a la pasarela externa sin pre-requisitos de firma si ya cuenta con una clave de clúster autorizada.</p>
-                    </div>
-                    <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-express" style="background: #ffcc00; color: #1a1a1a;">Ir a Fillout Directo</a>
-                </div>
-            </div>
-        </div>
-
-        <div style="background-color: #1e293b; color: #ffffff; padding: 25px; border-radius: 8px; margin: 10px 0 25px 0; border: 2px solid #ffcc00; font-family: sans-serif; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);">
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
-                <span style="background-color: #ffcc00; color: #1a1a1a; padding: 4px 10px; font-weight: bold; font-size: 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Portal Profesional</span>
-                <h2 style="color: #ffcc00; margin: 0; font-size: 20px; font-weight: bold; text-transform: uppercase;">Exclusivo para Auditores de Sistemas y Consultoras de TI</h2>
-            </div>
-            <p style="color: #f1f5f9; font-size: 16px; margin: 0 0 15px 0; line-height: 1.5;">
-                Acceda a la suite ejecutable del <strong>Protocolo MS3V S.A.A.R.E.</strong>, la primera herramienta analítica de auditoría automatizada diseñada para certificar la robustez perimetral y asegurar el cumplimiento estricto del <strong>Reglamento Europeo de IA (EU AI Act)</strong> en infraestructuras locales corporativas.
-            </p>
-            <div style="display: flex; gap: 15px; flex-wrap: wrap; color: #cbd5e1; font-size: 14px; background-color: #0f172a; padding: 12px; border-radius: 6px;">
-                <div>🎯 <strong>Validación:</strong> Cero alucinaciones lógicas.</div>
-                <div>🛡️ <strong>Blindaje:</strong> Aislamiento perimetral local sin fugas de datos.</div>
-                <div>📁 <strong>Gobernanza:</strong> Trazabilidad criptográfica inmutable corporativa.</div>
-            </div>
-            <p style="color: #94a3b8; font-size: 13px; margin: 15px 0 0 0; font-style: italic;">
-                🔒 Los scripts de explotación, environments de testeo y las guías avanzadas se liberan mediante descarga directa del <strong>Manual de Ejecución Profesional</strong> exclusivamente tras validar la licencia comercial mediante el botón amarillo superior <strong>"Auditorías"</strong>.
-            </p>
-        </div>
-    </div>
-
-    <header class="hero" style="padding-top: 40px;">
-        <div class="container">
+    <section class="hero-aduana-section">
+        <div class="container" style="text-align: center;">
             <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
+            
+            <div class="aduana-panel">
+                <h2>Aduana Legal de Contratación Corporativa</h2>
+                
+                <div class="legal-scrollbox">
+                    <h3>1. TÉRMINOS DE LA LICENCIA DE SOFTWARE ANUAL S.A.A.R.E.</h3>
+                    <p><strong>1.1 Objeto y Declaración Ex-Ante:</strong> Al rellenar el formulario de emisión y efectuar el pago, el Licenciatario suscribe una declaración técnica forense ex-ante estimando de buena fe su flujo de tráfico diario perimetral. La tarifa anual seleccionada constituye un límite volumétrico regulado de mercado (Tarifa Seed: hasta 1.500 interacciones/día; Tarifa Growth: hasta 20.000 interacciones/día; Tarifa Corporate Grid: tráfico masivo redundante sin límite de interacciones analíticas diarias).</p>
+                    <p><strong>1.2 Cláusula de Continuidad Industrial y Regularización:</strong> El Protocolo MS3V S.A.A.R.E. prioriza la disponibilidad operativa del cliente. En caso de superarse el umbral de flujo contratado debido a picos puntuales de tráfico, el servicio NO será interrumpido. No obstante, si el exceso es sostenido por más de treinta (30) días consecutivos, el sistema emitirá una alerta de gobernanza y el Licenciatario se obliga a formalizar un ajuste contractual dinámico (upgrade a la licencia superior de 14.500 € o 65.000 € correspondientemente) o a liquidar la diferencia económica correspondiente en la ventana de renovación anual.</p>
+                    <p><strong>1.3 Extinción del Derecho de Desistimiento B2B:</strong> De conformidad con el artículo 103, apartado m) del Real Decreto Legislativo 1/2007 de Consumo, las partes acuerdan explícitamente que al tratarse de un suministro de contenido digital, claves criptográficas Crypto-ID de nodo local e informes automatizados de alineamiento regulatorio emitidos inmediatamente después de procesar el pago seguro en la pasarela Stripe, la ejecución técnica comenzará de inmediato, perdiéndose de forma definitiva cualquier derecho de desistimiento.</p>
+                    
+                    <h3>2. POLÍTICA DE PRIVACIDAD, RGPD Y SOBERANÍA ALGORÍTMICA</h3>
+                    <p><strong>2.1 Principio de Privacidad por Diseño (Privacy-by-Design):</strong> El Protocolo S.A.A.R.E. funciona como un framework perimetral externo y desacoplado localmente en la infraestructura del Licenciatario. El Comité de Gobernanza Algorítmica MS3V certifica que el sistema indexa a cero tokens recurrentes y que NO recopila, extrae, almacena ni transfiere datos de carácter personal, consultas empresariales ni información confidencial hacia servidores de terceros o modelos lingüísticos públicos de IA.</p>
+                    <p><strong>2.2 Responsabilidad del Tratamiento:</strong> El control de accesos e inferencia es enteramente local. Corresponde en exclusiva a la empresa licenciataria velar por que los flujos informáticos cumplan con el Reglamento General de Protección de Datos (RGPD) en sus capas de cara al usuario final. Toda firma y Hash digital inmutable emitido sirve únicamente como prueba forense de integridad ex-ante ante inspecciones normativas.</p>
+                </div>
+
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="legal-agreement-checkbox" onchange="toggleLegalGate()">
+                    <label for="legal-agreement-checkbox" class="checkbox-label">
+                        Doy fe y acepto expresamente los <strong>Términos de Licencia de Software Corporativo</strong> (incluyendo la política de continuidad de flujo a los 30 días), la <strong>Política de Privacidad y Tratamiento de Datos Local</strong>, y confirmo la pérdida de desistimiento B2B al recibir el contenido criptográfico ex-ante de inmediato.
+                    </label>
+                </div>
+
+                <div class="legal-actions">
+                    <a href="mailto:legal@saare.es?subject=Solicitud Urgente: Emisión de Licencia Corporativa SAARE" class="btn-orange-trigger" id="action-trigger-btn">
+                        🔥 Solicitar Licencia Corporativa / Demo Enterprise
+                    </a>
+                    <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" id="main-gate-btn" class="btn-large-gate disabled" rel="noopener">
+                        🔒 Proceder a la Emisión de Licencia en Fillout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <header class="infosphere-header">
+        <div class="container">
             <h1>INFORME DE ALINEAMIENTO REGULATORIO Y AUDITORÍA EX-ANTE</h1>
-            <p style="color: #38bdf8; font-weight: bold; margin-bottom: 15px;">S.A.A.R.E. PROTOCOLO DE CERTIFICACIÓN | ESTADO: EMISIÓN POSITIVA</p>
-            <p>
-                Infraestructura perimetral externa y completely desacoplada del modelo lingüístico convencional, diseñada para mitigar el riesgo de deriva lógica (alucinaciones) y preconstituir de forma nativa e inmutable la prueba técnica forense de diligencia debida ex-ante exigida por las autoridades competentes.
+            <p>S.A.A.R.E. PROTOCOLO DE CERTIFICACIÓN | ESTADO: EMISIÓN POSITIVA</p>
+            <p style="color: #94a3b8; font-size: 1rem; max-width: 800px; margin: 15px auto 0 auto; font-weight: normal;">
+                Infraestructura perimetral externa y completamente desacoplada del modelo lingüístico convencional, diseñada para mitigar el riesgo de deriva lógica (alucinaciones) y preconstituir de forma nativa e inmutable la prueba técnica forense de diligencia debida ex-ante exigida por las autoridades competentes.
             </p>
 
             <div class="badge-img-container">
@@ -394,9 +233,6 @@
                 <div class="report-line" style="margin-top: 15px; border-top: 1px dashed #374151; padding-top: 10px; font-size: 0.85rem; color: #94a3b8;">
                     * El protocolo S.A.A.R.E. ha bloqueado activamente cualquier intento de deriva de veracidad superior al límite estructural del 0.01%. Gobernanza autónoma inalterable garantizada.
                 </div>
-                <div class="report-line" style="font-size: 0.85rem; color: #64748b; margin-top: 5px;">
-                    Desarrollador Responsable: Comité de Gobernanza Algorítmica MS3V
-                </div>
             </div>
         </div>
     </section>
@@ -424,19 +260,35 @@
         </div>
     </section>
 
+    <section class="portal-reconfigured-section">
+        <div class="container">
+            <div class="portal-frame">
+                <div class="portal-tag">Portal Profesional</div>
+                <h2>Exclusivo para Auditores de Sistemas y Consultoras de TI</h2>
+                <p>
+                    Acceda a la suite ejecutable del <strong>Protocolo MS3V S.A.A.R.E.</strong>, la primera herramienta analítica de auditoría automatizada diseñada para certificar la robustez perimetral y asegurar el cumplimiento estricto del <strong>Reglamento Europeo de IA (EU AI Act)</strong> en infraestructuras locales corporativas.
+                </p>
+                <div class="feature-box">
+                    <div>🎯 <strong>Validación:</strong> Cero alucinaciones lógicas.</div>
+                    <div>🛡️ <strong>Blindaje:</strong> Aislamiento perimetral local sin fugas de datos.</div>
+                    <div>📁 <strong>Gobernanza:</strong> Trazabilidad criptográfica inmutable corporativa.</div>
+                </div>
+                <div class="restriction-box">
+                    <h5>🔒 Restricción de Acceso Premium</h5>
+                    <p>
+                        Con la compra de su Licencia Comercial Anual a través de la "Aduana Legal" superior, recibirá de forma inmediata un <strong>CÓDIGO DE DESCARGA DE MANUALES Y DESPLIEGUE DE PROTOCOLO + GUÍA DE EJECUCIONES Y HERRAMIENTAS PROFESIONALES DE AUDITORÍA</strong> en su correo de confirmación. Este código criptográfico le otorgará acceso exclusivo de descarga directa durante <strong>1 AÑO</strong> a los scripts de explotación, entornos de testeo locales y guías avanzadas de ingeniería.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="iso-section">
         <div class="container">
             <div class="iso-box">
                 <h2>📈 La Revolución en la Gobernanza de IA Cerradas frente a la ISO 27001</h2>
-                <p>
-                    La integración de Modelos de Inteligencia Artificial locales cerrados (On-Premise) plantea un severo conflicto con el estándar internacional **ISO 27001** e **ISO 42001**. El aislamiento tradicional obligaba a limitar el entorno para prevenir fugas, provocando una obsolescencia cognitiva inmediata.
-                </p>
-                <p>
-                    Nuestra solución perimetral revoluciona este paradigma. Al desplegar canales virtuales strictly unidireccionales, S.A.A.R.E. actúa como un puente de anonimización intermedia ex-ante. Satisface las exigencias de integridad de datos de la norma sin exponer el núcleo inteligente al exterior, lo que permite auditar las herramientas operativas de forma determinista con una garantía estructural de error del 0%.
-                </p>
-                <a href="Informe_Alineamiento_ISO27001_SAARE.pdf" target="_blank" class="btn-doc-download" rel="noopener">
-                    📥 Descargar Informe de Alineamiento ISO 27001
-                </a>
+                <p>La integración de Modelos de Inteligencia Artificial locales cerrados (On-Premise) plantea un severo conflicto con el estándar internacional **ISO 27001** e **ISO 42001**. El aislamiento tradicional obligaba a limitar el entorno para prevenir fugas, provocando una obsolescencia cognitiva inmediata.</p>
+                <p>Nuestra solución perimetral revoluciona este paradigma. Al desplegar canales virtuales strictly unidireccionales, S.A.A.R.E. actúa como un puente de anonimización intermedia ex-ante. Satisface las exigencias de integridad de datos de la norma sin exponer el núcleo inteligente al exterior, lo que permite auditar las herramientas operativas de forma determinista con una garantía estructural de error del 0%.</p>
             </div>
         </div>
     </section>
@@ -444,9 +296,7 @@
     <section class="advantages-section">
         <div class="container">
             <h2>Arquitectura de Vanguardia: Ventajas Industriales Inyectadas</h2>
-            <p class="section-desc">
-                El Protocolo perimetral MS3V S.A.A.R.E. redefine las rules de la soberanía algorítmica empresarial a través de cuatro pilares de innovación disruptiva no obvia, diseñados para entornos locales e infraestructuras críticas.
-            </p>
+            <p class="section-desc">El Protocolo perimetral MS3V S.A.A.R.E. redefine las rules de la soberanía algorítmica empresarial a través de cuatro pilares de innovación disruptiva no obvia.</p>
             <div class="advantages-grid">
                 <div class="advantage-card">
                     <h3>🌐 Direccionamiento Unidireccional</h3>
@@ -472,9 +322,7 @@
         <div class="container">
             <div class="risk-alert-box">
                 <h3>■ ZONA DE RIESGO CRÍTICO (MARCO SANCIONADOR):</h3>
-                <p>
-                    Con la consolidación de la Ley Orgánica de Gobernanza de la IA y el EU AI Act, las organizaciones se enfrentan a la obligación estricta de garantizar la supervisión humana y la auditoría ex-ante. Las infracciones calificadas como muy graves bajo este ecosistema normativo acarrean sanciones financieras de <strong>hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> si se integran modelos algorítmicos sin una infraestructura de control preventivo.
-                </p>
+                <p>Con la consolidación de la Ley Orgánica de Gobernanza de la IA y el EU AI Act, las organizaciones se enfrentan a la obligación estricta de garantizar la supervisión humana y la auditoría ex-ante. Las infracciones calificadas como muy graves bajo este ecosistema normativo acarrean sanciones financieras de <strong>hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> si se integran modelos algorítmicos sin una infraestructura de control preventivo.</p>
             </div>
         </div>
     </section>
@@ -498,105 +346,12 @@
         </div>
     </section>
 
-    <section class="audit-upload-section">
-        <div class="container">
-            <div class="upload-container">
-                <h2>📂 Repositorio de Gobernanza y Carga de Herramientas de Auditoría IA</h2>
-                <p>
-                    Optimice el alineamiento de su infraestructura. Suba los manuales técnicos de sus herramientas de IA locales o marcos de auditoría interna para que nuestro motor perimetral configure de forma autónoma los umbrales de filtrado y las aduanas deterministas de control normativo.
-                </p>
-                <div class="upload-box" onclick="alert('Módulo de indexación local S.A.A.R.E. activo en producción. Conecte su instancia corporativa autenticada para iniciar el procesamiento de archivos síncronos.')">
-                    <span class="icon">📤</span>
-                    <h4>Arrastre sus manuales en formato PDF, Markdown o JSON aquí</h4>
-                    <span class="sub">Tamaño máximo por archivo: 50MB • Cifrado Local de Extremo a Extremo Activo</span>
-                    <button type="button" class="btn-upload-trigger">Seleccionar Archivo Local</button>
-                </div>
-                <p style="font-size: 0.85rem; color: #475569; margin-top: 15px; font-style: italic;">
-                    * Los documentos cargados se procesan bajo indexación local síncrona indexada a cero tokens. Ningún manual de configuración interna es almacenado en servidores externos o compartido con redes de terceros.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="legal-compliance-section" id="aduana-legal">
-        <div class="container">
-            <div class="legal-tabs-container">
-                <h2>Aduana Legal de Contratación Corporativa</h2>
-                <div class="legal-scrollbox">
-                    <h3>1. TÉRMINOS DE LA LICENCIA DE SOFTWARE ANUAL S.A.A.R.E.</h3>
-                    <p><strong>1.1 Objeto y Declaración Ex-Ante:</strong> Al rellenar el formulario de emisión y efectuar el pago, el Licenciatario suscribe una declaración técnica forense ex-ante estimando de buena fe su flujo de tráfico diario perimetral. La tarifa anual seleccionada constituye un límite volumétrico regulado de mercado (Tarifa Seed: hasta 1.500 interacciones/día; Tarifa Growth: hasta 20.000 interacciones/día; Tarifa Corporate Grid: tráfico masivo redundante sin límite de interacciones analíticas diarias).</p>
-                    <p><strong>1.2 Cláusula de Continuidad Industrial y Regularización:</strong> El Protocolo MS3V S.A.A.R.E. prioriza la disponibilidad operativa del cliente. En caso de superarse el umbral de flujo contratado debido a picos puntuales de tráfico, el servicio NO será interrumpido. No obstante, si el exceso es sostenido por más de treinta (30) días consecutivos, el sistema emitirá una alerta de gobernanza y el Licenciatario se obliga a formalizar un ajuste contractual dinámico (upgrade a la licencia superior de 14.500 € o 65.000 € correspondientemente) o a liquidar la diferencia económica correspondiente en la ventana de renovación anual.</p>
-                    <p><strong>1.3 Extinción del Derecho de Desistimiento B2B:</strong> De conformidad con el artículo 103, apartado m) del Real Decreto Legislativo 1/2007 de Consumo, las partes acuerdan explícitamente que al tratarse de un suministro de contenido digital, claves criptográficas Crypto-ID de nodo local e informes automatizados de alineamiento regulatorio emitidos inmediatamente después de procesar el pago seguro en la pasarela Stripe, la ejecución técnica comenzará de inmediato, perdiéndose de forma definitiva cualquier derecho de desistimiento.</p>
-                    
-                    <h3>2. POLÍTICA DE PRIVACIDAD, RGPD Y SOBERANÍA ALGORÍTMICA</h3>
-                    <p><strong>2.1 Principio de Privacidad por Diseño (Privacy-by-Design):</strong> El Protocolo S.A.A.R.E. funciona como un framework perimetral externo y desacoplado localmente en la infraestructura del Licenciatario. El Comité de Gobernanza Algorítmica MS3V certifica que el sistema indexa a cero tokens recurrentes y que NO recopila, extrae, almacena ni transfiere datos de carácter personal, consultas empresariales ni información confidencial hacia servidores de terceros o modelos lingüísticos públicos de IA.</p>
-                    <p><strong>2.2 Responsabilidad del Tratamiento:</strong> El control de accesos e inferencia es enteramente local. Corresponde en exclusiva a la empresa licenciataria velar por que los flujos informáticos cumplan con el Reglamento General de Protección de Datos (RGPD) en sus capas de cara al usuario final. Toda firma y Hash digital inmutable emitido sirve únicamente como prueba forense de integridad ex-ante ante inspecciones normativas.</p>
-                </div>
-
-                <div class="checkbox-wrapper">
-                    <input type="checkbox" id="legal-agreement-checkbox" onchange="toggleLegalGate()">
-                    <label for="legal-agreement-checkbox" class="checkbox-label">
-                        Doy fe y acepto expresamente los <strong>Términos de Licencia de Software Corporativo</strong> (incluyendo la política de continuidad de flujo a los 30 días), la <strong>Política de Privacidad y Tratamiento de Datos Local</strong>, y confirmo la pérdida de desistimiento B2B al recibir el contenido criptográfico ex-ante de inmediato.
-                    </label>
-                </div>
-
-                <div class="legal-actions">
-                    <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" id="main-gate-btn" class="btn-large-gate disabled" rel="noopener">
-                        🔒 Proceder a la Emisión de Licencia en Fillout
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="matrix-section">
-        <div class="container">
-            <h2>Matriz Corporativa de Arquitectura</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Característica Técnica</th>
-                        <th>Filtros Internos / RAG Convencional</th>
-                        <th>Protocolo Perimetral S.A.A.R.E.</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="td-highlight">Capa de Control</td>
-                        <td>Embebida (Interna / Probabilística y propensa a fallos)</td>
-                        <td class="td-saare">Perimetral Externa (Determinista e Inviolable)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-highlight">Consumo de Recursos</td>
-                        <td>Alto e impredecible (Re-evaluación constante de tokens)</td>
-                        <td class="td-saare">Indexado a Cero Tokens (Cálculo Local Fijo)</td>
-                    </tr>
-                    <tr>
-                        <td class="td-highlight">Riesgo de Alucinación</td>
-                        <td>Mitigado parcialmente mediante ingeniería de prompts</td>
-                        <td class="td-saare">Eliminado de raíz formalmente mediante restricciones</td>
-                    </tr>
-                    <tr>
-                        <td class="td-highlight">Auditoría Ex-Ante</td>
-                        <td>Compleja / Requiere post-procesamiento reactivo</td>
-                        <td class="td-saare">Nativa automatizada (Actúa como Capa de Aduana)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
     <section class="global-ethics">
         <div class="container">
             <div class="ethics-box">
                 <div class="ethics-emblem">🕊️ 🌍 🛡️</div>
                 <h3>Compromiso de Unidad Global, Privacidad y Soberanía de Datos</h3>
-                <p>
-                    El protocolo perimetral S.A.A.R.E. ha sido concebido bajo los principios fundamentales de la paz lógica y la unificación de estándares de ciberseguridad industrial. Al descentralizar la gobernanza algorítmica y operar bajo un modelo matemático local indexado a cero tokens, el framework erradica la exportación transfronteriza no autorizada de datos corporativos. 
-                </p>
-                <p style="font-size: 0.9rem; color: #64748b;">
-                    Garantizamos el derecho inalienable de las organizaciones a la privacidad absoluta, blindando el flujo informático frente a derivas analíticas sesgadas y asegurando que la Inteligencia Artificial opere como una herramienta de desarrollo armónico, seguro y equitativo a escala global.
-                </p>
+                <p>El protocolo perimetral S.A.A.R.E. ha sido concebido bajo los principios fundamentales de la paz lógica y la unificación de estándares de ciberseguridad industrial. Al descentralizar la gobernanza algorítmica y operar bajo un modelo matemático local indexado a cero tokens, el framework erradica la exportación transfronteriza no autorizada de datos corporativos.</p>
                 <div class="ethics-badges">
                     <span class="ethics-tag">PRIVACITY-BY-DESIGN</span>
                     <span class="ethics-tag">GLOBAL-AI-SAFETY-STANDARDS</span>
@@ -610,21 +365,17 @@
         <div class="container">
             <div class="slogan-container">
                 <div class="slogan-block-visual">
-                    <img src="HAZLO_TU_MISMO.png" alt="🛠️" class="slogan-logo-img" onerror="this.style.display='none'">
                     <div class="slogan-text-center">
                         <div class="slogan-main">Hazlo tú mismo</div>
                         <div class="slogan-sub">No te dejes engañar</div>
                     </div>
-                    <img src="NO_TE_DEJES_ENGANAR.png" alt="🛡️" class="slogan-logo-img" onerror="this.style.display='none'">
                 </div>
-                
                 <a href="https://gemini.google.com/share/c8fbe4822068" target="_blank" class="btn-demo-gemini" rel="noopener">
                     🔍 Auditar Conversación Abierta en Gemini
                 </a>
                 <br>
-                
                 <div class="demo-commitment">
-                    * Compromiso de Transparencia Tecnológica S.A.A.R.E.: Cualquier demostración perimetral o evaluación algorítmica ex-ante se ejecuta de forma directa y abierta, garantizando que la empresa audite de forma autónoma la eficiencia real del framework sin intermediaciones opacas.
+                    * Compromiso de Transparencia Tecnológica S.A.A.R.E.: Cualquier demostración perimetral o evaluación algorítmica ex-ante se ejecuta de forma directo y abierta, garantizando que la empresa audite de forma autónoma la eficiencia real del framework sin intermediaciones opacas.
                 </div>
             </div>
         </div>
@@ -634,28 +385,21 @@
         <div class="container">
             <h2>Pilares del Protocolo y Oportunidad Estratégica</h2>
             <p class="subtitle">Estrategia descentralizada para el desarrollo experimental y la adopción de Inteligencia Artificial segura</p>
-            
             <div class="grid-3">
                 <div class="pilar-card border-grey">
                     <span class="icon">📉</span>
                     <h3>Coste Cero (Sin Tokens)</h3>
-                    <p>
-                        S.A.A.R.E. opera mediante restricciones algorítmicas locales, eliminando la carga de inferencia y las re-llamadas de auditoría en nubes públicas. Fija la desviación por debajo del umbral del 0.01% para preconstituir de forma nativa la prueba técnica forense.
-                    </p>
+                    <p>S.A.A.R.E. opera mediante restricciones algorítmicas locales, eliminando la carga de inferencia y las re-llamadas de auditoría en nubes públicas. Fija la desviación por debajo del umbral del 0.01% para preconstituir de forma nativa la prueba técnica forense.</p>
                 </div>
                 <div class="pilar-card border-orange">
                     <span class="icon">🛡️</span>
                     <h3 class="text-orange">■ FINANCIACIÓN ESTATAL (SUBVENCIONES):</h3>
-                    <p>
-                        Este proyecto se encuadra en la línea de ayudas oficiales vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>). Permite financiar hasta el 100% del coste del despliegue del protocolo con plazos de amortización flexibles de 1 a 7 años.
-                    </p>
+                    <p>Este proyecto se encuadra en la línea de ayudas oficiales vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>). Permite financiar hasta el 100% del coste del despliegue del protocolo con plazos de amortización flexibles de 1 a 7 años.</p>
                 </div>
                 <div class="pilar-card border-dark">
                     <span class="icon">🌍</span>
                     <h3>Activo Intangible Seguro</h3>
-                    <p>
-                        Al estructurarse como una infraestructura local y perimetral de ciberseguridad industrial, S.A.A.R.E. no genera gastos operativos variables (OpEx). Clasifica directamente como una inversión en activos intangibles de ciberseguridad y gobernanza algorítmica responsable.
-                    </p>
+                    <p>Al estructurarse como una infraestructura local y perimetral de ciberseguridad industrial, S.A.A.R.E. no genera gastos operativos variables (OpEx). Clasifica directamente como una inversión en activos intangibles de ciberseguridad.</p>
                 </div>
             </div>
         </div>
@@ -668,13 +412,9 @@
                 <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" rel="noopener">Derechos de Uso y Soberanía Algorítmica</a>
                 <a href="Manual_Buenas_Practicas_SAARE.pdf" target="_blank" rel="noopener">Manual de Buenas Prácticas S.A.A.R.E.</a>
             </div>
-
             <div class="sys-hash">Firma Digital: SAARE-ISO-COMPLIANCE-NODE-BCC0A9A0-HASH99X77B</div>
             <p>© 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.</p>
-            <p>
-                Para solicitudes de despliegue enterprise o canales de auditoría corporativa, contacte en: 
-                <a href="mailto:legal@saare.es" style="color: #ea580c; text-decoration: none; font-weight: bold;">legal@saare.es</a> o use los accesos directos superiores.
-            </p>
+            <p>Para solicitudes de despliegue enterprise o canales de auditoría corporativa, contacte en: <strong style="color: #ea580c;">legal@saare.es</strong></p>
         </div>
     </footer>
 
@@ -682,22 +422,13 @@
         function toggleLegalGate() {
             var checkbox = document.getElementById('legal-agreement-checkbox');
             var mainBtn = document.getElementById('main-gate-btn');
-            var navBtn = document.getElementById('nav-btn-gate');
             
             if (checkbox.checked) {
                 mainBtn.classList.remove('disabled');
                 mainBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
-                if(navBtn) {
-                    navBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
-                    navBtn.setAttribute('target', '_blank');
-                }
             } else {
                 mainBtn.classList.add('disabled');
                 mainBtn.removeAttribute('href');
-                if(navBtn) {
-                    navBtn.setAttribute('href', 'mailto:legal@saare.es?subject=Solicitud Urgente: Emisión de Licencia Corporativa SAARE');
-                    navBtn.removeAttribute('target');
-                }
             }
         }
     </script>
