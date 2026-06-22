@@ -12,6 +12,14 @@
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
+        /* BARRA DINÁMICA DE LANZAMIENTO DUAL S.A.A.R.E. */
+        .promo-banner-header { background: #1a202c; color: #ffffff; text-align: center; padding: 14px 10px; font-size: 13px; font-weight: bold; position: relative; z-index: 999; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border-bottom: 3px solid #ea580c; letter-spacing: 0.5px; }
+        .promo-banner-header .badge-saare-text { color: #ea580c; font-weight: 800; text-transform: uppercase; }
+        .promo-banner-header .counter-box { background: #ea580c; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 14px; margin: 0 4px; font-family: monospace; }
+        .promo-banner-header .highlight-green { color: #22c55e; font-weight: bold; }
+        .promo-banner-header .btn-banner-action { color: #1a202c; text-decoration: none; margin-left: 15px; background: #ffffff; padding: 6px 14px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; display: inline-block; font-weight: 800; }
+        .promo-banner-header .btn-banner-action:hover { background: #ea580c; color: #ffffff; }
+
         /* Navbar Minimalista Purificado */
         nav { background: #0f172a; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ea580c; position: sticky; top: 0; z-index: 100; }
         .logo-area { display: flex; align-items: center; gap: 12px; }
@@ -25,8 +33,8 @@
         .aduana-panel { background: linear-gradient(145deg, #0b1329, #111827); border: 2px solid #ea580c; border-radius: 8px; padding: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); max-width: 850px; margin: 0 auto; }
         .aduana-panel h2 { font-size: 1.8rem; font-weight: bold; text-align: center; margin-bottom: 20px; color: #ffffff; letter-spacing: 0.5px; }
         
-        /* Contenedor legal reducido a la mitad */
-        .legal-scrollbox { background: #070d19; border: 1px solid #1e293b; padding: 15px; height: 110px; overflow-y: scroll; border-radius: 6px; font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; text-align: justify; line-height: 1.5; }
+        /* Contenedor legal */
+        .legal-scrollbox { background: #070d19; border: 1px solid #1e293b; padding: 15px; height: 110px; overflow-y: scroll; border-radius: 6px; font-size: 0.85rem; color: #94a3b8; margin-bottom: 20px; text-transform: justify; line-height: 1.5; }
         .legal-scrollbox h3 { color: #ffffff; font-size: 0.95rem; margin: 12px 0 4px 0; font-weight: bold; border-bottom: 1px solid #334155; padding-bottom: 3px; }
         .legal-scrollbox h3:first-child { margin-top: 0; }
         
@@ -48,10 +56,17 @@
         .rates-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .rates-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 700; color: #ffffff; }
         .rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .rate-card { background: #1e293b; border: 1px solid #374151; border-radius: 6px; padding: 25px; text-align: center; }
+        .rate-card { background: #1e293b; border: 1px solid #374151; border-radius: 6px; padding: 25px; text-align: center; position: relative; overflow: hidden; }
         .rate-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #ffffff; }
         .rate-price { font-size: 1.8rem; color: #ea580c; font-weight: bold; margin-bottom: 15px; }
         .rate-card p { font-size: 0.9rem; color: #cbd5e1; }
+        
+        /* Detalles específicos del Resaltado de Oferta */
+        .rate-card-featured { border: 2px solid #22c55e !important; background: linear-gradient(145deg, #1e293b, #0d1e14); }
+        .promo-ribbon { background: #22c55e; color: #1a202c; position: absolute; top: 15px; right: -35px; transform: rotate(45deg); width: 130px; font-size: 0.7rem; font-weight: 900; padding: 4px 0; text-transform: uppercase; letter-spacing: 0.5px; }
+        .sub-promo-box { margin-top: 15px; padding: 12px; background: rgba(7, 13, 25, 0.6); border-radius: 6px; border: 1px solid #334155; text-align: left; font-size: 0.85rem; }
+        .sub-promo-line { display: flex; justify-content: space-between; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px dashed #334155; }
+        .sub-promo-line:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 
         /* TERCER BLOQUE: PORTAL PROFESIONAL Y LICENCIATURA DE HERRAMIENTAS */
         .portal-reconfigured-section { padding: 60px 0; background: #0b0f19; border-bottom: 1px solid #1e293b; }
@@ -82,7 +97,7 @@
         .advantages-section h2 { text-align: center; margin-bottom: 15px; font-size: 2rem; color: #ffffff; font-weight: 700; }
         .advantages-section .section-desc { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1rem; max-width: 800px; margin: 0 auto; }
         .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .advantage-card { background: #1e293b; border-top: 4px solid #0284c7; padding: 25px; border-radius: 6px; border: 1px solid #334155; }
+        .advantage-card { background: #1e293b; border-top: 4px solid #ea580c; padding: 25px; border-radius: 6px; border: 1px solid #334155; }
         .advantage-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 12px; font-weight: 700; }
         .advantage-card p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
 
@@ -139,6 +154,11 @@
 </head>
 <body>
 
+    <div class="promo-banner-header">
+        🛡️ <span class="badge-saare-text">[MS3V S.A.A.R.E. CERTIFICACIÓN EX-ANTE]</span> ¡ALERTA DE ADQUISICIÓN! Quedan solo <span id="licencias-count" class="counter-box">7</span> Licencias de Lanzamiento a <span class="highlight-green">0€ / GRATIS</span>. Siguiente tramo: 100 licencias promocionales a 100€ (Tarifa base normal: 1800€).
+        <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-banner-action" rel="noopener">Reclamar Acceso Temporal &rarr;</a>
+    </div>
+
     <nav>
         <div class="logo-area">
             <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Mesa de trabajo 1.jpeg'; this.onerror=null;">
@@ -156,14 +176,14 @@
                 <div class="legal-scrollbox">
                     <h3>1. TÉRMINOS DE LA LICENCIA DE SOFTWARE ANUAL S.A.A.R.E.</h3>
                     <p><strong>1.1 Objeto y Declaración Ex-Ante:</strong> Al rellenar el formulario de emisión y efectuar el pago, el Licenciatario suscribe una declaración técnica forense ex-ante estimando de buena fe su flujo de tráfico diario perimetral. La tarifa anual seleccionada constituye un límite volumétrico regulado de mercado (Tarifa Seed: hasta 1.500 interacciones/día; Tarifa Growth: hasta 20.000 interacciones/día; Tarifa Corporate Grid: tráfico masivo redundante sin límite de interacciones analíticas diarias).</p>
-                    <p><strong>1.2 Cláusula de Continuidad Industrial y Regularización:</strong> El Protocolo MS3V S.A.A.R.E. prioriza la disponibilidad operativa del cliente. En caso de superarse el umbral de flujo contratado debido a picos puntuales de tráfico, el servicio NO será interrumpido. No obstante, si el exceso es sostenido por más de treinta (30) días consecutivos, el sistema emitirá una alerta de gobernanza y el Licenciatario se obliga a formalizar un ajuste contractual dinámico (upgrade a la licencia superior de 14.500 € o 65.000 € correspondientemente) o a liquidar la diferencia económica correspondiente en la renovación anual.</p>
+                    <p><strong>1.2 Trazabilidad de Información Criptográfica MLS:</strong> La IA del Protocolo inyecta una capa perimetral basada en la estructura forense MLS (Máxima Logística de Seguridad). Cada flujo analítico genera una firma criptográfica hash indexada localmente, preconstituyendo una cadena de custodia de datos inmutable plenamente válida y verificable como evidencia pericial ante un Juez o Tribunal de Justicia.</p>
                     <p><strong>1.3 Extinción del Derecho de Desistimiento B2B:</strong> De conformidad con el artículo 103, apartado m) del Real Decreto Legislativo 1/2007 de Consumo, las partes acuerdan explícitamente que al tratarse de un suministro de contenido digital, claves criptográficas Crypto-ID de nodo local e informes automatizados de alineamiento regulatorio emitidos inmediatamente después de procesar el pago seguro en la pasarela Stripe, la ejecución técnica comenzará de inmediato, perdiéndose de forma definitiva cualquier derecho de desistimiento.</p>
                 </div>
 
                 <div class="checkbox-wrapper">
                     <input type="checkbox" id="legal-agreement-checkbox" onchange="toggleLegalGate()">
                     <label for="legal-agreement-checkbox" class="checkbox-label">
-                        Doy fe y acepto expresamente los <strong>Términos de Licencia de Software Corporativo</strong> (incluyendo la política de continuidad de flujo a los 30 días), la <strong>Política de Privacidad y Tratamiento de Datos Local</strong>, y confirmo la pérdida de desistimiento B2B al recibir el contenido criptográfico ex-ante de inmediato.
+                        Doy fe y acepto expresamente los <strong>Términos de Licencia de Software Corporativo</strong> (incluyendo la inmutabilidad de la trazabilidad MLS verificable ante un juez), la <strong>Política de Privacidad y Tratamiento de Datos Local con Error Lógico = 0</strong>, y confirmo la pérdida de desistimiento B2B al recibir el contenido criptográfico ex-ante de inmediato.
                     </label>
                 </div>
 
@@ -191,11 +211,25 @@
         <div class="container">
             <h2>Modelos de Licencia por Volumen Estructural e Ingresos</h2>
             <div class="rates-grid">
-                <div class="rate-card">
-                    <h3>1. Bajo Flujo (Seed)</h3>
-                    <div class="rate-price">1.800 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
-                    <p>Optimizado para startups locales enfocadas en mitigar el riesgo sin sobrecostes. Límite de flujo: hasta <strong>1.500 interacciones al día</strong>.</p>
+                <div class="rate-card rate-card-featured">
+                    <div class="promo-ribbon">Fase Promocional</div>
+                    <h3>1. Bajo Flujo (Seed / Lanzamiento)</h3>
+                    <div class="rate-price" style="color: #22c55e;">FASE DE LANZAMIENTO</div>
+                    <p>Optimizado para startups y corporaciones enfocadas en mitigar el riesgo normativo con la máxima potencia analítica perimetral.</p>
+                    
+                    <div class="sub-promo-box">
+                        <div class="sub-promo-line">
+                            <span style="color: #22c55e; font-weight: bold;">Fase 1 (Primeras 20):</span>
+                            <span style="color: #ffffff;">0 € / GRATIS (1.500 int/día)</span>
+                        </div>
+                        <div class="sub-promo-line" style="border-bottom: none; padding-bottom: 0;">
+                            <span style="color: #ea580c; font-weight: bold;">Fase 2 (Siguientes 100):</span>
+                            <span style="color: #ffffff; font-weight: bold;">100 € (MÁXIMO FLUJO ILIMITADO)</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.72rem; color: #94a3b8; margin-top: 10px; font-style: italic;">Acceso total al motor redundante Corporate Grid (Valor original: 65.000 €/año)</p>
                 </div>
+                
                 <div class="rate-card" style="border: 2px solid #ea580c;">
                     <h3>2. Medio Flujo (Growth)</h3>
                     <div class="rate-price">14.500 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
@@ -217,9 +251,9 @@
                 <h2>Exclusivo para Auditores de Sistemas y Consultoras de TI</h2>
                 <p>Acceda a la suite ejecutable del <strong>Protocolo MS3V S.A.A.R.E.</strong>, la primera herramienta analítica de auditoría automatizada diseñada para certificar la robustez perimetral y asegurar el cumplimiento estricto del <strong>Reglamento Europeo de IA (EU AI Act)</strong>.</p>
                 <div class="feature-box">
-                    <div>🎯 <strong>Validación:</strong> Cero alucinaciones lógicas.</div>
-                    <div>🛡️ <strong>Blindaje:</strong> Aislamiento perimetral local sin fugas de datos.</div>
-                    <div>📁 <strong>Gobernanza:</strong> Trazabilidad criptográfica inmutable corporativa.</div>
+                    <div>🎯 <strong>Validación:</strong> Margen de Error Lógico = 0 (Zero Drift de inferencia).</div>
+                    <div>🛡️ <strong>Blindaje:</strong> Aislamiento perimetral local sin fugas de datos bajo trazabilidad MLS.</div>
+                    <div>📁 <strong>Gobernanza:</strong> Evidencia criptográfica inmutable verificable judicialmente.</div>
                 </div>
                 <div class="restriction-box">
                     <h5>🔒 Restricción de Acceso Premium</h5>
@@ -237,7 +271,8 @@
                     Fecha de Emisión: 2026-06-10 | ID de Auditoría: SEC_GUARD_88X
                 </div>
                 <div class="report-line">ESTADO GENERAL DE COMPLIANCE: <span class="report-accent">BLINDAJE ACTIVO - NIVEL 5</span></div>
-                <div class="report-line">» PROTECCIÓN DE INFERENCIA (FILTRO RAG): <span class="report-accent">EVALUADO CON EFICIENCIA DEL 99.9%</span></div>
+                <div class="report-line">» PROTECCIÓN DE INFERENCIA (FILTRO RAG): <span class="report-accent">EVALUADO CON EFICIENCIA DEL 99.99% (MARGEN ERROR LÓGICO = 0)</span></div>
+                <div class="report-line">» TRAZABILIDAD INDUSTRIAL: <span class="report-accent">LOGÍSTICA MLS INMUTABLE RESPALDADA ANTE TRIBUNALES</span></div>
                 <div class="report-line">» INTEGRIDAD DE NODOS CRYPTO-ID: <span class="report-line" style="color: #eab308;">ACTIVE_77X9 (AUTENTICACIÓN COMPLETADA)</span></div>
                 <div class="report-line">» ADUANA CONTRA INYECCIONES DE PROMPTS: VALIDACIÓN LÓGICA DETERMINISTA INDEPENDIENTE</div>
             </div>
@@ -263,11 +298,11 @@
                 </div>
                 <div class="advantage-card">
                     <h3>🛡️ Integridad y Trazabilidad Forense</h3>
-                    <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable, preconstituyendo la evidencia forense exigida por las autoridades.</p>
+                    <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable bajo arquitectura MLS, preconstituyendo la evidencia forense exigida por las autoridades y verificable ante un juez.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>📉 Error Lógico Cero (Zero Drift)</h3>
-                    <p>S.A.A.R.E. sustituye la aleatoriedad por restricciones semánticas deterministas locales, eliminando formalmente el riesgo de alucinación.</p>
+                    <p>S.A.A.R.E. sustituye la aleatoriedad por restricciones semánticas deterministas locales, eliminando formalmente el riesgo de alucinación y garantizando un margen de error lógico igual a cero.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>¼️ Erradicación de la Obsolescencia</h3>
@@ -338,7 +373,7 @@
                 <div class="pilar-card border-grey">
                     <span class="icon">📉</span>
                     <h3>Coste Cero (Sin Tokens)</h3>
-                    <p>S.A.A.R.E. opera mediante restricciones algorítmicas locales, eliminando la carga de inferencia y fijando la desviación por debajo del umbral del 0.01%.</p>
+                    <p>S.A.A.R.E. opera mediante restricciones algorítmicas locales, optimizando los recursos de la empresa y fijando el margen de error lógico estrictamente a cero.</p>
                 </div>
                 <div class="pilar-card border-orange">
                     <span class="icon">🛡️</span>
@@ -380,6 +415,29 @@
                 mainBtn.removeAttribute('href');
             }
         }
+
+        // CONTROL DE PERSISTENCIA DEL CONTADOR DE LICENCIAS GRATUITAS
+        document.addEventListener("DOMContentLoaded", function() {
+            const storageKey = "saare_licencias_gratis_v2";
+            let currentLicencias = localStorage.getItem(storageKey);
+
+            if (!currentLicencias) {
+                currentLicencias = 7; // Inicia mostrando 7 disponibles para urgencia extrema
+                localStorage.setItem(storageKey, currentLicencias);
+            } else {
+                currentLicencias = parseInt(currentLicencias);
+            }
+
+            const countElement = document.getElementById("licencias-count");
+            countElement.innerText = currentLicencias;
+
+            // Simulación de decremento aleatorio controlado (15% probabilidad)
+            if (currentLicencias > 1 && Math.random() < 0.15) {
+                currentLicencias -= 1;
+                localStorage.setItem(storageKey, currentLicencias);
+                countElement.innerText = currentLicencias;
+            }
+        });
     </script>
 
 </body>
