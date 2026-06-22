@@ -29,13 +29,48 @@
         .btn-yellow { background: #ffcc00; color: #1a1a1a; border: 2px solid #e6b800; animation: pulseYellow 2s infinite; }
         .btn-yellow:hover { background: #e6b800; transform: translateY(-1px); }
         
-        /* Animación de Pulso Naranja (Licencia) */
+        /* Animación de Pulso Naranja (Licencia Directa Corporativa) */
         .btn-orange { background: #ea580c; color: #ffffff; animation: pulseOrange 2s infinite; cursor: pointer; }
         .btn-orange:hover { background: #c2410c; }
         
         /* Animación de Pulso Verde (WhatsApp Soporte) */
         .btn-whatsapp { background: #25d366; color: #ffffff; animation: pulseGreen 2s infinite; }
         .btn-whatsapp:hover { background: #128c7e; }
+
+        /* NUEVO ESTILO: CARD HIGHLIGHT PREMIUM PARA LICENCIAS */
+        .enterprise-highlight-card {
+            background: linear-gradient(145deg, #1e293b, #0b1329);
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .enterprise-card-text { flex: 1; min-width: 300px; }
+        .enterprise-card-text h3 { color: #38bdf8; font-size: 1.4rem; margin-bottom: 8px; font-weight: bold; }
+        .enterprise-card-text p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; }
+        .btn-giant-action {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: #ffffff !important;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .btn-giant-action:hover {
+            background: linear-gradient(135deg, #60a5fa, #2563eb);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+            transform: scale(1.02);
+        }
 
         @keyframes pulseYellow {
             0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.4); }
@@ -216,8 +251,8 @@
                 ⚡ Auditorías
             </a>
             
-            <a href="#aduana-legal" class="btn-nav btn-orange" id="nav-btn-gate" rel="noopener">
-                🔥 Emitir Licencia Automatizada
+            <a href="mailto:legal@saare.es?subject=Solicitud Urgente: Emisión de Licencia Corporativa SAARE" class="btn-nav btn-orange" rel="noopener">
+                🔥 Solicitar Licencia Corporativa
             </a>
             
             <a href="https://api.whatsapp.com/send?phone=34633886506&text=Solicito%20informaci%C3%B3n%20para%20un%20despliegue%20corporativo%20del%20cl%C3%BAster%20S.A.A.R.E." target="_blank" class="btn-nav btn-whatsapp" rel="noopener">
@@ -227,7 +262,19 @@
     </nav>
 
     <div class="container">
-        <div style="background-color: #1e293b; color: #ffffff; padding: 25px; border-radius: 8px; margin: 25px 0 10px 0; border: 2px solid #ffcc00; font-family: sans-serif; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);">
+        <div class="enterprise-highlight-card">
+            <div class="enterprise-card-text">
+                <h3>🛡️ Control de Cumplimiento y Módulo de Emisión Licencias Enterprise</h3>
+                <p>
+                    Despliegue centralizado del protocolo perimetral síncrono para entornos corporativos y auditorías ex-ante automatizadas. Active de forma inmediata el entorno de producción seguro y desacoplado a cero tokens.
+                </p>
+            </div>
+            <a href="mailto:legal@saare.es?subject=Solicitud de Licencia Corporativa / Demo Enterprise SAARE" class="btn-giant-action">
+                Solicitar Licencia Corporativa / Demo Enterprise
+            </a>
+        </div>
+
+        <div style="background-color: #1e293b; color: #ffffff; padding: 25px; border-radius: 8px; margin: 10px 0 25px 0; border: 2px solid #ffcc00; font-family: sans-serif; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
                 <span style="background-color: #ffcc00; color: #1a1a1a; padding: 4px 10px; font-weight: bold; font-size: 12px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Portal Profesional</span>
                 <h2 style="color: #ffcc00; margin: 0; font-size: 20px; font-weight: bold; text-transform: uppercase;">Exclusivo para Auditores de Sistemas y Consultoras de TI</h2>
@@ -241,7 +288,7 @@
                 <div>📁 <strong>Gobernanza:</strong> Trazabilidad criptográfica inmutable corporativa.</div>
             </div>
             <p style="color: #94a3b8; font-size: 13px; margin: 15px 0 0 0; font-style: italic;">
-                🔒 Los scripts de explotación, entornos de testeo y las guías avanzadas se liberan mediante descarga directa del <strong>Manual de Ejecución Profesional</strong> exclusivamente tras validar la licencia comercial mediante el botón amarillo superior <strong>"Auditorías"</strong>.
+                🔒 Los scripts de explotación, environments de testeo y las guías avanzadas se liberan mediante descarga directa del <strong>Manual de Ejecución Profesional</strong> exclusivamente tras validar la licencia comercial mediante el botón amarillo superior <strong>"Auditorías"</strong>.
             </p>
         </div>
     </div>
@@ -320,7 +367,7 @@
                     La integración de Modelos de Inteligencia Artificial locales cerrados (On-Premise) plantea un severo conflicto con el estándar internacional **ISO 27001** e **ISO 42001**. El aislamiento tradicional obligaba a limitar el entorno para prevenir fugas, provocando una obsolescencia cognitiva inmediata.
                 </p>
                 <p>
-                    Nuestra solución perimetral revoluciona este paradigma. Al desplegar canales virtuales estrictamente unidireccionales, S.A.A.R.E. actúa como un puente de anonimización intermedia ex-ante. Satisface las exigencias de integridad de datos de la norma sin exponer el núcleo inteligente al exterior, lo que permite auditar las herramientas operativas de forma determinista con una garantía estructural de error del 0%.
+                    Nuestra solución perimetral revoluciona este paradigma. Al desplegar canales virtuales strictly unidireccionales, S.A.A.R.E. actúa como un puente de anonimización intermedia ex-ante. Satisface las exigencias de integridad de datos de la norma sin exponer el núcleo inteligente al exterior, lo que permite auditar las herramientas operativas de forma determinista con una garantía estructural de error del 0%.
                 </p>
                 <a href="Informe_Alineamiento_ISO27001_SAARE.pdf" target="_blank" class="btn-doc-download" rel="noopener">
                     📥 Descargar Informe de Alineamiento ISO 27001
@@ -349,7 +396,7 @@
                     <p>Al desacoplar la validación de restricciones del motor de inferencia probabilístico, S.A.A.R.E. sustituye la aleatoriedad por restricciones semánticas deterministas locales. El riesgo de deriva lógica o alucinación es eliminado de raíz formalmente, garantizando una tasa de error de precisión absoluta.</p>
                 </div>
                 <div class="advantage-card">
-                    <h3>⚡ Erradicación de la Obsolescencia</h3>
+                    <h3>¼️ Erradicación de la Obsolescencia</h3>
                     <p>Se elimina la carga financiera asociada al reentrenamiento o sintonización mensual de modelos cerrados. El puente perimetral refresca el contexto capturando conocimiento fresco del exterior de forma anonimizada, inyectándolo localmente con un coste de OpEx y tokens cloud de cero.</p>
                 </div>
             </div>
@@ -575,13 +622,17 @@
             if (checkbox.checked) {
                 mainBtn.classList.remove('disabled');
                 mainBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
-                navBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
-                navBtn.setAttribute('target', '_blank');
+                if(navBtn) {
+                    navBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
+                    navBtn.setAttribute('target', '_blank');
+                }
             } else {
                 mainBtn.classList.add('disabled');
                 mainBtn.removeAttribute('href');
-                navBtn.setAttribute('href', '#aduana-legal');
-                navBtn.removeAttribute('target');
+                if(navBtn) {
+                    navBtn.setAttribute('href', 'mailto:legal@saare.es?subject=Solicitud Urgente: Emisión de Licencia Corporativa SAARE');
+                    navBtn.removeAttribute('target');
+                }
             }
         }
     </script>
