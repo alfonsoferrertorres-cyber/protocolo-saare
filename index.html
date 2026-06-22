@@ -72,6 +72,44 @@
             transform: scale(1.02);
         }
 
+        /* NUEVA SECCIÓN: EMBUDO EXPRES PARA LEADS FRÍOS DE ANUNCIOS */
+        .express-funnel-section {
+            background: #111827;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+        .express-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .express-action-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .express-action-card h4 { font-size: 1.1rem; margin-bottom: 8px; color: #ffffff; }
+        .express-action-card p { font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px; text-align: left; }
+        .btn-express {
+            width: 100%;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
         @keyframes pulseYellow {
             0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.4); }
             70% { box-shadow: 0 0 0 10px rgba(255, 204, 0, 0); }
@@ -272,6 +310,33 @@
             <a href="mailto:legal@saare.es?subject=Solicitud de Licencia Corporativa / Demo Enterprise SAARE" class="btn-giant-action">
                 Solicitar Licencia Corporativa / Demo Enterprise
             </a>
+        </div>
+
+        <div class="express-funnel-section">
+            <h3 style="color: #ffffff; font-size: 1.2rem; font-weight: bold; border-bottom: 1px solid #334155; padding-bottom: 10px;">⚡ Canales Rápidos de Acceso y Evaluación Ex-Ante</h3>
+            <div class="express-grid">
+                <div class="express-action-card">
+                    <div>
+                        <h4>📚 Dossier Técnico de Ingeniería</h4>
+                        <p>Solicite los planos de infraestructura perimetral, esquemas de nodos y modelos de restricciones deterministas locales.</p>
+                    </div>
+                    <a href="mailto:legal@saare.es?subject=Solicitud de Dossier Tecnico Completo - Protocolo SAARE" class="btn-express" style="background: #3b82f6; color: #ffffff;">Recibir Dossier PDF</a>
+                </div>
+                <div class="express-action-card">
+                    <div>
+                        <h4>🧠 Agenda de Demo (15 min)</h4>
+                        <p>Reserve una sesión síncrona cerrada con nuestro comité técnico para evaluar el alineamiento con la AESIA.</p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=34633886506&text=Deseo%20agendar%20una%20reuni%C3%B3n%20tecnica%20de%20evaluaci%C3%B3n%20SAARE" target="_blank" class="btn-express" style="background: #22c55e; color: #ffffff;">Agendar Mesa Técnica</a>
+                </div>
+                <div class="express-action-card">
+                    <div>
+                        <h4>⚖️ Auditoría Forense Express</h4>
+                        <p>Acceda directamente a la pasarela externa sin pre-requisitos de firma si ya cuenta con una clave de clúster autorizada.</p>
+                    </div>
+                    <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-express" style="background: #ffcc00; color: #1a1a1a;">Ir a Fillout Directo</a>
+                </div>
+            </div>
         </div>
 
         <div style="background-color: #1e293b; color: #ffffff; padding: 25px; border-radius: 8px; margin: 10px 0 25px 0; border: 2px solid #ffcc00; font-family: sans-serif; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);">
