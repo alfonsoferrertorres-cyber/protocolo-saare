@@ -26,16 +26,12 @@
         .logo-img { height: 50px; width: auto; border-radius: 4px; }
         .logo-text { color: #ffffff; font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
 
-        /* HERO ADUANA LEGAL CON ESTILIZADO DE ALTA CIBERSEGURIDAD */
-        .hero-aduana-section { padding: 40px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
-        .badge { display: inline-block; background: #fee2e2; color: #dc2626; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; border: 1px solid #fca5a5; margin-bottom: 20px; text-transform: uppercase; }
-        
-        /* BOTÓN DE ACCIÓN COMPORTAMIENTO DINÁMICO */
-        .btn-large-gate-orange { width: 100%; background-color: #ea580c; color: #ffffff; border: none; padding: 14px; font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3); }
-        .btn-large-gate-orange:hover { background-color: #c2410c; transform: translateY(-1px); }
-        .btn-large-gate-orange.disabled { background-color: #1e293b !important; color: #64748b !important; box-shadow: none !important; cursor: not-allowed; transform: none !important; opacity: 0.5; pointer-events: none; }
+        /* BOTÓN DE ACCIÓN COMPORTAMIENTO DIRECTO */
+        .action-container { text-align: center; padding: 50px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
+        .btn-large-gate-orange { display: inline-flex; background-color: #ea580c; color: #ffffff; border: none; padding: 16px 40px; font-size: 15px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; cursor: pointer; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3); }
+        .btn-large-gate-orange:hover { background-color: #c2410c; transform: translateY(-2px); }
 
-        /* SECCIÓN DE TARIFAS DE PRECIOS POR VOLUMEN (AHORA ARRIBA) */
+        /* SECCIÓN DE TARIFAS DE PRECIOS POR VOLUMEN */
         .rates-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .rates-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 700; color: #ffffff; }
         .rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
@@ -51,21 +47,10 @@
         .sub-promo-line { display: flex; justify-content: space-between; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px dashed #334155; }
         .sub-promo-line:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
 
-        /* TERCER BLOQUE: PORTAL PROFESIONAL Y LICENCIATURA DE HERRAMIENTAS */
-        .portal-reconfigured-section { padding: 60px 0; background: #0b0f19; border-bottom: 1px solid #1e293b; }
-        .portal-frame { border: 2px solid #ffcc00; background-color: #1e293b; padding: 35px; border-radius: 8px; }
-        .portal-tag { background-color: #ffcc00; color: #1a1a1a; padding: 4px 10px; font-weight: bold; font-size: 12px; border-radius: 4px; text-transform: uppercase; display: inline-block; margin-bottom: 15px; }
-        .portal-frame h2 { color: #ffcc00; margin: 0 0 15px 0; font-size: 20px; font-weight: bold; text-transform: uppercase; }
-        .portal-frame p { color: #f1f5f9; font-size: 16px; margin-bottom: 20px; line-height: 1.5; }
-        .feature-box { display: flex; gap: 15px; flex-wrap: wrap; color: #cbd5e1; font-size: 14px; background-color: #0f172a; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
-        .restriction-box { background-color: #110904; border-left: 4px solid #ea580c; padding: 20px; border-radius: 0 6px 6px 0; }
-        .restriction-box h5 { color: #ea580c; margin: 0 0 10px 0; font-size: 15px; text-transform: uppercase; font-weight: bold; }
-        .restriction-box p { color: #94a3b8; font-size: 0.9rem; margin: 0; line-height: 1.6; }
-
         /* Reporte de Seguridad */
         .security-report { padding: 40px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .report-box { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 30px; font-family: monospace; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5); }
-        .report-header { border-bottom: 1px solid #374151; padding-bottom: 15px; margin-bottom: 15px; color: #38bdf8; }
+        .report-box h3 { border-bottom: 1px solid #374151; padding-bottom: 15px; margin-bottom: 15px; color: #38bdf8; font-size: 1rem; }
         .report-line { margin-bottom: 10px; color: #cbd5e1; }
         .report-accent { color: #22c55e; font-weight: bold; }
 
@@ -114,12 +99,6 @@
         .border-dark { border-top: 5px solid #0f172a; }
         .text-orange { color: #ea580c; }
 
-        .precaution-section { padding: 40px 0; background: #111827; border-bottom: 1px solid #1e293b; }
-        .precaution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .precaution-card { background: #1e293b; border-left: 4px solid #eab308; padding: 20px; border-radius: 4px; }
-        .precaution-card h4 { color: #ffffff; font-size: 1rem; margin-bottom: 8px; font-weight: bold; }
-        .precaution-card p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
-
         footer { background: #0b0f19; color: #94a3b8; padding: 60px 0 40px 0; text-align: center; font-size: 0.9rem; }
         .sys-hash { font-family: monospace; color: #64748b; background: #1e293b; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 25px; }
         .footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 25px; flex-wrap: wrap; font-size: 0.85rem; }
@@ -139,9 +118,12 @@
             <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Mesa de trabajo 1.jpeg'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
+        <div style="color: #ea580c; font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; font-family: monospace;">
+            SAARE MS3V
+        </div>
     </nav>
 
-    <!-- 1. SECCIÓN DE TARIFAS DE PRECIOS POR VOLUMEN (IMPACTO PRIMERO SEGÚN IMAGE_BAB0E4.PNG) -->
+    <!-- 1. SECCIÓN DE TARIFAS DE PRECIOS POR VOLUMEN -->
     <section class="rates-section">
         <div class="container">
             <h2>Modelos de Licencia por Volumen Estructural e Ingresos</h2>
@@ -179,83 +161,20 @@
         </div>
     </section>
 
-    <!-- 2. SECCIÓN ADUANA LEGAL (AHORA EN SEGUNDO LUGAR CON LOGOS AMPLIADOS) -->
-    <section class="hero-aduana-section">
-        <div class="container" style="text-align: center;">
-            <span class="badge">MARCO REGULATORIO ESPAÑA 2026 &nbsp;|&nbsp; AESIA & EU AI ACT COMPLIANT</span>
-            
-            <div style="max-width: 750px; margin: 0 auto; padding: 30px; background: linear-gradient(145deg, #0b1329, #111827); border: 2px solid #ea580c; border-radius: 8px; box-shadow: 0px 4px 25px rgba(234, 88, 12, 0.25);">
-                
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <h2 style="color: #ffffff; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0;">
-                        Aduana Legal de Contratación Corporativa
-                    </h2>
-                </div>
-
-                <div style="background-color: #070d19; border: 1px solid #1e293b; border-radius: 4px; padding: 12px; max-height: 110px; overflow-y: scroll; margin-bottom: 15px;">
-                    <p style="color: #94a3b8; font-size: 11px; line-height: 1.4; margin: 0; text-align: justify;">
-                        <strong>1. TÉRMINOS DE LA LICENCIA DE SOFTWARE ANUAL S.A.A.R.E.</strong><br>
-                        1.1 Objeto y Declaración Ex-Ante: Al rellenar el formulario de emisión y efectuar el pago, el Licenciatario suscribe una declaración técnica forense ex-ante estimando de buena fe su flujo de tráfico diario perimetral. La tarifa anual seleccionada constituye un límite volumétrico regulado de mercado (Tarifa Seed: hasta 1.500 interacciones/día; Tarifa Growth: hasta 20.000 interacciones/día; Tarifa Corporate Grid: tráfico masivo redundante sin límite de interacciones analíticas diarias).<br><br>
-                        1.2 Trazabilidad de Información Criptográfica MLS: La IA del Protocolo inyecta una capa perimetral basada en la estructura forense MLS (Máxima Logística de Seguridad). Cada flujo analítico genera una firma criptográfica hash indexada localmente, preconstituyendo una cadena de custodia de datos inmutable plenamente válida y verificable como evidencia pericial ante un Juez o Tribunal de Justicia.<br><br>
-                        1.3 Extinción del Derecho de Desistimiento B2B: De conformidad con el artículo 103, apartado m) del Real Decreto Legislativo 1/2007 de Consumo, las partes acuerdan explícitamente que al tratarse de un suministro de contenido digital, claves criptográficas Crypto-ID de nodo local e informes automatizados de alineamiento regulatorio emitidos inmediatamente después de procesar el pago seguro en la pasarela Stripe, la ejecución técnica comenzará de inmediato, perdiéndose de forma definitiva cualquier derecho de desistimiento.
-                    </p>
-                </div>
-
-                <div style="background-color: #070d19; border: 1px solid #1e293b; padding: 10px; border-radius: 4px; margin-bottom: 25px; display: flex; align-items: flex-start; gap: 10px;">
-                    <input type="checkbox" id="legal-agreement-checkbox" onchange="toggleLegalGate()" style="margin-top: 3px; cursor: pointer; accent-color: #ea580c; transform: scale(0.9);">
-                    <label for="legal-agreement-checkbox" style="color: #94a3b8; font-size: 10.5px; line-height: 1.3; cursor: pointer; text-align: justify; display: block;">
-                        Doy fe y acepto expresamente los <span style="color: #ffffff; font-weight: 600;">Términos de Licencia de Software Corporativo</span> (incluyendo la inmutabilidad de la trazabilidad MLS verificable ante un juez), la <span style="color: #ffffff; font-weight: 600;">Política de Privacidad y Tratamiento de Datos Local con Error Lógico = 0</span>, y confirmo la pérdida de desistimiento B2B al recibir el contenido criptográfico ex-ante de inmediato.
-                    </label>
-                </div>
-
-                <!-- 🚀 LOGOTIPOS DE VALIDACIÓN AMPLIADOS Y REFORZADOS -->
-                <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 25px;">
-                    <div style="background-color: #070d19; border: 2px solid #ea580c; padding: 12px 24px; border-radius: 6px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 10px rgba(234, 88, 12, 0.1);">
-                        <span style="color: #ea580c; font-size: 18px;">🛡️</span>
-                        <span style="color: #ffffff; font-size: 12px; font-weight: 800; letter-spacing: 1px;">MS3V S.A.A.R.E.</span>
-                    </div>
-                    <div style="background-color: #070d19; border: 2px solid #ea580c; padding: 12px 24px; border-radius: 6px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 10px rgba(234, 88, 12, 0.1);">
-                        <span style="color: #ea580c; font-size: 18px;">⚙️</span>
-                        <span style="color: #ffffff; font-size: 12px; font-weight: 800; letter-spacing: 1px;">CERTIFICACIÓN EX-ANTE</span>
-                    </div>
-                </div>
-
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" id="main-gate-btn" class="btn-large-gate-orange disabled" rel="noopener">
-                        🔒 Proceder a la Emisión de Licencia en Fillout
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- RESTO DE SECCIONES INTACTAS -->
-    <section class="portal-reconfigured-section">
+    <!-- 2. BOTÓN ÚNICO DE ACCESO DIRECTO -->
+    <section class="action-container">
         <div class="container">
-            <div class="portal-frame">
-                <div class="portal-tag">Portal Profesional</div>
-                <h2>Exclusivo para Auditores de Sistemas y Consultoras de TI</h2>
-                <p>Acceda a la suite ejecutable del <strong>Protocolo MS3V S.A.A.R.E.</strong>, la primera herramienta analítica de auditoría automatizada diseñada para certificar la robustez perimetral y asegurar el cumplimiento estricto del <strong>Reglamento Europeo de IA (EU AI Act)</strong>.</p>
-                <div class="feature-box">
-                    <div>🎯 <strong>Validación:</strong> Margen de Error Lógico = 0 (Zero Drift de inferencia).</div>
-                    <div>🛡️ <strong>Blindaje:</strong> Aislamiento perimetral local sin fugas de datos bajo trazabilidad MLS.</div>
-                    <div>📁 <strong>Gobernanza:</strong> Evidencia criptográfica inmutable verificable judicialmente.</div>
-                </div>
-                <div class="restriction-box">
-                    <h5>🔒 Restricción de Acceso Premium</h5>
-                    <p>Con la compra de su Licencia Comercial Anual a través de la "Aduana Legal" superior, recibirá de forma inmediata un <strong>CÓDIGO DE DESCARGA DE MANUALES Y DESPLIEGUE DE PROTOCOLO</strong> en su correo de confirmación. Este código criptográfico le otorgará acceso exclusivo de descarga directa durante <strong>1 AÑO</strong>.</p>
-                </div>
-            </div>
+            <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-large-gate-orange" rel="noopener">
+                🔒 Proceder al Alta de Licencia Automatizada
+            </a>
         </div>
     </section>
 
     <section class="security-report">
         <div class="container">
             <div class="report-box">
-                <div class="report-header">
-                    <strong>[S.A.A.R.E. SYSTEM LOG: REPORTE DE SEGURIDAD CRÍTICA]</strong><br>
-                    Fecha de Emisión: 2026-06-10 | ID de Auditoría: SEC_GUARD_88X
-                </div>
+                <h3><strong>[S.A.A.R.E. SYSTEM LOG: REPORTE DE SEGURIDAD CRÍTICA]</strong><br>
+                Fecha de Emisión: 2026-06-10 | ID de Auditoría: SEC_GUARD_88X</h3>
                 <div class="report-line">ESTADO GENERAL DE COMPLIANCE: <span class="report-accent">BLINDAJE ACTIVO - NIVEL 5</span></div>
                 <div class="report-line">» PROTECCIÓN DE INFERENCIA (FILTRO RAG): <span class="report-accent">EVALUADO CON EFICIENCIA DEL 99.99% (MARGEN ERROR LÓGICO = 0)</span></div>
                 <div class="report-line">» TRAZABILIDAD INDUSTRIAL: <span class="report-accent">LOGÍSTICA MLS INMUTABLE RESPALDADA ANTE TRIBUNALES</span></div>
@@ -288,11 +207,11 @@
                 </div>
                 <div class="advantage-card">
                     <h3>📉 Error Lógico Cero (Zero Drift)</h3>
-                    <p>S.A.A.R.E. sustituye la aleatoriedad por restricciones semánticas deterministas locales, eliminando formalmente el riesgo de alucinación y garantizando un margen de error lógico igual a cero.</p>
+                    <p>Las restricciones semánticas de S.A.A.R.E. sustituyen la aleatoriedad por restricciones semánticas deterministas locales, eliminando formalmente el riesgo de alucinación y garantizando un margen de error lógico igual a cero.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>¼️ Erradicación de la Obsolescencia</h3>
-                    <p>Se elimina la carga financiera asociada al reentrenamiento. El puente perimetral refresca el contexto capturando conocimiento fresco de forma anonimizada con un coste de OpEx de cero.</p>
+                    <p>Se elimina la carga financiera asociada al reentrenamiento. El puente perimetral refresca el contextopturando conocimiento fresco de forma anonimizada con un coste de OpEx de cero.</p>
                 </div>
             </div>
         </div>
@@ -303,25 +222,6 @@
             <div class="risk-alert-box">
                 <h3>■ ZONA DE RIESGO CRÍTICO (MARCO SANCIONADOR):</h3>
                 <p>Las infracciones calificadas como muy graves bajo el EU AI Act acarrean sanciones financieras de <strong>hasta 35 millones de euros o el 7% del volumen de negocio global anual</strong> si se integran modelos algorítmicos sin una infraestructura de control preventivo.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="precaution-section">
-        <div class="container">
-            <div class="precaution-grid">
-                <div class="precaution-card">
-                    <h4>⚠️ Exención de Responsabilidad Técnico-Forense</h4>
-                    <p>El Protocolo S.A.A.R.E. actúa como una capa analítica perimetral externa de validación lógica determinista de soporte basado en restricciones ex-ante.</p>
-                </div>
-                <div class="precaution-card" style="border-left-color: #0284c7;">
-                    <h4>💳 Entorno de Pago Seguro y Control de Flujo</h4>
-                    <p>Toda transacción se procesa bajo el estándar de cifrado PCI-DSS mediante pasarela Stripe en producción conectada directamente a la cuenta bancaria titular.</p>
-                </div>
-                <div class="precaution-card" style="border-left-color: #ea580c;">
-                    <h4>📦 Suministro de Contenido Digital Ex-Ante</h4>
-                    <p>Al tratarse de un suministro de contenido digital ejecutado y entregado de forma inmediata tras el pago, el derecho de desistimiento quedará extinguido conforme al artículo 103 de Consumo.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -369,7 +269,7 @@
                 <div class="pilar-card border-dark">
                     <span class="icon">🌍</span>
                     <h3>Activo Intangible Seguro</h3>
-                    <p>Al estructurarse como infraestructura perimetral local, clasifica directamente como una inversión en activos intangibles de ciberseguridad corporativa.</p>
+                    <p>Al estructurarse como infraestructura perimetral local, classifies directamente como una inversión en activos intangibles de ciberseguridad corporativa.</p>
                 </div>
             </div>
         </div>
@@ -389,19 +289,6 @@
     </footer>
 
     <script>
-        function toggleLegalGate() {
-            var checkbox = document.getElementById('legal-agreement-checkbox');
-            var mainBtn = document.getElementById('main-gate-btn');
-            
-            if (checkbox.checked) {
-                mainBtn.classList.remove('disabled');
-                mainBtn.setAttribute('href', 'https://forms.fillout.com/t/jSYEe4iTMUus');
-            } else {
-                mainBtn.classList.add('disabled');
-                mainBtn.removeAttribute('href');
-            }
-        }
-
         // CONTROL DE PERSISTENCIA DEL CONTADOR DE LICENCIAS GRATUITAS
         document.addEventListener("DOMContentLoaded", function() {
             const storageKey = "saare_licencias_gratis_v2";
