@@ -20,24 +20,28 @@
         .promo-banner-header .btn-banner-action { color: #1a202c; text-decoration: none; margin-left: 15px; background: #ffffff; padding: 6px 14px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; display: inline-block; font-weight: 800; }
         .promo-banner-header .btn-banner-action:hover { background: #ea580c; color: #ffffff; }
 
-        /* Navbar Minimalista Purificado */
+        /* Navbar Minimalista con Eslogan y Cerebro */
         nav { background: #0f172a; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ea580c; position: sticky; top: 0; z-index: 100; }
         .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-img { height: 50px; width: auto; border-radius: 4px; }
         .logo-text { color: #ffffff; font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
+        
+        /* Estilizado del nuevo eslogan derecho */
+        .nav-slogan-area { display: flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.95rem; font-weight: 500; letter-spacing: 1px; }
+        .nav-brain-icon { font-size: 1.3rem; }
 
-        /* SECCIÓN HERO INTEGRADA DE ALTA SIMETRÍA (SEGUN TU FOTO) */
+        /* SECCIÓN HERO INTEGRADA DE ALTA SIMETRÍA */
         .hero-licensing-section { padding: 60px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
         .hero-flex-wrapper { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
         .hero-side-logo { max-height: 160px; width: auto; background-color: #ffffff; padding: 10px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-        .central-cta-box { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        .central-cta-box { display: flex; flex-direction: column; align-items: center; gap: 15px; }
         
-        /* BOTÓN PRINCIPAL TRAMITA TU LICENCIA */
-        .btn-tramita-licencia { display: inline-flex; background-color: #ea580c; color: #ffffff; border: none; padding: 22px 50px; font-size: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 6px 25px rgba(234, 88, 12, 0.4); transition: all 0.2s ease; }
-        .btn-tramita-licencia:hover { background-color: #c2410c; transform: translateY(-3px); box-shadow: 0 8px 30px rgba(234, 88, 12, 0.5); }
+        /* BOTÓN TRAMITA TU LICENCIA (UN PELÍN MÁS PEQUEÑO Y ESTILIZADO) */
+        .btn-tramita-licencia { display: inline-flex; background-color: #ea580c; color: #ffffff; border: none; padding: 16px 36px; font-size: 19px; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 5px 20px rgba(234, 88, 12, 0.35); transition: all 0.2s ease; }
+        .btn-tramita-licencia:hover { background-color: #c2410c; transform: translateY(-2px); box-shadow: 0 7px 25px rgba(234, 88, 12, 0.45); }
         
         /* BOTÓN AZUL AUDITAR EN GEMINI */
-        .btn-auditar-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.95rem; padding: 12px 24px; border-radius: 6px; border: 1px solid #38bdf8; transition: all 0.2s ease; }
+        .btn-auditar-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 10px 20px; border-radius: 6px; border: 1px solid #38bdf8; transition: all 0.2s ease; }
         .btn-auditar-gemini:hover { background: #0369a1; transform: translateY(-1px); }
 
         /* SECCIÓN DE VENTAJAS INDUSTRIALES */
@@ -55,12 +59,11 @@
         .ethics-box h3 { font-size: 1.6rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
         .ethics-box p { color: #94a3b8; font-size: 1rem; max-width: 750px; margin: 0 auto; line-height: 1.7; }
 
-        /* SECCIÓN BLOQUE SLOGAN INFERIOR HAZLO TÚ MISMO */
+        /* SECCIÓN BLOQUE SLOGAN INFERIOR LIMPIO */
         .slogan-section { background: #0f172a; padding: 60px 0; text-align: center; }
         .slogan-container { max-width: 900px; margin: 0 auto; background: rgba(234, 88, 12, 0.02); border: 1px dashed rgba(234, 88, 12, 0.3); padding: 50px 30px; border-radius: 8px; }
-        .slogan-text-center { display: flex; flex-direction: column; align-items: center; margin-bottom: 25px; }
+        .slogan-text-center { display: flex; flex-direction: column; align-items: center; }
         .slogan-main { font-size: 2.6rem; font-weight: 900; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; }
-        .slogan-sub { font-size: 1.8rem; font-weight: 700; color: #ea580c; text-transform: uppercase; margin-top: 5px; }
 
         /* PIE DE PÁGINA CORPORATIVO */
         footer { background: #0b0f19; color: #94a3b8; padding: 40px 0; text-align: center; font-size: 0.9rem; }
@@ -74,27 +77,28 @@
 
     <!-- BARRA DE CONTADOR CON PRECIOS Y DESCUENTO ACTUALIZADO -->
     <div class="promo-banner-header">
-        🛡️ <span class="badge-saare-text">[MS3V S.A.A.R.E. CERTIFICACIÓN EX-ANTE]</span> ¡ALERTA DE ADQUISICIÓN! Las <span id="licencias-count" class="counter-box">50</span> primeras licencias tendrán un <span class="highlight-green">descuento del 50%</span> (se queda a solo 32,50€).
+        🛡️ <span class="badge-saare-text">[MS3V S.A.A.R.E. CERTIFICACIÓN EX-ANTE]</span> ¡ALERTA DE ADQUISICIÓN! Las <span id="licencias-count" class="counter-box">48</span> primeras licencias tendrán un <span class="highlight-green">descuento del 50%</span> (se queda a solo 32,50€).
         <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-banner-action" rel="noopener">Reclamar Acceso Temporal &rarr;</a>
     </div>
 
-    <!-- NAVBAR SUPERIOR -->
+    <!-- NAVBAR SUPERIOR CON LOGO Y ESLEGAN NUEVO -->
     <nav>
         <div class="logo-area">
-            <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Mesa de trabajo 1.jpeg'; this.onerror=null;">
+            <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Mesa de trabajo 1.png'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
-        <div style="color: #ea580c; font-weight: 900; font-size: 1.5rem; letter-spacing: 2px; font-family: monospace;">
-            SAARE MS3V
+        <div class="nav-slogan-area">
+            <span class="nav-brain-icon">🧠</span>
+            <span>&lt;empresa lider en tecnologia&gt;</span>
         </div>
     </nav>
 
-    <!-- BLOQUE PRINCIPAL SIMÉTRICO: LOGOS Y BOTÓN CENTRAL (SEGÚN TU CAPTURA) -->
+    <!-- BLOQUE PRINCIPAL SIMÉTRICO: LOGOS APLICADOS DESDE TU GITHUB -->
     <section class="hero-licensing-section">
         <div class="container">
             <div class="hero-flex-wrapper">
                 <!-- Logotipo Izquierdo -->
-                <img src="Mesa de trabajo 1.jpeg" alt="MS3V SAARE Motor Lógico" class="hero-side-logo">
+                <img src="Mesa de trabajo 1.png" alt="MS3V SAARE Motor Lógico" class="hero-side-logo">
                 
                 <!-- Caja de Botones Central -->
                 <div class="central-cta-box">
@@ -106,8 +110,8 @@
                     </a>
                 </div>
                 
-                <!-- Logotipo Derecho -->
-                <img src="Escudo_CC.png" alt="MS3V SAARE Escudo" class="hero-side-logo" onerror="this.src='Mesa de trabajo 1.jpeg'; this.onerror=null;">
+                <!-- Logotipo Derecho Corregido según tu GitHub -->
+                <img src="Logo + Cumplimiento.png" alt="MS3V SAARE Escudo" class="hero-side-logo" onerror="this.src='Mesa de trabajo 1.png'; this.onerror=null;">
             </div>
         </div>
     </section>
@@ -154,11 +158,7 @@
             <div class="slogan-container">
                 <div class="slogan-text-center">
                     <div class="slogan-main">Hazlo tú mismo</div>
-                    <div class="slogan-sub">No te dejes engañar</div>
                 </div>
-                <a href="https://gemini.google.com/share/c8fbe4822068" target="_blank" class="btn-auditar-gemini" rel="noopener">
-                    🔍 Auditar Conversación Abierta en Gemini
-                </a>
             </div>
         </div>
     </section>
@@ -184,7 +184,7 @@
             let currentLicencias = localStorage.getItem(storageKey);
 
             if (!currentLicencias) {
-                currentLicencias = 49; 
+                currentLicencias = 48; 
                 localStorage.setItem(storageKey, currentLicencias);
             } else {
                 currentLicencias = parseInt(currentLicencias);
