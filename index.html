@@ -12,7 +12,7 @@
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        /* BARRA DINÁMICA DE LANZAMIENTO DUAL S.A.A.R.E. */
+        /* BARRA DINÁMICA DE LANZAMIENTO S.A.A.R.E. */
         .promo-banner-header { background: #1a202c; color: #ffffff; text-align: center; padding: 14px 10px; font-size: 13px; font-weight: bold; position: relative; z-index: 999; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border-bottom: 3px solid #ea580c; letter-spacing: 0.5px; }
         .promo-banner-header .badge-saare-text { color: #ea580c; font-weight: 800; text-transform: uppercase; }
         .promo-banner-header .counter-box { background: #ea580c; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 14px; margin: 0 4px; font-family: monospace; }
@@ -26,26 +26,10 @@
         .logo-img { height: 50px; width: auto; border-radius: 4px; }
         .logo-text { color: #ffffff; font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
 
-        /* BOTÓN DE ACCIÓN COMPORTAMIENTO DIRECTO */
-        .action-container { text-align: center; padding: 50px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
-        .btn-large-gate-orange { display: inline-flex; background-color: #ea580c; color: #ffffff; border: none; padding: 16px 40px; font-size: 15px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; cursor: pointer; align-items: center; justify-content: center; gap: 10px; transition: all 0.2s ease; text-decoration: none; box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3); }
-        .btn-large-gate-orange:hover { background-color: #c2410c; transform: translateY(-2px); }
-
-        /* SECCIÓN DE TARIFAS DE PRECIOS POR VOLUMEN */
-        .rates-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
-        .rates-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 700; color: #ffffff; }
-        .rates-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .rate-card { background: #1e293b; border: 1px solid #374151; border-radius: 6px; padding: 25px; text-align: center; position: relative; overflow: hidden; }
-        .rate-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #ffffff; }
-        .rate-price { font-size: 1.8rem; color: #ea580c; font-weight: bold; margin-bottom: 15px; }
-        .rate-card p { font-size: 0.9rem; color: #cbd5e1; }
-        
-        /* Detalles específicos del Resaltado de Oferta */
-        .rate-card-featured { border: 2px solid #22c55e !important; background: linear-gradient(145deg, #1e293b, #0d1e14); }
-        .promo-ribbon { background: #22c55e; color: #1a202c; position: absolute; top: 15px; right: -35px; transform: rotate(45deg); width: 130px; font-size: 0.7rem; font-weight: 900; padding: 4px 0; text-transform: uppercase; letter-spacing: 0.5px; }
-        .sub-promo-box { margin-top: 15px; padding: 12px; background: rgba(7, 13, 25, 0.6); border-radius: 6px; border: 1px solid #334155; text-align: left; font-size: 0.85rem; }
-        .sub-promo-line { display: flex; justify-content: space-between; margin-bottom: 5px; padding-bottom: 5px; border-bottom: 1px dashed #334155; }
-        .sub-promo-line:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        /* BOTÓN DE ACCIÓN CENTRAL MASIVO */
+        .action-container { text-align: center; padding: 80px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
+        .btn-large-gate-orange { display: inline-flex; background-color: #ea580c; color: #ffffff; border: none; padding: 20px 60px; font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; gap: 12px; transition: all 0.2s ease; text-decoration: none; box-shadow: 0 6px 25px rgba(234, 88, 12, 0.4); }
+        .btn-large-gate-orange:hover { background-color: #c2410c; transform: translateY(-3px); box-shadow: 0 8px 30px rgba(234, 88, 12, 0.5); }
 
         /* Reporte de Seguridad */
         .security-report { padding: 40px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
@@ -63,7 +47,6 @@
         /* Ventajas */
         .advantages-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .advantages-section h2 { text-align: center; margin-bottom: 15px; font-size: 2rem; color: #ffffff; font-weight: 700; }
-        .advantages-section .section-desc { text-align: center; color: #94a3b8; margin-bottom: 40px; font-size: 1rem; max-width: 800px; margin: 0 auto; }
         .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
         .advantage-card { background: #1e293b; border-top: 4px solid #ea580c; padding: 25px; border-radius: 6px; border: 1px solid #334155; }
         .advantage-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 12px; font-weight: 700; }
@@ -107,9 +90,9 @@
 </head>
 <body>
 
-    <!-- BARRA DE CONTADOR CON LICENCIAS GRATUITAS -->
+    <!-- BARRA DE CONTADOR CON PRECIOS Y DESCUENTO ACTUALIZADO -->
     <div class="promo-banner-header">
-        🛡️ <span class="badge-saare-text">[MS3V S.A.A.R.E. CERTIFICACIÓN EX-ANTE]</span> ¡ALERTA DE ADQUISICIÓN! Quedan solo <span id="licencias-count" class="counter-box">7</span> Licencias de Lanzamiento a <span class="highlight-green">0€ / GRATIS</span>. Siguiente tramo: 100 licencias promocionales a 100€ (Tarifa base normal: 1800€).
+        🛡️ <span class="badge-saare-text">[MS3V S.A.A.R.E. CERTIFICACIÓN EX-ANTE]</span> ¡ALERTA DE ADQUISICIÓN! Las <span id="licencias-count" class="counter-box">50</span> primeras licencias tendrán un <span class="highlight-green">descuento del 50%</span> (se queda a solo 32,50€).
         <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-banner-action" rel="noopener">Reclamar Acceso Temporal &rarr;</a>
     </div>
 
@@ -123,49 +106,11 @@
         </div>
     </nav>
 
-    <!-- 1. SECCIÓN DE TARIFAS DE PRECIOS POR VOLUMEN -->
-    <section class="rates-section">
-        <div class="container">
-            <h2>Modelos de Licencia por Volumen Estructural e Ingresos</h2>
-            <div class="rates-grid">
-                <div class="rate-card rate-card-featured">
-                    <div class="promo-ribbon">Fase Promocional</div>
-                    <h3>1. Bajo Flujo (Seed / Lanzamiento)</h3>
-                    <div class="rate-price" style="color: #22c55e;">FASE DE LANZAMIENTO</div>
-                    <p>Optimizado para startups y corporaciones enfocadas en mitigar el riesgo normativo con la máxima potencia analítica perimetral.</p>
-                    
-                    <div class="sub-promo-box">
-                        <div class="sub-promo-line">
-                            <span style="color: #22c55e; font-weight: bold;">Fase 1 (Primeras 20):</span>
-                            <span style="color: #ffffff;">0 € / GRATIS (1.500 int/día)</span>
-                        </div>
-                        <div class="sub-promo-line" style="border-bottom: none; padding-bottom: 0;">
-                            <span style="color: #ea580c; font-weight: bold;">Fase 2 (Siguientes 100):</span>
-                            <span style="color: #ffffff; font-weight: bold;">100 € (MÁXIMO FLUJO ILIMITADO)</span>
-                        </div>
-                    </div>
-                    <p style="font-size: 0.72rem; color: #94a3b8; margin-top: 10px; font-style: italic;">Acceso total al motor redundante Corporate Grid (Valor original: 65.000 €/año)</p>
-                </div>
-                
-                <div class="rate-card" style="border: 2px solid #ea580c;">
-                    <h3>2. Medio Flujo (Growth)</h3>
-                    <div class="rate-price">14.500 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
-                    <p>Ideal para medianas empresas y plataformas consolidadas frente a inspecciones de mercado. Límite de flujo: hasta <strong>20.000 interacciones al día</strong>.</p>
-                </div>
-                <div class="rate-card">
-                    <h3>3. Alto Flujo (Corporate Grid)</h3>
-                    <div class="rate-price">65.000 € <span style="font-size: 1rem; color: #94a3b8;">/ año</span></div>
-                    <p>Diseñado para entornos financieros e infraestructuras críticas con <strong>tráfico masivo redundante ilimitado</strong>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. BOTÓN ÚNICO DE ACCESO DIRECTO -->
+    <!-- 1. BOTÓN MASIVO PRINCIPAL COMPORTAMIENTO DIRECTO -->
     <section class="action-container">
         <div class="container">
             <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-large-gate-orange" rel="noopener">
-                🔒 Proceder al Alta de Licencia Automatizada
+                🔒 &lt;pide aqui tu licencia&gt;
             </a>
         </div>
     </section>
@@ -211,7 +156,7 @@
                 </div>
                 <div class="advantage-card">
                     <h3>¼️ Erradicación de la Obsolescencia</h3>
-                    <p>Se elimina la carga financiera asociada al reentrenamiento. El puente perimetral refresca el contextopturando conocimiento fresco de forma anonimizada con un coste de OpEx de cero.</p>
+                    <p>Se elimina la carga financiera asociada al reentrenamiento. El puente perimetral refresca el contexto capturando conocimiento fresco de forma anonimizada con un coste de OpEx de cero.</p>
                 </div>
             </div>
         </div>
@@ -231,7 +176,7 @@
             <div class="ethics-box">
                 <div class="ethics-emblem">🕊️ 🌍 🛡️</div>
                 <h3>Compromiso de Unidad Global, Privacidad y Soberanía de Datos</h3>
-                <p>El protocolo perimetral S.A.A.R.E. opera bajo un model matemático local indexado a cero tokens, erradicando la exportación transfronteriza no autorizada de datos corporativos y blindando el flujo informático a escala global.</p>
+                <p>El protocolo perimetral S.A.A.R.E. opera bajo un modelo matemático local indexado a cero tokens, erradicando la exportación transfronteriza no autorizada de datos corporativos y blindando el flujo informático a escala global.</p>
             </div>
         </div>
     </section>
@@ -264,12 +209,12 @@
                 <div class="pilar-card border-orange">
                     <span class="icon">🛡️</span>
                     <h3 class="text-orange">■ FINANCIACIÓN ESTATAL:</h3>
-                    <p>Este proyecto se encuadra en la línea de ayudas oficiales vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>), financiando hasta el 100% del coste.</p>
+                    <p>Este proyecto se encuadra en la línea de ayudas oficiales vigentes hasta el 31 de marzo de 2028 (<strong>ICO RED.ES ACELERA</strong>), financiacion hasta el 100% del coste.</p>
                 </div>
                 <div class="pilar-card border-dark">
                     <span class="icon">🌍</span>
                     <h3>Activo Intangible Seguro</h3>
-                    <p>Al estructurarse como infraestructura perimetral local, classifies directamente como una inversión en activos intangibles de ciberseguridad corporativa.</p>
+                    <p>Al estructurarse como infraestructura perimetral local, clasifica directamente como una inversión en activos intangibles de ciberseguridad corporativa.</p>
                 </div>
             </div>
         </div>
@@ -289,13 +234,13 @@
     </footer>
 
     <script>
-        // CONTROL DE PERSISTENCIA DEL CONTADOR DE LICENCIAS GRATUITAS
+        // CONTROL DE PERSISTENCIA DEL CONTADOR DE LICENCIAS CON DESCUENTO
         document.addEventListener("DOMContentLoaded", function() {
-            const storageKey = "saare_licencias_gratis_v2";
+            const storageKey = "saare_licencias_descuento_v1";
             let currentLicencias = localStorage.getItem(storageKey);
 
             if (!currentLicencias) {
-                currentLicencias = 7; 
+                currentLicencias = 50; 
                 localStorage.setItem(storageKey, currentLicencias);
             } else {
                 currentLicencias = parseInt(currentLicencias);
@@ -304,7 +249,8 @@
             const countElement = document.getElementById("licencias-count");
             countElement.innerText = currentLicencias;
 
-            if (currentLicencias > 1 && Math.random() < 0.15) {
+            // Simulación visual de decremento de licencias disponibles
+            if (currentLicencias > 3 && Math.random() < 0.12) {
                 currentLicencias -= 1;
                 localStorage.setItem(storageKey, currentLicencias);
                 countElement.innerText = currentLicencias;
