@@ -92,8 +92,10 @@
         
         .pricing-card .btn-quote { display: block; text-align: center; background: transparent; border: 1px solid var(--cyan-tech); color: var(--cyan-tech); padding: 14px; border-radius: 6px; text-decoration: none; font-weight: 700; transition: all 0.2s ease; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; }
         .pricing-card .btn-quote:hover { background: var(--cyan-tech); color: #000000; }
-        .pricing-card.featured .btn-quote { border-color: var(--orange-alert); color: var(--orange-alert); }
-        .pricing-card.featured .btn-quote:hover { background: var(--orange-alert); color: #ffffff; }
+        
+        /* Enfoque visual corporativo al botón principal */
+        .pricing-card.featured .btn-quote { background-color: var(--orange-alert); border-color: var(--orange-alert); color: #ffffff; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2); }
+        .pricing-card.featured .btn-quote:hover { background-color: #e05500; border-color: #e05500; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4); }
 
         /* VENTAJAS INDUSTRIALES */
         .advantages-section { padding: 80px 0; background: var(--bg-main); border-bottom: 1px solid var(--border-color); }
