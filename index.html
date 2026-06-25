@@ -11,50 +11,38 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* BARRA DINÁMICA DE LANZAMIENTO S.A.A.R.E. */
-        .promo-banner-header { background: #1a202c; color: #ffffff; text-align: center; padding: 14px 10px; font-size: 13px; font-weight: bold; position: relative; z-index: 999; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border-bottom: 3px solid #ea580c; letter-spacing: 0.5px; }
-        .promo-banner-header .badge-saare-text { color: #ea580c; font-weight: 800; text-transform: uppercase; }
-        .promo-banner-header .counter-box { background: #ea580c; color: #ffffff; padding: 2px 8px; border-radius: 4px; font-size: 14px; margin: 0 4px; font-family: monospace; }
-        .promo-banner-header .highlight-green { color: #22c55e; font-weight: bold; }
-        .promo-banner-header .btn-banner-action { color: #1a202c; text-decoration: none; margin-left: 15px; background: #ffffff; padding: 6px 14px; border-radius: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; display: inline-block; font-weight: 800; }
-        .promo-banner-header .btn-banner-action:hover { background: #ea580c; color: #ffffff; }
 
         /* Navbar Minimalista con Eslogan Estilo Sello */
-        nav { background: #0f172a; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ea580c; position: sticky; top: 0; z-index: 100; }
+        nav { background: #0f172a; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #00E5FF; position: sticky; top: 0; z-index: 100; }
         .logo-area { display: flex; align-items: center; gap: 12px; }
         .logo-img { height: 50px; width: auto; border-radius: 4px; }
         .logo-text { color: #ffffff; font-weight: bold; font-size: 1.4rem; letter-spacing: 1px; }
         
-        /* Modificación del Eslogan a formato Tipo Sello */
-        .nav-slogan-area { display: flex; align-items: center; gap: 8px; color: #cbd5e1; font-size: 0.85rem; font-weight: bold; letter-spacing: 1.5px; font-family: 'Courier New', Courier, monospace; text-transform: uppercase; background: rgba(234, 88, 12, 0.1); border: 1.5px solid #ea580c; padding: 6px 14px; border-radius: 4px; box-shadow: inset 0 0 4px rgba(234, 88, 12, 0.2); }
-        .nav-brain-icon { font-size: 1.1rem; filter: drop-shadow(0 0 2px #ea580c); }
+        .nav-slogan-area { display: flex; align-items: center; gap: 8px; color: #cbd5e1; font-size: 0.85rem; font-weight: bold; letter-spacing: 1.5px; font-family: 'Courier New', Courier, monospace; text-transform: uppercase; background: rgba(0, 229, 255, 0.1); border: 1.5px solid #00E5FF; padding: 6px 14px; border-radius: 4px; box-shadow: inset 0 0 4px rgba(0, 229, 255, 0.2); }
+        .nav-brain-icon { font-size: 1.1rem; filter: drop-shadow(0 0 2px #00E5FF); }
 
         /* SECCIÓN HERO INTEGRADA DE ALTA SIMETRÍA */
-        .hero-licensing-section { padding: 60px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
+        .hero-licensing-section { padding: 80px 0; background: linear-gradient(to bottom, #1e293b, #0f172a); border-bottom: 1px solid #1e293b; }
         .hero-flex-wrapper { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
         
-        /* Contenedor optimizado para que los logos se vean grandes e idénticos */
         .hero-side-logo { height: 160px; width: 160px; background-color: #ffffff; padding: 4px; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); object-fit: contain; }
-        .central-cta-box { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .central-cta-box { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 420px; }
         
-        /* BOTÓN TRAMITA TU LICENCIA */
-        .btn-tramita-licencia { display: inline-flex; background-color: #ea580c; color: #ffffff; border: none; padding: 16px 36px; font-size: 19px; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 5px 20px rgba(234, 88, 12, 0.35); transition: all 0.2s ease; }
-        .btn-tramita-licencia:hover { background-color: #c2410c; transform: translateY(-2px); box-shadow: 0 7px 25px rgba(234, 88, 12, 0.45); }
+        /* BOTONES DE ACCIÓN PERIMETRAL */
+        .btn-tramita-licencia { display: inline-flex; background-color: #00E5FF; color: #000000; border: none; padding: 18px 36px; font-size: 18px; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 5px 20px rgba(0, 229, 255, 0.25); transition: all 0.2s ease; width: 100%; text-align: center; }
+        .btn-tramita-licencia:hover { background-color: #00b4d8; transform: translateY(-2px); box-shadow: 0 7px 25px rgba(0, 229, 255, 0.45); }
         
-        /* BOTÓN AZUL AUDITAR EN GEMINI */
-        .btn-auditar-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 10px 20px; border-radius: 6px; border: 1px solid #38bdf8; transition: all 0.2s ease; width: 100%; justify-content: center; }
+        .btn-auditar-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 12px 20px; border-radius: 6px; border: 1px solid #38bdf8; transition: all 0.2s ease; width: 100%; justify-content: center; }
         .btn-auditar-gemini:hover { background: #0369a1; transform: translateY(-1px); }
 
-        /* BOTÓN VERDE SOPORTE TÉCNICO WHATSAPP */
-        .btn-soporte-whatsapp { display: inline-flex; align-items: center; gap: 8px; background: #16a34a; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 10px 20px; border-radius: 6px; border: 1px solid #4ade80; transition: all 0.2s ease; width: 100%; justify-content: center; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn-soporte-whatsapp { display: inline-flex; align-items: center; gap: 8px; background: #16a34a; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 12px 20px; border-radius: 6px; border: 1px solid #4ade80; transition: all 0.2s ease; width: 100%; justify-content: center; text-transform: uppercase; letter-spacing: 0.5px; }
         .btn-soporte-whatsapp:hover { background: #15803d; transform: translateY(-1px); }
 
         /* SECCIÓN DE VENTAJAS INDUSTRIALES */
         .advantages-section { padding: 60px 0; background: #0f172a; border-bottom: 1px solid #1e293b; }
         .advantages-section h2 { text-align: center; margin-bottom: 40px; font-size: 2rem; font-weight: 700; color: #ffffff; }
         .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .advantage-card { background: #1e293b; border-top: 4px solid #ea580c; padding: 25px; border-radius: 6px; border: 1px solid #334155; }
+        .advantage-card { background: #1e293b; border-top: 4px solid #00E5FF; padding: 25px; border-radius: 6px; border: 1px solid #334155; }
         .advantage-card h3 { font-size: 1.1rem; color: #ffffff; margin-bottom: 12px; font-weight: 700; }
         .advantage-card p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; }
 
@@ -67,7 +55,7 @@
 
         /* SECCIÓN BLOQUE SLOGAN INFERIOR LIMPIO */
         .slogan-section { background: #0f172a; padding: 60px 0; text-align: center; }
-        .slogan-container { max-width: 900px; margin: 0 auto; background: rgba(234, 88, 12, 0.02); border: 1px dashed rgba(234, 88, 12, 0.3); padding: 50px 30px; border-radius: 8px; }
+        .slogan-container { max-width: 900px; margin: 0 auto; background: rgba(0, 229, 255, 0.02); border: 1px dashed rgba(0, 229, 255, 0.3); padding: 50px 30px; border-radius: 8px; }
         .slogan-text-center { display: flex; flex-direction: column; align-items: center; }
         .slogan-main { font-size: 2.6rem; font-weight: 900; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; }
 
@@ -76,37 +64,22 @@
         .sys-hash { font-family: monospace; color: #64748b; background: #1e293b; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 20px; }
         .footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; flex-wrap: wrap; font-size: 0.85rem; }
         .footer-links a { color: #94a3b8; text-decoration: none; border-bottom: 1px dotted #475569; padding-bottom: 3px; }
-        .footer-links a:hover { color: #ea580c; }
+        .footer-links a:hover { color: #00E5FF; }
     </style>
 </head>
 <body>
 
-   <!-- BLOQUE DE LANZAMIENTO PROMO S.A.A.R.E. SECCIÓN INDEX -->
-<div class="saare-alert-box" style="border: 2px solid #00E5FF; padding: 25px; background-color: #0d1b2a; border-radius: 8px; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; margin: 20px 0; box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);">
-    <h3 style="color: #00E5FF; margin-top: 0; font-size: 20px; letter-spacing: 0.5px;">🛡️ [MS3V S.A.A.R.E. CERTIFICACIÓN EX-ANTE] ¡ALERTA DE LANZAMIENTO!</h3>
-    <p style="font-size: 16px; line-height: 1.6; color: #ffffff;">
-        Las primeras <strong>10 licencias</strong> serán <strong>100% GRATUITAS</strong> como promoción de salida para validar la infraestructura perimetral en entornos reales. Asegura tu Blindaje Activo a coste cero antes de que el contador inteligente cierre el acceso.
-    </p>
-    <p style="font-size: 14px; color: #a0aec0; margin-bottom: 20px;">
-        El proceso es completamente automático y el límite de plazas se monitoriza en tiempo real directamente desde el servidor.
-    </p>
-    <div style="margin-top: 20px;">
-        <a href="https://forms.fillout.com/t/jSYEe4iTMUus" class="btn-saare" style="display: inline-block; background-color: #00E5FF; color: #000000; padding: 14px 28px; font-weight: bold; text-decoration: none; border-radius: 6px; transition: all 0.3s ease; text-transform: uppercase; font-size: 14px; letter-spacing: 0.5px;">
-            Reclamar Mi Licencia Gratuita Aquí →
-        </a>
-    </div>
-</div>
-    
+    <nav>
         <div class="logo-area">
             <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Logo.jpeg'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
         <div class="nav-slogan-area">
             <span class="nav-brain-icon">🧠</span>
-            <span>&lt;Empresa Lider en Tecnologia&gt;</span>
+            <span>&lt;Empresa Líder en Tecnología&gt;</span>
         </div>
     </nav>
-
+    
     <section class="hero-licensing-section">
         <div class="container">
             <div class="hero-flex-wrapper">
@@ -114,13 +87,13 @@
                 
                 <div class="central-cta-box">
                     <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-tramita-licencia" rel="noopener">
-                        🔒 TRAMITA TU LICENCIA
+                        🔒 ADQUIRIR LICENCIA OFICIAL
                     </a>
                     <a href="https://gemini.google.com/share/c8fbe4822068" target="_blank" class="btn-auditar-gemini" rel="noopener">
                         🔍 Auditar Conversación Abierta en Gemini
                     </a>
-                    <a href="https://wa.me/34633886506?text=Hola,%20necesito%20soporte%20técnico%20con%20la%20licencia%20MS3V%20S.A.A.R.E." target="_blank" class="btn-soporte-whatsapp" rel="noopener">
-                        💬 Soporte Técnico
+                    <a href="https://wa.me/34633886506?text=Hola,%20necesito%20cobertura%20oficial%20con%20el%20Protocolo%20MS3V%20S.A.A.R.E." target="_blank" class="btn-soporte-whatsapp" rel="noopener">
+                        💬 Contactar Consultoría Directa
                     </a>
                 </div>
                 
@@ -131,7 +104,7 @@
 
     <section class="advantages-section">
         <div class="container">
-            <h2>Arquitectura de Vanguardia: Ventajas Industriales Inyectadas</h2>
+            <h2>Arquitectura de Vanguardia: Garantías y Ventajas Forenses</h2>
             <div class="advantages-grid">
                 <div class="advantage-card">
                     <h3>🌐 Direccionamiento Unidireccional</h3>
@@ -146,8 +119,8 @@
                     <p>Las restricciones semánticas de S.A.A.R.E. sustituyen la aleatoriedad por restricciones semánticas deterministas locales, eliminando formalmente el riesgo de alucinación y garantizando un margen de error lógico igual a cero.</p>
                 </div>
                 <div class="advantage-card">
-                    <h3>¼️ Erradicación de la Obsolescencia</h3>
-                    <p>Se elimina la carga financiera asociada al reentrenamiento. El puente perimetral refresca el contexto capturando conocimiento fresco de forma anonimizada con un coste de OpEx de cero.</p>
+                    <h3>⚡ Cumplimiento de la Ley de IA (EU Act)</h3>
+                    <p>Apertura completa de cajas negras algorítmicas locales. El puente perimetral genera el registro de logs exigido por las directivas comunitarias y las normativas vigentes de auditoría.</p>
                 </div>
             </div>
         </div>
@@ -182,33 +155,9 @@
             </div>
             <div class="sys-hash">Firma Digital: SAARE-ISO-COMPLIANCE-NODE-BCC0A9A0-HASH99X77B</div>
             <p>© 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.</p>
-            <p>Para solicitudes de despliegue enterprise, contacte en: <strong style="color: #ea580c;">legal@saare.es</strong></p>
+            <p>Para solicitudes de despliegue enterprise o alta de nodos, contacte en: <strong style="color: #00E5FF;">legal@saare.es</strong></p>
         </div>
     </footer>
-
-    <script>
-        // CONTROL DE PERSISTENCIA DEL CONTADOR DE LICENCIAS CON DESCUENTO
-        document.addEventListener("DOMContentLoaded", function() {
-            const storageKey = "saare_licencias_descuento_v1";
-            let currentLicencias = localStorage.getItem(storageKey);
-
-            if (!currentLicencias) {
-                currentLicencias = 47; 
-                localStorage.setItem(storageKey, currentLicencias);
-            } else {
-                currentLicencias = parseInt(currentLicencias);
-            }
-
-            const countElement = document.getElementById("licencias-count");
-            countElement.innerText = currentLicencias;
-
-            if (currentLicencias > 3 && Math.random() < 0.12) {
-                currentLicencias -= 1;
-                localStorage.setItem(storageKey, currentLicencias);
-                countElement.innerText = currentLicencias;
-            }
-        });
-    </script>
 
 </body>
 </html>
