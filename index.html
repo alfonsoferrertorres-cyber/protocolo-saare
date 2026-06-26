@@ -30,9 +30,15 @@
         @media (min-width: 768px) { .logo-img { height: 50px; } }
         .logo-text { color: #ffffff; font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; }
         
+        .nav-right-container { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+        
         .nav-slogan-area { display: flex; align-items: center; gap: 8px; color: #ffffff; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px; font-family: 'Courier New', Courier, monospace; text-transform: uppercase; background: rgba(255, 102, 0, 0.15); border: 1.5px solid var(--orange-alert); padding: 6px 12px; border-radius: 4px; box-shadow: inset 0 0 4px rgba(255, 102, 0, 0.3); }
         @media (min-width: 768px) { .nav-slogan-area { font-size: 0.85rem; letter-spacing: 1.5px; padding: 6px 14px; } }
         .nav-brain-icon { font-size: 1.1rem; filter: drop-shadow(0 0 3px var(--orange-alert)); }
+
+        .btn-servicio-tecnico { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: #ffffff; border: 1.5px solid var(--cyan-tech); padding: 6px 14px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; text-decoration: none; transition: all 0.2s ease; }
+        @media (min-width: 768px) { .btn-servicio-tecnico { font-size: 0.85rem; padding: 6px 16px; } }
+        .btn-servicio-tecnico:hover { background: var(--cyan-tech); color: #000000; box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); }
 
         /* HERO SECTION */
         .hero-licensing-section { padding: 60px 0; background: linear-gradient(to bottom, var(--bg-card), var(--bg-main)); border-bottom: 1px solid var(--border-color); text-align: center; }
@@ -56,12 +62,6 @@
         .btn-tramita-licencia { display: inline-flex; background-color: var(--orange-alert); color: #ffffff; border: none; padding: 16px 24px; font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 14px rgba(255, 102, 0, 0.4); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); width: 100%; text-align: center; }
         @media (min-width: 768px) { .btn-tramita-licencia { padding: 18px 36px; font-size: 18px; } }
         .btn-tramita-licencia:hover { background-color: #e05500; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6); }
-        
-        .btn-auditar-gemini { display: inline-flex; align-items: center; gap: 8px; background: #0284c7; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 12px 20px; border-radius: 6px; border: 1px solid #38bdf8; transition: all 0.2s ease; width: 100%; justify-content: center; }
-        .btn-auditar-gemini:hover { background: #0369a1; transform: translateY(-1px); }
-
-        .btn-soporte-whatsapp { display: inline-flex; align-items: center; gap: 8px; background: #16a34a; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 0.9rem; padding: 12px 20px; border-radius: 6px; border: 1px solid #4ade80; transition: all 0.2s ease; width: 100%; justify-content: center; text-transform: uppercase; letter-spacing: 0.5px; }
-        .btn-soporte-whatsapp:hover { background: #15803d; transform: translateY(-1px); }
 
         /* SECCIÓN PLANES / MATRIZ DE LICENCIAMIENTO */
         .pricing-section { padding: 80px 0; background: #111827; border-bottom: 1px solid var(--border-color); }
@@ -128,19 +128,22 @@
 </head>
 <body>
 
-    <!-- NAVBAR CORPORATIVA -->
     <nav>
         <div class="logo-area">
             <img src="LOGO NAVEGADOR.png" alt="🛡️" class="logo-img" onerror="this.src='Logo.jpeg'; this.onerror=null;">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
-        <div class="nav-slogan-area">
-            <span class="nav-brain-icon">🧠</span>
-            <span>&lt;Empresa Líder en Tecnología&gt;</span>
+        <div class="nav-right-container">
+            <div class="nav-slogan-area">
+                <span class="nav-brain-icon">🧠</span>
+                <span>&lt;Empresa Líder en Tecnología&gt;</span>
+            </div>
+            <a href="mailto:legal@saare.es?subject=Solicitud%20de%20Servicio%20T%C3%A9cnico%20-%20SAARE" class="btn-servicio-tecnico">
+                🛠️ Servicio Técnico
+            </a>
         </div>
     </nav>
     
-    <!-- HERO SECTION -->
     <section class="hero-licensing-section">
         <div class="container">
             <div class="hero-flex-wrapper">
@@ -154,12 +157,6 @@
                         <a href="#licencias" class="btn-tramita-licencia">
                             🔒 SOLICITAR ALTA DE LICENCIA
                         </a>
-                        <a href="https://gemini.google.com/share/c8fbe4822068" target="_blank" class="btn-auditar-gemini" rel="noopener">
-                            🔍 Auditar Conversación Abierta en Gemini
-                        </a>
-                        <a href="https://wa.me/34633886506?text=Hola,%20necesito%20cobertura%20oficial%20con%20el%20Protocolo%20MS3V%20S.A.A.R.E." target="_blank" class="btn-soporte-whatsapp" rel="noopener">
-                            💬 Consultoría Estratégica Directa
-                        </a>
                     </div>
                 </div>
                 
@@ -168,14 +165,12 @@
         </div>
     </section>
 
-    <!-- MATRIZ DE LICENCIAMIENTO INDUSTRIAL -->
     <section id="licencias" class="pricing-section">
         <div class="container">
             <h2>Modelos de Despliegue de Licencias Oficiales</h2>
             <p class="subtitle">Aprovisionamiento informático inmutable y asignación dedicada de arquitectura criptográfica.</p>
             <div class="pricing-grid">
                 
-                <!-- LICENCIA USUARIO -->
                 <div class="pricing-card">
                     <div>
                         <h3>Licencia Oficial Usuario</h3>
@@ -192,7 +187,6 @@
                     <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-quote" rel="noopener">Adquirir Licencia Usuario →</a>
                 </div>
 
-                <!-- LICENCIA EMPRESA -->
                 <div class="pricing-card featured">
                     <div class="badge">Oferta de Lanzamiento</div>
                     <div>
@@ -215,7 +209,6 @@
         </div>
     </section>
 
-    <!-- VENTAJAS INDUSTRIALES -->
     <section class="advantages-section">
         <div class="container">
             <h2>Arquitectura de Vanguardia: Garantías y Ventajas Forenses</h2>
@@ -240,7 +233,6 @@
         </div>
     </section>
 
-    <!-- COMPROMISO GLOBAL DE DATOS -->
     <section class="global-ethics">
         <div class="container">
             <div class="ethics-box">
@@ -251,7 +243,6 @@
         </div>
     </section>
 
-    <!-- SLOGAN INFERIOR -->
     <section class="slogan-section">
         <div class="container">
             <div class="slogan-container">
@@ -262,7 +253,6 @@
         </div>
     </section>
 
-    <!-- FOOTER CORPORATIVO -->
     <footer>
         <div class="container">
             <div class="footer-links">
