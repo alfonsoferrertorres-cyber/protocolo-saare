@@ -102,6 +102,22 @@
         .pricing-card.featured .btn-quote { background-color: var(--orange-alert); border-color: var(--orange-alert); color: #ffffff; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2); }
         .pricing-card.featured .btn-quote:hover { background-color: #e05500; border-color: #e05500; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4); }
 
+        /* SECCIÓN FINANCIACIÓN Y GESTIÓN DE AYUDAS OFICIALES */
+        .subventions-section { padding: 80px 0; background: linear-gradient(to bottom, #111827, var(--bg-main)); border-bottom: 1px solid var(--border-color); }
+        .subventions-box { background: rgba(16, 185, 129, 0.04); border: 2px dashed var(--green-success); padding: 45px 35px; border-radius: 8px; max-width: 1150px; margin: 0 auto; }
+        .subventions-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        .subventions-badge { background: var(--green-success); color: #ffffff; font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; }
+        .subventions-box h3 { font-size: 1.8rem; color: #ffffff; font-weight: 800; }
+        .subventions-box p.intro { color: #cbd5e1; font-size: 1.05rem; margin-bottom: 30px; }
+        .subventions-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-bottom: 35px; }
+        .subvention-item { background: rgba(30, 41, 59, 0.6); border: 1px solid var(--border-color); padding: 20px; border-radius: 6px; }
+        .subvention-item h4 { color: var(--cyan-tech); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700; }
+        .subvention-item p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; }
+        .subventions-cta-container { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 30px; }
+        .btn-ayudas { display: inline-flex; align-items: center; gap: 8px; background-color: var(--green-success); color: #ffffff; border: none; padding: 14px 28px; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 6px; text-decoration: none; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); transition: all 0.2s ease; }
+        .btn-ayudas:hover { background-color: #059669; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5); }
+        .subventions-notice { font-size: 0.85rem; color: var(--text-muted); flex: 1; min-width: 250px; line-height: 1.5; }
+
         /* VENTAJAS INDUSTRIALES */
         .advantages-section { padding: 80px 0; background: var(--bg-main); border-bottom: 1px solid var(--border-color); }
         .advantages-section h2 { text-align: center; margin-bottom: 50px; font-size: 2.2rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }
@@ -139,7 +155,7 @@
                 <span class="nav-brain-icon">🧠</span>
                 <span>&lt;PROTECCIÓN EX-ANTE COMPLIANCE&gt;</span>
             </div>
-            <a href="https://wa.me/34TU_TELEFONO?text=Hola,%20necesito%20asistencia%20técnica%20con%20el%20despliegue%20On-Premise%20de%20la%20Licencia%20Enterprise." class="btn-servicio-tecnico" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/34633886506?text=Hola,%20necesito%20asistencia%20técnica%20con%20el%20despliegue%20On-Premise%20de%20la%20Licencia%20Enterprise." class="btn-servicio-tecnico" target="_blank" rel="noopener noreferrer">
                 🛠️ Servicio Técnico
             </a>
         </div>
@@ -188,7 +204,7 @@
                         <div class="scope">Entorno de Desarrollo & Sandbox Profesional</div>
                         <ul>
                             <li>Aislamiento de la capa nativa en terminal único.</li>
-                            <li>Mitigación de Drift Lógico Ex-Ante in tiempo real.</li>
+                            <li>Mitigación de Drift Lógico Ex-Ante en tiempo real.</li>
                             <li>Auditoría segura para desarrolladores, peritos e ingenieros.</li>
                             <li>Firma Digital e indexación local a cero tokens.</li>
                         </ul>
@@ -218,25 +234,75 @@
         </div>
     </section>
 
+    <section id="ayudas-oficiales" class="subventions-section">
+        <div class="container">
+            <div class="subventions-box">
+                <div class="subventions-header">
+                    <span class="subventions-badge">Fondos Públicos Activos</span>
+                    <h3>Financiación y Gestión de Ayudas Ministeriales (Periodo 2025-2027)</h3>
+                </div>
+                <p class="intro">
+                    La integración perimetral del **Protocolo S.A.A.R.E. v4.2** se encuentra plenamente amparada por la Actualización de la Orden Ministerial del Plan Estratégico de Subvenciones del Ministerio para la Transformación Digital y de la Función Pública[cite: 3769]. Al estructurarse bajo modalidad de "Caja Negra" (Black Box) orientada a la soberanía del dato y mitigación de riesgos lógicos, el licenciamiento es financiable hasta el **100% sin costes de intermediación**.
+                </p>
+                
+                <div class="subventions-list">
+                    <div class="subvention-item">
+                        <h4>Partida 1.1: Kit Consulting (SIA 3109834)</h4>
+                        <p>Dotación presupuestaria de 300M€ con mecanismo de reinversión continua "revolving" hasta 2031 para remanentes y desistimientos[cite: 3834, 4014]. Cubre bonos de asesoramiento especializado en Ciberseguridad e Inteligencia Artificial para pymes de entre 10 y 250 empleados[cite: 3964].</p>
+                    </div>
+                    <div class="subvention-item">
+                        <h4>Partida 1.2: Kit Espacios de Datos (KTED)</h4>
+                        <p>Fondo de 60M€ destinado a resolver fallos de mercado en soberanía tecnológica y tratamiento seguro en entornos B2B distribuidos[cite: 3834, 4088, 4089]. Convocatoria plenamente activa con ampliación oficial de solicitudes hasta el 14 de mayo de 2026[cite: 4175].</p>
+                    </div>
+                    <div class="subvention-item">
+                        <h4>Partida 1.3: Cadenas de Valor de la IA</h4>
+                        <p>Dotación de 130M€ (Financiación FEDER 2021-2027) destinada al desarrollo experimental de procesos digitales e integración de modelos avanzados en las cadenas de valor corporativas[cite: 3834, 4181, 4206].</p>
+                    </div>
+                    <div class="subvention-item">
+                        <h4>Partida 1.12: Tecnologías de Uso Dual</h4>
+                        <p>Dotación ampliada a 109M€ para la creación de infraestructuras de investigación, ensayo y experimentación avanzada[cite: 3862, 3863]. El blindaje perimetral y determinista de S.A.A.R.E. v4.2 facilita el cumplimiento de los requerimientos de seguridad lógica exigidos en entornos tecnológicos de doble uso corporativo.</p>
+                    </div>
+                </div>
+
+                <div class="subventions-cta-container">
+                    <a href="https://wa.me/34633886506?text=Hola,%20solicito%20información%20y%20asistencia%20del%20Servicio%20de%20Ayudas%20para%20la%20justificación%20técnica%20de%20la%20licencia%20SAARE." class="btn-ayudas" target="_blank" rel="noopener noreferrer">
+                        📞 Servicio Ayudas: +34 633 88 65 06
+                    </a>
+                    <p class="subventions-notice">
+                        *Nuestro canal proporciona a ingenieros y consultores de cumplimiento la memoria técnica simplificada requerida para la justificación ex-ante de la ayuda pública sin coste adicional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="advantages-section">
         <div class="container">
             <h2>Arquitectura de Vanguardia: Garantías y Ventajas Forenses</h2>
             <div class="advantages-grid">
                 <div class="advantage-card">
-                    <h3>🌐 Direccionamiento Unidireccional</h3>
-                    <p>Las peticiones limpias viajan hacia el exterior en un único sentido, de forma que se anula cualquier posibilidad de rastreo inverso hacia el núcleo de la IA cerrada corporativa.</p>
+                    <h3>🌐 Direccionamiento Unidireccional Físico</h3>
+                    <p>Las peticiones limpias viajan hacia el exterior en un único sentido, de forma que se anula por completo cualquier posibilidad de rastreo o inyección inversa hacia el núcleo de la IA cerrada corporativa.</p>
                 </div>
                 <div class="advantage-card">
-                    <h3>🛡️ Integridad y Trazabilidad Forense</h3>
-                    <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable bajo arquitectura MLS, preconstituyendo la evidencia forense exigida por las autoridades y verificable ante un juez.</p>
+                    <h3>🛡️ Integridad y Trazabilidad Forense (MLS)</h3>
+                    <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable bajo arquitectura MLS, preconstituyendo la evidencia forense e inalterable exigida por las autoridades reguladoras.</p>
                 </div>
                 <div class="advantage-card">
                     <h3>📉 Error Lógico Cero (Zero Drift)</h3>
-                    <p>Las restricciones semánticas de S.A.A.R.E. sustituyen la aleatoriedad por restricciones semánticas deterministas locales, eliminando formalmente el riesgo de alucinación y garantizando un margen de error lógico igual a cero.</p>
+                    <p>Las restricciones semánticas deterministas locales de S.A.A.R.E. sustituyen la aleatoriedad probabilística tradicional, eliminando formalmente el riesgo de alucinación en entornos automatizados críticos.</p>
                 </div>
                 <div class="advantage-card">
-                    <h3>⚡ Cumplimiento de la Ley de IA (EU Act)</h3>
-                    <p>Apertura completa de cajas negras algorítmicas locales. El puente perimetral genera el registro de logs exigido por las dinámicas comunitarias y las normativas vigentes de auditoría.</p>
+                    <h3>⚡ Gobernanza EU AI Act e ISO 42001</h3>
+                    <p>Apertura completa de cajas negras algorítmicas locales. El puente perimetral genera automáticamente el registro de logs exigido por las dinámicas comunitarias europeas y las normativas vigentes de auditoría.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>🔒 Aislamiento Caja Negra (Black Box)</h3>
+                    <p>Integración ágil y opaca vía API perimetral que se acopla al servidor sin comprometer, alterar ni exponer el código fuente original del invento o sistema del cliente.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3>🛠️ Despliegue Clúster Llave en Mano</h3>
+                    <p>Arquitectura optimizada para entornos distribuidos locales y clústeres de alto rendimiento, asegurando un aprovisionamiento informático inmediato On-Premise y soporte de ingeniería dedicado.</p>
                 </div>
             </div>
         </div>
