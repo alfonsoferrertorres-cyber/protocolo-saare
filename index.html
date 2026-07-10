@@ -8,14 +8,14 @@
     <link rel="icon" type="image/png" href="LOGO NAVEGADOR.png">
     <style>
         :root {
-            --primary-bg: #060f1e;
-            --surface-bg: #0b172a;
+            --primary-bg: #ffffff; /* Fondo Principal Blanco */
+            --surface-bg: #f8fafc; /* Fondo de Tarjetas Gris Muy Claro */
             --accent-orange: #d95400;
-            --accent-blue: #0076ff;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border-color: #1e293b;
-            --success-green: #10b981;
+            --accent-blue: #0056cc; /* Azul corporativo ajustado para contraste en fondo blanco */
+            --text-main: #0f172a; /* Texto Oscuro Principal */
+            --text-muted: #475569; /* Texto Secundario */
+            --border-color: #e2e8f0; /* Bordes Claros */
+            --success-green: #15803d;
         }
 
         body {
@@ -38,7 +38,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 25px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
         }
 
         .logo-area {
@@ -51,17 +51,18 @@
             height: 40px;
             width: auto;
             border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
 
         .logo-text {
             font-size: 22px;
             font-weight: 800;
             letter-spacing: 1px;
-            color: #ffffff;
+            color: var(--text-main);
         }
 
         .shield-status {
-            background: rgba(217, 84, 0, 0.15);
+            background: rgba(217, 84, 0, 0.1);
             color: var(--accent-orange);
             border: 1px solid var(--accent-orange);
             padding: 4px 12px;
@@ -92,7 +93,7 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 20px;
-            color: #ffffff;
+            color: var(--text-main);
         }
 
         .hero p {
@@ -108,7 +109,8 @@
             border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            background: #000000;
         }
 
         video {
@@ -130,18 +132,19 @@
             padding: 40px;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-orange);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
         }
 
         .card-title {
             font-size: 20px;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--text-main);
             margin-bottom: 5px;
         }
 
@@ -155,7 +158,7 @@
         .card-price {
             font-size: 36px;
             font-weight: 800;
-            color: #ffffff;
+            color: var(--text-main);
             margin-bottom: 25px;
         }
 
@@ -213,7 +216,7 @@
             font-size: 28px;
             font-weight: 700;
             margin: 60px 0 40px 0;
-            color: #ffffff;
+            color: var(--text-main);
         }
 
         .tech-grid {
@@ -255,11 +258,16 @@
         .doc-link:hover { text-decoration: underline; }
 
         .subsidy-box {
-            background: linear-gradient(135deg, #0b172a 0%, #071324 100%);
+            background: #f1f5f9;
             border-left: 4px solid var(--accent-blue);
             padding: 40px;
             border-radius: 6px;
             margin: 60px 0;
+        }
+
+        .subsidy-box h2 {
+            color: var(--text-main);
+            margin-top: 0;
         }
 
         .subsidy-grid {
@@ -270,16 +278,16 @@
         }
 
         .subsidy-item {
-            background: rgba(255,255,255,0.02);
+            background: #ffffff;
             padding: 15px;
             border-radius: 4px;
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid var(--border-color);
         }
 
         .subsidy-item strong {
             display: block;
             font-size: 13px;
-            color: #ffffff;
+            color: var(--text-main);
             font-family: monospace;
         }
 
@@ -288,7 +296,6 @@
             color: var(--text-muted);
         }
 
-        /* BOTONES DE DOCUMENTACIÓN COMPLEMENTARIA */
         .legal-downloads {
             display: flex;
             justify-content: center;
@@ -298,7 +305,7 @@
         }
 
         .btn-doc {
-            background: transparent;
+            background: #ffffff;
             border: 1px solid var(--border-color);
             color: var(--text-main);
             padding: 10px 20px;
@@ -306,11 +313,12 @@
             font-size: 13px;
             text-decoration: none;
             transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .btn-doc:hover {
             border-color: var(--accent-blue);
-            background: rgba(0, 118, 255, 0.1);
+            background: rgba(0, 86, 204, 0.05);
         }
 
         footer {
@@ -328,7 +336,7 @@
 <div class="container">
     <header>
         <div class="logo-area">
-            <!-- Renderizado de tu logotipo local -->
+            <!-- Imagen del logotipo principal integrada -->
             <img src="LOGOTIPO PRINCIPAL S.A.A.R.E..jpeg" alt="Logo MS3V" class="logo-img">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
@@ -341,7 +349,7 @@
         <p>Protección inmutable On-Premise contra fugas de datos y responsabilidad por alucinaciones lógicas. Diseñado bajo estándares de cumplimiento de la Ley de IA de la UE e ISO 42001.</p>
     </section>
 
-    <!-- INTEGRACIÓN DE TU VIDEO CORPORATIVO -->
+    <!-- VIDEO CORPORATIVO -->
     <div class="video-container">
         <video controls poster="Mesa de trabajo 1.png">
             <source src="dreamina-2026-06-30-7219-A high-end tech corporate video, cinemat.mp4" type="video/mp4">
@@ -353,7 +361,7 @@
     <h2 class="section-title">Modelos de Despliegue de Licencias Oficiales</h2>
     <div class="pricing-grid">
         
-        <!-- SANDBOX -->
+        <!-- LICENCIA SANDBOX -->
         <div class="card">
             <div class="card-title">Licencia Sandbox Perito</div>
             <div class="card-allocation">📟 Asignación: 1 Nodo Local Individual</div>
@@ -364,11 +372,10 @@
                 <li>Auditoría segura para desarrolladores, peritos e ingenieros.</li>
                 <li>Firma Digital e indexación local a cero tokens.</li>
             </ul>
-            <!-- Enlace directo a tu pasarela de Stripe automatizada -->
             <a href="https://checkout.stripe.com/...tu_enlace_real..." class="btn-action">Adquirir Sandbox (Stripe Checkout) →</a>
         </div>
 
-        <!-- ENTERPRISE CLUSTER -->
+        <!-- LICENCIA ENTERPRISE CLÚSTER CONECTADA A FILLOUT -->
         <div class="card">
             <div class="card-title">Licencia Clúster Enterprise</div>
             <div class="card-allocation">🎛️ Asignación: Nodos Dedicados + Respaldo Multicliente</div>
@@ -380,12 +387,13 @@
                 <li>Direccionamiento Unidireccional físico antirrastreo por hardware.</li>
                 <li>Soporte de Ingeniería 24/7 con integración directa de Capa Nativa.</li>
             </ul>
-            <a href="mailto:tu-correo@saare.es?subject=Solicitud Licencia Cluster Enterprise" class="btn-action premium">Contratar Licencia Clúster Enterprise →</a>
+            <!-- Enlace automatizado a tu formulario de Fillout -->
+            <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-action premium">Contratar Licencia Clúster Enterprise →</a>
         </div>
 
     </div>
 
-    <!-- DOCUMENTACIÓN LEGAL INDEXADA -->
+    <!-- REPOSITORIO DE DOCUMENTACIÓN LOCAL -->
     <h2 class="section-title">Garantías y Respaldos Técnicos Avalados</h2>
     <div class="legal-downloads">
         <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" class="btn-doc">📋 Derechos de Uso y Soberanía</a>
@@ -394,50 +402,50 @@
         <a href="Manual_Protocolo_SAARE_V4.pdf" target="_blank" class="btn-doc">📘 Manual Protocolo V4</a>
     </div>
 
-    <!-- ARQUITECTURA FORENSE -->
+    <!-- GARANTÍAS FORENSES -->
     <h2 class="section-title">Arquitectura de Vanguardia: Garantías Forenses</h2>
     <div class="tech-grid">
         <div class="tech-box">
             <h3>🌐 Direccionamiento Unidireccional Físico</h3>
-            <p>Las peticiones limpias viajan hacia el exterior en un único sentido, anulando inyecciones inversas.</p>
+            <p>Las peticiones limpias viajan hacia el exterior en un único sentido, anulando por completo cualquier posibilidad de rastreo o inyección inversa.</p>
             <a href="Informe_Alineamiento_ISO27001_SAARE.pdf" target="_blank" class="doc-link">Ver Alineamiento ISO 27001 →</a>
         </div>
         <div class="tech-box">
-            <h3>🛡️ Trazabilidad Forense (MLS)</h3>
-            <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable.</p>
+            <h3>🛡️ Integridad y Trazabilidad Forense (MLS)</h3>
+            <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable, preconstituyendo la evidencia forense.</p>
             <a href="Informe_Alineamiento_Regulatorio_SAARE.pdf" target="_blank" class="doc-link">Descargar Informe Regulatorio →</a>
         </div>
         <div class="tech-box">
             <h3>📉 Error Lógico Cero (Zero Drift)</h3>
-            <p>Las restricciones semánticas deterministas locales de S.A.A.R.E. sustituyen la aleatoriedad probabilística.</p>
+            <p>Las restricciones semánticas deterministas locales de S.A.A.R.E. sustituyen la aleatoriedad probabilística tradicional corporativa.</p>
             <a href="Manual_Ejecución_Profesional.pdf" target="_blank" class="doc-link">Manual de Ejecución →</a>
         </div>
     </div>
 
-    <!-- FONDOS PÚBLICOS ACTIVOS -->
+    <!-- FINANCIACIÓN Y FONDOS PÚBLICOS -->
     <div class="subsidy-box">
         <h2>Fondos Públicos Activos: Financiación Ministerial (Periodo 2025-2027)</h2>
-        <p>La integración perimetral del <strong>Protocolo S.A.A.R.E. v4.2</strong> se encuentra plenamente amparada por la Actualización de la Orden Ministerial del Plan Estratégico de Subvenciones. Financiable hasta el <strong>100% sin costes de intermediación</strong>.</p>
+        <p>La integración perimetral del <strong>Protocolo S.A.A.R.E. v4.2</strong> se encuentra plenamente amparada por la Actualización de la Orden Ministerial del Plan Estratégico de Subvenciones del Ministerio para la Transformación Digital. Financiable hasta el 100% sin costes de intermediación.</p>
         
         <div class="subsidy-grid">
             <div class="subsidy-item">
                 <strong>Partida 1.1: Kit Consulting (SIA 3109834)</strong>
-                <span>Dotación presupuestaria de 300M€ con mecanismo revolving hasta 2031.</span>
+                <span>Dotación presupuestaria de 300M€ con mecanismo revolving hasta 2031 para remanentes.</span>
             </div>
             <div class="subsidy-item">
                 <strong>Partida 1.2: Kit Espacios de Datos (KTED)</strong>
-                <span>Fondo de 60M€. Convocatoria plenamente activa con ampliación oficial hasta el 14 de mayo de 2026.</span>
+                <span>Fondo de 60M€ destinado a tratamiento seguro en entornos B2B distribuidos. Convocatoria activa hasta mayo de 2026.</span>
             </div>
             <div class="subsidy-item">
                 <strong>Partida 1.3: Cadenas de Valor de la IA</strong>
-                <span>Dotación de 130M€ (Financiación FEDER 2021-2027) destinada al desarrollo experimental.</span>
+                <span>Dotación de 130M€ (Financiación FEDER 2021-2027) destinada al desarrollo experimental de procesos digitales.</span>
             </div>
             <div class="subsidy-item">
                 <strong>Partida 1.12: Tecnologías de Uso Dual</strong>
-                <span>Dotación ampliada a 109M€ para la creación de infraestructuras de experimentación avanzada.</span>
+                <span>Dotación ampliada a 109M€. El blindaje perimetral facilita el cumplimiento forense exigido en tecnologías críticas.</span>
             </div>
         </div>
-        <p style="margin-top: 25px; font-size: 14px; color: var(--accent-orange);"><strong>📞 Servicio Ayudas: +34 633 88 65 06</strong></p>
+        <p style="margin-top: 25px; font-size: 14px; color: var(--accent-orange); text-align: center;"><strong>📞 Servicio Ayudas: +34 633 88 65 06</strong></p>
     </div>
 
     <footer>
