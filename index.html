@@ -3,336 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MS3V S.A.A.R.E. | Motor Lógico Perimetral de Inteligencia Artificial</title>
-    
+    <title>MS3V S.A.A.R.E. | Layer 7 Perimeter Infrastructure</title>
+    <!-- Favicon Indexado -->
     <link rel="icon" type="image/png" href="LOGO NAVEGADOR.png">
-    
     <style>
         :root {
-            --bg-main: #0f172a;
-            --bg-card: #1e293b;
-            --cyan-tech: #00E5FF;
-            --orange-alert: #ff6600;
-            --text-light: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: #334155;
-            --green-success: #10b981;
+            --primary-bg: #060f1e;
+            --surface-bg: #0b172a;
+            --accent-orange: #d95400;
+            --accent-blue: #0076ff;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1e293b;
+            --success-green: #10b981;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg-main); color: var(--text-light); line-height: 1.6; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-        /* Navbar Adaptable */
-        nav { background: var(--bg-main); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--cyan-tech); position: sticky; top: 0; z-index: 100; flex-wrap: wrap; gap: 10px; }
-        @media (min-width: 768px) { nav { padding: 15px 40px; } }
-        .logo-area { display: flex; align-items: center; gap: 12px; }
-        .logo-img { height: 45px; width: auto; border-radius: 4px; }
-        @media (min-width: 768px) { .logo-img { height: 50px; } }
-        .logo-text { color: #ffffff; font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; }
-        
-        .nav-right-container { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
-        
-        .nav-slogan-area { display: flex; align-items: center; gap: 8px; color: #ffffff; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px; font-family: 'Courier New', Courier, monospace; text-transform: uppercase; background: rgba(255, 102, 0, 0.15); border: 1.5px solid var(--orange-alert); padding: 6px 12px; border-radius: 4px; box-shadow: inset 0 0 4px rgba(255, 102, 0, 0.3); }
-        @media (min-width: 768px) { .nav-slogan-area { font-size: 0.85rem; letter-spacing: 1.5px; padding: 6px 14px; } }
-        .nav-brain-icon { font-size: 1.1rem; filter: drop-shadow(0 0 3px var(--orange-alert)); }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-        .btn-servicio-tecnico { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: #ffffff; border: 1.5px solid var(--cyan-tech); padding: 6px 14px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; text-decoration: none; transition: all 0.2s ease; }
-        @media (min-width: 768px) { .btn-servicio-tecnico { font-size: 0.85rem; padding: 6px 16px; } }
-        .btn-servicio-tecnico:hover { background: var(--cyan-tech); color: #000000; box-shadow: 0 0 10px rgba(0, 229, 255, 0.4); }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
 
-        /* HERO SECTION */
-        .hero-licensing-section { padding: 60px 0; background: linear-gradient(to bottom, var(--bg-card), var(--bg-main)); border-bottom: 1px solid var(--border-color); text-align: center; }
-        @media (min-width: 768px) { .hero-licensing-section { padding: 90px 0; text-align: left; } }
-        .hero-flex-wrapper { display: flex; align-items: center; justify-content: center; gap: 30px; flex-direction: column; }
-        @media (min-width: 768px) { .hero-flex-wrapper { flex-direction: row; gap: 50px; } }
-        
-        .hero-side-logo { height: 140px; width: 140px; padding: 4px; border-radius: 6px; object-fit: contain; }
-        @media (min-width: 768px) { .hero-side-logo { height: 180px; width: 180px; } }
-        
-        .hero-text-box h1 { font-size: 2.2rem; font-weight: 900; line-height: 1.2; color: #ffffff; margin-bottom: 20px; letter-spacing: -0.5px; }
-        @media (min-width: 768px) { .hero-text-box h1 { font-size: 3rem; } }
-        .hero-text-box h1 span { color: var(--cyan-tech); }
-        .hero-text-box p { color: var(--text-muted); font-size: 1.15rem; margin-bottom: 30px; max-width: 650px; margin-left: auto; margin-right: auto; }
-        @media (min-width: 768px) { .hero-text-box p { margin-left: 0; margin-right: 0; } }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-        .central-cta-box { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; max-width: 440px; margin: 0 auto; }
-        @media (min-width: 768px) { .central-cta-box { margin: 0; } }
-        
-        /* CONTENEDOR VIDEO EXPLICATIVO HTML5 */
-        .video-wrapper { width: 100%; max-width: 800px; margin: 35px auto 0 auto; border: 2px solid var(--cyan-tech); border-radius: 8px; overflow: hidden; box-shadow: 0 0 20px rgba(0, 229, 255, 0.15); background: #000; }
-        @media (min-width: 768px) { .video-wrapper { margin: 40px 0 0 0; } }
+        .logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 4px;
+        }
 
-        /* BOTONES DE ACCIÓN */
-        .btn-tramita-licencia { display: inline-flex; background-color: var(--orange-alert); color: #ffffff; border: none; padding: 16px 24px; font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; border-radius: 6px; cursor: pointer; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 14px rgba(255, 102, 0, 0.4); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); width: 100%; text-align: center; }
-        @media (min-width: 768px) { .btn-tramita-licencia { padding: 18px 36px; font-size: 18px; } }
-        .btn-tramita-licencia:hover { background-color: #e05500; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6); }
+        .logo-text {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #ffffff;
+        }
 
-        /* SECCIÓN PLANES / MATRIZ DE LICENCIAMIENTO */
-        .pricing-section { padding: 80px 0; background: #111827; border-bottom: 1px solid var(--border-color); }
-        .pricing-section h2 { text-align: center; font-size: 2.2rem; margin-bottom: 10px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }
-        .pricing-section p.subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 50px; }
-        .pricing-grid { display: flex; flex-direction: column; gap: 30px; max-width: 950px; margin: 0 auto; align-items: stretch; }
-        @media (min-width: 768px) { .pricing-grid { flex-direction: row; } }
-        .pricing-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 40px 30px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; position: relative; transition: transform 0.3s ease, border-color 0.3s ease; }
-        .pricing-card:hover { transform: translateY(-5px); border-color: var(--cyan-tech); }
-        .pricing-card.featured { border: 2px solid var(--cyan-tech); box-shadow: 0 10px 30px rgba(0, 229, 255, 0.05); }
-        .pricing-card.featured:hover { border-color: var(--orange-alert); }
-        
-        .pricing-card .badge { position: absolute; top: -12px; right: 20px; background: var(--orange-alert); color: #ffffff; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .pricing-card h3 { font-size: 1.5rem; color: #ffffff; margin-bottom: 8px; font-weight: 700; }
-        
-        /* Contenedor de Nodos Asignados */
-        .node-allocation { display: inline-block; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.25); color: var(--cyan-tech); font-family: monospace; font-size: 0.8rem; font-weight: bold; padding: 6px 12px; border-radius: 4px; margin-bottom: 20px; text-transform: uppercase; }
-        .pricing-card.featured .node-allocation { background: rgba(255, 102, 0, 0.08); border: 1px solid rgba(255, 102, 0, 0.25); color: var(--orange-alert); }
+        .shield-status {
+            background: rgba(217, 84, 0, 0.15);
+            color: var(--accent-orange);
+            border: 1px solid var(--accent-orange);
+            padding: 4px 12px;
+            font-family: monospace;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
 
-        .pricing-card .price-tag { font-size: 2.6rem; font-weight: 900; color: #ffffff; margin-bottom: 5px; letter-spacing: -1px; }
-        .pricing-card .price-tag span { font-size: 1rem; color: var(--text-muted); font-weight: normal; letter-spacing: 0; }
-        .pricing-card .scope { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 0.5px; }
-        
-        .pricing-card ul { list-style: none; margin-bottom: 35px; border-top: 1px solid var(--border-color); padding-top: 25px; }
-        .pricing-card ul li { font-size: 0.95rem; color: #cbd5e1; margin-bottom: 14px; display: flex; align-items: start; gap: 12px; line-height: 1.5; }
-        .pricing-card ul li::before { content: "✓"; color: var(--cyan-tech); font-weight: bold; font-size: 1.1rem; }
-        .pricing-card.featured ul li::before { color: var(--orange-alert); }
-        
-        .pricing-card .btn-quote { display: block; text-align: center; background: transparent; border: 1px solid var(--cyan-tech); color: var(--cyan-tech); padding: 14px; border-radius: 6px; text-decoration: none; font-weight: 700; transition: all 0.2s ease; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; cursor: pointer; }
-        .pricing-card .btn-quote:hover { background: var(--cyan-tech); color: #000000; }
-        
-        /* Enfoque visual corporativo al botón principal */
-        .pricing-card.featured .btn-quote { background-color: var(--orange-alert); border-color: var(--orange-alert); color: #ffffff; box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2); }
-        .pricing-card.featured .btn-quote:hover { background-color: #e05500; border-color: #e05500; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4); }
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px 0;
+            max-width: 850px;
+            margin: 0 auto;
+        }
 
-        /* SECCIÓN FINANCIACIÓN Y GESTIÓN DE AYUDAS OFICIALES */
-        .subventions-section { padding: 80px 0; background: linear-gradient(to bottom, #111827, var(--bg-main)); border-bottom: 1px solid var(--border-color); }
-        .subventions-box { background: rgba(16, 185, 129, 0.04); border: 2px dashed var(--green-success); padding: 45px 35px; border-radius: 8px; max-width: 1200px; margin: 0 auto; }
-        .subventions-header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
-        .subventions-badge { background: var(--green-success); color: #ffffff; font-size: 0.8rem; font-weight: 800; padding: 6px 14px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; }
-        .subventions-box h3 { font-size: 1.8rem; color: #ffffff; font-weight: 800; }
-        .subventions-box p.intro { color: #cbd5e1; font-size: 1.05rem; margin-bottom: 30px; }
-        .subventions-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 35px; }
-        .subventions-item { background: rgba(30, 41, 59, 0.6); border: 1px solid var(--border-color); padding: 20px; border-radius: 6px; }
-        .subventions-item h4 { color: var(--cyan-tech); font-size: 1.05rem; margin-bottom: 8px; font-weight: 700; }
-        .subventions-item p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; }
-        .subventions-cta-container { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 30px; }
-        .btn-ayudas { display: inline-flex; align-items: center; gap: 8px; background-color: var(--green-success); color: #ffffff; border: none; padding: 14px 28px; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 6px; text-decoration: none; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); transition: all 0.2s ease; }
-        .btn-ayudas:hover { background-color: #059669; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5); }
-        .subventions-notice { font-size: 0.85rem; color: var(--text-muted); flex: 1; min-width: 250px; line-height: 1.5; }
+        .tag-top {
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
 
-        /* VENTAJAS INDUSTRIALES */
-        .advantages-section { padding: 80px 0; background: var(--bg-main); border-bottom: 1px solid var(--border-color); }
-        .advantages-section h2 { text-align: center; margin-bottom: 50px; font-size: 2.2rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }
-        .advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .advantage-card { background: var(--bg-card); border-top: 4px solid var(--orange-alert); padding: 30px; border-radius: 6px; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); transition: transform 0.2s ease; }
-        .advantage-card:hover { transform: translateY(-3px); }
-        .advantage-card h3 { font-size: 1.2rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
-        .advantage-card p { font-size: 0.9rem; color: #cbd5e1; line-height: 1.6; }
+        h1 {
+            font-size: 38px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
 
-        /* COMPROMISO GLOBAL DE DATOS */
-        .global-ethics { background: var(--bg-main); padding: 80px 0; border-bottom: 1px solid var(--border-color); }
-        .ethics-box { background: linear-gradient(135deg, #111827 0%, var(--bg-card) 100%); border: 1px solid var(--border-color); padding: 45px 35px; border-radius: 8px; text-align: center; max-width: 900px; margin: 0 auto; box-shadow: 0px 10px 30px rgba(0,0,0,0.2); }
-        .ethics-emblem { font-size: 3rem; margin-bottom: 20px; }
-        .ethics-box h3 { font-size: 1.7rem; color: #ffffff; margin-bottom: 15px; font-weight: 700; }
-        .ethics-box p { color: var(--text-muted); font-size: 1.05rem; max-width: 750px; margin: 0 auto; line-height: 1.7; }
+        .hero p {
+            font-size: 17px;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
 
-        /* PIE DE PÁGINA CORPORATIVO */
-        footer { background: #0b0f19; color: var(--text-muted); padding: 50px 0; text-align: center; font-size: 0.85rem; }
-        .sys-hash { font-family: monospace; color: #64748b; background: var(--bg-card); padding: 6px 14px; border-radius: 4px; display: inline-block; margin-bottom: 25px; font-size: 0.8rem; word-break: break-all; border: 1px solid var(--border-color); }
-        .footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 25px; flex-wrap: wrap; font-size: 0.9rem; }
-        .footer-links a { color: var(--text-muted); text-decoration: none; border-bottom: 1px dotted #475569; padding-bottom: 3px; transition: color 0.2s ease; }
-        .footer-links a:hover { color: var(--cyan-tech); }
+        /* VIDEO CONTAINER */
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-orange);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .card-allocation {
+            font-family: monospace;
+            font-size: 13px;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .card-price {
+            font-size: 36px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+
+        .card-price span {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 35px 0;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--success-green);
+            font-weight: bold;
+        }
+
+        .btn-action {
+            display: block;
+            text-align: center;
+            background: var(--accent-blue);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .btn-action.premium {
+            background: var(--accent-orange);
+        }
+
+        .btn-action:hover {
+            filter: brightness(1.1);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 60px 0 40px 0;
+            color: #ffffff;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tech-box {
+            background: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            border-radius: 6px;
+        }
+
+        .tech-box h3 {
+            color: var(--accent-orange);
+            margin-top: 0;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-box p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .doc-link {
+            display: inline-block;
+            font-size: 12px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .doc-link:hover { text-decoration: underline; }
+
+        .subsidy-box {
+            background: linear-gradient(135deg, #0b172a 0%, #071324 100%);
+            border-left: 4px solid var(--accent-blue);
+            padding: 40px;
+            border-radius: 6px;
+            margin: 60px 0;
+        }
+
+        .subsidy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .subsidy-item {
+            background: rgba(255,255,255,0.02);
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .subsidy-item strong {
+            display: block;
+            font-size: 13px;
+            color: #ffffff;
+            font-family: monospace;
+        }
+
+        .subsidy-item span {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* BOTONES DE DOCUMENTACIÓN COMPLEMENTARIA */
+        .legal-downloads {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .btn-doc {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-doc:hover {
+            border-color: var(--accent-blue);
+            background: rgba(0, 118, 255, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
 
-    <nav>
+<div class="container">
+    <header>
         <div class="logo-area">
-            <img src="Logo.jpeg" alt="🛡️" class="logo-img">
+            <!-- Renderizado de tu logotipo local -->
+            <img src="LOGOTIPO PRINCIPAL S.A.A.R.E..jpeg" alt="Logo MS3V" class="logo-img">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
+        <div class="shield-status">[🧠 S.A.A.R.E.—BLINDAJE ACTIVO v4.2]</div>
+    </header>
+
+    <section class="hero">
+        <div class="tag-top">&lt;PROTECCIÓN EX-ANTE COMPLIANCE&gt;</div>
+        <h1>Infraestructura Perimetral Ex-Ante para Inteligencia Artificial</h1>
+        <p>Protección inmutable On-Premise contra fugas de datos y responsabilidad por alucinaciones lógicas. Diseñado bajo estándares de cumplimiento de la Ley de IA de la UE e ISO 42001.</p>
+    </section>
+
+    <!-- INTEGRACIÓN DE TU VIDEO CORPORATIVO -->
+    <div class="video-container">
+        <video controls poster="Mesa de trabajo 1.png">
+            <source src="dreamina-2026-06-30-7219-A high-end tech corporate video, cinemat.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+
+    <!-- MODELOS DE LICENCIAS OFICIALES -->
+    <h2 class="section-title">Modelos de Despliegue de Licencias Oficiales</h2>
+    <div class="pricing-grid">
         
-        <div class="nav-right-container">
-            <div class="nav-slogan-area">
-                <span class="nav-brain-icon">🧠</span>
-                <span>&lt;PROTECCIÓN EX-ANTE COMPLIANCE&gt;</span>
-            </div>
-            <a href="https://wa.me/34633886506?text=Hola,%20necesito%20asistencia%20técnica%20con%20el%20despliegue%20On-Premise%20de%20la%20Licencia%20Enterprise." class="btn-servicio-tecnico" target="_blank" rel="noopener noreferrer">
-                🛠️ Servicio Técnico
-            </a>
+        <!-- SANDBOX -->
+        <div class="card">
+            <div class="card-title">Licencia Sandbox Perito</div>
+            <div class="card-allocation">📟 Asignación: 1 Nodo Local Individual</div>
+            <div class="card-price">29 € <span>/ mes</span></div>
+            <ul class="features-list">
+                <li>Aislamiento de la capa nativa en terminal único.</li>
+                <li>Mitigación de Drift Lógico Ex-Ante en tiempo real.</li>
+                <li>Auditoría segura para desarrolladores, peritos e ingenieros.</li>
+                <li>Firma Digital e indexación local a cero tokens.</li>
+            </ul>
+            <!-- Enlace directo a tu pasarela de Stripe automatizada -->
+            <a href="https://checkout.stripe.com/...tu_enlace_real..." class="btn-action">Adquirir Sandbox (Stripe Checkout) →</a>
         </div>
-    </nav>
-    
-    <section class="hero-licensing-section">
-        <div class="container">
-            <div class="hero-flex-wrapper">
-                <img src="Logo.jpeg" alt="MS3V SAARE Certificación Nativa" class="hero-side-logo">
-                
-                <div class="hero-text-box">
-                    <h1>Infraestructura Perimetral <span>Ex-Ante</span> para Inteligencia Artificial</h1>
-                    <p>Protección inmutable On-Premise contra fugas de datos y responsabilidad por alucinaciones lógicas. Diseñado bajo estándares de cumplimiento de la Ley de IA de la UE e ISO 42001.</p>
-                    
-                    <div class="central-cta-box">
-                        <!-- Corregido: Apunta directo a WhatsApp para la Captación Directa Llave en Mano -->
-                        <a href="https://wa.me/34633886506?text=Hola%20Alfonso,%20solicitamos%20inicializar%20un%20nodo%20local%20y%20el%20diagnóstico%20de%20cumplimiento%20ex-ante%20bajo%20ISO%2027001%20para%20nuestra%20organización." class="btn-tramita-licencia" target="_blank" rel="noopener noreferrer">
-                            🔒 INICIALIZAR NODO LOCAL (LICENCIA DE EXPLOTACIÓN OPERATIVA)
-                        </a>
-                    </div>
-                </div>
 
-                <div class="video-wrapper">
-                    <video width="100%" controls autoplay muted loop playsinline>
-                        <source src="dreamina-2026-06-30-7219-A high-end tech corporate video, cinemat.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de vídeo HTML5.
-                    </video>
-                </div>
-                
-                <img src="Logo.jpeg" alt="MS3V SAARE Escudo" class="hero-side-logo">
-            </div>
+        <!-- ENTERPRISE CLUSTER -->
+        <div class="card">
+            <div class="card-title">Licencia Clúster Enterprise</div>
+            <div class="card-allocation">🎛️ Asignación: Nodos Dedicados + Respaldo Multicliente</div>
+            <div class="card-price">Custom <span>/ Depósito previo</span></div>
+            <ul class="features-list">
+                <li>Despliegue perimetral modular en clúster local corporativo.</li>
+                <li>Trazabilidad avanzada, auditoría forense y sellado MLS.</li>
+                <li>Cumplimiento estricto certificado ISO 42001 y EU AI Act.</li>
+                <li>Direccionamiento Unidireccional físico antirrastreo por hardware.</li>
+                <li>Soporte de Ingeniería 24/7 con integración directa de Capa Nativa.</li>
+            </ul>
+            <a href="mailto:tu-correo@saare.es?subject=Solicitud Licencia Cluster Enterprise" class="btn-action premium">Contratar Licencia Clúster Enterprise →</a>
         </div>
-    </section>
 
-    <section id="licencias" class="pricing-section">
-        <div class="container">
-            <h2>Modelos de Despliegue de Licencias Oficiales</h2>
-            <p class="subtitle">Aprovisionamiento informático inmutable y asignación dedicada de arquitectura criptográfica.</p>
-            
-            <div class="pricing-grid">
-                
-                <div class="pricing-card">
-                    <div>
-                        <h3>Licencia Sandbox Perito</h3>
-                        <div class="node-allocation">📟 Asignación: 1 Nodo Local Individual</div>
-                        <div class="price-tag">29 € <span>/ mes</span></div>
-                        <div class="scope">Entorno de Desarrollo & Sandbox Profesional</div>
-                        <ul>
-                            <li>Aislamiento de la capa nativa en terminal único.</li>
-                            <li>Mitigación de Drift Lógico Ex-Ante en tiempo real.</li>
-                            <li>Auditoría segura para desarrolladores, peritos e ingenieros.</li>
-                            <li>Firma Digital e indexación local a cero tokens.</li>
-                        </ul>
-                    </div>
-                    <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-quote" rel="noopener noreferrer">Adquirir Sandbox (Stripe Checkout) →</a>
-                </div>
+    </div>
 
-                <div class="pricing-card featured">
-                    <div class="badge">Infraestructura Crítica</div>
-                    <div>
-                        <h3>Licencia Clúster Enterprise</h3>
-                        <div class="node-allocation">🎛️ Asignación: Nodos Dedicados + Respaldo Multicliente</div>
-                        <div class="price-tag">Custom <span>/ Depósito previo</span></div>
-                        <div class="scope">Infraestructura Corporativa & Servidores On-Premise</div>
-                        <ul>
-                            <li>Despliegue perimetral modular en clúster local corporativo.</li>
-                            <li>Trazabilidad avanzada, auditoría forense y sellado MLS.</li>
-                            <li>Cumplimiento estricto certificado ISO 42001 y EU AI Act.</li>
-                            <li>Direccionamiento Unidireccional físico antirrastreo por hardware.</li>
-                            <li>Soporte de Ingeniería 24/7 con integración directa de Capa Nativa.</li>
-                        </ul>
-                    </div>
-                    <!-- Corregido: Enlace Fillout Enterprise modificado hacia WhatsApp directo con texto cualificado -->
-                    <a href="https://wa.me/34633886506?text=Hola%20Alfonso,%20estoy%20interesado%20en%20la%20Licencia%20Cl%C3%BAster%20Enterprise%20de%20S.A.A.R.E.%20para%20nuestra%20infraestructura%20y%20el%20diagn%C3%B3stico%20bajo%20ISO%2027001." target="_blank" class="btn-quote" rel="noopener noreferrer">Contratar Licencia Clúster Enterprise →</a>
-                </div>
+    <!-- DOCUMENTACIÓN LEGAL INDEXADA -->
+    <h2 class="section-title">Garantías y Respaldos Técnicos Avalados</h2>
+    <div class="legal-downloads">
+        <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" class="btn-doc">📋 Derechos de Uso y Soberanía</a>
+        <a href="Manual_Buenas_Practicas_SAARE.pdf" target="_blank" class="btn-doc">📖 Manual de Buenas Prácticas</a>
+        <a href="Politicas_Privacidad_e_Inferencia_SAARE.pdf" target="_blank" class="btn-doc">🔒 Políticas de Inferencia</a>
+        <a href="Manual_Protocolo_SAARE_V4.pdf" target="_blank" class="btn-doc">📘 Manual Protocolo V4</a>
+    </div>
 
-            </div>
+    <!-- ARQUITECTURA FORENSE -->
+    <h2 class="section-title">Arquitectura de Vanguardia: Garantías Forenses</h2>
+    <div class="tech-grid">
+        <div class="tech-box">
+            <h3>🌐 Direccionamiento Unidireccional Físico</h3>
+            <p>Las peticiones limpias viajan hacia el exterior en un único sentido, anulando inyecciones inversas.</p>
+            <a href="Informe_Alineamiento_ISO27001_SAARE.pdf" target="_blank" class="doc-link">Ver Alineamiento ISO 27001 →</a>
         </div>
-    </section>
+        <div class="tech-box">
+            <h3>🛡️ Trazabilidad Forense (MLS)</h3>
+            <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable.</p>
+            <a href="Informe_Alineamiento_Regulatorio_SAARE.pdf" target="_blank" class="doc-link">Descargar Informe Regulatorio →</a>
+        </div>
+        <div class="tech-box">
+            <h3>📉 Error Lógico Cero (Zero Drift)</h3>
+            <p>Las restricciones semánticas deterministas locales de S.A.A.R.E. sustituyen la aleatoriedad probabilística.</p>
+            <a href="Manual_Ejecución_Profesional.pdf" target="_blank" class="doc-link">Manual de Ejecución →</a>
+        </div>
+    </div>
 
-    <!-- SECCIÓN DE GESTIÓN DE AYUDAS OFICIALES 2026 -->
-    <section id="ayudas-oficiales" class="subventions-section">
-        <div class="container">
-            <div class="subventions-box">
-                <div class="subventions-header">
-                    <span class="subventions-badge">Fondos Públicos Activos</span>
-                    <h3>Financiación y Gestión de Ayudas Ministeriales (Periodo 2025-2027)</h3>
-                </div>
-                <p class="intro">
-                    La integración perimetral del **Protocolo S.A.A.R.E. v4.2** se encuentra plenamente amparada por la Actualización de la Orden Ministerial del Plan Estratégico de Subvenciones del Ministerio para la Transformación Digital y de la Función Pública. Al estructurarse bajo modalidad de "Caja Negra" (Black Box) orientada a la soberanía del dato y mitigación de riesgos lógicos, el licenciamiento es financiable hasta el **100% sin costes de intermediación**.
-                </p>
-                
-                <div class="subventions-list">
-                    <div class="subventions-item">
-                        <h4>Partida 1.1: Kit Consulting (SIA 3109834)</h4>
-                        <p>Dotación presupuestaria de 300M€ con mecanismo de reinversión continua "revolving" hasta 2031 para remanentes y desistimientos. Cubre bonos de asesoramiento especializado en Ciberseguridad e Inteligencia Artificial para pymes de entre 10 y 250 empleados.</p>
-                    </div>
-                    <div class="subventions-item">
-                        <h4>Partida 1.2: Kit Espacios de Datos (KTED)</h4>
-                        <p>Fondo de 60M€ destinado a resolver fallos de mercado en soberanía tecnológica y tratamiento seguro en entornos B2B distribuidos. Convocatoria plenamente activa con ampliación oficial de solicitudes hasta el 14 de mayo de 2026.</p>
-                    </div>
-                    <div class="subventions-item">
-                        <h4>Partida 1.3: Cadenas de Valor de la IA</h4>
-                        <p>Dotación de 130M€ (Financiación FEDER 2021-2027) destinada al desarrollo experimental de procesos digitales e integración de modelos avanzados en las cadenas de valor corporativas.</p>
-                    </div>
-                    <div class="subventions-item">
-                        <h4>Partida 1.12: Tecnologías de Uso Dual</h4>
-                        <p>Dotación ampliada a 109M€ para la creación de infraestructuras de investigación, ensayo y experimentación avanzada. El blindaje perimetral y determinista de S.A.A.R.E. v4.2 facilita el cumplimiento forense exigido en tecnologías críticas.</p>
-                    </div>
-                </div>
-
-                <div class="subventions-cta-container">
-                    <a href="https://wa.me/34633886506?text=Hola,%20solicito%20información%20y%20asistencia%20del%20Servicio%20de%20Ayudas%20para%20la%20justificación%20técnica%20de%20la%20licencia%20SAARE." class="btn-ayudas" target="_blank" rel="noopener noreferrer">
-                        📞 Servicio Ayudas: +34 633 88 65 06
-                    </a>
-                    <p class="subventions-notice">
-                        *Nuestro canal proporciona a ingenieros y consultores de cumplimiento la memoria técnica simplificada requerida para la justificación ex-ante de la ayuda pública sin coste adicional.
-                    </p>
-                </div>
+    <!-- FONDOS PÚBLICOS ACTIVOS -->
+    <div class="subsidy-box">
+        <h2>Fondos Públicos Activos: Financiación Ministerial (Periodo 2025-2027)</h2>
+        <p>La integración perimetral del <strong>Protocolo S.A.A.R.E. v4.2</strong> se encuentra plenamente amparada por la Actualización de la Orden Ministerial del Plan Estratégico de Subvenciones. Financiable hasta el <strong>100% sin costes de intermediación</strong>.</p>
+        
+        <div class="subsidy-grid">
+            <div class="subsidy-item">
+                <strong>Partida 1.1: Kit Consulting (SIA 3109834)</strong>
+                <span>Dotación presupuestaria de 300M€ con mecanismo revolving hasta 2031.</span>
+            </div>
+            <div class="subsidy-item">
+                <strong>Partida 1.2: Kit Espacios de Datos (KTED)</strong>
+                <span>Fondo de 60M€. Convocatoria plenamente activa con ampliación oficial hasta el 14 de mayo de 2026.</span>
+            </div>
+            <div class="subsidy-item">
+                <strong>Partida 1.3: Cadenas de Valor de la IA</strong>
+                <span>Dotación de 130M€ (Financiación FEDER 2021-2027) destinada al desarrollo experimental.</span>
+            </div>
+            <div class="subsidy-item">
+                <strong>Partida 1.12: Tecnologías de Uso Dual</strong>
+                <span>Dotación ampliada a 109M€ para la creación de infraestructuras de experimentación avanzada.</span>
             </div>
         </div>
-    </section>
-
-    <section class="advantages-section">
-        <div class="container">
-            <h2>Arquitectura de Vanguardia: Garantías y Ventajas Forenses</h2>
-            <div class="advantages-grid">
-                <div class="advantage-card">
-                    <h3>🌐 Direccionamiento Unidireccional Físico</h3>
-                    <p>Las peticiones limpias viajan hacia el exterior en un único sentido, de forma que se anula por completo cualquier posibilidad de rastreo o inyección inversa hacia el núcleo de la IA cerrada corporativa.</p>
-                </div>
-                <div class="advantage-card">
-                    <h3>🛡️ Integridad y Trazabilidad Forense (MLS)</h3>
-                    <p>Cada interacción analítica es sellada en tiempo real mediante un Hash criptográfico inmutable bajo arquitectura MLS, preconstituyendo la evidencia forense e inalterable exigida por las autoridades reguladoras.</p>
-                </div>
-                <div class="advantage-card">
-                    <h3>📉 Error Lógico Cero (Zero Drift)</h3>
-                    <p>Las restricciones semánticas deterministas locales de S.A.A.R.E. sustituyen la aleatoriedad probabilística tradicional, eliminando formalmente el riesgo de alucinación en entornos automatizados críticos.</p>
-                </div>
-                <div class="advantage-card">
-                    <h3>⚡ Gobernanza EU AI Act e ISO 42001</h3>
-                    <p>Apertura completa de cajas negras algorítmicas locales. El puente perimetral genera automáticamente el registro de logs exigido por las dinámicas comunitarias europeas y las normativas vigentes de auditoría.</p>
-                </div>
-                <div class="advantage-card">
-                    <h3>🔒 Aislamiento Caja Negra (Black Box)</h3>
-                    <p>Integración ágil y opaca vía API perimetral que se acopla al servidor sin comprometer, alterar ni exponer el código fuente original del invento o sistema del cliente.</p>
-                </div>
-                <div class="advantage-card">
-                    <h3>🛠️ Despliegue Clúster Llave en Mano</h3>
-                    <p>Arquitectura optimizada para entornos distribuidos locales y clústeres de alto rendimiento, asegurando un aprovisionamiento informático inmediato On-Premise y soporte de ingeniería dedicado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="global-ethics">
-        <div class="container">
-            <div class="ethics-box">
-                <div class="ethics-emblem">🕊️ 🌍 🛡️</div>
-                <h3>Compromiso de Unidad Global, Privacidad y Soberanía de Datos</h3>
-                <p>El protocolo perimetral S.A.A.R.E. opera bajo un modelo matemático local indexado a cero tokens, erradicando la exportación transfronteriza no autorizada de datos corporativos y blindando el flujo informático a escala global.</p>
-            </div>
-        </div>
-    </section>
+        <p style="margin-top: 25px; font-size: 14px; color: var(--accent-orange);"><strong>📞 Servicio Ayudas: +34 633 88 65 06</strong></p>
+    </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="Politicas_Privacidad_e_Inferencia_SAARE.pdf" target="_blank" rel="noopener noreferrer">Políticas de Privacidad e Inferencia</a>
-                <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" rel="noopener noreferrer">Derechos de Uso y Soberanía Algorítmica</a>
-                <a href="Manual_Buenas_Practicas_SAARE.pdf" target="_blank" rel="noopener noreferrer">Manual de Buenas Prácticas S.A.A.R.E.</a>
-            </div>
-            <div class="sys-hash">Firma Digital Verificada: SAARE-ISO-COMPLIANCE-NODE-BCC0A9A0-HASH99X77B</div>
-            <p>© 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.</p>
-            <p>Para solicitudes de despliegue enterprise o alta de nodos, contacte en: <strong style="color: #ff6600;">legal@saare.es</strong></p>
-        </div>
+        Firma Digital Verificada: SAARE-ISO-COMPLIANCE-NODE-BCC0A9A0-HASH99X77B<br>
+        © 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.
     </footer>
+</div>
 
 </body>
 </html>
