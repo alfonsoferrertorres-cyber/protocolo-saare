@@ -317,7 +317,7 @@
             background: rgba(0, 86, 204, 0.05);
         }
 
-        .video-wrapper {
+        .video-container {
             background: var(--surface-bg);
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -325,7 +325,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
-        .video-wrapper h3 {
+        .video-container h3 {
             font-size: 15px;
             margin: 0 0 10px 0;
             color: var(--text-main);
@@ -363,24 +363,30 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto 50px auto;">
         
         <!-- VÍDEO COMPLIANCE ISO 27001 -->
-        <div class="video-wrapper">
+        <div class="video-container">
             <h3>📊 Mapeo y Evidencia Dinámica ISO 27001</h3>
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px;">
-                <video controls preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000;">
-                    <source src="ISO_27001.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    src="https://www.youtube.com/embed/ENwiGevPaBk" 
+                    title="Mapeo y Evidencia Dinámica ISO 27001" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
 
         <!-- VÍDEO COMPLIANCE ISO 42001 -->
-        <div class="video-wrapper">
+        <div class="video-container">
             <h3>🤖 Gobernanza y Métricas Algorítmicas ISO 42001</h3>
             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px;">
-                <video controls preload="metadata" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000;">
-                    <source src="ISO_42001.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de video.
-                </video>
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    src="https://www.youtube.com/embed/Q4aHFhRLQFE" 
+                    title="Gobernanza y Métricas Algorítmicas ISO 42001" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
 
@@ -412,7 +418,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto 50px auto;">
         
         <!-- VÍDEO 1 YOUTUBE: DEMOSTRACIÓN DE HERRAMIENTAS -->
-        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
+        <div class="video-container" style="padding: 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
             <iframe 
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
                 src="https://www.youtube.com/embed/O4OPP8bCj-U" 
@@ -423,7 +429,7 @@
         </div>
 
         <!-- VÍDEO 2 YOUTUBE: GUÍA DE INSTALACIÓN DEL NODO -->
-        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
+        <div class="video-container" style="padding: 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
             <iframe 
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
                 src="https://www.youtube.com/embed/Gag_nELRkFQ" 
