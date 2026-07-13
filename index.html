@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MS3V S.A.A.R.E. | Layer 7 Deterministic Perimeter Infrastructure</title>
+    <title>MS3V S.A.A.R.E. | Layer 7 Perimeter Infrastructure</title>
+    <!-- Favicon Indexado -->
+    <link rel="icon" type="image/png" href="Logo + Cumplimiento.png">
     <style>
         :root {
             --primary-bg: #090d16;
             --surface-bg: #111827;
-            --surface-card: #1f2937;
             --accent-cyan: #00d4b2;
             --accent-blue: #3b82f6;
+            --accent-orange: #ef4444;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --border-color: #374151;
+            --border-color: #1f2937;
             --success-green: #10b981;
         }
 
@@ -37,41 +39,44 @@
             justify-content: space-between;
             align-items: center;
             padding: 25px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
 
         .logo-text {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
-            letter-spacing: 1.5px;
-            color: var(--text-main);
-            background: linear-gradient(to right, #ffffff, var(--text-muted));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            color: #ffffff;
         }
 
         .shield-status {
             background: rgba(0, 212, 178, 0.1);
             color: var(--accent-cyan);
-            border: 1px solid rgba(0, 212, 178, 0.3);
-            padding: 6px 14px;
+            border: 1px solid var(--accent-cyan);
+            padding: 4px 12px;
             font-family: monospace;
             font-size: 11px;
             font-weight: bold;
-            border-radius: 20px;
-            letter-spacing: 0.5px;
+            border-radius: 4px;
         }
 
         .hero {
             text-align: center;
-            padding: 80px 0 50px 0;
-            max-width: 900px;
+            padding: 60px 0 40px 0;
+            max-width: 850px;
             margin: 0 auto;
         }
 
@@ -79,316 +84,429 @@
             color: var(--accent-blue);
             font-weight: 700;
             text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
         }
 
         h1 {
-            font-size: 44px;
+            font-size: 38px;
             font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 25px;
-            letter-spacing: -0.5px;
-            background: linear-gradient(to bottom right, #ffffff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #ffffff;
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 17px;
             color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 35px;
         }
 
         .pricing-grid {
             display: flex;
             justify-content: center;
-            margin: 20px 0 60px 0;
+            margin: 40px 0;
         }
 
         .card {
             background: var(--surface-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 45px;
-            max-width: 650px;
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 600px;
             width: 100%;
             display: flex;
             flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             position: relative;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
         .card::before {
-            content: "CERTIFICACIÓN DE PROTOCOLO ACTIVADA";
+            content: "EMERGENCIA REGULATORIA";
             position: absolute;
             top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
-            color: #090d16;
+            right: 25px;
+            background: var(--accent-orange);
+            color: white;
             font-size: 10px;
-            font-weight: 800;
-            padding: 5px 16px;
-            border-radius: 20px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
             letter-spacing: 1px;
         }
 
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 15px 30px rgba(0, 212, 178, 0.05);
+        }
+
         .card-title {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 4px;
-            text-align: center;
+            margin-bottom: 5px;
         }
 
         .card-allocation {
             font-family: monospace;
-            font-size: 12px;
-            color: var(--accent-cyan);
-            margin-bottom: 30px;
-            text-align: center;
-            opacity: 0.9;
+            font-size: 13px;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
         }
 
         .card-price {
-            font-size: 42px;
+            font-size: 36px;
             font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 30px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 25px;
+            color: var(--accent-cyan);
+            margin-bottom: 25px;
         }
 
         .card-price span {
             font-size: 14px;
             color: var(--text-muted);
             font-weight: 400;
-            display: block;
-            margin-top: 5px;
         }
 
         .features-list {
             list-style: none;
             padding: 0;
-            margin: 0 0 40px 0;
+            margin: 0 0 35px 0;
             flex-grow: 1;
         }
 
         .features-list li {
-            font-size: 15px;
-            margin-bottom: 16px;
+            font-size: 14.5px;
+            margin-bottom: 14px;
             color: #e2e8f0;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
         }
 
         .features-list li::before {
             content: "✓";
-            color: var(--accent-cyan);
+            color: var(--success-green);
             font-weight: bold;
+        }
+
+        .btn-action {
+            display: block;
+            text-align: center;
+            background: var(--accent-cyan);
+            color: #090d16;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 16px;
+            border-radius: 6px;
             font-size: 16px;
+            transition: background 0.2s;
+        }
+
+        .btn-action:hover {
+            filter: brightness(1.1);
         }
 
         .section-title {
             text-align: center;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
-            margin: 80px 0 40px 0;
-            letter-spacing: -0.5px;
+            margin: 60px 0 40px 0;
+            color: #ffffff;
         }
 
         .tech-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
         .tech-box {
             background: var(--surface-bg);
             border: 1px solid var(--border-color);
-            padding: 30px;
-            border-radius: 8px;
-            transition: border-color 0.2s;
-        }
-
-        .tech-box:hover {
-            border-color: var(--accent-blue);
+            padding: 25px;
+            border-radius: 6px;
         }
 
         .tech-box h3 {
-            color: #ffffff;
+            color: var(--accent-cyan);
             margin-top: 0;
-            font-size: 17px;
-            font-weight: 700;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .tech-box h3::after {
-            content: "PROTECTED";
-            font-family: monospace;
-            font-size: 9px;
-            background: rgba(59, 130, 246, 0.15);
-            color: var(--accent-blue);
-            padding: 2px 8px;
-            border-radius: 4px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .tech-box p {
-            font-size: 14px;
+            font-size: 13.5px;
             color: var(--text-muted);
-            margin-bottom: 20px;
-            line-height: 1.5;
+            margin-bottom: 10px;
         }
 
         .doc-link {
-            display: block;
-            font-family: monospace;
-            font-size: 11px;
-            color: var(--accent-cyan);
-            background: rgba(0, 212, 178, 0.05);
-            padding: 6px 10px;
-            border-radius: 4px;
-            border: 1px dashed rgba(0, 212, 178, 0.2);
-        }
-
-        .crypto-vault {
-            background: #0f141c;
-            border: 1px dashed var(--border-color);
-            padding: 30px;
-            border-radius: 8px;
-            margin: 60px 0;
-            font-family: monospace;
-        }
-
-        .crypto-vault-header {
-            color: var(--accent-blue);
-            font-weight: bold;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 13px;
-        }
-
-        .crypto-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
+            display: inline-block;
             font-size: 12px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 5px;
         }
 
-        .crypto-item {
-            background: var(--surface-bg);
-            padding: 12px 16px;
+        .doc-link:hover { text-decoration: underline; }
+
+        .subsidy-box {
+            background: #111827;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            padding: 40px;
+            border-radius: 6px;
+            margin: 60px 0;
+        }
+
+        .subsidy-box h2 {
+            color: #ffffff;
+            margin-top: 0;
+        }
+
+        .subsidy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .subsidy-item {
+            background: #090d16;
+            padding: 15px;
             border-radius: 4px;
             border: 1px solid var(--border-color);
         }
 
-        .crypto-item span {
-            color: var(--text-muted);
+        .subsidy-item strong {
             display: block;
-            margin-bottom: 4px;
-            font-size: 11px;
+            font-size: 13px;
+            color: var(--accent-cyan);
+            font-family: monospace;
         }
 
-        .crypto-item strong {
-            color: #e2e8f0;
-            word-break: break-all;
+        .subsidy-item span {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .legal-downloads {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .btn-doc {
+            background: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .btn-doc:hover {
+            border-color: var(--accent-blue);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        .video-container {
+            background: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .video-container h3 {
+            font-size: 15px;
+            margin: 0 0 10px 0;
+            color: #ffffff;
         }
 
         footer {
             text-align: center;
             padding: 40px 0;
+            border-top: 1px solid var(--border-color);
             font-size: 12px;
             color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            margin-top: 60px;
+            font-family: monospace;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <div class="logo-area">
-                <div class="logo-text">MS3V / S.A.A.R.E.</div>
-            </div>
-            <div class="shield-status">STATUS: DETERMINISTIC_CORE_ACTIVE</div>
-        </header>
-
-        <div class="hero">
-            <div class="tag-top">Infraestructura Global de Gobernanza</div>
-            <h1>Control Perimetral ex-ante en Capa 7</h1>
-            <p>Alineación técnica avanzada para el cumplimiento del Reglamento Europeo de Inteligencia Artificial (EU AI Act) fijado para agosto de 2026. Mitigación stocástica radical y entorno de error lógico cero.</p>
+<div class="container">
+    <header>
+        <div class="logo-area">
+            <img src="LOGOTIPO PRINCIPAL S.A.A.RE..jpeg" alt="Logo MS3V" class="logo-img">
+            <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
+        <div class="shield-status">[🧠 S.A.A.R.E.—NODO DE CONTROL EXTRA-PERIMETRAL v7.0 PRO]</div>
+    </header>
 
-        <div class="pricing-grid">
-            <div class="card">
-                <div class="card-title">Ecosistema Integrado MS3V</div>
-                <div class="card-allocation">ID Contexto: MS3V-RECON-VALID-2026-ALF-0521</div>
-                <div class="card-price">
-                    0.00%<span>Tasa de Error Lógico Garantizado (Stateless)</span>
-                </div>
-                <ul class="features-list">
-                    <li>Involución Vectorial Dinámica en el espacio latente del servidor.</li>
-                    <li>Desacople y Filtro de Aplicación en Capa 7 (Motores BLOCK-LOGIC).</li>
-                    <li>Optimización estructural de flujos informáticos con Token Reduction masivo.</li>
-                    <li>Generación de evidencias automatizadas para marcos ISO 27001 e ISO 42001.</li>
-                </ul>
-            </div>
-        </div>
+    <section class="hero">
+        <div class="tag-top">&lt;ARQUITECTURA DE INTERCEPTACIÓN EN CAPA 7&gt;</div>
+        <h1>Filtro Determinista Perimetral ex-ante frente al EU AI Act</h1>
+        <p>Gobernanza inmutable e infraestructura Stateless ejecutada directamente en la fuente del tráfico[cite: 1]. Mitigación estocástica radical en la capa de aplicación para adquirir cumplimiento normativo inmediato bajo tasa de error lógico del 0.00%[cite: 1, 4].</p>
+    </section>
 
-        <div class="section-title">Índice Indexado de Propiedad Industrial Registrada</div>
+    <!-- SECCIÓN DE INFRAESTRUCTURA AUDIOVISUAL PRINCIPAL: DEMOSTRACIÓN RÁPIDA -->
+    <h2 class="section-title">Demostración Rápida de Conformidad Normativa</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto 50px auto;">
         
-        <div class="tech-grid">
-            <div class="tech-box">
-                <h3>Infraestructura Core V7.0 PRO</h3>
-                <p>Paquete tecnológico ejecutable registrado que implementa la arquitectura y lógica del framework de software conceptual.</p>
-                <div class="doc-link">Safe Creative: 2607076314949</div>
-            </div>
-            <div class="tech-box">
-                <h3>Motores BLOCK-LOGIC</h3>
-                <p>Algoritmos deterministas inscritos para la auditoría de integridad en tiempo real y filtrado semántico ex-ante.</p>
-                <div class="doc-link">Safe Creative: 2605235761177</div>
-            </div>
-            <div class="tech-box">
-                <h3>Control de Potencia Analógica</h3>
-                <p>Método certificado de gestión de presión sonora mediante lazo de retorno físico en línea de señal de audio.</p>
-                <div class="doc-link">Safe Creative: 2602284720315</div>
+        <!-- VÍDEO COMPLIANCE ISO 27001 -->
+        <div class="video-container">
+            <h3>📊 Mapeo y Evidencia Dinámica ISO 27001</h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    src="https://www.youtube.com/embed/ENwiGevPaBk" 
+                    title="Mapeo y Evidencia Dinámica ISO 27001" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
 
-        <div class="crypto-vault">
-            <div class="crypto-vault-header">🛡️ BÓVEDA DE TRAZABILIDAD Y HASH DE VALIDACIÓN MASTER</div>
-            <div class="crypto-grid">
-                <div class="crypto-item">
-                    <span>HASH MAESTRO DE AUTORÍA</span>
-                    <strong>MS3V-RECON-VALID-2026-ALF-0521</strong>
-                </div>
-                <div class="crypto-item">
-                    <span>TITULAR EXCLUSIVO</span>
-                    <strong>Alfonso Ferrer Torres</strong>
-                </div>
-                <div class="crypto-item">
-                    <span>MARCA DE TIEMPO CONSOLIDADA</span>
-                    <strong>Mayo - Julio 2026</strong>
-                </div>
+        <!-- VÍDEO COMPLIANCE ISO 42001 -->
+        <div class="video-container">
+            <h3>🤖 Gobernanza y Métricas Algorítmicas ISO 42001</h3>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                    src="https://www.youtube.com/embed/Q4aHFhRLQFE" 
+                    title="Gobernanza y Métricas Algorítmicas ISO 42001" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
 
-        <footer>
-            Gabinete Técnico Comercial MS3V &copy; 2026. Todos los derechos reservados bajo el Régimen Internacional de Secreto Comercial.
-        </footer>
     </div>
+
+    <!-- MODELO ÚNICO DE LICENCIA B2B -->
+    <h2 class="section-title">Aprovisionamiento Técnico de Contingencia</h2>
+    <div class="pricing-grid">
+        
+        <!-- LICENCIA UNIFICADA PILOTO EXPRESS -->
+        <div class="card">
+            <div class="card-title">Licencia de Evaluación Piloto Express</div>
+            <div class="card-allocation">📟 Registro de Propiedad Industrial Master ID: MS3V-RECON-VALID-2026-ALF-0521</div>
+            <div class="card-price">4.500 € <span>/ Setup Fee Único de Entrada</span></div>
+            <ul class="features-list">
+                <li>Alineamiento ex-ante completo con las exigencias obligatorias del EU AI Act del 2 de agosto[cite: 1, 4].</li>
+                <li>Despliegue perimetral en Capa 7 sin almacenamiento de logs ni persistencia de datos (100% Stateless)[cite: 1, 4].</li>
+                <li>Mitigación absoluta de alucinaciones algorítmicas con tasa de error lógico del 0.00% verificada[cite: 1, 4].</li>
+                <li>Firma e indexación forense automatizada bajo algoritmo SHA-256 verificado de fábrica.</li>
+                <li>Optimización financiera automatizada mediante reducción drástica del coste de tokens redundantes[cite: 4].</li>
+                <li>Autorización directa por canal de gastos de departamento técnico (evita comités de compras tradicionales)[cite: 4].</li>
+            </ul>
+            <a href="https://wa.me/34633886506?text=Hola%20Alfonso,%20solicitamos%20activación%20de%20Licencia%20Piloto%20Express%20(4.500€)%20bajo%20NDA%20para%20despliegue%20inmediato%20en%20Capa%207." target="_blank" class="btn-action">Activar Licencia Piloto bajo NDA →</a>
+        </div>
+
+    </div>
+
+    <!-- SECCIÓN SECUNDARIA: HERRAMIENTAS AVANZADAS Y TUTORIALES LARGOS -->
+    <h2 class="section-title">Tutoriales Avanzados y Demostración Extendida</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto 50px auto;">
+        
+        <!-- VÍDEO 1 YOUTUBE: DEMOSTRACIÓN DE HERRAMIENTAS -->
+        <div class="video-container" style="padding: 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
+            <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                src="https://www.youtube.com/embed/O4OPP8bCj-U" 
+                title="Demostración de Herramientas SAARE ms3v" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- VÍDEO 2 YOUTUBE: GUÍA DE INSTALACIÓN DEL NODO -->
+        <div class="video-container" style="padding: 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
+            <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                src="https://www.youtube.com/embed/Gag_nELRkFQ" 
+                title="Guia para la Instalación del Nodo SAARE" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- REPOSITORIO DE DOCUMENTACIÓN LOCAL -->
+    <h2 class="section-title">Garantías y Respaldos Técnicos Avalados</h2>
+    <div class="legal-downloads">
+        <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" class="btn-doc">📋 Derechos de Uso y Soberanía</a>
+        <a href="Manual_Buenas_Practicas_SAARE.pdf" target="_blank" class="btn-doc">📖 Manual de Buenas Prácticas</a>
+        <a href="Politicas_Privacidad_e_Inferencia_SAARE.pdf" target="_blank" class="btn-doc">🔒 Políticas de Inferencia</a>
+    </div>
+
+    <!-- GARANTÍAS FORENSES -->
+    <h2 class="section-title">Arquitectura Avanzada: Infraestructura Libre de Estado</h2>
+    <div class="tech-grid">
+        <div class="tech-box">
+            <h3>🌐 Direccionamiento Unidireccional Físico</h3>
+            <p>El flujo de datos viaja hacia el exterior de forma estrictamente lineal. Al no depender de servidores intermediarios, se anula por completo el rastreo inverso.</p>
+            <a href="Informe_Alineamiento_ISO27001_SAARE.pdf" target="_blank" class="doc-link">Ver Alineamiento ISO 27001 →</a>
+        </div>
+        <div class="tech-box">
+            <h3>🛡️ Trazabilidad Nativa de Cumplimiento</h3>
+            <p>Cada interacción analítica es procesada en memoria RAM al vuelo[cite: 3]. El nodo estampa la firma criptográfica necesaria para auditorías oficiales sin almacenar logs externos[cite: 3].</p>
+            <a href="Informe_Alineamiento_Regulatorio_SAARE.pdf" target="_blank" class="doc-link">Descargar Informe Regulatorio →</a>
+        </div>
+        <div class="tech-box">
+            <h3>📉 Mitigación Absoluta de Riesgo Semántico</h3>
+            <p>Las restricciones semánticas deterministas del motor perimetral actúan de manera directa sobre la Capa 7, impidiendo la desviación lógica antes de que el tráfico abandone el servidor[cite: 3].</p>
+            <a href="Manual_Ejecución_Profesional.pdf" target="_blank" class="doc-link">Manual de Execution →</a>
+        </div>
+    </div>
+
+    <!-- FINANCIACIÓN Y FONDOS PÚBLICOS -->
+    <div class="subsidy-box">
+        <h2>Fondos Públicos Activos: Financiación Ministerial (Periodo 2025-2027)</h2>
+        <p>La integración perimetral del <strong>Protocolo S.A.A.R.E. v7.0 PRO</strong> se encuentra amparada por la Actualización de la Orden Ministerial del Plan Estratégico de Subvenciones del Ministerio para la Transformación Digital[cite: 3]. Financiable hasta el 100% sin costes de intermediación[cite: 3].</p>
+        
+        <div class="subsidy-grid">
+            <div class="subsidy-item">
+                <strong>Partida 1.1: Kit Consulting (SIA 3109834)</strong>
+                <span>Dotación presupuestaria de 300M€ con mecanismo revolving hasta 2031 para remanentes[cite: 3].</span>
+            </div>
+            <div class="subsidy-item">
+                <strong>Partida 1.2: Kit Espacios de Datos (KTED)</strong>
+                <span>Fondo de 60M€ destinado a tratamiento seguro en entornos B2B distribuidos[cite: 3]. Convocatoria activa hasta mayo de 2026[cite: 3].</span>
+            </div>
+            <div class="subsidy-item">
+                <strong>Partida 1.3: Cadenas de Valor de la IA</strong>
+                <span>Dotación de 130M€ (Financiación FEDER 2021-2027) destinada al desarrollo experimental de procesos digitales[cite: 3].</span>
+            </div>
+            <div class="subsidy-item">
+                <strong>Partida 1.12: Tecnologías de Uso Dual</strong>
+                <span>Dotación ampliada a 109M€[cite: 3]. El blindaje perimetral facilita el cumplimiento forense exigido en tecnologías críticas[cite: 3].</span>
+            </div>
+        </div>
+        <p style="margin-top: 25px; font-size: 14px; color: var(--accent-cyan); text-align: center;"><strong>📞 Servicio Ayudas y Dirección Directa: +34 633 88 65 06</strong></p>
+    </div>
+
+    <!-- PIE DE PÁGINA ACTUALIZADO -->
+    <footer>
+        Código Master Identificador: MS3V-RECON-VALID-2026-ALF-0521<br>
+        Firma Digital Verificada: SAARE-ISO-COMPLIANCE-NODE-FB3FE6A1-HASH2026<br>
+        Integridad SHA-256: fb3fe6a18a0e05b995922579562f04d4d6badb215ea91d103b5d5276d1b9dfbd<br>
+        © 2026 Protocolo MS3V S.A.A.R.E. • Todos los derechos reservados.
+    </footer>
+</div>
 
 </body>
 </html>
