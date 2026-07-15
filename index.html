@@ -97,31 +97,46 @@
             color: #ffffff;
         }
 
-        .eslogan-box {
-            background: rgba(59, 130, 246, 0.05);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-left: 4px solid var(--accent-blue);
-            padding: 20px;
+        /* WARIBILLO / BLOQUE DE AVISO DE TRANSFERENCIA IP DE ALTO IMPACTO */
+        .transfer-warning-box {
+            background: rgba(239, 68, 68, 0.03);
+            border: 1px dashed rgba(239, 68, 68, 0.3);
+            border-left: 4px solid var(--accent-orange);
+            padding: 24px;
             border-radius: 6px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             text-align: left;
         }
 
-        .eslogan-box h2 {
-            font-size: 16px;
+        .transfer-warning-box h2 {
+            font-size: 14px;
             font-weight: 800;
-            color: var(--accent-cyan);
-            margin: 0 0 8px 0;
+            color: var(--accent-orange);
+            margin: 0 0 10px 0;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .eslogan-box p {
-            font-size: 15px;
-            color: #e2e8f0;
+        .transfer-warning-box .ip-claim {
+            font-size: 17px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .transfer-warning-box .tech-sub {
+            font-size: 14px;
+            color: var(--text-muted);
             margin: 0;
-            font-style: italic;
             line-height: 1.5;
+        }
+
+        .transfer-warning-box .tech-sub strong {
+            color: var(--accent-cyan);
         }
 
         .hero p.meta-desc {
@@ -386,10 +401,11 @@
         <div class="tag-top">&lt;ARQUITECTURA DE INTERCEPTACIÓN EN CAPA 7&gt;</div>
         <h1>Filtro Determinista Perimetral ex-ante frente al EU AI Act</h1>
         
-        <!-- BLOQUE DE DISCURSO PRINCIPAL DESTACADO -->
-        <div class="eslogan-box">
-            <h2>Gobernanza de Infraestructura Eficiente:</h2>
-            <p>"Nuestra arquitectura no es una capa de IA auditando a otra IA. Es un motor determinista que valida la semántica en tiempo de ejecución con consumo cero de tokens. Esto permite blindar la ISO 42001 de manera continua sin añadir costes de API ni costes de computación extra a la infraestructura de sus clientes."</p>
+        <!-- WARIBILLO DE TRANSFERENCIA TECNOLÓGICA B2B -->
+        <div class="transfer-warning-box">
+            <h2>⚠️ DIRECTIVA DE LICENCIAMIENTO B2B</h2>
+            <div class="ip-claim">"No vendemos un producto SaaS. Cedemos una propiedad intelectual lista para integrarse mediante licencia OEM o marca blanca."</div>
+            <p class="tech-sub">Nuestra arquitectura no es una capa de IA auditando a otra IA. Es un motor determinista que valida la semántica en tiempo de ejecución con <strong>consumo cero de tokens</strong>. Esto permite blindar la ISO 42001 de manera continua sin añadir costes de API ni costes de computación extra a la infraestructura de sus clientes.</p>
         </div>
 
         <p class="meta-desc">Gobernanza inmutable e infraestructura Stateless ejecutada directamente en la fuente del tráfico. Mitigación estocástica radical en la capa de aplicación para adquirir cumplimiento normativo inmediato bajo tasa de error lógico del 0.00%.</p>
