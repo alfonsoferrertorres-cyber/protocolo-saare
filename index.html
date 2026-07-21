@@ -75,7 +75,7 @@
 
         .hero {
             text-align: center;
-            padding: 60px 0 40px 0;
+            padding: 50px 0 30px 0;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -97,11 +97,10 @@
             color: #ffffff;
         }
 
-        /* WARIBILLO / BLOQUE DE AVISO DE TRANSFERENCIA IP DE ALTO IMPACTO */
         .transfer-warning-box {
-            background: rgba(239, 68, 68, 0.03);
-            border: 1px dashed rgba(239, 68, 68, 0.3);
-            border-left: 4px solid var(--accent-orange);
+            background: rgba(0, 212, 178, 0.03);
+            border: 1px dashed rgba(0, 212, 178, 0.3);
+            border-left: 4px solid var(--accent-cyan);
             padding: 24px;
             border-radius: 6px;
             margin-bottom: 35px;
@@ -111,7 +110,7 @@
         .transfer-warning-box h2 {
             font-size: 14px;
             font-weight: 800;
-            color: var(--accent-orange);
+            color: var(--accent-cyan);
             margin: 0 0 10px 0;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -148,44 +147,38 @@
         .pricing-grid {
             display: flex;
             justify-content: center;
-            margin: 40px 0;
+            margin: 30px 0 50px 0;
         }
 
         .card {
             background: var(--surface-bg);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--accent-cyan);
             border-radius: 8px;
             padding: 40px;
-            max-width: 600px;
+            max-width: 650px;
             width: 100%;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             position: relative;
+            box-shadow: 0 10px 25px rgba(0, 212, 178, 0.08);
         }
 
         .card::before {
-            content: "EMERGENCIA REGULATORIA";
+            content: "15 DÍAS PRUEBA GRATUITA";
             position: absolute;
             top: -12px;
             right: 25px;
-            background: var(--accent-orange);
-            color: white;
-            font-size: 10px;
+            background: var(--accent-cyan);
+            color: #090d16;
+            font-size: 11px;
             font-weight: bold;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 4px;
             letter-spacing: 1px;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 15px 30px rgba(0, 212, 178, 0.05);
-        }
-
         .card-title {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 800;
             color: #ffffff;
             margin-bottom: 5px;
@@ -199,16 +192,28 @@
         }
 
         .card-price {
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 800;
             color: var(--accent-cyan);
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
         .card-price span {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--text-muted);
             font-weight: 400;
+        }
+
+        .trial-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success-green);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            border: 1px solid var(--success-green);
         }
 
         .features-list {
@@ -239,15 +244,17 @@
             background: var(--accent-cyan);
             color: #090d16;
             text-decoration: none;
-            font-weight: 700;
-            padding: 16px;
+            font-weight: 800;
+            padding: 18px;
             border-radius: 6px;
-            font-size: 16px;
-            transition: background 0.2s;
+            font-size: 18px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 212, 178, 0.3);
         }
 
         .btn-action:hover {
-            filter: brightness(1.1);
+            filter: brightness(1.15);
+            transform: translateY(-2px);
         }
 
         .section-title {
@@ -401,17 +408,39 @@
         <div class="tag-top">&lt;ARQUITECTURA DE INTERCEPTACIÓN EN CAPA 7&gt;</div>
         <h1>Filtro Determinista Perimetral ex-ante frente al EU AI Act</h1>
         
-        <!-- WARIBILLO DE TRANSFERENCIA TECNOLÓGICA B2B -->
+        <!-- BLOQUE DE TRANSFERENCIA TECNOLÓGICA B2B -->
         <div class="transfer-warning-box">
-            <h2>⚠️ DIRECTIVA DE LICENCIAMIENTO B2B</h2>
-            <div class="ip-claim">"No vendemos un producto SaaS. Cedemos una propiedad intelectual lista para integrarse mediante licencia OEM o marca blanca."</div>
-            <p class="tech-sub">Nuestra arquitectura no es una capa de IA auditando a otra IA. Es un motor determinista que valida la semántica en tiempo de ejecución con <strong>consumo cero de tokens</strong>. Esto permite blindar la ISO 42001 de manera continua sin añadir costes de API ni costes de computación extra a la infraestructura de sus clientes.</p>
+            <h2>⚠️ DIRECTIVA DE LICENCIAMIENTO B2B / OEM</h2>
+            <div class="ip-claim">"Cedemos una propiedad intelectual lista para integrarse mediante licencia OEM o marca blanca."</div>
+            <p class="tech-sub">Un motor determinista que valida la semántica en tiempo de ejecución con <strong>consumo cero de tokens</strong>. Permite blindar la ISO 42001 de manera continua sin añadir costes de API ni costes de computación extra.</p>
         </div>
 
-        <p class="meta-desc">Gobernanza inmutable e infraestructura Stateless ejecutada directamente en la fuente del tráfico. Mitigación estocástica radical en la capa de aplicación para adquirir cumplimiento normativo inmediato bajo tasa de error lógico del 0.00%.</p>
+        <p class="meta-desc">Gobernanza inmutable e infraestructura Stateless ejecutada directamente en la fuente del tráfico. Cumplimiento normativo inmediato con tasa de error lógico del 0.00%.</p>
     </section>
 
-    <!-- SECCIÓN DE INFRAESTRUCTURA AUDIOVISUAL PRINCIPAL: DEMOSTRACIÓN RÁPIDA -->
+    <!-- MODELO ÚNICO DE LICENCIA B2B CON EMBUDO A FILLOUT -->
+    <div class="pricing-grid">
+        <div class="card">
+            <div class="card-title">Licencia SAARE v7.0 PRO</div>
+            <div class="card-allocation">📟 Registro de Propiedad Industrial Master ID: MS3V-RECON-VALID-2026-ALF-0521</div>
+            <div class="card-price">Suscripción PRO <span>/ Cobro mensual tras la prueba</span></div>
+            <div class="trial-badge">🎁 15 DÍAS DE PRUEBA GRATUITA SIN COSTE HOY (0.00 €)</div>
+            
+            <ul class="features-list">
+                <li>Alineamiento ex-ante completo con las exigencias obligatorias del EU AI Act.</li>
+                <li>Despliegue perimetral en Capa 7 sin almacenamiento de logs ni persistencia de datos (100% Stateless).</li>
+                <li>Mitigación absoluta de alucinaciones algorítmicas con tasa de error lógico del 0.00% verificada.</li>
+                <li>Firma e indexación forense automatizada bajo algoritmo SHA-256 verificado.</li>
+                <li>Optimización financiera automatizada mediante reducción drástica del coste de tokens.</li>
+                <li>Acceso inmediato al paquete distribuidor con instalador automatizado.</li>
+            </ul>
+            
+            <!-- ENLACE AL EMBUDO DE FILLOUT -->
+            <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-action">Iniciar Prueba de 15 Días Gratis →</a>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DEMOSTRACIÓN DE CONFORMIDAD -->
     <h2 class="section-title">Demostración Rápida de Conformidad Normativa</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto 50px auto;">
         
@@ -442,36 +471,12 @@
                 </iframe>
             </div>
         </div>
-
     </div>
 
-    <!-- MODELO ÚNICO DE LICENCIA B2B -->
-    <h2 class="section-title">Aprovisionamiento Técnico de Contingencia</h2>
-    <div class="pricing-grid">
-        
-        <!-- LICENCIA UNIFICADA PILOTO EXPRESS -->
-        <div class="card">
-            <div class="card-title">Licencia de Evaluación Piloto Express</div>
-            <div class="card-allocation">📟 Registro de Propiedad Industrial Master ID: MS3V-RECON-VALID-2026-ALF-0521</div>
-            <div class="card-price">4.500 € <span>/ Setup Fee Único de Entrada</span></div>
-            <ul class="features-list">
-                <li>Alineamiento ex-ante completo con las exigencias obligatorias del EU AI Act del 2 de agosto.</li>
-                <li>Despliegue perimetral en Capa 7 sin almacenamiento de logs ni persistencia de datos (100% Stateless).</li>
-                <li>Mitigación absoluta de alucinaciones algorítmicas con tasa de error lógico del 0.00% verificada.</li>
-                <li>Firma e indexación forense automatizada bajo algoritmo SHA-256 verificado de fábrica.</li>
-                <li>Optimización financiera automatizada mediante reducción drástica del coste de tokens redundantes.</li>
-                <li>Autorización directa por canal de gastos de departamento técnico (evita comités de compras tradicionales).</li>
-            </ul>
-            <a href="https://wa.me/34633886506?text=Hola%20Alfonso,%20solicitamos%20activación%20de%20Licencia%20Piloto%20Express%20(4.500€)%20bajo%20NDA%20para%20despliegue%20inmediato%20en%20Capa%207." target="_blank" class="btn-action">Activar Licencia Piloto bajo NDA →</a>
-        </div>
-
-    </div>
-
-    <!-- SECCIÓN SECUNDARIA: HERRAMIENTAS AVANZADAS Y TUTORIALES LARGOS -->
+    <!-- SECCIÓN SECUNDARIA: TUTORIALES -->
     <h2 class="section-title">Tutoriales Avanzados y Demostración Extendida</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto 50px auto;">
         
-        <!-- VÍDEO 1 YOUTUBE: DEMOSTRACIÓN DE HERRAMIENTAS -->
         <div class="video-container" style="padding: 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
             <iframe 
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
@@ -482,7 +487,6 @@
             </iframe>
         </div>
 
-        <!-- VÍDEO 2 YOUTUBE: GUÍA DE INSTALACIÓN DEL NODO -->
         <div class="video-container" style="padding: 0; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border-color); border-radius: 8px;">
             <iframe 
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
@@ -492,10 +496,9 @@
                 allowfullscreen>
             </iframe>
         </div>
-
     </div>
 
-    <!-- REPOSITORIO DE DOCUMENTACIÓN LOCAL -->
+    <!-- DOCUMENTACIÓN Y ARCHIVOS -->
     <h2 class="section-title">Garantías y Respaldos Técnicos Avalados</h2>
     <div class="legal-downloads">
         <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" class="btn-doc">📋 Derechos de Uso y Soberanía</a>
@@ -503,7 +506,7 @@
         <a href="Politicas_Privacidad_e_Inferencia_SAARE.pdf" target="_blank" class="btn-doc">🔒 Políticas de Inferencia</a>
     </div>
 
-    <!-- GARANTÍAS FORENSES -->
+    <!-- ARQUITECTURA -->
     <h2 class="section-title">Arquitectura Avanzada: Infraestructura Libre de Estado</h2>
     <div class="tech-grid">
         <div class="tech-box">
@@ -549,7 +552,7 @@
         <p style="margin-top: 25px; font-size: 14px; color: var(--accent-cyan); text-align: center;"><strong>📞 Servicio Ayudas y Dirección Directa: +34 633 88 65 06</strong></p>
     </div>
 
-    <!-- PIE DE PÁGINA ACTUALIZADO -->
+    <!-- PIE DE PÁGINA -->
     <footer>
         Código Master Identificador: MS3V-RECON-VALID-2026-ALF-0521<br>
         Firma Digital Verificada: SAARE-ISO-COMPLIANCE-NODE-FB3FE6A1-HASH2026<br>
