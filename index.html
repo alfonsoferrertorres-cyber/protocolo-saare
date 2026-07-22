@@ -6,7 +6,7 @@
     <title>MS3V S.A.A.R.E. v7.0 PRO | Perimetral Layer 7 AI Governance</title>
     <link rel="icon" type="image/x-icon" href="Logo.ico">
     
-    <!-- Tipografías Profesionales (Inter para UI / JetBrains Mono para código/telemetría) -->
+    <!-- Tipografías Profesionales -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -39,7 +39,6 @@
                 radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
         }
 
-        /* GRID BACKGROUND PATTERN */
         body::before {
             content: "";
             position: fixed;
@@ -147,7 +146,7 @@
         .telemetry-content { padding: 20px; font-size: 13px; line-height: 1.8; color: #a7f3d0; min-height: 140px; }
         .t-cyan { color: var(--cyan); } .t-blue { color: var(--blue); } .t-green { color: var(--green); } .t-purple { color: var(--purple); }
 
-        /* ADVANCED ARCHITECTURE GRID (HOVER CARDS) */
+        /* ADVANCED ARCHITECTURE GRID */
         .arch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 70px; }
         .arch-card {
             background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: 14px; padding: 28px;
@@ -159,7 +158,7 @@
         .arch-card a { font-size: 12px; font-weight: 700; color: var(--blue); text-decoration: none; }
         .arch-card a:hover { text-decoration: underline; }
 
-        /* ACCORDION SUBSIDIES (FONDOS PÚBLICOS) */
+        /* ACCORDION SUBSIDIES */
         .subsidy-wrapper { background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: 16px; padding: 36px; margin-bottom: 70px; }
         .subsidy-wrapper h2 { font-size: 22px; margin-bottom: 10px; }
         .subsidy-wrapper p.desc { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
@@ -243,7 +242,8 @@
             <div class="cta-group">
                 <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-main">Iniciar Prueba de 15 Días Gratis →</a>
                 <a href="https://saare-grc-dashboard.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn-sub">🌐 Dashboard GRC & Telemetría en Vivo (PoC)</a>
-                <a href="https://github.com/alfonsoferrertorres-cyber/protocolo-saare" target="_blank" rel="noopener noreferrer" class="btn-sub">⚡ Ver Repositorio Core en GitHub</a>
+                <!-- ENLACE CORREGIDO AL REPOSITORIO ACTIVO EN GITHUB -->
+                <a href="https://github.com/alfonsoferrertorres-cyber/saare-grc-dashboard" target="_blank" rel="noopener noreferrer" class="btn-sub">⚡ Ver Repositorio Core en GitHub</a>
             </div>
         </div>
     </div>
@@ -272,7 +272,7 @@
     <div class="arch-grid">
         <div class="arch-card">
             <h3>🌐 Direccionamiento Unidireccional</h3>
-            <p>El flujo de datos viaja hacia el exterior de forma estrictamente lineal, anulando por completo el rastreo inverso al no requerir intermediarios.</p>
+            <p>El flujo de datos viaja hacia el exterior de forma strictly lineal, anulando por completo el rastreo inverso al no requerir intermediarios.</p>
             <a href="Informe_Alineamiento_ISO27001_SAARE.pdf" target="_blank">Alineamiento ISO 27001 →</a>
         </div>
         <div class="arch-card">
