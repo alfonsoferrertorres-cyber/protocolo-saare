@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MS3V S.A.A.R.E. | Layer 7 Perimeter Infrastructure</title>
-    <!-- Favicon Indexado -->
-    <link rel="icon" type="image/png" href="Logo + Cumplimiento.png">
+    <!-- Favicon Indexado Unificado -->
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
     <style>
         :root {
             --primary-bg: #090d16;
@@ -50,7 +50,8 @@
 
         .logo-img {
             height: 40px;
-            width: auto;
+            width: 40px;
+            object-fit: contain;
             border-radius: 4px;
             border: 1px solid var(--border-color);
         }
@@ -238,6 +239,12 @@
             font-weight: bold;
         }
 
+        .cta-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
         .btn-action {
             display: block;
             text-align: center;
@@ -245,15 +252,34 @@
             color: #090d16;
             text-decoration: none;
             font-weight: 800;
-            padding: 18px;
+            padding: 16px;
             border-radius: 6px;
-            font-size: 18px;
+            font-size: 17px;
             transition: all 0.2s ease;
             box-shadow: 0 4px 12px rgba(0, 212, 178, 0.3);
         }
 
         .btn-action:hover {
             filter: brightness(1.15);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary-live {
+            display: block;
+            text-align: center;
+            background: transparent;
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary-live:hover {
+            background: rgba(59, 130, 246, 0.1);
             transform: translateY(-2px);
         }
 
@@ -398,7 +424,7 @@
 <div class="container">
     <header>
         <div class="logo-area">
-            <img src="LOGOTIPO PRINCIPAL S.A.A.RE..jpeg" alt="Logo MS3V" class="logo-img">
+            <img src="Logo.ico" alt="Logo MS3V" class="logo-img">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
         </div>
         <div class="shield-status">[🧠 S.A.A.R.E.—NODO DE CONTROL EXTRA-PERIMETRAL v7.0 PRO]</div>
@@ -418,7 +444,7 @@
         <p class="meta-desc">Gobernanza inmutable e infraestructura Stateless ejecutada directamente en la fuente del tráfico. Cumplimiento normativo inmediato con tasa de error lógico del 0.00%.</p>
     </section>
 
-    <!-- MODELO ÚNICO DE LICENCIA B2B CON EMBUDO A FILLOUT -->
+    <!-- MODELO ÚNICO DE LICENCIA B2B CON EMBUDO A FILLOUT Y PANEL STREAMLIT -->
     <div class="pricing-grid">
         <div class="card">
             <div class="card-title">Licencia SAARE v7.0 PRO</div>
@@ -435,8 +461,11 @@
                 <li>Acceso inmediato al paquete distribuidor con instalador automatizado.</li>
             </ul>
             
-            <!-- ENLACE AL EMBUDO DE FILLOUT -->
-            <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-action">Iniciar Prueba de 15 Días Gratis →</a>
+            <!-- ENLACES DE ACCIÓN PRINCIPAL Y SECUNDARIO -->
+            <div class="cta-container">
+                <a href="https://forms.fillout.com/t/jSYEe4iTMUus" target="_blank" class="btn-action">Iniciar Prueba de 15 Días Gratis →</a>
+                <a href="https://saare-grc-dashboard.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn-secondary-live">🌐 Acceder al Control Panel GRC & Telemetría en Vivo (PoC)</a>
+            </div>
         </div>
     </div>
 
