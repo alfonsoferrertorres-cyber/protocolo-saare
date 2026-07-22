@@ -99,10 +99,10 @@
             display: inline-block;
         }
 
-        /* GRID DE PILARES DE VALIDACIÓN */
+        /* GRID DE PILARES DE VALIDACIÓN (REORGANIZADO A 4 PILARES) */
         .validation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 16px;
             margin-bottom: 25px;
         }
@@ -112,6 +112,10 @@
             border-radius: 10px;
             padding: 18px;
             text-align: left;
+            transition: border-color 0.3s ease;
+        }
+        .validation-card:hover {
+            border-color: var(--cyan);
         }
         .validation-card h4 {
             font-size: 14px;
@@ -280,7 +284,7 @@
         <span class="validation-badge">🟢 VALIDACIÓN EN TIEMPO REAL DEL SERVICIO DEL NODO</span>
     </div>
 
-    <!-- TRES PILARES DE VALIDACIÓN DEL MOTOR -->
+    <!-- CUATRO PILARES DE VALIDACIÓN DEL MOTOR (INCLUYE VERIFICABILIDAD DE LA IA) -->
     <div class="validation-grid">
         <div class="validation-card">
             <h4>⚡ Servicio Activo (Heartbeat)</h4>
@@ -291,8 +295,12 @@
             <p>Acredita que el nodo procesa las validaciones al vuelo sin guardar registros ni datos confidenciales en discos o bases de datos, garantizando la privacidad absoluta.</p>
         </div>
         <div class="validation-card">
+            <h4>🔎 Verificabilidad de la IA</h4>
+            <p>Transforma el modelo en un proceso 100% auditable ex-ante. Emite evidencias <strong>SHA-256</strong> que certifican el cumplimiento normativo sin exponer datos sensibles.</p>
+        </div>
+        <div class="validation-card">
             <h4>📜 Cumplimiento (ISO & EU AI)</h4>
-            <p>Muestra que las reglas de gobernanza y las firmas criptográficas <strong>SHA-256</strong> se están aplicando ex-ante en cada interacción, sirviendo como evidencia técnica legal para auditorías.</p>
+            <p>Muestra que las reglas de gobernanza y firmas criptográficas se están aplicando ex-ante en cada interacción, sirviendo como evidencia técnica legal para auditorías.</p>
         </div>
     </div>
 
@@ -372,7 +380,6 @@
     </div>
 
     <div class="docs-grid">
-        <!-- ENLACE CORREGIDO AL PDF ÚNICO DISPONIBLE EN EL REPOSITORIO -->
         <a href="INFORME TÉCNICO V4 - ALINEAMIENTO REGULATORIO Y GOBERNANZA - MS3V S.A.A.R.E..pdf" target="_blank" class="doc-item">📜 Informe Técnico V4 (ISO 27001 / 42001)</a>
         <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" class="doc-item">📋 Derechos de Uso y Soberanía</a>
         <a href="Manual_Buenas_Practicas_SAARE.pdf" target="_blank" class="doc-item">📖 Manual de Buenas Prácticas</a>
