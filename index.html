@@ -76,11 +76,54 @@
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
         /* HERO */
-        .hero { text-align: center; padding: 50px 0 30px 0; max-width: 950px; margin: 0 auto; }
+        .hero { text-align: center; padding: 50px 0 25px 0; max-width: 950px; margin: 0 auto; }
         .tag-top { font-family: 'JetBrains Mono', monospace; color: var(--cyan); font-weight: 700; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
         h1 { font-size: 44px; font-weight: 900; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px; }
         h1 span { background: linear-gradient(135deg, var(--cyan), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-sub { font-size: 16px; color: var(--text-muted); margin-bottom: 30px; font-weight: 300; }
+        .hero-sub { font-size: 16px; color: var(--text-muted); margin-bottom: 20px; font-weight: 300; }
+
+        /* SECCIÓN VALIDACIÓN DEL SERVICIO DEL NODO */
+        .validation-banner {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .validation-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--cyan);
+            background: rgba(0, 242, 254, 0.1);
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: 1px solid var(--cyan);
+            box-shadow: 0 0 15px var(--glow-cyan);
+            display: inline-block;
+        }
+
+        /* GRID DE PILARES DE VALIDACIÓN */
+        .validation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+        .validation-card {
+            background: rgba(11, 15, 25, 0.8);
+            border: 1px solid var(--panel-border);
+            border-radius: 10px;
+            padding: 18px;
+            text-align: left;
+        }
+        .validation-card h4 {
+            font-size: 14px;
+            color: var(--cyan);
+            margin-bottom: 6px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .validation-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
 
         /* EMBEDDED STREAMLIT DASHBOARD EN CABECERA */
         .dashboard-hero-container {
@@ -232,13 +275,33 @@
         <p class="hero-sub">Gobernanza inmutable e infraestructura Stateless ejecutada directamente en la fuente del tráfico.</p>
     </section>
 
-    <!-- 🌐 MOTOR VISUAL INTERACTIVO STREAMLIT INCORPORADO EN LA CABECERA -->
+    <!-- VALIDACIÓN DEL SERVICIO DEL NODO -->
+    <div class="validation-banner">
+        <span class="validation-badge">🟢 VALIDACIÓN EN TIEMPO REAL DEL SERVICIO DEL NODO</span>
+    </div>
+
+    <!-- TRES PILARES DE VALIDACIÓN DEL MOTOR -->
+    <div class="validation-grid">
+        <div class="validation-card">
+            <h4>⚡ Servicio Activo (Heartbeat)</h4>
+            <p>Demuestra que el motor ejecutable (<code>saare_core_daemon.exe</code>) está corriendo en memoria RAM, interceptando tráfico en tiempo real y listo para procesar peticiones.</p>
+        </div>
+        <div class="validation-card">
+            <h4>🔒 Certificación Stateless</h4>
+            <p>Acredita que el nodo procesa las validaciones al vuelo sin guardar registros ni datos confidenciales en discos o bases de datos, garantizando la privacidad absoluta.</p>
+        </div>
+        <div class="validation-card">
+            <h4>📜 Cumplimiento (ISO & EU AI)</h4>
+            <p>Muestra que las reglas de gobernanza y las firmas criptográficas <strong>SHA-256</strong> se están aplicando ex-ante en cada interacción, sirviendo como evidencia técnica legal para auditorías.</p>
+        </div>
+    </div>
+
+    <!-- 🌐 MOTOR VISUAL INTERACTIVO STREAMLIT INCORPORADO EN CABECERA -->
     <div class="dashboard-hero-container">
         <div class="dashboard-header-bar">
             <span>🌐 CONTROL PANEL GRC & TELEMETRÍA EN TIEMPO REAL (Nube Activa)</span>
             <span>https://saare-grc-dashboard.streamlit.app</span>
         </div>
-        <!-- iframe con el parámetro ?embed=true para incrustación limpia -->
         <iframe 
             src="https://saare-grc-dashboard.streamlit.app/?embed=true" 
             class="streamlit-iframe" 
