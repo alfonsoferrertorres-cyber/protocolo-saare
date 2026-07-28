@@ -111,7 +111,7 @@
         }
         .btn-header:hover { transform: translateY(-1px); filter: brightness(1.15); box-shadow: 0 0 25px var(--cyan-glow); }
 
-        /* HERO SECTION - PALO ALTO / WIZ STYLE */
+        /* HERO SECTION */
         .hero { text-align: center; padding: 80px 0 40px 0; max-width: 1050px; margin: 0 auto; }
         .tag-top { font-family: var(--font-mono); color: var(--cyan); font-weight: 700; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px; display: inline-block; background: rgba(0,242,254,0.06); padding: 6px 16px; border-radius: 30px; border: 1px solid rgba(0,242,254,0.3); box-shadow: 0 0 15px rgba(0,242,254,0.1); }
         h1 { font-size: clamp(36px, 5.5vw, 64px); font-weight: 900; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1.5px; }
@@ -143,7 +143,7 @@
         .metric-value { font-family: var(--font-mono); font-size: 26px; font-weight: 800; color: var(--cyan); margin-bottom: 4px; }
         .metric-label { font-size: 12px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* STREAMLIT EMBED CONTENEDOR OPTIMIZADO */
+        /* STREAMLIT EMBED CONTENEDOR */
         .dashboard-hero-container {
             width: 100%; margin: 0 auto 80px auto; background: #020617;
             border: 1px solid var(--cyan); border-radius: 20px; overflow: hidden;
@@ -164,7 +164,7 @@
         .btn-toggle-view:hover { border-color: var(--cyan); color: var(--cyan); }
         .streamlit-iframe { width: 100%; height: 680px; border: none; display: block; background: #0e1117; transition: height 0.3s ease; }
 
-        /* COMPARATIVA TABULAR EX-POST VS EX-ANTE */
+        /* COMPARATIVA TABULAR */
         .comparison-section { margin-bottom: 90px; }
         .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: 16px; overflow: hidden; }
         .comparison-table th, .comparison-table td { padding: 18px 24px; text-align: left; border-bottom: 1px solid var(--panel-border); font-size: 14px; }
@@ -173,7 +173,7 @@
         .col-traditional { color: #f87171; background: rgba(239, 68, 68, 0.03); }
         .col-saare { color: var(--cyan); font-weight: 600; background: rgba(0, 242, 254, 0.03); }
 
-        /* ARCHITECTURE DEEP DIVE */
+        /* ARQUITECTURA */
         .arch-section { margin-bottom: 90px; }
         .arch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
         .arch-card {
@@ -199,7 +199,32 @@
         .use-case-title { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 12px; }
         .use-case-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.5; }
 
-        /* PARTNER PROGRAM / OEM BANNER */
+        /* TARJETA DE CERTIFICADO DESTACADA (NUEVA INTEGRACIÓN 002.JPG) */
+        .cert-showcase-section {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(2, 6, 23, 0.98) 100%);
+            border: 1px solid var(--cyan); border-radius: 20px; padding: 40px; margin-bottom: 90px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px var(--cyan-glow);
+        }
+        .cert-showcase-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center;
+        }
+        @media (max-width: 900px) { .cert-showcase-grid { grid-template-columns: 1fr; } }
+        .cert-info h2 { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 12px; }
+        .cert-info p { color: var(--text-muted); font-size: 14.5px; line-height: 1.6; margin-bottom: 24px; }
+        .cert-badge { font-family: var(--font-mono); font-size: 11px; color: var(--cyan); background: rgba(0, 242, 254, 0.08); border: 1px solid var(--cyan); padding: 6px 14px; border-radius: 20px; display: inline-block; margin-bottom: 16px; }
+        .cert-img-wrapper {
+            position: relative; border-radius: 12px; overflow: hidden; border: 2px solid var(--panel-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); cursor: pointer; transition: all 0.3s ease;
+        }
+        .cert-img-wrapper:hover { border-color: var(--cyan); transform: scale(1.02); box-shadow: 0 15px 40px var(--cyan-glow); }
+        .cert-img-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .cert-overlay-btn {
+            position: absolute; bottom: 12px; right: 12px; background: rgba(2, 6, 23, 0.85);
+            border: 1px solid var(--cyan); color: var(--cyan); font-family: var(--font-mono); font-size: 11px;
+            padding: 8px 14px; border-radius: 6px; backdrop-filter: blur(8px);
+        }
+
+        /* OEM BANNER */
         .oem-section {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%);
             border: 1px solid var(--cyan); border-radius: 20px; padding: 48px; margin-bottom: 90px;
@@ -209,7 +234,7 @@
         .oem-title { font-size: 28px; font-weight: 800; color: #fff; margin-bottom: 16px; }
         .oem-desc { font-size: 15px; color: var(--text-muted); max-width: 800px; margin-bottom: 28px; line-height: 1.6; }
 
-        /* SECCIÓN ENTERPRISE PILOT (SOLICITUD POC) */
+        /* SOLICITUD POC */
         .pilot-section { display: flex; justify-content: center; margin-bottom: 90px; }
         .pilot-card {
             background: rgba(15, 23, 42, 0.9); border: 1px solid var(--panel-border); border-radius: 24px; padding: 48px;
@@ -219,7 +244,7 @@
         .pilot-title { font-size: 32px; font-weight: 900; margin-bottom: 12px; }
         .pilot-desc { font-size: 15px; color: var(--text-muted); margin-bottom: 32px; }
 
-        /* DOCUMENTACIÓN OFICIAL & DATA ROOM */
+        /* DATA ROOM */
         .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 90px; }
         .doc-item {
             background: var(--panel-bg); border: 1px solid var(--panel-border); padding: 20px 24px; border-radius: 12px;
@@ -227,8 +252,9 @@
             transition: all 0.25s ease;
         }
         .doc-item:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,242,254,0.15); }
+        .doc-item.featured { border-color: var(--cyan); background: rgba(0, 242, 254, 0.05); }
 
-        /* DESPLEGABLE DE SUBVENCIONES (ACORDEÓN EXCLUSIVO) */
+        /* SUBVENCIONES (ACORDEÓN) */
         .subsidy-wrapper { background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: 20px; padding: 40px; margin-bottom: 90px; }
         .subsidy-wrapper h2 { font-size: 24px; margin-bottom: 10px; font-weight: 800; }
         .subsidy-wrapper p.desc { font-size: 14.5px; color: var(--text-muted); margin-bottom: 28px; }
@@ -252,7 +278,7 @@
         }
         .phone-box:hover { background: rgba(0, 242, 254, 0.12); transform: scale(1.01); }
 
-        /* FOOTER PRO Y LIMPIO CON CLIPBOARD */
+        /* FOOTER */
         footer {
             border-top: 1px solid var(--panel-border); padding: 50px 0; text-align: center;
             font-family: var(--font-mono); font-size: 11.5px; color: var(--text-muted); line-height: 2.2;
@@ -261,7 +287,7 @@
         .copy-hash { cursor: pointer; text-decoration: underline; text-decoration-style: dotted; color: var(--blue); }
         .copy-hash:hover { color: var(--cyan); }
 
-        /* TOAST NOTIFICATION */
+        /* TOAST & LIGHTBOX MODAL */
         .toast {
             position: fixed; bottom: 24px; right: 24px; background: var(--cyan); color: #020617;
             padding: 12px 24px; border-radius: 10px; font-family: var(--font-mono); font-weight: 800;
@@ -269,6 +295,18 @@
             transition: opacity 0.3s ease, transform 0.3s ease; transform: translateY(10px); z-index: 1000;
         }
         .toast.show { opacity: 1; transform: translateY(0); }
+
+        .lightbox-modal {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(15px);
+            display: none; justify-content: center; align-items: center; z-index: 9999;
+            padding: 20px;
+        }
+        .lightbox-modal.active { display: flex; }
+        .lightbox-modal img { max-width: 95%; max-height: 90vh; border-radius: 12px; border: 2px solid var(--cyan); box-shadow: 0 0 50px var(--cyan-glow); }
+        .lightbox-close {
+            position: absolute; top: 20px; right: 30px; font-size: 32px; color: #fff; cursor: pointer; font-family: var(--font-mono);
+        }
 
         /* MEDIA QUERIES */
         @media (max-width: 900px) {
@@ -296,6 +334,7 @@
         <nav class="nav-links">
             <a href="#arquitectura">Arquitectura</a>
             <a href="#comparativa">Ex-Ante vs Ex-Post</a>
+            <a href="#certificacion">Certificado IP</a>
             <a href="#casos-uso">Sectores</a>
             <a href="#partner-program">OEM Partners</a>
             <a href="#data-room">Data Room</a>
@@ -439,6 +478,29 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DESTACADA: CERTIFICADO OFICIAL DE INTEGRIDAD Y PROPIEDAD INTELECTUAL (002.JPG) -->
+    <section class="cert-showcase-section" id="certificacion">
+        <div class="cert-showcase-grid">
+            <div class="cert-info">
+                <div class="cert-badge">REGISTRO RPI-2026-SAARE-0914X</div>
+                <h2>Certificado de Integridad de Propiedad Intelectual</h2>
+                <p>Acredita la prueba determinista de no-infracción y tasa de similitud estructural analítica (<strong>&Delta; = 0.0024%</strong>), respaldando la inviolabilidad del código fuente y garantizando la protección frente a auditorías corporativas y reclamos de terceros bajo el marco normativo del protocolo S.A.A.R.E.</p>
+                <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                    <button onclick="openLightbox()" class="btn-hero-primary" style="padding: 12px 24px; font-size: 13.5px;">
+                        🔍 Expandir Certificado
+                    </button>
+                    <a href="002.jpg" download="Certificado_Integridad_IP_SAARE_002.jpg" class="btn-hero-secondary" style="padding: 12px 24px; font-size: 13.5px;">
+                        💾 Descargar Alta Resolución
+                    </a>
+                </div>
+            </div>
+            <div class="cert-img-wrapper" onclick="openLightbox()">
+                <img src="002.jpg" alt="Certificado Oficial de Integridad S.A.A.R.E.">
+                <div class="cert-overlay-btn">🔍 Clic para ampliar</div>
+            </div>
+        </div>
+    </section>
+
     <!-- CASOS DE USO POR SECTOR CRÍTICO -->
     <section class="use-cases-section" id="casos-uso">
         <div style="text-align: center; margin-bottom: 45px;">
@@ -480,7 +542,7 @@
         <a href="mailto:legal@saare.es?subject=Solicitud%20Partner%20Program%20OEM" class="btn-hero-primary" style="display: inline-flex;">Contactar con el Equipo de Alianzas OEM →</a>
     </section>
 
-    <!-- SECCIÓN SOLICITUD ENTERPRISE PILOT (NO TARIFA LOW-COST) -->
+    <!-- SECCIÓN SOLICITUD ENTERPRISE PILOT -->
     <section class="pilot-section">
         <div class="pilot-card">
             <div class="pilot-badge">PROGRAMA DE EVALUACIÓN TÉCNICA Y AUDITORÍA</div>
@@ -501,6 +563,7 @@
         </div>
 
         <nav class="docs-grid" aria-label="Documentos Aprobados">
+            <a href="002.jpg" target="_blank" class="doc-item featured">🏆 Certificado Oficial de IP (RPI-2026-0914X)</a>
             <a href="00_SAARE v7.0 PRO - Technical Whitepaper.pdf" target="_blank" class="doc-item">📄 Technical Whitepaper V1.0</a>
             <a href="INFORME TÉCNICO V4 - ALINEAMIENTO REGULATORIO Y GOBERNANZA - MS3V S.A.A.R.E..pdf" target="_blank" class="doc-item">📜 Informe Técnico (ISO 27001 / 42001)</a>
             <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" class="doc-item">📋 Soberanía y Derechos de Uso</a>
@@ -550,12 +613,18 @@
     </footer>
 </div>
 
+<!-- LIGHTBOX MODAL PARA 002.JPG -->
+<div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img src="002.jpg" alt="Certificado de Integridad de Propiedad Intelectual en Pantalla Completa" onclick="event.stopPropagation()">
+</div>
+
 <!-- TOAST NOTIFICATION UI -->
 <div id="toast" class="toast">Texto copiado al portapapeles</div>
 
 <!-- LÓGICA INTERACTIVA JS -->
 <script>
-    // Acordeón Exclusivo (Cierra otros al abrir uno)
+    // Acordeón Exclusivo
     function toggleAccordion(element) {
         const isActive = element.classList.contains('active');
         document.querySelectorAll('.accordion-item').forEach(item => {
@@ -586,6 +655,14 @@
                 toast.classList.remove('show');
             }, 2500);
         });
+    }
+
+    // Modal Lightbox para 002.jpg
+    function openLightbox() {
+        document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
     }
 </script>
 
