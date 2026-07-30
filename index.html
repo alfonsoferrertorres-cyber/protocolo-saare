@@ -284,7 +284,7 @@
         </div>
     </header>
 
-    <!-- HÉROE: CLIMA DE SERENIDAD Y CERTEZA EN UN MOMENTO HISTÓRICO -->
+    <!-- HÉROE -->
     <section class="hero">
         <div class="tag-top">&lt;The Independent AI Governance Infrastructure&gt;</div>
         <h1>Certidumbre y gobierno operativo <br>ante la <span class="highlight">disrupción histórica de la IA</span></h1>
@@ -360,7 +360,7 @@
         <!-- TARJETAS DE LICENCIAMIENTO -->
         <div class="licensing-grid">
             
-            <!-- 0º TARJETA EVALUACIÓN 7 DÍAS (ALTA AUTOMÁTICA EN 1 CLIC) -->
+            <!-- 0º TARJETA EVALUACIÓN 7 DÍAS -->
             <div class="v-card" style="border: 2px dashed var(--brand-accent); background: #FAF9F5;">
                 <div>
                     <div class="v-number" style="background: var(--brand-accent); color: #FFF;">ACCESO INSTANTÁNEO</div>
@@ -590,7 +590,7 @@
     function openLightbox() { document.getElementById('lightbox').classList.add('active'); }
     function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
 
-    /* LÓGICA DE ALTA AUTOMÁTICA Y EMISIÓN DE SAAR.LIC (7 DÍAS) */
+    /* LÓGICA DE ALTA AUTOMÁTICA Y EMISIÓN DE SAARE.LIC (7 DÍAS) */
     async function solicitarTrialAutomatico(event) {
         event.preventDefault();
         
@@ -623,10 +623,8 @@
             a.remove();
             window.URL.revokeObjectURL(url);
 
-            alert("✅ ¡Licencia 'saare.lic' de 7 Días generada y descargada con éxito!\n\nA continuación se descargará el ejecutable S.A.A.R.E.");
-            
-            // 2. Redirección/Descarga automática del binario ejecutable
-            window.location.href = "dashboard_ui.exe";
+            // 2. Notificación y guía de instalación manual o enlace externo
+            alert("✅ ¡Licencia 'saare.lic' de 7 Días generada y descargada con éxito!\n\nPor favor, coloca el archivo descargado 'saare.lic' en la carpeta de tu instalador o cárgalo mediante el botón '📂 Cargar .lic' dentro de la suite.");
 
         } catch (err) {
             alert("❌ Ocurrió un error al procesar el alta: " + err.message);
