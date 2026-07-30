@@ -601,7 +601,7 @@
         btn.disabled = true;
 
         try {
-            // CONEXIÓN CON ENDPOINT SERVERLESS EN VERCEL
+            // 1. CONEXIÓN CON ENDPOINT SERVERLESS EN VERCEL
             const response = await fetch('https://saare-v7-iso42001-sable.vercel.app/api/trial', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -612,21 +612,27 @@
 
             const licData = await response.json();
 
-            // 1. Descarga automática del archivo saare.lic en el navegador
+            // 2. DESCARGA AUTOMÁTICA DEL ARCHIVO SAARE.LIC
             const blob = new Blob([JSON.stringify(licData, null, 2)], { type: 'application/json' });
             const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'saare.lic';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
+            const aLic = document.createElement('a');
+            aLic.href = url;
+            aLic.download = 'saare.lic';
+            document.body.appendChild(aLic);
+            aLic.click();
+            aLic.remove();
             window.URL.revokeObjectURL(url);
 
-            alert("✅ ¡Licencia 'saare.lic' de 7 Días generada y descargada con éxito!\n\nA continuación se descargará el ejecutable S.A.A.R.E.");
+            alert("✅ ¡Licencia 'saare.lic' de 7 Días generada y descargada con éxito!\n\nA continuación se descargará el instalador oficial S.A.A.R.E. PRO v7.0.");
             
-            // 2. Descarga automática del binario ejecutable
-            window.location.href = "dashboard_ui.exe";
+            // 3. DESCARGA PROGRAMÁTICA DEL INSTALADOR EXE (EVITA BLOQUEOS DEL NAVEGADOR)
+            const setupUrl = "https://fwlnfgvsh8hbg8dx.public.blob.vercel-storage.com/SAARE_PRO_v7.0_Setup.exe";
+            const aExe = document.createElement('a');
+            aExe.href = setupUrl;
+            aExe.download = "SAARE_PRO_v7.0_Setup.exe";
+            document.body.appendChild(aExe);
+            aExe.click();
+            aExe.remove();
 
         } catch (err) {
             alert("❌ Ocurrió un error al procesar el alta: " + err.message);
