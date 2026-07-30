@@ -31,7 +31,7 @@
             
             --brand-navy: #0F172A;          /* Azul noche profundo */
             --brand-accent: #0284C7;        /* Azul confianza */
-            --brand-green: #059669;         /* Verde tranquilidad/certificación */
+            --brand-green: #059669;          /* Verde tranquilidad/certificación */
             --brand-purple: #7C3AED;        /* Púrpura Enterprise */
             
             --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -85,6 +85,7 @@
         .btn-header {
             background: var(--brand-navy); color: #FFFFFF; font-size: 12.5px; font-weight: 700;
             padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: all 0.2s ease;
+            display: inline-block;
         }
         .btn-header:hover { background: #1E293B; transform: translateY(-1px); }
 
@@ -130,7 +131,7 @@
         .paradigm-flow { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-body); line-height: 2; }
         .paradigm-arrow { font-size: 24px; color: var(--text-muted); }
 
-        /* SECCIÓN DE LICENCIAMIENTO (VENTA DIRECTA) */
+        /* SECCIÓN DE LICENCIAMIENTO (VENTA DIRECTA + ALTA AUTOMÁTICA) */
         .licensing-section { margin-bottom: 90px; }
         .licensing-header { text-align: center; margin-bottom: 30px; }
         
@@ -146,10 +147,10 @@
         .licensing-strip-item span { color: #38BDF8; font-weight: 800; }
         .licensing-strip-divider { color: #475569; }
 
-        .licensing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+        .licensing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         
         .v-card {
-            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 20px; padding: 36px;
+            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 20px; padding: 32px;
             display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.03);
         }
@@ -167,6 +168,14 @@
         .v-features { list-style: none; margin-bottom: 32px; font-size: 13px; color: var(--text-body); }
         .v-features li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; }
         .v-features li::before { content: "✓"; color: var(--brand-green); font-weight: bold; }
+
+        /* Estilos específicos para el formulario de Trial Express */
+        .trial-form-input {
+            width: 100%; padding: 10px 12px; margin-bottom: 10px;
+            border: 1px solid var(--border-soft); border-radius: 8px;
+            font-family: var(--font-sans); font-size: 13px; background: #FFF; color: var(--text-title);
+        }
+        .trial-form-input:focus { outline: none; border-color: var(--brand-accent); }
 
         /* FRAMEWORK V4 */
         .framework-section {
@@ -271,7 +280,7 @@
                 <div class="pulse-dot"></div>
                 <span>[PEP L7 ACTIVE]</span>
             </div>
-            <a href="https://wa.me/34633886506?text=Hola,%20contacto%20con%20el%20Gabinete%20T%C3%A9cnico%20para%20solicitar%20informaci%C3%B3n%20sobre%20el%20Enterprise%20Pilot." target="_blank" rel="noopener" class="btn-header">Solicitar Pilot</a>
+            <a href="#soluciones" class="btn-header">Probar 7 Días</a>
         </div>
     </header>
 
@@ -282,10 +291,10 @@
         <p class="hero-sub">En un momento donde la regulación y la adopción masiva de algoritmos convergen, S.A.A.R.E. aporta la infraestructura técnica de evidencia inmutable, trazabilidad en memoria volátil (~1,16 ms) y control ex-ante exigida por ISO 42001 y el EU AI Act.</p>
 
         <div class="hero-cta-group">
-            <a href="https://wa.me/34633886506?text=Hola,%20deseo%20solicitar%20un%20Enterprise%20Pilot%20de%2030%20d%C3%ADas%20con%20el%20Gabinete%20T%C3%A9cnico." target="_blank" rel="noopener" class="btn-hero-primary">
-                <span>Solicitar Pilot Evaluativo (30 Días)</span> →
+            <a href="#soluciones" class="btn-hero-primary">
+                <span>Obtener Licencia de Evaluación (7 Días)</span> →
             </a>
-            <a href="#soluciones" class="btn-hero-secondary">Ver Licencias de Software</a>
+            <a href="#soluciones" class="btn-hero-secondary">Ver Licencias Comerciales</a>
         </div>
     </section>
 
@@ -329,8 +338,12 @@
             <p style="color: var(--text-muted); font-size: 15px;">Modelos paquetizados según la madurez operativa y la necesidad de cumplimiento del cliente.</p>
         </div>
 
-        <!-- CABECERA EN UNA SOLA LÍNEA (SEGÚN ESQUEMA) -->
+        <!-- CABECERA DE ETAPAS -->
         <div class="licensing-strip-bar">
+            <div class="licensing-strip-item">
+                <span>0º</span> EVALUACIÓN INSTANTÁNEA (7 DÍAS)
+            </div>
+            <div class="licensing-strip-divider">|</div>
             <div class="licensing-strip-item">
                 <span>1º</span> VERSIÓN BÁSICA CUMPLIMIENTO
             </div>
@@ -340,13 +353,45 @@
             </div>
             <div class="licensing-strip-divider">|</div>
             <div class="licensing-strip-item">
-                <span>3º</span> ENTERPRISE FULL AGENT / PARTNER
+                <span>3º</span> ENTERPRISE / PARTNER
             </div>
         </div>
 
-        <!-- DESARROLLO DE CADA VERSIÓN PARA CERRAR LA VENTA -->
+        <!-- TARJETAS DE LICENCIAMIENTO -->
         <div class="licensing-grid">
             
+            <!-- 0º TARJETA EVALUACIÓN 7 DÍAS (ALTA AUTOMÁTICA EN 1 CLIC) -->
+            <div class="v-card" style="border: 2px dashed var(--brand-accent); background: #FAF9F5;">
+                <div>
+                    <div class="v-number" style="background: var(--brand-accent); color: #FFF;">ACCESO INSTANTÁNEO</div>
+                    <div class="v-title">SAARE Evaluation</div>
+                    <div class="v-subtitle">Prueba de Concepto (7 Días)</div>
+                    
+                    <div class="v-target">
+                        <strong>Dirigido a:</strong> CISOs, Auditores y Equipos Técnicos que quieren evaluar el motor en vivo inmediatamente.
+                    </div>
+
+                    <div class="v-price">0 € <span style="font-size: 14px; font-weight: 400; color: var(--text-muted);">/ 7 días</span></div>
+                    <div class="v-price-sub">Sin compromiso • Emisión criptográfica instantánea</div>
+
+                    <form id="form-trial-express" onsubmit="solicitarTrialAutomatico(event)" style="margin-bottom: 20px;">
+                        <input type="text" id="trial-org" placeholder="Empresa / Organización" required class="trial-form-input">
+                        <input type="email" id="trial-email" placeholder="Email corporativo" required class="trial-form-input">
+
+                        <button type="submit" id="btn-trial-submit" class="btn-header" style="width: 100%; text-align: center; background: var(--brand-accent); border: none; cursor: pointer; padding: 12px;">
+                            ⚡ Obtener Licencia de 7 Días →
+                        </button>
+                    </form>
+
+                    <ul class="v-features">
+                        <li>Emisión automática de `saare.lic` Ed25519</li>
+                        <li>Motor L7 PEP & Sanitizador en RAM</li>
+                        <li>Extensión Web Chrome + Dashboard UI</li>
+                        <li>Evidencia HMAC-SHA256 en vivo</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- 1º VERSIÓN BÁSICA CUMPLIMIENTO -->
             <div class="v-card">
                 <div>
@@ -544,6 +589,52 @@
 
     function openLightbox() { document.getElementById('lightbox').classList.add('active'); }
     function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+
+    /* LÓGICA DE ALTA AUTOMÁTICA Y EMISIÓN DE SAAR.LIC (7 DÍAS) */
+    async function solicitarTrialAutomatico(event) {
+        event.preventDefault();
+        
+        const empresa = document.getElementById('trial-org').value;
+        const email = document.getElementById('trial-email').value;
+        const btn = document.getElementById('btn-trial-submit');
+
+        btn.innerText = "⏳ Firmando Ed25519...";
+        btn.disabled = true;
+
+        try {
+            const response = await fetch('/api/trial', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, empresa })
+            });
+
+            if (!response.ok) throw new Error("No se pudo emitir la licencia desde el servidor");
+
+            const licData = await response.json();
+
+            // 1. Descarga automática del archivo saare.lic en el navegador
+            const blob = new Blob([JSON.stringify(licData, null, 2)], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'saare.lic';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+
+            alert("✅ ¡Licencia 'saare.lic' de 7 Días generada y descargada con éxito!\n\nA continuación se descargará el ejecutable S.A.A.R.E.");
+            
+            // 2. Redirección/Descarga automática del binario ejecutable
+            window.location.href = "dashboard_ui.exe";
+
+        } catch (err) {
+            alert("❌ Ocurrió un error al procesar el alta: " + err.message);
+        } finally {
+            btn.innerText = "⚡ Obtener Licencia de 7 Días →";
+            btn.disabled = false;
+        }
+    }
 </script>
 
 </body>
