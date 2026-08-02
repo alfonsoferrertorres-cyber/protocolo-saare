@@ -8,42 +8,44 @@
     <meta name="author" content="MS3V S.A.A.R.E. SL">
     <link rel="canonical" href="https://saare.es/">
     
-    <title>MS3V S.A.A.R.E. | Runtime AI Governance Infrastructure</title>
+    <title>MS3V S.A.A.R.E. | Executive Sovereignty & Runtime AI Governance</title>
     
     <link rel="icon" type="image/x-icon" href="logo_saare.ico">
     
-    <!-- Fuentes Tipográficas Institucionales -->
+    <!-- Tipografías Serif Elegantes e Industriales -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Librería Criptográfica TweetNaCl -->
+    <!-- Librería Criptográfica TweetNaCl para generación Ed25519 -->
     <script src="https://cdn.jsdelivr.net/npm/tweetnacl@1.0.3/nacl-fast.min.js"></script>
 
     <style>
         :root {
             --bg-beige: #F9F8F4;
             --bg-card: #FFFFFF;
-            --bg-accent-beige: #F1EEE7;
+            --bg-dark: #0A0F1D;
+            --bg-dark-card: #111827;
             --border-soft: #E2DDD5;
-            --border-hover: #0F172A;
+            --border-gold: #D4AF37;
             
             --text-title: #0F172A;
             --text-body: #475569;
             --text-muted: #64748B;
             
             --brand-navy: #0F172A;
-            --brand-navy-light: #1E293B;
+            --brand-gold: #C5A059;
             --brand-accent: #0284C7;
             --brand-green: #059669;
             --brand-purple: #7C3AED;
             
-            --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            --font-serif: 'Cinzel', 'Playfair Display', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
 
             --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
-            --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
-            --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.1);
+            --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.15);
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -58,30 +60,45 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-        /* HEADER */
+        /* HEADER & MEGAMENÚ EXECUTIVE */
         header {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 18px 36px; border-bottom: 1px solid var(--border-soft);
-            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            position: sticky; top: 0; z-index: 100;
-            background: rgba(249, 248, 244, 0.94);
+            padding: 20px 40px; border-bottom: 1px solid rgba(226, 221, 213, 0.6);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(249, 248, 244, 0.95);
         }
 
-        .logo-area { display: flex; align-items: center; gap: 14px; text-decoration: none; transition: opacity 0.2s; }
-        .logo-area:hover { opacity: 0.9; }
-        .logo-img { height: 42px; width: 42px; object-fit: contain; border-radius: 10px; border: 1px solid var(--border-soft); background: #FFF; padding: 2px; box-shadow: var(--shadow-sm); }
+        .logo-area { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+        .logo-img { height: 42px; width: 42px; object-fit: contain; border-radius: 8px; border: 1px solid var(--border-soft); background: #FFF; padding: 2px; }
         .logo-text-group { display: flex; flex-direction: column; }
-        .logo-text { font-size: 19px; font-weight: 800; color: var(--text-title); letter-spacing: -0.5px; line-height: 1.1; }
-        .logo-subtext { font-family: var(--font-mono); font-size: 8.5px; color: var(--brand-accent); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; margin-top: 2px; }
+        .logo-text { font-family: var(--font-serif); font-size: 20px; font-weight: 800; color: var(--text-title); letter-spacing: 0.5px; }
+        .logo-subtext { font-family: var(--font-mono); font-size: 8.5px; color: var(--brand-gold); letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
 
-        nav.nav-links { display: flex; gap: 28px; align-items: center; }
-        nav.nav-links a { color: var(--text-body); text-decoration: none; font-size: 13.5px; font-weight: 600; transition: color 0.2s ease; }
+        nav.nav-links { display: flex; gap: 32px; align-items: center; }
+        nav.nav-links a { color: var(--text-body); text-decoration: none; font-size: 13.5px; font-weight: 600; transition: color 0.2s; }
         nav.nav-links a:hover { color: var(--brand-navy); }
 
-        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        /* MEGAMENÚ DESPLEGABLE DIDÁCTICO */
+        .dropdown-menu { position: relative; }
+        .dropdown-btn { cursor: pointer; display: flex; align-items: center; gap: 6px; color: var(--brand-navy); font-weight: 700; font-size: 13.5px; }
+        
+        .megamenu-content {
+            display: none; position: absolute; top: 100%; left: -100px; width: 680px;
+            background: var(--bg-card); border: 1px solid var(--border-soft); border-top: 3px solid var(--brand-gold);
+            border-radius: 12px; padding: 28px; box-shadow: var(--shadow-lg); z-index: 1100;
+            grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 15px;
+        }
+        .dropdown-menu:hover .megamenu-content { display: grid; }
 
+        .megamenu-col h4 { font-family: var(--font-serif); font-size: 14px; color: var(--brand-navy); margin-bottom: 12px; border-bottom: 1px solid var(--border-soft); padding-bottom: 6px; }
+        .megamenu-item { display: block; text-decoration: none; margin-bottom: 12px; }
+        .megamenu-item-title { font-size: 13px; font-weight: 700; color: var(--text-title); }
+        .megamenu-item-desc { font-size: 11.5px; color: var(--text-muted); line-height: 1.3; }
+
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
         .shield-status {
             background: rgba(5, 150, 105, 0.08); border: 1px solid rgba(5, 150, 105, 0.3);
             color: var(--brand-green); padding: 6px 14px; font-family: var(--font-mono);
@@ -89,183 +106,122 @@
             display: flex; align-items: center; gap: 8px;
         }
         .pulse-dot { width: 7px; height: 7px; background: var(--brand-green); border-radius: 50%; animation: pulse 2s infinite; }
-
         @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(0.8); } }
 
         .btn-header {
             background: var(--brand-navy); color: #FFFFFF; font-size: 12.5px; font-weight: 700;
-            padding: 10px 20px; border-radius: 8px; text-decoration: none; transition: all 0.2s ease;
-            display: inline-block; box-shadow: var(--shadow-sm);
-        }
-        .btn-header:hover { background: var(--brand-navy-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-
-        /* HERO */
-        .hero { text-align: center; padding: 85px 0 55px 0; max-width: 1040px; margin: 0 auto; }
-        .tag-top {
-            font-family: var(--font-mono); color: var(--brand-navy); font-weight: 700; font-size: 11px;
-            letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; display: inline-block;
-            background: var(--bg-accent-beige); padding: 8px 22px; border-radius: 30px; border: 1px solid var(--border-soft);
-        }
-        h1 { font-size: clamp(38px, 5vw, 60px); font-weight: 800; color: var(--text-title); line-height: 1.15; margin-bottom: 24px; letter-spacing: -1.5px; }
-        h1 span.highlight { color: var(--brand-accent); }
-        .hero-sub { font-size: 18.5px; color: var(--text-body); font-weight: 400; max-width: 860px; margin: 0 auto 38px auto; line-height: 1.65; }
-
-        .hero-cta-group { display: flex; justify-content: center; gap: 16px; margin-bottom: 30px; flex-wrap: wrap; }
-        .btn-hero-primary {
-            background: var(--brand-navy); color: #FFFFFF; font-weight: 700; font-size: 14.5px;
-            padding: 16px 36px; border-radius: 10px; text-decoration: none; transition: all 0.25s ease;
-            display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow-md); border: 1px solid transparent;
-        }
-        .btn-hero-primary:hover { background: var(--brand-navy-light); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-        .btn-hero-secondary {
-            background: var(--bg-card); border: 1px solid var(--border-soft); color: var(--text-title);
-            font-weight: 600; font-size: 14.5px; padding: 16px 32px; border-radius: 10px; text-decoration: none; transition: all 0.25s ease;
+            padding: 10px 20px; border-radius: 6px; text-decoration: none; transition: all 0.2s;
             box-shadow: var(--shadow-sm);
         }
-        .btn-hero-secondary:hover { border-color: var(--brand-navy); background: #FFF; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+        .btn-header:hover { background: var(--brand-gold); color: #0F172A; }
 
-        /* PARADIGMA */
-        .paradigm-section { margin-bottom: 85px; text-align: center; }
-        .paradigm-box {
-            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 20px; padding: 42px 32px;
-            box-shadow: var(--shadow-sm); margin-top: 28px;
+        /* HERO EXECUTIVE SOVEREIGNTY CON FONDO DE ACUERDO JURÍDICO */
+        .hero-executive {
+            position: relative; min-height: 82vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; color: #FFFFFF; padding: 80px 24px; margin-bottom: 40px;
+            background: linear-gradient(180deg, rgba(10, 15, 29, 0.88) 0%, rgba(10, 15, 29, 0.96) 100%),
+                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop') center/cover no-repeat;
+            border-bottom: 3px solid var(--brand-gold);
         }
-        .paradigm-grid { display: grid; grid-template-columns: 1fr 50px 1fr; gap: 20px; align-items: center; margin-top: 28px; }
-        @media (max-width: 850px) { .paradigm-grid { grid-template-columns: 1fr; gap: 24px; } .paradigm-arrow { transform: rotate(90deg); } }
         
-        .paradigm-card { background: var(--bg-beige); border: 1px solid var(--border-soft); border-radius: 14px; padding: 24px; text-align: left; }
-        .paradigm-card.old { border-color: rgba(220, 38, 38, 0.35); background: rgba(254, 242, 242, 0.4); }
-        .paradigm-card.new { border-color: var(--brand-navy); background: #FFFFFF; box-shadow: var(--shadow-md); }
-        .paradigm-title { font-size: 13px; font-family: var(--font-mono); font-weight: 800; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
-        .paradigm-card.old .paradigm-title { color: #DC2626; }
-        .paradigm-card.new .paradigm-title { color: var(--brand-navy); }
-        .paradigm-flow { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-body); line-height: 2; }
-        .paradigm-arrow { font-size: 22px; color: var(--text-muted); font-weight: bold; }
+        .hero-content { max-width: 980px; margin: 0 auto; }
+        .tag-executive {
+            font-family: var(--font-mono); color: var(--brand-gold); font-weight: 700; font-size: 11px;
+            letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; display: inline-block;
+            background: rgba(197, 160, 89, 0.12); padding: 8px 24px; border-radius: 30px; border: 1px solid rgba(197, 160, 89, 0.3);
+        }
+        .hero-executive h1 {
+            font-family: var(--font-serif); font-size: clamp(38px, 5.5vw, 64px); font-weight: 800;
+            line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.5px; color: #F8FAFC;
+        }
+        .hero-executive h1 span.gold { color: var(--brand-gold); font-style: italic; }
+        .hero-sub-executive { font-size: 18.5px; color: #CBD5E1; font-weight: 300; max-width: 860px; margin: 0 auto 40px auto; line-height: 1.7; }
 
-        /* LICENCIAS */
+        .hero-cta-group { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+        .btn-hero-gold {
+            background: var(--brand-gold); color: #0F172A; font-weight: 800; font-size: 14.5px;
+            padding: 16px 36px; border-radius: 6px; text-decoration: none; transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(197, 160, 89, 0.3); border: none;
+        }
+        .btn-hero-gold:hover { background: #FFFFFF; transform: translateY(-2px); }
+
+        /* SECCIÓN DE VENTA B2B A LA CABEZA (MODELO 1) */
         .licensing-section { margin-bottom: 85px; }
-        .licensing-header { text-align: center; margin-bottom: 30px; }
-        
+        .licensing-header { text-align: center; margin-bottom: 35px; }
+        .licensing-header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 800; color: var(--text-title); }
+
         .licensing-strip-bar {
-            background: var(--brand-navy); color: #FFFFFF; border-radius: 14px; padding: 16px 28px;
+            background: var(--brand-navy); color: #FFFFFF; border-radius: 10px; padding: 18px 32px;
             display: flex; justify-content: space-between; align-items: center; gap: 12px;
-            margin-bottom: 36px; flex-wrap: wrap; box-shadow: var(--shadow-md);
+            margin-bottom: 36px; flex-wrap: wrap; box-shadow: var(--shadow-md); border-left: 4px solid var(--brand-gold);
         }
-        .licensing-strip-item {
-            font-family: var(--font-mono); font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
-            display: flex; align-items: center; gap: 8px; color: #E2E8F0;
-        }
-        .licensing-strip-item span { color: #38BDF8; font-weight: 800; }
-        .licensing-strip-divider { color: #475569; }
+        .licensing-strip-item { font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #E2E8F0; }
+        .licensing-strip-item span { color: var(--brand-gold); font-weight: 800; }
 
         .licensing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; align-items: stretch; }
         
         .v-card {
-            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 20px; padding: 32px;
+            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 14px; padding: 32px;
             display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;
             box-shadow: var(--shadow-sm); height: 100%;
         }
-        .v-card.featured { border: 2px solid var(--brand-navy); position: relative; box-shadow: var(--shadow-md); }
-        .v-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .v-card.featured { border: 2px solid var(--brand-gold); position: relative; box-shadow: var(--shadow-md); background: #FAF8F5; }
+        .v-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--brand-navy); }
         
-        .v-number { font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--brand-navy); background: var(--bg-accent-beige); padding: 5px 12px; border-radius: 20px; width: fit-content; margin-bottom: 16px; border: 1px solid var(--border-soft); }
-        .v-title { font-size: 22px; font-weight: 800; color: var(--text-title); margin-bottom: 6px; }
+        .v-number { font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; color: var(--brand-navy); background: var(--bg-accent-beige); padding: 5px 12px; border-radius: 20px; width: fit-content; margin-bottom: 16px; border: 1px solid var(--border-soft); }
+        .v-title { font-family: var(--font-serif); font-size: 22px; font-weight: 800; color: var(--text-title); margin-bottom: 4px; }
         .v-subtitle { font-size: 12px; font-family: var(--font-mono); color: var(--brand-accent); margin-bottom: 16px; font-weight: 700; }
-        .v-target { background: var(--bg-beige); padding: 12px 16px; border-radius: 10px; font-size: 12.5px; color: var(--text-body); margin-bottom: 20px; border-left: 3px solid var(--brand-navy); }
-        .v-price { font-family: var(--font-mono); font-size: 28px; font-weight: 800; color: var(--text-title); margin-bottom: 4px; }
+        .v-target { background: var(--bg-beige); padding: 12px 16px; border-radius: 8px; font-size: 12.5px; color: var(--text-body); margin-bottom: 20px; border-left: 3px solid var(--brand-gold); }
+        .v-price { font-family: var(--font-serif); font-size: 32px; font-weight: 800; color: var(--text-title); margin-bottom: 4px; }
         .v-price-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 20px; }
         .v-sales-argument { font-size: 13.5px; color: var(--text-body); margin-bottom: 24px; line-height: 1.6; }
-        .v-sales-argument strong { color: var(--text-title); }
         .v-features { list-style: none; margin-bottom: 32px; font-size: 13px; color: var(--text-body); }
         .v-features li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; }
         .v-features li::before { content: "✓"; color: var(--brand-green); font-weight: bold; }
 
         .trial-form-input {
             width: 100%; padding: 11px 14px; margin-bottom: 10px;
-            border: 1px solid var(--border-soft); border-radius: 8px;
+            border: 1px solid var(--border-soft); border-radius: 6px;
             font-family: var(--font-sans); font-size: 13px; background: #FFF; color: var(--text-title);
-            transition: border-color 0.2s;
         }
-        .trial-form-input:focus { outline: none; border-color: var(--brand-accent); }
 
-        /* FRAMEWORK V4 */
-        .framework-section {
-            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 20px; padding: 44px; margin-bottom: 85px;
-            box-shadow: var(--shadow-sm);
-        }
+        /* PARADIGMA */
+        .paradigm-section { margin-bottom: 85px; text-align: center; }
+        .paradigm-box { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 42px 32px; margin-top: 28px; }
+        .paradigm-grid { display: grid; grid-template-columns: 1fr 50px 1fr; gap: 20px; align-items: center; margin-top: 28px; }
+        @media (max-width: 850px) { .paradigm-grid { grid-template-columns: 1fr; } }
+        .paradigm-card { background: var(--bg-beige); border: 1px solid var(--border-soft); border-radius: 12px; padding: 24px; text-align: left; }
+        .paradigm-card.old { border-color: rgba(220, 38, 38, 0.35); background: rgba(254, 242, 242, 0.4); }
+        .paradigm-card.new { border-color: var(--brand-navy); background: #FFFFFF; box-shadow: var(--shadow-md); }
+        .paradigm-title { font-size: 13px; font-family: var(--font-mono); font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
+
+        /* FRAMEWORK & CERTIFICADO */
+        .framework-section { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 44px; margin-bottom: 85px; }
         .framework-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
         @media (max-width: 900px) { .framework-grid { grid-template-columns: 1fr; } }
-        .framework-title { font-size: 28px; font-weight: 800; color: var(--text-title); margin-bottom: 16px; }
-        .framework-desc { font-size: 15px; color: var(--text-body); line-height: 1.65; margin-bottom: 24px; }
 
-        /* CERTIFICADO */
-        .cert-showcase-section {
-            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 20px; padding: 40px; margin-bottom: 85px;
-            box-shadow: var(--shadow-sm);
-        }
+        .cert-showcase-section { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 40px; margin-bottom: 85px; }
         .cert-showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
-        @media (max-width: 900px) { .cert-showcase-grid { grid-template-columns: 1fr; } }
-        .cert-img-wrapper {
-            position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-soft);
-            cursor: pointer; transition: all 0.3s ease; background: var(--bg-beige); box-shadow: var(--shadow-sm);
-        }
-        .cert-img-wrapper:hover { border-color: var(--brand-navy); transform: scale(1.01); box-shadow: var(--shadow-md); }
-        .cert-img-wrapper img { width: 100%; height: auto; display: block; }
+        .cert-img-wrapper img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border-soft); }
 
-        /* DASHBOARD LIVE */
-        .dashboard-hero-container {
-            width: 100%; margin: 0 auto 85px auto; background: var(--bg-card);
-            border: 1px solid var(--border-soft); border-radius: 20px; overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-        .dashboard-header-bar {
-            background: var(--bg-accent-beige); padding: 14px 24px; border-bottom: 1px solid var(--border-soft);
-            display: flex; justify-content: space-between; align-items: center;
-            font-family: var(--font-mono); font-size: 11.5px; color: var(--text-title); flex-wrap: wrap; gap: 10px;
-        }
-        .dashboard-header-bar a.ext-link { color: var(--brand-accent); text-decoration: none; font-weight: 700; }
-        .dashboard-header-bar a.ext-link:hover { color: var(--brand-navy); text-decoration: underline; }
-        
-        .btn-toggle-view {
-            background: #FFF; border: 1px solid var(--border-soft); color: var(--text-title);
-            padding: 6px 14px; border-radius: 6px; cursor: pointer; font-family: var(--font-mono); font-size: 11px; font-weight: 600;
-        }
-        .btn-toggle-view:hover { border-color: var(--brand-navy); background: var(--bg-beige); }
-        .streamlit-iframe { width: 100%; height: 680px; border: none; display: block; background: #0e1117; transition: height 0.3s ease; }
+        /* DASHBOARD & DATA ROOM */
+        .dashboard-hero-container { width: 100%; margin-bottom: 85px; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; overflow: hidden; }
+        .dashboard-header-bar { background: var(--bg-accent-beige); padding: 14px 24px; border-bottom: 1px solid var(--border-soft); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11.5px; }
+        .streamlit-iframe { width: 100%; height: 680px; border: none; display: block; background: #0e1117; }
 
-        /* DATA ROOM */
         .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 85px; }
-        .doc-item {
-            background: var(--bg-card); border: 1px solid var(--border-soft); padding: 20px 24px; border-radius: 12px;
-            color: var(--text-title); text-decoration: none; font-size: 13.5px; font-weight: 600; display: flex; align-items: center; gap: 12px;
-            transition: all 0.25s ease; box-shadow: var(--shadow-sm);
-        }
-        .doc-item:hover { border-color: var(--brand-navy); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .doc-item { background: var(--bg-card); border: 1px solid var(--border-soft); padding: 20px 24px; border-radius: 10px; color: var(--text-title); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 12px; }
 
         /* FOOTER */
-        footer {
-            border-top: 1px solid var(--border-soft); padding: 50px 0; text-align: center;
-            font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); line-height: 2.2;
-            background: var(--bg-beige);
-        }
-        .copy-hash { cursor: pointer; text-decoration: underline; text-decoration-style: dotted; color: var(--brand-navy); font-weight: 600; }
+        footer { border-top: 1px solid var(--border-soft); padding: 50px 0; text-align: center; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); line-height: 2.2; background: var(--bg-beige); }
 
         /* MODAL & TOAST */
-        .toast {
-            position: fixed; bottom: 24px; right: 24px; background: var(--brand-navy); color: #FFF;
-            padding: 12px 24px; border-radius: 10px; font-family: var(--font-mono); font-weight: 700;
-            font-size: 12px; opacity: 0; pointer-events: none; transition: all 0.3s ease; z-index: 1000;
-            box-shadow: var(--shadow-lg);
-        }
-        .toast.show { opacity: 1; transform: translateY(0); }
+        .toast { position: fixed; bottom: 24px; right: 24px; background: var(--brand-navy); color: #FFF; padding: 12px 24px; border-radius: 8px; font-family: var(--font-mono); font-size: 12px; opacity: 0; pointer-events: none; transition: all 0.3s; z-index: 2000; }
+        .toast.show { opacity: 1; }
 
-        .lightbox-modal {
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: rgba(15, 23, 42, 0.92); backdrop-filter: blur(8px);
-            display: none; justify-content: center; align-items: center; z-index: 9999; padding: 20px;
-        }
+        .lightbox-modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(10, 15, 29, 0.92); backdrop-filter: blur(8px); display: none; justify-content: center; align-items: center; z-index: 9999; padding: 20px; }
         .lightbox-modal.active { display: flex; }
-        .lightbox-modal img { max-width: 90%; max-height: 85vh; border-radius: 12px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-lg); }
+        .lightbox-modal img { max-width: 90%; max-height: 85vh; border-radius: 10px; border: 1px solid var(--border-soft); }
         .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 32px; color: #FFF; cursor: pointer; }
         .legal-tab-btn { font-family: var(--font-mono); font-weight: 700; font-size: 11.5px; border: none; background: none; cursor: pointer; padding: 6px 12px; border-radius: 4px; }
         .legal-tab-btn.active { background: #0F172A; color: #FFF; }
@@ -273,87 +229,88 @@
 </head>
 <body>
 
-<div class="container">
-    <!-- CABECERA INSTITUCIONAL -->
-    <header>
-        <a href="https://saare.es/" class="logo-area" title="MS3V S.A.A.R.E. | Inicio">
-            <img src="logo_saare.ico" alt="MS3V S.A.A.R.E. Logo" class="logo-img">
-            <div class="logo-text-group">
-                <span class="logo-text">MS3V S.A.A.R.E.</span>
-                <span class="logo-subtext">AI Governance Infrastructure</span>
-            </div>
-        </a>
-
-        <nav class="nav-links">
-            <a href="#paradigma">Visión</a>
-            <a href="#soluciones">Arquitectura & Licencias</a>
-            <a href="#framework">Framework V4</a>
-            <a href="#certificacion">Evidencia IP</a>
-            <a href="#dashboard-live">GRC Engine</a>
-            <a href="#data-room">Data Room</a>
-        </nav>
-
-        <div class="nav-actions">
-            <div class="shield-status">
-                <div class="pulse-dot"></div>
-                <span>[PEP L7 ACTIVE]</span>
-            </div>
-            <a href="#soluciones" class="btn-header">Evaluación (7 Días)</a>
+<!-- CABECERA INSTITUCIONAL CON MEGAMENÚ DIDÁCTICO -->
+<header>
+    <a href="https://saare.es/" class="logo-area" title="MS3V S.A.A.R.E. | Inicio">
+        <img src="logo_saare.ico" alt="MS3V S.A.A.R.E. Logo" class="logo-img">
+        <div class="logo-text-group">
+            <span class="logo-text">MS3V S.A.A.R.E.</span>
+            <span class="logo-subtext">AI Governance Infrastructure</span>
         </div>
-    </header>
+    </a>
 
-    <!-- HÉROE -->
-    <section class="hero">
-        <div class="tag-top">&lt;Runtime AI Governance Infrastructure&gt;</div>
-        <h1>Certidumbre y gobierno operativo <br>ante la <span class="highlight">disrupción histórica de la IA</span></h1>
-        <p class="hero-sub">En un escenario donde la regulación europea y el despliegue de modelos convergen, S.A.A.R.E. provee la infraestructura técnica de control ex-ante, evidencia inmutable y trazabilidad en memoria volátil (~1,16 ms) para la alineación con ISO/IEC 42001 y el EU AI Act.</p>
+    <nav class="nav-links">
+        <!-- MEGAMENÚ DESPLEGABLE DIDÁCTICO -->
+        <div class="dropdown-menu">
+            <span class="dropdown-btn">Gobernanza & Módulos ▾</span>
+            <div class="megamenu-content">
+                <div class="megamenu-col">
+                    <h4>Módulos Runtime</h4>
+                    <a href="#soluciones" class="megamenu-item">
+                        <div class="megamenu-item-title">Active Shield (Layer 7 PEP)</div>
+                        <div class="megamenu-item-desc">Interceptación síncrona ex-ante antes de la inferencia LLM.</div>
+                    </a>
+                    <a href="#soluciones" class="megamenu-item">
+                        <div class="megamenu-item-title">Zero-Disk RAM Engine</div>
+                        <div class="megamenu-item-desc">Purga irreversible de buffers mediante memset_s y madvise.</div>
+                    </a>
+                </div>
+                <div class="megamenu-col">
+                    <h4>Cumplimiento & Legales</h4>
+                    <a href="#data-room" class="megamenu-item">
+                        <div class="megamenu-item-title">Soberanía Algorítmica B2B</div>
+                        <div class="megamenu-item-desc">Informe contable de Activo Intangible y exención de desistimiento.</div>
+                    </a>
+                    <a href="#framework" class="megamenu-item">
+                        <div class="megamenu-item-title">Framework ISO 42001 & EU AI Act</div>
+                        <div class="megamenu-item-desc">Árbol de controles estandarizado V4 de auditoría.</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#soluciones">Arquitectura & Licencias</a>
+        <a href="#paradigma">Visión</a>
+        <a href="#framework">Framework V4</a>
+        <a href="#certificacion">Evidencia IP</a>
+        <a href="#dashboard-live">GRC Engine</a>
+        <a href="#data-room">Data Room</a>
+    </nav>
+
+    <div class="nav-actions">
+        <div class="shield-status">
+            <div class="pulse-dot"></div>
+            <span>[PEP L7 ACTIVE]</span>
+        </div>
+        <a href="#soluciones" class="btn-header">Evaluación (7 Días)</a>
+    </div>
+</header>
+
+<!-- HERO MODELO 1: EXECUTIVE SOVEREIGNTY -->
+<section class="hero-executive">
+    <div class="hero-content">
+        <div class="tag-executive">&lt;Runtime AI Governance Infrastructure&gt;</div>
+        <h1>Soberanía Jurídica y Gobierno Operativo en la <span class="gold">Era de la Inteligencia Artificial</span></h1>
+        <p class="hero-sub-executive">Infraestructura técnica de control ex-ante, evidencia criptográfica inmutable y trazabilidad en memoria volátil (~1,16 ms). Blindaje normativo para la alineación con ISO/IEC 42001, DORA y el EU AI Act.</p>
 
         <div class="hero-cta-group">
-            <a href="#soluciones" class="btn-hero-primary">
-                <span>Obtener Licencia de Evaluación (7 Días)</span> →
+            <a href="#soluciones" class="btn-hero-gold">
+                Obtener Licencia de Evaluación (7 Días) →
             </a>
-            <a href="#soluciones" class="btn-hero-secondary">Ver Despliegue de Infraestructura</a>
+            <a href="#data-room" class="btn-hero-secondary" style="background: rgba(255,255,255,0.1); color: #FFF; border-color: rgba(255,255,255,0.2);">
+                Ver Documentación Homologada
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CAMBIO DE PARADIGMA -->
-    <section class="paradigm-section" id="paradigma">
-        <h2 style="font-size: 30px; font-weight: 800; color: var(--text-title);">El Cambio de Paradigma en la IA Empresarial</h2>
-        <p style="color: var(--text-muted); font-size: 15.5px; margin-top: 4px;">La evolución técnica desde flujos no supervisados hacia una infraestructura de gobierno en tiempo de ejecución.</p>
+<div class="container">
 
-        <div class="paradigm-box">
-            <div class="paradigm-grid">
-                <div class="paradigm-card old">
-                    <div class="paradigm-title">❌ Flujo Unprotected (Primera Generación)</div>
-                    <div class="paradigm-flow">
-                        Usuario / Aplicación Cliente<br>
-                        └─&gt; Inferencia Directa con Datos Sensibles (PII/PHI)<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;└─&gt; Modelo LLM Público / Proveedor Cloud<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&gt; <b>Riesgo: Shadow AI, Fuga de IP, Sanción RGPD</b>
-                    </div>
-                </div>
-
-                <div class="paradigm-arrow">➔</div>
-
-                <div class="paradigm-card new">
-                    <div class="paradigm-title">🛡️ Flujo Governed (Arquitectura S.A.A.R.E.)</div>
-                    <div class="paradigm-flow">
-                        Usuario / Aplicación Cliente<br>
-                        └─&gt; Interceptación Ex-Ante (Layer 7 PEP Middleware)<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;├─&gt; Memory-Only Processing (&lt;1.2 ms) + Policy Engine<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;├─&gt; Modelo LLM Corporativo / Provider Agnostic<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;└─&gt; <b>Sello HMAC-SHA256: Evidencia Técnica Inmutable</b>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN DE VENTA DE SOLUCIONES Y LICENCIAS POR PLANOS -->
+    <!-- SECCIÓN DE VENTA B2B A LA CABEZA -->
     <section class="licensing-section" id="soluciones">
         <div class="licensing-header">
-            <h2 style="font-size: 32px; font-weight: 800; color: var(--text-title);">Gama de Despliegue de Infraestructura</h2>
-            <p style="color: var(--text-muted); font-size: 15px; margin-top: 4px;">Modelos de adopción basados en la arquitectura desacoplada de 3 planos (Control, Governance & Data Plane).</p>
+            <h2>Gama de Despliegue de Infraestructura</h2>
+            <p style="color: var(--text-muted); font-size: 15.5px; margin-top: 6px;">Modelos de adopción basados en la arquitectura desacoplada de 3 planos (Control, Governance & Data Plane).</p>
         </div>
 
         <div class="licensing-strip-bar">
@@ -367,10 +324,10 @@
         </div>
 
         <div class="licensing-grid">
-            <!-- 0º EVALUACIÓN INSTANTÁNEA -->
-            <div class="v-card" style="border: 2px dashed var(--brand-accent); background: #FAF9F5;">
+            <!-- 0º EVALUACIÓN INSTANTÁNEA CON JS AUTOMATIZADO -->
+            <div class="v-card" style="border: 2px dashed var(--brand-gold); background: #FAF8F5;">
                 <div>
-                    <div class="v-number" style="background: var(--brand-accent); color: #FFF;">ACCESO INSTANTÁNEO</div>
+                    <div class="v-number" style="background: var(--brand-gold); color: #0F172A;">ACCESO INSTANTÁNEO</div>
                     <div class="v-title">SAARE Discovery</div>
                     <div class="v-subtitle">Sandbox & Evaluation License</div>
                     
@@ -386,10 +343,10 @@
                         <input type="email" id="trial-email" placeholder="Email corporativo" required class="trial-form-input">
 
                         <div style="font-size: 10px; color: var(--text-muted); text-align: left; margin-bottom: 12px; line-height: 1.35;">
-                            🔒 <strong>Responsable:</strong> MS3V S.A.A.R.E. SL. <strong>Finalidad:</strong> Generación de la licencia `saare.lic` Ed25519 y descarga del ejecutable. <strong>Derechos:</strong> Ejercicio vía <code>privacidad@saare.es</code>.
+                            🔒 <strong>Responsable:</strong> MS3V S.A.A.R.E. SL. <strong>Finalidad:</strong> Generación de licencia `saare.lic` Ed25519 y descarga del ejecutable. <strong>Derechos:</strong> Ejercicio vía <code>privacidad@saare.es</code>.
                         </div>
 
-                        <button type="submit" id="btn-trial-submit" class="btn-header" style="width: 100%; text-align: center; background: var(--brand-accent); border: none; cursor: pointer; padding: 13px; font-size: 13px;">
+                        <button type="submit" id="btn-trial-submit" class="btn-header" style="width: 100%; text-align: center; background: var(--brand-gold); color: #0F172A; border: none; cursor: pointer; padding: 13px; font-size: 13px; font-weight: 800;">
                             ⚡ Generar Licencia de Evaluación →
                         </button>
                     </form>
@@ -492,19 +449,52 @@
         </div>
     </section>
 
-    <!-- SAARE FRAMEWORK V4 -->
+    <!-- CAMBIO DE PARADIGMA -->
+    <section class="paradigm-section" id="paradigma">
+        <h2 style="font-family: var(--font-serif); font-size: 32px; font-weight: 800; color: var(--text-title);">El Cambio de Paradigma en la IA Empresarial</h2>
+        <p style="color: var(--text-muted); font-size: 15.5px; margin-top: 4px;">La evolución técnica desde flujos no supervisados hacia una infraestructura de gobierno en tiempo de ejecución.</p>
+
+        <div class="paradigm-box">
+            <div class="paradigm-grid">
+                <div class="paradigm-card old">
+                    <div class="paradigm-title">❌ Flujo Unprotected (Primera Generación)</div>
+                    <div class="paradigm-flow">
+                        Usuario / Aplicación Cliente<br>
+                        └─&gt; Inferencia Directa con Datos Sensibles (PII/PHI)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;└─&gt; Modelo LLM Público / Proveedor Cloud<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─&gt; <b>Riesgo: Shadow AI, Fuga de IP, Sanción RGPD</b>
+                    </div>
+                </div>
+
+                <div class="paradigm-arrow">➔</div>
+
+                <div class="paradigm-card new">
+                    <div class="paradigm-title">🛡️ Flujo Governed (Arquitectura S.A.A.R.E.)</div>
+                    <div class="paradigm-flow">
+                        Usuario / Aplicación Cliente<br>
+                        └─&gt; Interceptación Ex-Ante (Layer 7 PEP Middleware)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;├─&gt; Memory-Only Processing (&lt;1.2 ms) + Policy Engine<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;├─&gt; Modelo LLM Corporativo / Provider Agnostic<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;└─&gt; <b>Sello HMAC-SHA256: Evidencia Técnica Inmutable</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAMEWORK V4 -->
     <section class="framework-section" id="framework">
         <div class="framework-grid">
             <div>
                 <div class="v-number">ESTÁNDAR DE GOBIERNO OPERATIVO</div>
-                <div class="framework-title">SAARE AI Governance Framework V4</div>
+                <div class="framework-title" style="font-family: var(--font-serif); font-size: 28px; font-weight: 800;">SAARE AI Governance Framework V4</div>
                 <div class="framework-desc">Marco metodológico para la evaluación objetiva de la integridad algorítmica, procesamiento determinista en memoria volátil y generación de evidencia criptográfica para mitigación de riesgos.</div>
                 <a href="SAARE_AI_Governance_Framework_V4.pdf" target="_blank" class="btn-hero-primary" style="display: inline-flex;">
                     📄 Descargar Framework V4 (PDF Oficial)
                 </a>
             </div>
             <div>
-                <div style="background: var(--bg-beige); border: 1px solid var(--border-soft); border-radius: 14px; padding: 28px; font-family: var(--font-mono); font-size: 12.5px; color: var(--text-body); box-shadow: var(--shadow-sm);">
+                <div style="background: var(--bg-beige); border: 1px solid var(--border-soft); border-radius: 12px; padding: 28px; font-family: var(--font-mono); font-size: 12.5px; color: var(--text-body); box-shadow: var(--shadow-sm);">
                     <span style="color: var(--brand-navy); font-weight: bold;">// SAARE Governance Principles</span><br>
                     [Principle 1] Memory-Only Processing<br>
                     [Principle 2] Policy Enforcement Before Inference (L7 PEP)<br>
@@ -521,7 +511,7 @@
         <div class="cert-showcase-grid">
             <div>
                 <div class="v-number">SISTEMA DE VERIFICACIÓN S.A.A.R.E.</div>
-                <h2 style="font-size: 28px; font-weight: 800; color: var(--text-title); margin-bottom: 12px;">Certificado de Integridad y Verificación Algorítmica</h2>
+                <h2 style="font-family: var(--font-serif); font-size: 28px; font-weight: 800; color: var(--text-title); margin-bottom: 12px;">Certificado de Integridad y Verificación Algorítmica</h2>
                 <p style="color: var(--text-body); font-size: 14.5px; line-height: 1.6; margin-bottom: 24px;">Emisión de evidencia técnica estructurada mediante el motor de validación S.A.A.R.E., acreditando la ausencia de desviaciones deterministas conforme a las métricas del Framework V4.</p>
                 <div style="display: flex; gap: 14px; flex-wrap: wrap;">
                     <button onclick="openLightbox()" class="btn-hero-primary" style="padding: 12px 24px; font-size: 13.5px; cursor: pointer;">🔍 Expandir Certificado</button>
@@ -539,7 +529,7 @@
         <div class="dashboard-header-bar">
             <span>🌐 GOVERNANCE PLANE & TELEMETRÍA EN TIEMPO REAL (Nube Activa)</span>
             <div style="display: flex; align-items: center; gap: 16px;">
-                <a href="https://saare-grc-dashboard.streamlit.app/" target="_blank" rel="noopener" class="ext-link">Abrir Dashboard Streamlit en Pestaña Completa ↗</a>
+                <a href="https://saare-grc-dashboard.streamlit.app/" target="_blank" rel="noopener" class="ext-link" style="color: var(--brand-accent); font-weight: 700; text-decoration: none;">Abrir Dashboard Streamlit en Pestaña Completa ↗</a>
                 <button class="btn-toggle-view" onclick="toggleIframeSize()">↕ Expandir / Reducir Vista</button>
             </div>
         </div>
@@ -556,7 +546,7 @@
     <!-- DATA ROOM PRIVADA -->
     <section id="data-room">
         <div style="text-align: center; margin-bottom: 35px;">
-            <h2 style="font-size: 26px; font-weight: 800; color: var(--text-title);">Data Room Privada & Documentación Homologada</h2>
+            <h2 style="font-family: var(--font-serif); font-size: 28px; font-weight: 800; color: var(--text-title);">Data Room Privada & Documentación Homologada</h2>
             <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">Estructura documental clasificada para procesos de Due Diligence, Auditores y Entidades Reguladoras.</p>
         </div>
 
@@ -574,9 +564,9 @@
         SHA-256 Hash: <span class="copy-hash" onclick="copyToClipboard('fb3fe6a18a0e05b995922579562f04d4d6badb215ea91d103b5d5276d1b9dfbd', 'Hash SHA-256 copiado al portapapeles')">fb3fe6a18a0e05b995922579562f04d4d6badb215ea91d103b5d5276d1b9dfbd</span><br>
         © 2026 <a href="https://saare.es/" style="color: inherit; text-decoration: none; font-weight: bold;">MS3V S.A.A.R.E. SL</a> • Infrastructure for Independent AI Governance • Todos los derechos reservados.<br>
         <div style="margin-top: 12px; font-size: 10.5px;">
-            <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-accent); text-decoration: none; margin: 0 10px;">Aviso Legal (LSSI)</a> | 
-            <a href="#" onclick="openLegalModal('privacidad'); return false;" style="color: var(--brand-accent); text-decoration: none; margin: 0 10px;">Política de Privacidad (RGPD)</a> | 
-            <a href="#" onclick="openLegalModal('cookies'); return false;" style="color: var(--brand-accent); text-decoration: none; margin: 0 10px;">Política de Cookies</a>
+            <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold); text-decoration: none; margin: 0 10px;">Aviso Legal (LSSI)</a> | 
+            <a href="#" onclick="openLegalModal('privacidad'); return false;" style="color: var(--brand-gold); text-decoration: none; margin: 0 10px;">Política de Privacidad (RGPD)</a> | 
+            <a href="#" onclick="openLegalModal('cookies'); return false;" style="color: var(--brand-gold); text-decoration: none; margin: 0 10px;">Política de Cookies</a>
         </div>
     </footer>
 </div>
@@ -599,7 +589,7 @@
         </div>
 
         <div id="legal-sec-aviso" class="legal-sec">
-            <h3 style="margin-bottom: 12px;">Aviso Legal y Términos de Servicios (LSSI-CE)</h3>
+            <h3 style="margin-bottom: 12px; font-family: var(--font-serif);">Aviso Legal y Términos de Servicios (LSSI-CE)</h3>
             <p style="font-size: 12px; color: #475569; margin-bottom: 10px;">En cumplimiento del artículo 10 de la Ley 34/2002 (LSSI-CE), se informan los datos de la entidad:</p>
             <ul style="font-size: 12px; color: #475569; margin-left: 20px; margin-bottom: 15px; line-height: 1.8;">
                 <li><strong>Entidad Explotadora:</strong> MS3V S.A.A.R.E. SL</li>
@@ -612,7 +602,7 @@
         </div>
 
         <div id="legal-sec-privacidad" class="legal-sec" style="display: none;">
-            <h3 style="margin-bottom: 12px;">Política de Privacidad (RGPD & LOPDGDD)</h3>
+            <h3 style="margin-bottom: 12px; font-family: var(--font-serif);">Política de Privacidad (RGPD & LOPDGDD)</h3>
             <p style="font-size: 12px; color: #475569; margin-bottom: 10px;">Conforme al Reglamento UE 2016/679 (RGPD) y Ley Orgánica 3/2018:</p>
             <ul style="font-size: 12px; color: #475569; margin-left: 20px; margin-bottom: 15px; line-height: 1.8;">
                 <li><strong>Responsable:</strong> MS3V S.A.A.R.E. SL.</li>
@@ -624,7 +614,7 @@
         </div>
 
         <div id="legal-sec-cookies" class="legal-sec" style="display: none;">
-            <h3 style="margin-bottom: 12px;">Política de Cookies e Infraestructura</h3>
+            <h3 style="margin-bottom: 12px; font-family: var(--font-serif);">Política de Cookies e Infraestructura</h3>
             <p style="font-size: 12px; color: #475569; margin-bottom: 10px;">El dominio <strong>saare.es</strong> opera bajo el principio de privacidad por defecto (Privacy by Design):</p>
             <ul style="font-size: 12px; color: #475569; margin-left: 20px; margin-bottom: 15px; line-height: 1.8;">
                 <li><strong>Sin Cookies de Rastreo:</strong> Este sitio web NO emplea cookies publicitarias, ni scripts de seguimiento o telemetría de terceros.</li>
@@ -636,6 +626,7 @@
 
 <div id="toast" class="toast">Texto copiado al portapapeles</div>
 
+<!-- JS DE AUTOMATIZACIÓN DE LICENCIAS E INTERACTIVIDAD (INTEGRO) -->
 <script>
     function toggleIframeSize() {
         const iframe = document.getElementById('grc-iframe');
@@ -667,6 +658,7 @@
         document.getElementById('tab-btn-' + tab).classList.add('active');
     }
 
+    /* MOTOR DE EMISIÓN CLIENT-SIDE Ed25519 DE EVALUACIÓN */
     async function solicitarTrialAutomatico(event) {
         event.preventDefault();
         
