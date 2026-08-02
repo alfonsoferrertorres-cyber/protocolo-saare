@@ -111,16 +111,16 @@
         .btn-header {
             background: var(--brand-navy); color: #FFFFFF; font-size: 12.5px; font-weight: 700;
             padding: 10px 20px; border-radius: 6px; text-decoration: none; transition: all 0.2s;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; justify-content: center;
         }
         .btn-header:hover { background: var(--brand-gold); color: #0F172A; }
 
-        /* HERO EXECUTIVE SOVEREIGNTY CON FONDO DE ACUERDO JURÍDICO */
+        /* HERO EXECUTIVE SOVEREIGNTY CON IMAGEN LOCAL DE ALTA VISIBILIDAD */
         .hero-executive {
             position: relative; min-height: 82vh; display: flex; align-items: center; justify-content: center;
             text-align: center; color: #FFFFFF; padding: 80px 24px; margin-bottom: 40px;
-            background: linear-gradient(180deg, rgba(10, 15, 29, 0.88) 0%, rgba(10, 15, 29, 0.96) 100%),
-                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop') center/cover no-repeat;
+            background: linear-gradient(180deg, rgba(10, 15, 29, 0.55) 0%, rgba(10, 15, 29, 0.78) 100%),
+                        url('hero_bg.jpg') center/cover no-repeat;
             border-bottom: 3px solid var(--brand-gold);
         }
         
@@ -141,22 +141,39 @@
         .btn-hero-gold {
             background: var(--brand-gold); color: #0F172A; font-weight: 800; font-size: 14.5px;
             padding: 16px 36px; border-radius: 6px; text-decoration: none; transition: all 0.25s ease;
-            box-shadow: 0 4px 20px rgba(197, 160, 89, 0.3); border: none;
+            box-shadow: 0 4px 20px rgba(197, 160, 89, 0.3); border: none; display: inline-flex; align-items: center; justify-content: center;
         }
         .btn-hero-gold:hover { background: #FFFFFF; transform: translateY(-2px); }
 
-        /* SECCIÓN DE VENTA B2B A LA CABEZA (MODELO 1) */
+        .btn-hero-primary {
+            background: var(--brand-navy); color: #FFFFFF; font-weight: 700; font-size: 13.5px;
+            padding: 14px 28px; border-radius: 6px; text-decoration: none; transition: all 0.2s ease;
+            display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--brand-navy);
+        }
+        .btn-hero-primary:hover { background: var(--brand-gold); color: #0F172A; border-color: var(--brand-gold); }
+
+        .btn-hero-secondary {
+            background: transparent; color: var(--brand-navy); font-weight: 700; font-size: 13.5px;
+            padding: 14px 28px; border-radius: 6px; text-decoration: none; transition: all 0.2s ease;
+            border: 1px solid var(--border-soft); display: inline-flex; align-items: center; justify-content: center;
+        }
+        .btn-hero-secondary:hover { border-color: var(--brand-navy); background: #FFFFFF; }
+
+        /* SECCIÓN DE VENTA B2B A LA CABEZA */
         .licensing-section { margin-bottom: 85px; }
         .licensing-header { text-align: center; margin-bottom: 35px; }
         .licensing-header h2 { font-family: var(--font-serif); font-size: 36px; font-weight: 800; color: var(--text-title); }
 
         .licensing-strip-bar {
-            background: var(--brand-navy); color: #FFFFFF; border-radius: 10px; padding: 18px 32px;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.90) 0%, rgba(15, 23, 42, 0.95) 100%),
+                        url('infra_bg.jpg') center/cover no-repeat;
+            color: #FFFFFF; border-radius: 10px; padding: 22px 32px;
             display: flex; justify-content: space-between; align-items: center; gap: 12px;
             margin-bottom: 36px; flex-wrap: wrap; box-shadow: var(--shadow-md); border-left: 4px solid var(--brand-gold);
         }
         .licensing-strip-item { font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; color: #E2E8F0; }
         .licensing-strip-item span { color: var(--brand-gold); font-weight: 800; }
+        .licensing-strip-divider { color: var(--brand-gold); font-weight: bold; }
 
         .licensing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; align-items: stretch; }
         
@@ -168,13 +185,13 @@
         .v-card.featured { border: 2px solid var(--brand-gold); position: relative; box-shadow: var(--shadow-md); background: #FAF8F5; }
         .v-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--brand-navy); }
         
-        .v-number { font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; color: var(--brand-navy); background: var(--bg-accent-beige); padding: 5px 12px; border-radius: 20px; width: fit-content; margin-bottom: 16px; border: 1px solid var(--border-soft); }
+        .v-number { font-family: var(--font-mono); font-size: 10.5px; font-weight: 800; color: var(--brand-navy); background: rgba(241,238,231,0.8); padding: 5px 12px; border-radius: 20px; width: fit-content; margin-bottom: 16px; border: 1px solid var(--border-soft); }
         .v-title { font-family: var(--font-serif); font-size: 22px; font-weight: 800; color: var(--text-title); margin-bottom: 4px; }
         .v-subtitle { font-size: 12px; font-family: var(--font-mono); color: var(--brand-accent); margin-bottom: 16px; font-weight: 700; }
         .v-target { background: var(--bg-beige); padding: 12px 16px; border-radius: 8px; font-size: 12.5px; color: var(--text-body); margin-bottom: 20px; border-left: 3px solid var(--brand-gold); }
         .v-price { font-family: var(--font-serif); font-size: 32px; font-weight: 800; color: var(--text-title); margin-bottom: 4px; }
-        .v-price-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 20px; }
-        .v-sales-argument { font-size: 13.5px; color: var(--text-body); margin-bottom: 24px; line-height: 1.6; }
+        .v-price-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 20px; font-family: var(--font-mono); }
+        .v-sales-argument { font-size: 13px; color: var(--text-body); margin-bottom: 20px; line-height: 1.5; background: #FFF; padding: 10px 14px; border-radius: 6px; border: 1px dashed var(--border-soft); }
         .v-features { list-style: none; margin-bottom: 32px; font-size: 13px; color: var(--text-body); }
         .v-features li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; }
         .v-features li::before { content: "✓"; color: var(--brand-green); font-weight: bold; }
@@ -189,31 +206,55 @@
         .paradigm-section { margin-bottom: 85px; text-align: center; }
         .paradigm-box { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 42px 32px; margin-top: 28px; }
         .paradigm-grid { display: grid; grid-template-columns: 1fr 50px 1fr; gap: 20px; align-items: center; margin-top: 28px; }
-        @media (max-width: 850px) { .paradigm-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 850px) { .paradigm-grid { grid-template-columns: 1fr; } .paradigm-arrow { transform: rotate(90deg); margin: 10px 0; } }
         .paradigm-card { background: var(--bg-beige); border: 1px solid var(--border-soft); border-radius: 12px; padding: 24px; text-align: left; }
         .paradigm-card.old { border-color: rgba(220, 38, 38, 0.35); background: rgba(254, 242, 242, 0.4); }
         .paradigm-card.new { border-color: var(--brand-navy); background: #FFFFFF; box-shadow: var(--shadow-md); }
         .paradigm-title { font-size: 13px; font-family: var(--font-mono); font-weight: 800; margin-bottom: 12px; text-transform: uppercase; }
+        .paradigm-arrow { font-size: 24px; color: var(--brand-gold); text-align: center; font-weight: bold; }
+        .paradigm-flow { font-family: var(--font-mono); font-size: 12px; line-height: 1.8; color: var(--text-title); }
+
+        .paradigm-media-card {
+            margin-top: 32px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-soft);
+            box-shadow: var(--shadow-md); max-height: 380px;
+        }
+        .paradigm-media-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         /* FRAMEWORK & CERTIFICADO */
         .framework-section { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 44px; margin-bottom: 85px; }
         .framework-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
         @media (max-width: 900px) { .framework-grid { grid-template-columns: 1fr; } }
+        .framework-title { color: var(--text-title); margin-bottom: 12px; }
+        .framework-desc { font-size: 15px; color: var(--text-body); margin-bottom: 24px; line-height: 1.6; }
+        .framework-img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); }
 
         .cert-showcase-section { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 40px; margin-bottom: 85px; }
         .cert-showcase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
-        .cert-img-wrapper img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border-soft); }
+        @media (max-width: 900px) { .cert-showcase-grid { grid-template-columns: 1fr; } }
+        .cert-img-wrapper { cursor: pointer; transition: transform 0.2s; }
+        .cert-img-wrapper:hover { transform: scale(1.01); }
+        .cert-img-wrapper img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--border-soft); box-shadow: var(--shadow-sm); }
 
         /* DASHBOARD & DATA ROOM */
         .dashboard-hero-container { width: 100%; margin-bottom: 85px; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; overflow: hidden; }
-        .dashboard-header-bar { background: var(--bg-accent-beige); padding: 14px 24px; border-bottom: 1px solid var(--border-soft); display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 11.5px; }
-        .streamlit-iframe { width: 100%; height: 680px; border: none; display: block; background: #0e1117; }
+        .dashboard-header-bar {
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.98) 100%),
+                        url('grc_bg.jpg') center/cover no-repeat;
+            color: #FFFFFF; padding: 18px 28px; border-bottom: 1px solid var(--border-soft);
+            display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 11.5px;
+        }
+        .btn-toggle-view { background: rgba(255, 255, 255, 0.15); color: #FFF; border: 1px solid rgba(255, 255, 255, 0.3); padding: 5px 12px; border-radius: 4px; font-family: var(--font-mono); font-size: 11px; cursor: pointer; transition: background 0.2s; }
+        .btn-toggle-view:hover { background: rgba(255, 255, 255, 0.3); }
+        .streamlit-iframe { width: 100%; height: 680px; border: none; display: block; background: #0e1117; transition: height 0.3s ease; }
 
-        .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 85px; }
-        .doc-item { background: var(--bg-card); border: 1px solid var(--border-soft); padding: 20px 24px; border-radius: 10px; color: var(--text-title); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 12px; }
+        .docs-section-wrapper { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 40px; margin-bottom: 85px; }
+        .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+        .doc-item { background: var(--bg-beige); border: 1px solid var(--border-soft); padding: 20px 24px; border-radius: 10px; color: var(--text-title); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 12px; transition: all 0.2s; }
+        .doc-item:hover { border-color: var(--brand-navy); transform: translateY(-2px); }
 
         /* FOOTER */
         footer { border-top: 1px solid var(--border-soft); padding: 50px 0; text-align: center; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); line-height: 2.2; background: var(--bg-beige); }
+        .copy-hash { cursor: pointer; border-bottom: 1px dashed var(--text-muted); }
 
         /* MODAL & TOAST */
         .toast { position: fixed; bottom: 24px; right: 24px; background: var(--brand-navy); color: #FFF; padding: 12px 24px; border-radius: 8px; font-family: var(--font-mono); font-size: 12px; opacity: 0; pointer-events: none; transition: all 0.3s; z-index: 2000; }
@@ -479,6 +520,11 @@
                     </div>
                 </div>
             </div>
+
+            <!-- IMAGEN DE IMPACTO DE PARADIGMA -->
+            <div class="paradigm-media-card">
+                <img src="paradigma_legal.png" alt="Soberanía de Juicio Algorítmico y Código Legal">
+            </div>
         </div>
     </section>
 
@@ -494,14 +540,7 @@
                 </a>
             </div>
             <div>
-                <div style="background: var(--bg-beige); border: 1px solid var(--border-soft); border-radius: 12px; padding: 28px; font-family: var(--font-mono); font-size: 12.5px; color: var(--text-body); box-shadow: var(--shadow-sm);">
-                    <span style="color: var(--brand-navy); font-weight: bold;">// SAARE Governance Principles</span><br>
-                    [Principle 1] Memory-Only Processing<br>
-                    [Principle 2] Policy Enforcement Before Inference (L7 PEP)<br>
-                    [Principle 3] Cryptographic Evidence Generation<br>
-                    [Principle 4] Vendor-Agnostic Runtime Integration<br>
-                    [Principle 5] Deterministic Low-Latency Execution (~1.16 ms)
-                </div>
+                <img src="framework_v4.png" alt="Módulos del Framework SAARE V4 ISO 42001" class="framework-img">
             </div>
         </div>
     </section>
@@ -519,7 +558,7 @@
                 </div>
             </div>
             <div class="cert-img-wrapper" onclick="openLightbox()">
-                <img src="CERTIFICADO%20DE%20INTEGRIDAD%20SAARE.png" alt="Certificado Oficial de Integridad S.A.A.R.E.">
+                <img src="evidencia_ip.png" alt="Firma Criptográfica y Certificación Oficial">
             </div>
         </div>
     </section>
@@ -529,7 +568,7 @@
         <div class="dashboard-header-bar">
             <span>🌐 GOVERNANCE PLANE & TELEMETRÍA EN TIEMPO REAL (Nube Activa)</span>
             <div style="display: flex; align-items: center; gap: 16px;">
-                <a href="https://saare-grc-dashboard.streamlit.app/" target="_blank" rel="noopener" class="ext-link" style="color: var(--brand-accent); font-weight: 700; text-decoration: none;">Abrir Dashboard Streamlit en Pestaña Completa ↗</a>
+                <a href="https://saare-grc-dashboard.streamlit.app/" target="_blank" rel="noopener" style="color: var(--brand-gold); font-weight: 700; text-decoration: none;">Abrir Dashboard Streamlit en Pestaña Completa ↗</a>
                 <button class="btn-toggle-view" onclick="toggleIframeSize()">↕ Expandir / Reducir Vista</button>
             </div>
         </div>
@@ -544,10 +583,15 @@
     </section>
 
     <!-- DATA ROOM PRIVADA -->
-    <section id="data-room">
-        <div style="text-align: center; margin-bottom: 35px;">
-            <h2 style="font-family: var(--font-serif); font-size: 28px; font-weight: 800; color: var(--text-title);">Data Room Privada & Documentación Homologada</h2>
-            <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">Estructura documental clasificada para procesos de Due Diligence, Auditores y Entidades Reguladoras.</p>
+    <section id="data-room" class="docs-section-wrapper">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 32px; align-items: center; margin-bottom: 28px;">
+            <div>
+                <img src="data_room.png" alt="Data Room Privada Clasificada" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-soft);">
+            </div>
+            <div>
+                <h2 style="font-family: var(--font-serif); font-size: 28px; font-weight: 800; color: var(--text-title);">Data Room Privada & Documentación Homologada</h2>
+                <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 6px;">Estructura documental clasificada para procesos de Due Diligence, Auditores y Entidades Reguladoras conforme al marco europeo.</p>
+            </div>
         </div>
 
         <nav class="docs-grid" aria-label="Documentos Aprobados">
@@ -571,7 +615,7 @@
     </footer>
 </div>
 
-<!-- LIGHTBOX IMAGEN -->
+<!-- LIGHTBOX IMAGEN (MUESTRA EL CERTIFICADO RPI) -->
 <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
     <img src="CERTIFICADO%20DE%20INTEGRIDAD%20SAARE.png" alt="Certificado de Integridad de Propiedad Intelectual" onclick="event.stopPropagation()">
@@ -626,7 +670,7 @@
 
 <div id="toast" class="toast">Texto copiado al portapapeles</div>
 
-<!-- JS DE AUTOMATIZACIÓN DE LICENCIAS E INTERACTIVIDAD (INTEGRO) -->
+<!-- JS DE AUTOMATIZACIÓN DE LICENCIAS E INTERACTIVIDAD INTEGRAL -->
 <script>
     function toggleIframeSize() {
         const iframe = document.getElementById('grc-iframe');
