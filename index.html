@@ -17,9 +17,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Librería Criptográfica TweetNaCl para generación Ed25519 -->
-    <script src="https://cdn.jsdelivr.net/npm/tweetnacl@1.0.3/nacl-fast.min.js"></script>
-
     <style>
         :root {
             --bg-beige: #F9F8F4;
@@ -662,7 +659,7 @@
             <p style="font-size: 12px; color: #475569; margin-bottom: 10px;">El dominio <strong>saare.es</strong> opera bajo el principio de privacidad por defecto (Privacy by Design):</p>
             <ul style="font-size: 12px; color: #475569; margin-left: 20px; margin-bottom: 15px; line-height: 1.8;">
                 <li><strong>Sin Cookies de Rastreo:</strong> Este sitio web NO emplea cookies publicitarias, ni scripts de seguimiento o telemetría de terceros.</li>
-                <li><strong>Cookies Técnicas Exclusivas:</strong> Se emplean únicamente variables de sesión imprescindibles para la generación criptográfica local (TweetNaCl.js) y la carga del dashboard GRC de Streamlit.</li>
+                <li><strong>Cookies Técnicas Exclusivas:</strong> Se emplean únicamente variables de sesión imprescindibles para la interacción del portal y la carga del dashboard GRC de Streamlit.</li>
             </ul>
         </div>
     </div>
@@ -702,7 +699,7 @@
         document.getElementById('tab-btn-' + tab).classList.add('active');
     }
 
-    /* MOTOR DE EMISIÓN DE EVALUACIÓN (Sincronizado con Vercel ZIP Bundler) */
+    /* MOTOR DE EMISIÓN DE EVALUACIÓN (Vía Vercel Serverless) */
     async function solicitarTrialAutomatico(event) {
         event.preventDefault();
         
@@ -710,103 +707,46 @@
         const email = document.getElementById('trial-email').value.trim();
         const btn = document.getElementById('btn-trial-submit');
 
-        btn.innerText = "⏳ Generando Paquete ZIP...";
+        btn.innerText = "⏳ Generando Paquete ZIP seguro...";
         btn.disabled = true;
 
         try {
-            let zipDownloaded = false;
-
             // 1. Descarga del paquete .ZIP directamente de la API Vercel
-            try {
-                const response = await fetch('https://saare-v7-iso42001-sable.vercel.app/api/trial', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, empresa })
-                });
+            const response = await fetch('https://saare-v7-iso42001-sable.vercel.app/api/trial', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, empresa })
+            });
 
-                if (response.ok) {
-                    const blob = await response.blob();
-                    const url = window.URL.createObjectURL(blob);
-                    const aZip = document.createElement('a');
-                    aZip.href = url;
-                    
-                    const cleanCompany = empresa.replace(/[^a-zA-Z0-9_-]/g, '');
-                    aZip.download = `SAARE_v7.0_PRO_${cleanCompany || 'Evaluation'}.zip`;
-                    document.body.appendChild(aZip);
-                    aZip.click();
-                    aZip.remove();
-                    window.URL.revokeObjectURL(url);
-                    
-                    zipDownloaded = true;
-                }
-            } catch (apiErr) {
-                console.warn("API Vercel no disponible. Ejecutando motor de contingencia local...", apiErr);
-            }
-
-            // 2. FALLBACK CLIENT-SIDE (Si la API Serverless de Vercel falla)
-            if (!zipDownloaded) {
-                const now = new Date();
-                const expDate = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000));
-
-                const payload = {
-                    client_id: empresa,
-                    email: email,
-                    tier: "SAARE_DISCOVERY",
-                    modules: ["SAARE_DISCOVER", "SAARE_GOVERN", "ACTIVE_SHIELD", "SAARE_ASSURE", "AUDITOR_SUITE"],
-                    expires_at: expDate.toISOString().replace(/\.\d{3}Z$/, 'Z'),
-                    issued_at: now.toISOString().replace(/\.\d{3}Z$/, 'Z')
-                };
-
-                const defaultPrivateKeyHex = "83367892821e25d770f1fba0c47c11ff4b813e54162ece9eb839e076231ab600";
-                const canonicalPayload = JSON.stringify(payload, Object.keys(payload).sort());
-                const encoder = new TextEncoder();
-                const payloadBytes = encoder.encode(canonicalPayload);
-
-                function hexToBytes(hex) {
-                    const bytes = new Uint8Array(hex.length / 2);
-                    for (let i = 0; i < bytes.length; i++) {
-                        bytes[i] = parseInt(hex.substr(i * 2, 2), 16);
-                    }
-                    return bytes;
-                }
-
-                const secretKeyBytes = hexToBytes(defaultPrivateKeyHex);
-                const keyPair = nacl.sign.keyPair.fromSeed(secretKeyBytes);
-                const signatureBytes = nacl.sign.detached(payloadBytes, keyPair.secretKey);
-
-                let binaryStr = "";
-                for (let i = 0; i < signatureBytes.length; i++) {
-                    binaryStr += String.fromCharCode(signatureBytes[i]);
-                }
-                const signatureB64 = btoa(binaryStr);
-
-                const licData = { payload: payload, signature: signatureB64 };
-
-                // Descarga saare.lic
-                const blobLic = new Blob([JSON.stringify(licData, null, 2)], { type: 'application/json' });
-                const urlLic = window.URL.createObjectURL(blobLic);
-                const aLic = document.createElement('a');
-                aLic.href = urlLic;
-                aLic.download = 'saare.lic';
-                document.body.appendChild(aLic);
-                aLic.click();
-                aLic.remove();
-                window.URL.revokeObjectURL(urlLic);
-
-                alert("✅ Licencia 'saare.lic' generada en modo contingencia local.\n\nA continuación se descargará el ejecutable universal base.");
-
-                // Descargar el ejecutable desde la release oficial v7.0.0 de protocolo-saare
-                const setupUrl = "https://github.com/alfonsoferrertorres-cyber/protocolo-saare/releases/download/v7.0.0/Setup_SAARE_v7.0_PRO.exe";
-                const aExe = document.createElement('a');
-                aExe.href = setupUrl;
-                aExe.download = "Setup_SAARE_v7.0_PRO.exe";
-                document.body.appendChild(aExe);
-                aExe.click();
-                aExe.remove();
+            if (response.ok) {
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const aZip = document.createElement('a');
+                aZip.href = url;
+                
+                const cleanCompany = empresa.replace(/[^a-zA-Z0-9_-]/g, '');
+                aZip.download = `SAARE_v7.0_PRO_${cleanCompany || 'Evaluation'}.zip`;
+                document.body.appendChild(aZip);
+                aZip.click();
+                aZip.remove();
+                window.URL.revokeObjectURL(url);
+            } else {
+                throw new Error("El servidor de licencias devolvió un error.");
             }
 
         } catch (err) {
-            alert("❌ Ocurrió un error al procesar la alta: " + err.message);
+            console.warn("API Vercel no disponible. Error:", err);
+            
+            alert("⚠️ Servidor de licencias en mantenimiento temporal.\n\nA continuación se descargará el instalador base. Por favor, contacta con soporte@saare.es para recibir tu archivo 'saare.lic' activado.");
+
+            // Descargar ejecutable base de respaldo
+            const setupUrl = "https://github.com/alfonsoferrertorres-cyber/protocolo-saare/releases/download/v7.0.0/Setup_SAARE_v7.0_PRO.exe";
+            const aExe = document.createElement('a');
+            aExe.href = setupUrl;
+            aExe.download = "Setup_SAARE_v7.0_PRO.exe";
+            document.body.appendChild(aExe);
+            aExe.click();
+            aExe.remove();
         } finally {
             btn.innerText = "⚡ Generar Licencia de Evaluación →";
             btn.disabled = false;
