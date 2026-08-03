@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MS3V S.A.A.R.E. - The Independent AI Governance Infrastructure. Runtime Control, Cryptographic Evidence, Enterprise Assurance.">
-    <meta name="keywords" content="AI Governance Infrastructure, SAARE Runtime Engine, Layer 7 PEP, Zero-Disk, ISO 42001, EU AI Act, Embedded OEM">
+    <meta name="description" content="MS3V S.A.A.R.E. ISV Suite v4.2 - Production-Ready AI Governance Infrastructure SDK. Modular Rust Architecture, C-ABI Dynamic Library, Python SDK, and Zero-Disk LicenseGuard Engine.">
+    <meta name="keywords" content="AI Governance SDK, SAARE ISV Suite v4.2, C-ABI FFI, Zero-Disk Licensing, ISO 42001, EU AI Act, Embedded Rust Engine, Python AI Governance">
     <meta name="author" content="MS3V S.A.A.R.E. SL">
     <link rel="canonical" href="https://saare.es/">
     
-    <title>MS3V S.A.A.R.E. | Independent AI Governance Infrastructure</title>
+    <title>MS3V S.A.A.R.E. ISV Suite v4.2 | Independent AI Governance Infrastructure</title>
     
     <link rel="icon" type="image/x-icon" href="logo_saare.ico">
     
@@ -60,7 +60,7 @@
 
         .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-        /* HEADER ENTERPRISE CON MEGAMENÚ ESTILO CROWDSTRIKE */
+        /* HEADER ENTERPRISE CON MEGAMENÚ */
         header {
             display: flex; justify-content: space-between; align-items: center;
             padding: 16px 40px; border-bottom: 1px solid rgba(226, 221, 213, 0.8);
@@ -119,7 +119,7 @@
         .hero-executive {
             position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center;
             text-align: center; color: #FFFFFF; padding: 90px 24px; margin-bottom: 60px;
-            background: linear-gradient(180deg, rgba(10, 15, 29, 0.75) 0%, rgba(10, 15, 29, 0.92) 100%),
+            background: linear-gradient(180deg, rgba(10, 15, 29, 0.82) 0%, rgba(10, 15, 29, 0.95) 100%),
                         url('hero_bg.jpg') center/cover no-repeat;
             border-bottom: 3px solid var(--brand-gold);
         }
@@ -131,11 +131,11 @@
             background: rgba(197, 160, 89, 0.12); padding: 8px 24px; border-radius: 30px; border: 1px solid rgba(197, 160, 89, 0.3);
         }
         .hero-executive h1 {
-            font-family: var(--font-serif); font-size: clamp(32px, 4.8vw, 54px); font-weight: 800;
-            line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.5px; color: #F8FAFC;
+            font-family: var(--font-serif); font-size: clamp(32px, 4.8vw, 52px); font-weight: 800;
+            line-height: 1.18; margin-bottom: 24px; letter-spacing: -0.5px; color: #F8FAFC;
         }
         .hero-executive h1 span.gold { color: var(--brand-gold); }
-        .hero-sub-executive { font-size: 18.5px; color: #CBD5E1; font-weight: 300; max-width: 860px; margin: 0 auto 36px auto; line-height: 1.6; }
+        .hero-sub-executive { font-size: 18px; color: #CBD5E1; font-weight: 300; max-width: 880px; margin: 0 auto 36px auto; line-height: 1.6; }
 
         .hero-pills { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
         .pill-item { font-family: var(--font-mono); font-size: 11px; color: #E2E8F0; background: rgba(255,255,255,0.08); padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.15); }
@@ -155,7 +155,7 @@
         }
         .btn-hero-secondary:hover { background: rgba(255,255,255,0.2); border-color: #FFF; }
 
-        /* ESTILOS DE FORMULARIO ENTERPRISE ESTILO CROWDSTRIKE */
+        /* ESTILOS DE FORMULARIO ENTERPRISE */
         .form-section-wrapper {
             background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px;
             padding: 48px; margin-bottom: 90px; box-shadow: var(--shadow-md);
@@ -187,7 +187,7 @@
         .vision-section { margin-bottom: 90px; }
         .section-title-center { text-align: center; margin-bottom: 48px; }
         .section-title-center h2 { font-family: var(--font-serif); font-size: 34px; font-weight: 800; color: var(--text-title); }
-        .section-title-center p { color: var(--text-muted); font-size: 16px; margin-top: 8px; max-width: 720px; margin-left: auto; margin-right: auto; }
+        .section-title-center p { color: var(--text-muted); font-size: 16px; margin-top: 8px; max-width: 760px; margin-left: auto; margin-right: auto; }
 
         .gap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
         .gap-card { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 12px; padding: 32px; box-shadow: var(--shadow-sm); }
@@ -245,147 +245,121 @@
 </head>
 <body>
 
-<!-- HEADER ENTERPRISE CON MEGAMENÚ COMPLETO -->
+<!-- HEADER ENTERPRISE CON MEGAMENÚ ISV v4.2 -->
 <header>
-    <a href="https://saare.es/" class="logo-area" title="MS3V S.A.A.R.E. | Platform">
+    <a href="https://saare.es/" class="logo-area" title="MS3V S.A.A.R.E. | ISV Suite v4.2">
         <img src="logo_saare.ico" alt="MS3V S.A.A.R.E. Logo" class="logo-img">
         <div class="logo-text-group">
             <span class="logo-text">MS3V S.A.A.R.E.</span>
-            <span class="logo-subtext">AI Governance Infrastructure</span>
+            <span class="logo-subtext">ISV Suite v4.2 Enterprise</span>
         </div>
     </a>
 
     <nav class="nav-links">
-        <!-- 1. PLATAFORMA -->
+        <!-- 1. PLATAFORMA & ARQUITECTURA -->
         <div class="dropdown-menu">
-            <span class="dropdown-btn">Plataforma ▾</span>
-            <div class="megamenu-content" style="width: 680px; grid-template-columns: 1fr 1fr;">
+            <span class="dropdown-btn">Plataforma & SDKs ▾</span>
+            <div class="megamenu-content" style="width: 720px; grid-template-columns: 1fr 1fr;">
                 <div class="megamenu-col">
-                    <h4>Engine Core</h4>
+                    <h4>Engine Core & Binarios</h4>
                     <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">SAARE Runtime PEP</div>
-                        <div class="megamenu-item-desc">Motor determinista C++/Rust en memoria RAM (~1.16ms).</div>
+                        <div class="megamenu-item-title">SAARE Workspace (9 Crates Rust)</div>
+                        <div class="megamenu-item-desc">Arquitectura modular en Rust con 0 warnings y velocidad nativa.</div>
                     </a>
                     <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">Active Shield (L7 PEP)</div>
-                        <div class="megamenu-item-desc">Intercepción y enmascaramiento ex-ante de payloads.</div>
+                        <div class="megamenu-item-title">C-ABI Dynamic Library (saare_runtime.dll)</div>
+                        <div class="megamenu-item-desc">Interfaz FFI estándar exportable a Python, C++, Go, C# y Node.js.</div>
                     </a>
                     <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">Evidence Ledger (Ed25519)</div>
-                        <div class="megamenu-item-desc">Sellado criptográfico inmutable de trazabilidad.</div>
+                        <div class="megamenu-item-title">LicenseGuard Engine</div>
+                        <div class="megamenu-item-desc">Validación criptográfica HMAC/RSA de licencias en memoria (Zero-Disk).</div>
                     </a>
                 </div>
                 <div class="megamenu-col">
-                    <h4>Control & Integración</h4>
+                    <h4>Módulos Integrados</h4>
                     <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">SAARE Assurance Suite</div>
-                        <div class="megamenu-item-desc">Consola de evaluación continua y análisis de riesgo.</div>
-                    </a>
-                    <a href="#deployment" class="megamenu-item">
-                        <div class="megamenu-item-title">Embedded OEM Module</div>
-                        <div class="megamenu-item-desc">Motor de enforcement integrable para observabilidad.</div>
+                        <div class="megamenu-item-title">PerimeterShield & ComplianceSuite</div>
+                        <div class="megamenu-item-desc">Enmascaramiento DORA/PCI-DSS y auditoría automática EU AI Act.</div>
                     </a>
                     <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">Browser Security Agent</div>
-                        <div class="megamenu-item-desc">Protección en tiempo real contra Shadow AI.</div>
+                        <div class="megamenu-item-title">EvidenceVault & SovereigntyNode</div>
+                        <div class="megamenu-item-desc">Sellado de evidencia en tiempo de ejecución y aislamiento Air-Gap.</div>
+                    </a>
+                    <a href="#products" class="megamenu-item">
+                        <div class="megamenu-item-title">TokenMatrix, CodeSentinel & LabEngine</div>
+                        <div class="megamenu-item-desc">Optimización de costes de tokens, SAST de código e inspección de prompts.</div>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- 2. SERVICIOS -->
+        <!-- 2. SERVICIOS Y ALIANZAS -->
         <div class="dropdown-menu">
-            <span class="dropdown-btn">Servicios ▾</span>
+            <span class="dropdown-btn">Servicios & ISV ▾</span>
             <div class="megamenu-content" style="width: 540px; grid-template-columns: 1fr 1fr;">
                 <div class="megamenu-col">
-                    <h4>Servicios Gestionados</h4>
-                    <a href="#partner-program" class="megamenu-item">
-                        <div class="megamenu-item-title">Continuous Assurance</div>
-                        <div class="megamenu-item-desc">Auditoría 24/7 de evidencias técnicas.</div>
-                    </a>
-                    <a href="#partner-program" class="megamenu-item">
-                        <div class="megamenu-item-title">Shadow AI Discovery</div>
-                        <div class="megamenu-item-desc">Mapeo de consumo no autorizado de LLMs.</div>
-                    </a>
-                </div>
-                <div class="megamenu-col">
-                    <h4>Consultoría Especializada</h4>
-                    <a href="#partner-program" class="megamenu-item">
-                        <div class="megamenu-item-title">Alineación ISO 42001 / EU AI Act</div>
-                        <div class="megamenu-item-desc">Mapeo de controles e insumos de auditoría.</div>
-                    </a>
-                    <a href="#partner-program" class="megamenu-item">
-                        <div class="megamenu-item-title">Peritaje Ciber & Forense</div>
-                        <div class="megamenu-item-desc">Auditoría de integridad algorítmica.</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. SOLUCIONES -->
-        <div class="dropdown-menu">
-            <span class="dropdown-btn">Soluciones ▾</span>
-            <div class="megamenu-content" style="width: 560px; grid-template-columns: 1fr 1fr;">
-                <div class="megamenu-col">
-                    <h4>Por Caso de Uso</h4>
-                    <a href="#vision" class="megamenu-item">
-                        <div class="megamenu-item-title">Protección PII/PHI Ex-Ante</div>
-                        <div class="megamenu-item-desc">Sanitización en memoria antes del LLM cloud.</div>
-                    </a>
+                    <h4>Modelos de Entrega</h4>
                     <a href="#deployment" class="megamenu-item">
-                        <div class="megamenu-item-title">Gobernanza de Agentes</div>
-                        <div class="megamenu-item-desc">Control determinista de ejecuciones y MCPs.</div>
+                        <div class="megamenu-item-title">Embedded OEM Module</div>
+                        <div class="megamenu-item-desc">Librería nativa distribuible para integradores ISV.</div>
+                    </a>
+                    <a href="#partner-program" class="megamenu-item">
+                        <div class="megamenu-item-title">Programa MSSP / Tier-1</div>
+                        <div class="megamenu-item-desc">Servicios gestionados de gobernanza e inspección activa.</div>
                     </a>
                 </div>
                 <div class="megamenu-col">
-                    <h4>Por Industria</h4>
-                    <a href="#vision" class="megamenu-item">
-                        <div class="megamenu-item-title">Banca & Finanzas</div>
-                        <div class="megamenu-item-desc">Resiliencia operativa DORA y secreto bancario.</div>
+                    <h4>Consultoría Regulatoria</h4>
+                    <a href="#partner-program" class="megamenu-item">
+                        <div class="megamenu-item-title">Adecuación ISO 42001 / EU AI Act</div>
+                        <div class="megamenu-item-desc">Alineación de políticas y generación de evidencias técnicas.</div>
                     </a>
-                    <a href="#vision" class="megamenu-item">
-                        <div class="megamenu-item-title">Sector Público & Salud</div>
-                        <div class="megamenu-item-desc">Soberanía de datos y entornos Air-Gapped.</div>
+                    <a href="#partner-program" class="megamenu-item">
+                        <div class="megamenu-item-title">Auditoría de Algoritmos</div>
+                        <div class="megamenu-item-desc">Peritaje criptográfico e integridad de modelos.</div>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- 4. ENLACES DIRECTOS Y SECCIÓN HISTORIA -->
-        <a href="#hito-l7">Hito en Capa 7 (L7)</a>
-        <a href="#data-room">Recursos</a>
-        <a href="#products">Precios</a>
+        <!-- 3. ENLACES DIRECTOS -->
+        <a href="#architecture">Arquitectura v4.2</a>
+        <a href="#data-room">Recursos SDK</a>
+        <a href="#products">Distribución</a>
     </nav>
 
     <div class="nav-actions">
         <div class="shield-status">
             <div class="pulse-dot"></div>
-            <span>[RUNTIME PEP ACTIVE]</span>
+            <span>[ISV SUITE v4.2 READY]</span>
         </div>
-        <a href="#try-saare" class="btn-header">Prueba de 15 Días</a>
+        <a href="#try-saare" class="btn-header">Descargar SDK v4.2</a>
     </div>
 </header>
 
 <!-- HERO EXECUTIVE PLATFORM -->
 <section class="hero-executive">
     <div class="hero-content">
-        <div class="tag-executive">&lt;The Independent AI Governance Infrastructure&gt;</div>
-        <h1>"La IA no necesita más modelos. Necesita una <span class="gold">infraestructura de confianza</span> para operar en procesos críticos."</h1>
-        <p class="hero-sub-executive">Infraestructura agnóstica de control determinista en tiempo de ejecución (ex-ante), mitigación de riesgos y generación de evidencia criptográfica inmutable. Diseñada para proteger cualquier sistema de IA presente y futuro.</p>
+        <div class="tag-executive">&lt;Production-Ready Commercial AI Governance SDK&gt;</div>
+        <h1>El SDK Comercial Independiente para <span class="gold">Gobernanza e Integración de IA</span></h1>
+        <p class="hero-sub-executive">
+            <strong>S.A.A.R.E. ISV Suite v4.2:</strong> Arquitectura workspace en Rust de 9 módulos, compilada a binario nativo y DLL dinámica C-ABI (`saare_runtime.dll`), con SDK oficial para Python, headers C/C++ y motor de licencias Zero-Disk (`LicenseGuard`).
+        </p>
 
         <div class="hero-pills">
-            <span class="pill-item">Sub-1.2ms RAM Engine</span>
-            <span class="pill-item">Zero-Disk Processing</span>
-            <span class="pill-item">Ed25519 Cryptographic Ledger</span>
-            <span class="pill-item">Provider-Agnostic L7 PEP</span>
+            <span class="pill-item">Rust Workspace (9 Crates)</span>
+            <span class="pill-item">C-ABI Shared Library (.dll / .so)</span>
+            <span class="pill-item">Python SDK (saare_sdk.py)</span>
+            <span class="pill-item">Zero-Disk LicenseGuard</span>
+            <span class="pill-item">EU AI Act / ISO 42001 / DORA</span>
         </div>
 
         <div class="hero-cta-group">
             <a href="#try-saare" class="btn-hero-gold">
-                Solicitar Prueba Gratuita (15 Días) →
+                Solicitar SDK v4.2 & Trial License →
             </a>
             <a href="#partner-program" class="btn-hero-secondary">
-                Programa de Socios OEM / MSSP
+                Programa de Alianzas ISV / OEM
             </a>
         </div>
     </div>
@@ -393,73 +367,73 @@
 
 <div class="container">
 
-    <!-- SECCIÓN 1: HITO EN CAPA 7 (NARRATIVA E HISTORIA DE INNOVACIÓN) -->
-    <section class="vision-section" id="hito-l7">
+    <!-- SECCIÓN 1: ARQUITECTURA ISV v4.2 -->
+    <section class="vision-section" id="architecture">
         <div class="section-title-center">
-            <h2>El Hito en Capa 7 (Layer 7 PEP)</h2>
-            <p>De la auditoría pasiva de documentos al control activo e in-flight de la Inteligencia Artificial.</p>
+            <h2>Arquitectura Distribuible Zero-Disk v4.2</h2>
+            <p>Del prototipo al producto comercial: desacople total de datos y ejecución en memoria volátil sin persistencia en disco.</p>
         </div>
 
         <div class="gap-grid">
             <div class="gap-card">
-                <h3>El Origen: El Desacople de Planos</h3>
-                <p>Nuestra trayectoria comenzó resolviendo el cuello de botella de la auditoría tradicional. Comprendimos que para gobernar la IA no bastaba con emitir certificados en papel, sino que era imprescindible **desacoplar el plano de control (Governance Plane) del plano de datos (Data Plane)**.</p>
+                <h3>9 Módulos Especializados en Rust</h3>
+                <p>La suite agrupa 9 crates independientes (`PerimeterShield`, `EvidenceVault`, `ComplianceSuite`, `SovereigntyNode`, `TokenMatrix`, `EduTutorGuard`, `CodeSentinel`, `LabEngine` y `NexusOrchestrator`) bajo una workspace única lista para producción.</p>
             </div>
             <div class="gap-card">
-                <h3>Procesamiento Volátil en RAM (~1.16ms)</h3>
-                <p>Desarrollamos el motor S.A.A.R.E. en C++/Rust con arquitectura **Zero-Disk**. La inspección, anonimización y sanitización de datos sensibles ocurre íntegramente en memoria volátil en menos de 1.2ms, eliminando cualquier riesgo de persistencia en disco.</p>
+                <h3>Exportación C-ABI y Wrapper Python</h3>
+                <p>Soporte multilenguaje real. Compilado con interfaz FFI estándar (`saare_runtime.dll`) y empaquetado con el wrapper `saare_sdk.py` y el header `saare.h` para integración directa en cualquier software comercial.</p>
             </div>
             <div class="gap-card">
-                <h3>Gobernanza Ex-Ante e Inmutable</h3>
-                <p>El hito en L7 permite actuar *antes* de que el payload alcance los modelos LLM o agentes. Cada transacción genera de forma determinista una evidencia criptográfica inmutable con firma Ed25519, garantizando la trazabilidad ante ISO 42001, DORA y el EU AI Act.</p>
+                <h3>Verificación LicenseGuard en Memoria</h3>
+                <p>Motor de licencias integrado en RAM que valida tokens firmados criptográficamente HMAC/RSA sin requerir accesos a bases de datos ni escritura en disco, evaluando vigencia y módulos contratados ex-ante.</p>
             </div>
         </div>
     </section>
 
-    <!-- FORMULARIO 1: PRUEBA GRATUITA DE 15 DÍAS (Estilo CrowdStrike Try-Falcon) -->
+    <!-- FORMULARIO 1: SOLICITUD Y DESCARGA SDK v4.2 -->
     <section class="form-section-wrapper" id="try-saare">
         <div class="cs-form-grid">
             <div style="text-align: left;">
-                <div class="p-badge" style="background: var(--brand-gold); color: #0F172A;">EVALUACIÓN ENTERPRISE</div>
-                <h2 style="font-family: var(--font-serif); font-size: 34px; font-weight: 800; color: var(--text-title); margin-bottom: 16px;">Pruébalo gratis durante 15 días.</h2>
+                <div class="p-badge" style="background: var(--brand-gold); color: #0F172A;">ISV EVALUATION PACK</div>
+                <h2 style="font-family: var(--font-serif); font-size: 34px; font-weight: 800; color: var(--text-title); margin-bottom: 16px;">Obtén la Suite Comercial v4.2.</h2>
                 <p style="font-size: 15px; color: var(--text-body); margin-bottom: 28px; line-height: 1.6;">
-                    La gobernanza y seguridad de IA nunca ha sido tan directa. Aproveche nuestra prueba evaluativa de 15 días y despliegue el motor perimetral SAARE en su entorno corporativo.
+                    Evalúa la integración del motor S.A.A.R.E. en tus aplicaciones o infraestructura. El paquete incluye el ejecutable CLI, la DLL dinámica C-ABI, los SDKs y una licencia de prueba de 15 días.
                 </p>
 
-                <h4 style="font-family: var(--font-serif); font-size: 18px; color: var(--text-title); margin-bottom: 16px;">Qué incluye:</h4>
+                <h4 style="font-family: var(--font-serif); font-size: 18px; color: var(--text-title); margin-bottom: 16px;">Contenido del SDK Comercial:</h4>
                 <ul class="p-features" style="font-size: 14px; line-height: 2;">
-                    <li><strong>Motor SAARE Runtime PEP (Zero-Disk):</strong> Intercepción determinista en RAM (~1.16ms).</li>
-                    <li><strong>Control perimetral L7 Ex-Ante:</strong> Enmascaramiento de PII/PHI e inyección de reglas DLP.</li>
-                    <li><strong>Sellado criptográfico Ed25519:</strong> Trazabilidad inmutable libre de alteración.</li>
-                    <li><strong>Habilite módulos adicionales gratis:</strong> Consola GRC, Browser Agent y conectores OTel.</li>
+                    <li><strong>saare-runtime.exe:</strong> Ejecutable autónomo CLI para despliegues perimetrales.</li>
+                    <li><strong>saare_runtime.dll:</strong> Librería nativa dinámicamente enlazable con exportación C-ABI.</li>
+                    <li><strong>saare_sdk.py & saare.h:</strong> SDK listo para usar en Python 3.x y desarrollos en C/C++.</li>
+                    <li><strong>LicenseGuard Trial Token:</strong> Token de evaluación preconfigurado para todos los presets.</li>
                 </ul>
             </div>
 
             <form id="form-try-saare" onsubmit="solicitarTrialAutomatico(event)">
                 <div style="text-align: left; margin-bottom: 20px;">
-                    <span style="font-family: var(--font-mono); font-size: 11px; color: var(--brand-red); font-weight: 700; text-transform: uppercase;">Sin tarjeta de crédito. Sin compromiso.</span>
-                    <h3 style="font-family: var(--font-serif); font-size: 24px; font-weight: 800; color: var(--text-title); margin-top: 4px;">Solicita una prueba gratuita</h3>
-                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Recibirá las credenciales de acceso y el paquete `saare.lic` firmado en un plazo de 24 horas.</p>
+                    <span style="font-family: var(--font-mono); font-size: 11px; color: var(--brand-green); font-weight: 700; text-transform: uppercase;">Descarga Inmediata • Licencia Firmada Incluida</span>
+                    <h3 style="font-family: var(--font-serif); font-size: 24px; font-weight: 800; color: var(--text-title); margin-top: 4px;">Solicita tu Paquete SDK v4.2</h3>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Completa el formulario para descargar el paquete comprimido `saare-suite-v4.2-dist.zip`.</p>
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                     <div class="cs-form-group">
-                        <label>First name / Nombre</label>
+                        <label>Nombre</label>
                         <input type="text" id="trial-firstname" required class="cs-input" placeholder="Nombre">
                     </div>
                     <div class="cs-form-group">
-                        <label>Last name / Apellido</label>
+                        <label>Apellido</label>
                         <input type="text" id="trial-lastname" required class="cs-input" placeholder="Apellido">
                     </div>
                 </div>
 
                 <div class="cs-form-group">
-                    <label>Company / Organización</label>
+                    <label>Empresa / ISV Integrador</label>
                     <input type="text" id="trial-org" required class="cs-input" placeholder="Nombre de la empresa corporativa">
                 </div>
 
                 <div class="cs-form-group">
-                    <label>Where is your company located?</label>
+                    <label>País de ubicación</label>
                     <select id="trial-country" required class="cs-select">
                         <option value="">Seleccione país...</option>
                         <option value="ES">España</option>
@@ -473,22 +447,22 @@
                 </div>
 
                 <div class="cs-form-group">
-                    <label>Business email / Email corporativo</label>
+                    <label>Email Corporativo</label>
                     <input type="email" id="trial-email" required class="cs-input" placeholder="nombre@empresa.com">
                 </div>
 
                 <div class="cs-form-group">
-                    <label>Phone number / Teléfono</label>
+                    <label>Teléfono de contacto</label>
                     <input type="tel" id="trial-phone" required class="cs-input" placeholder="+34 600 000 000">
                 </div>
 
                 <div class="cs-checkbox-group">
                     <input type="checkbox" id="trial-terms" required>
-                    <label for="trial-terms">Acepto el <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold);">Acuerdo de Evaluación de MS3V S.A.A.R.E.</a> y la Política de Privacidad.</label>
+                    <label for="trial-terms">Acepto los <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold);">Términos de Licenciamiento ISV de MS3V S.A.A.R.E.</a> y la Política de Privacidad.</label>
                 </div>
 
                 <button type="submit" id="btn-trial-submit" class="btn-cs-submit">
-                    Solicitar Licencia Discovery Node →
+                    Descargar SDK v4.2 Enterprise Zip →
                 </button>
             </form>
         </div>
@@ -497,119 +471,119 @@
     <!-- SECCIÓN 2: PRODUCTS & PLATFORM STACK -->
     <section class="products-section" id="products">
         <div class="section-title-center">
-            <h2>Arquitectura Unificada de Plataforma</h2>
-            <p>Componentes tecnológicos desacoplados construidos sobre el mismo núcleo de procesamiento en memoria volátil.</p>
+            <h2>Componentes del Paquete Comercial v4.2</h2>
+            <p>Entregables listos para su distribución y empaquetado comercial en sistemas cliente.</p>
         </div>
 
         <div class="product-grid">
-            <!-- SAARE RUNTIME PEP -->
+            <!-- SAARE CORE & FFI ENGINE -->
             <div class="p-card featured">
                 <div>
-                    <div class="p-badge" style="background: var(--brand-navy); color: #FFF;">CORE ENGINE</div>
-                    <div class="p-title">SAARE Runtime PEP</div>
-                    <div class="p-desc">El motor perimetral determinista escrito en C++/Rust (~1.16ms latencia) que intercepta el tráfico en capa L7 antes de alcanzar el LLM.</div>
+                    <div class="p-badge" style="background: var(--brand-navy); color: #FFF;">NATIVE BINARY & DLL</div>
+                    <div class="p-title">SAARE ISV Core Engine</div>
+                    <div class="p-desc">Workspace compilado en Rust (`release` profile, 0 warnings) que genera el ejecutable CLI y la librería dinámica `saare_runtime.dll`.</div>
                     <ul class="p-features">
-                        <li>Enmascaramiento de PII/PHI en RAM (Zero-Disk)</li>
-                        <li>Ejecución de reglas DLP ex-ante (Block/Sanitize)</li>
-                        <li>Generación de sellos criptográficos Ed25519</li>
+                        <li>Intercepción perimetral en RAM (Zero-Disk)</li>
+                        <li>Soporte C-ABI exportado (`saare_verify_and_dispatch`)</li>
+                        <li>Enmascaramiento de datos financieros y PHI</li>
                     </ul>
                 </div>
-                <a href="#try-saare" class="btn-header" style="width: 100%; text-align: center;">Solicitar Architecture Brief →</a>
+                <a href="#try-saare" class="btn-header" style="width: 100%; text-align: center;">Obtener Artefactos Nativo (.dll) →</a>
             </div>
 
-            <!-- SAARE ASSURANCE SUITE -->
+            <!-- SAARE PYTHON & C SDK -->
             <div class="p-card">
                 <div>
-                    <div class="p-badge">GOVERNANCE & AUDIT</div>
-                    <div class="p-title">SAARE Assurance Suite</div>
-                    <div class="p-desc">Plataforma de evaluación continua (Continuous Trust) para CISOs, DPOs, peritos y consultoras (Big Four / MSSP).</div>
+                    <div class="p-badge">MULTI-LANGUAGE SDK</div>
+                    <div class="p-title">SDK C/C++ & Python</div>
+                    <div class="p-desc">Capas de integración preparadas para embeber el motor en pipelines de datos, microservicios y aplicaciones escritas en Python o C/C++.</div>
                     <ul class="p-features">
-                        <li>Gestión de la evidencia técnica e inspección de logs</li>
-                        <li>Reportes estandarizados de riesgo y evidencia</li>
-                        <li>Soporte de cumplimiento (ISO 42001 / EU AI Act / NIS2)</li>
+                        <li>Header oficial `dist/include/saare.h`</li>
+                        <li>Wrapper Python `dist/sdk_python/saare_sdk.py`</li>
+                        <li>Gestión transparente de punteros de memoria</li>
                     </ul>
                 </div>
-                <a href="https://buy.stripe.com/fZu00j7TTbOtdcvgEB8g000" target="_blank" rel="noopener" class="btn-hero-secondary" style="color: var(--brand-navy); text-align: center; border-color: var(--border-soft);">Desplegar Assurance Suite →</a>
+                <a href="#data-room" class="btn-hero-secondary" style="color: var(--brand-navy); text-align: center; border-color: var(--border-soft);">Ver Documentación de SDK →</a>
             </div>
 
-            <!-- SAARE POLICY FRAMEWORK -->
+            <!-- LICENSEGUARD ENGINE -->
             <div class="p-card">
                 <div>
-                    <div class="p-badge">STANDARD & RULES</div>
-                    <div class="p-title">SAARE Policy Framework</div>
-                    <div class="p-desc">El marco declarativo abierto para la definición de políticas de seguridad, límites éticos y restricciones perimetrales.</div>
+                    <div class="p-badge">SECURITY & LICENSING</div>
+                    <div class="p-title">LicenseGuard Engine</div>
+                    <div class="p-desc">Sistema de control de licencias criptográfico para proteger la propiedad intelectual del ISV y restringir funciones según contrato.</div>
                     <ul class="p-features">
-                        <li>Reglas de enrutamiento y sanitización adaptativas</li>
-                        <li>Plantillas de políticas para marcos regulatorios</li>
-                        <li>Especificaciones OpenAPI / JSON Schema</li>
+                        <li>Verificación HMAC/RSA de firma en memoria</li>
+                        <li>Validación de caducidad y Tenant ID</li>
+                        <li>Control granular de acceso por módulo</li>
                     </ul>
                 </div>
-                <a href="SAARE_AI_Governance_Framework_V4.pdf" target="_blank" class="btn-hero-secondary" style="color: var(--brand-navy); text-align: center; border-color: var(--border-soft);">Descargar Framework V4 (PDF) →</a>
+                <a href="#partner-program" class="btn-hero-secondary" style="color: var(--brand-navy); text-align: center; border-color: var(--border-soft);">Consultar Licenciamiento →</a>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN 3: DEPLOYMENT PROFILES -->
+    <!-- SECCIÓN 3: PERFILES DE DESPLIEGUE ISV -->
     <section class="deploy-section" id="deployment">
         <div class="deploy-header">
-            <h2>Deploy Anywhere</h2>
-            <p>Un único motor SAARE Runtime Engine diseñado para adaptarse a cualquier perfil de arquitectura enterprise.</p>
+            <h2>Modalidades de Integración Comercial</h2>
+            <p>Diseñado para adaptarse a las necesidades de distribución de cualquier fabricante de software (ISV).</p>
         </div>
 
         <div class="deploy-grid">
             <div class="deploy-card">
-                <h4>1. Local Agent Profile</h4>
-                <p>Agente ligero en background para estaciones de trabajo y protección directa de plantillas corporativas.</p>
+                <h4>1. Dynamic Library Integration</h4>
+                <p>Vinculación dinámica mediante `saare_runtime.dll` / `.so` para software compilado en C++, C#, Go o Rust.</p>
             </div>
             <div class="deploy-card">
-                <h4>2. Enterprise Gateway</h4>
-                <p>Despliegue perimetral en cluster para interceptar todo el tráfico saliente hacia proveedores de IA (OpenAI, Azure, Claude, Ollama).</p>
+                <h4>2. Embedded Python Wrapper</h4>
+                <p>Importación directa del paquete `saare_sdk.py` en entornos de inteligencia artificial, PyTorch y LangChain.</p>
             </div>
             <div class="deploy-card">
-                <h4>3. Kubernetes Sidecar</h4>
-                <p>Inyección como Sidecar Pod en arquitecturas cloud-native para la protección de microservicios y agentes autónomos.</p>
+                <h4>3. Standalone CLI Gateway</h4>
+                <p>Ejecución del binario `saare-runtime.exe` como demonio perimetral o sidecar en entornos Kubernetes.</p>
             </div>
             <div class="deploy-card">
-                <h4>4. Embedded OEM</h4>
-                <p>Módulo embebido dentro de plataformas de observabilidad de terceros (Arize, Langfuse) para aportar control activo en tiempo real.</p>
+                <h4>4. Rust Crate Dependency</h4>
+                <p>Inclusión directa de las crates de la workspace en el archivo `Cargo.toml` de aplicaciones cliente.</p>
             </div>
         </div>
     </section>
 
-    <!-- FORMULARIO 2: REGISTRO DE SOCIOS OEM / MSSP / ISV (Estilo CrowdStrike Become-A-Partner) -->
+    <!-- FORMULARIO 2: REGISTRO DE SOCIOS OEM / ISV -->
     <section class="form-section-wrapper" id="partner-program">
         <div style="max-width: 860px; margin: 0 auto;">
             <div class="p-badge" style="background: var(--brand-purple); color: #FFF; margin: 0 auto 16px auto;">ISV & OEM ALLIANCE PROGRAM</div>
-            <h2 style="font-family: var(--font-serif); font-size: 32px; font-weight: 800; color: var(--text-title); text-align: center; margin-bottom: 8px;">Conviértase en Socio de MS3V S.A.A.R.E.</h2>
-            <p style="color: var(--text-muted); font-size: 15px; text-align: center; margin-bottom: 36px;">Únase a nuestro ecosistema global de alianzas para integradores Tier-1, plataformas de observabilidad (ISVs) y proveedores de servicios gestionados de seguridad (MSSP).</p>
+            <h2 style="font-family: var(--font-serif); font-size: 32px; font-weight: 800; color: var(--text-title); text-align: center; margin-bottom: 8px;">Programa de Alianzas ISV & Distribuidores</h2>
+            <p style="color: var(--text-muted); font-size: 15px; text-align: center; margin-bottom: 36px;">Incorpore el motor de gobernanza S.A.A.R.E. dentro de su catálogo de soluciones de software o servicios de ciberseguridad.</p>
 
             <form id="form-partner-program" onsubmit="solicitarRegistroSocio(event)">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                     <div class="cs-form-group">
-                        <label>Nombre de pila / First name</label>
+                        <label>Nombre de pila</label>
                         <input type="text" id="partner-firstname" required class="cs-input">
                     </div>
                     <div class="cs-form-group">
-                        <label>Apellido / Last name</label>
+                        <label>Apellido</label>
                         <input type="text" id="partner-lastname" required class="cs-input">
                     </div>
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                     <div class="cs-form-group">
-                        <label>Correo electrónico comercial</label>
+                        <label>Correo electrónico corporativo</label>
                         <input type="email" id="partner-email" required class="cs-input" placeholder="socio@empresa.com">
                     </div>
                     <div class="cs-form-group">
-                        <label>Nombre de la empresa / ISV</label>
+                        <label>Nombre de la Empresa / ISV</label>
                         <input type="text" id="partner-company" required class="cs-input">
                     </div>
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                     <div class="cs-form-group">
-                        <label>Título profesional / Cargo</label>
-                        <input type="text" id="partner-jobtitle" placeholder="Ej. VP of Alliances / Enterprise Architect" required class="cs-input">
+                        <label>Cargo profesional</label>
+                        <input type="text" id="partner-jobtitle" placeholder="Ej. CTO / VP Product / Software Architect" required class="cs-input">
                     </div>
                     <div class="cs-form-group">
                         <label>Sitio web corporativo</label>
@@ -642,80 +616,43 @@
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                     <div class="cs-form-group">
-                        <label>Número de teléfono</label>
+                        <label>Teléfono corporativo</label>
                         <input type="tel" id="partner-phone" required class="cs-input">
                     </div>
                     <div class="cs-form-group">
-                        <label>Tipo de solicitud del socio</label>
+                        <label>Tipo de alianza comercial</label>
                         <select id="partner-type" required class="cs-select">
-                            <option value="">Seleccione modelo de alianza...</option>
+                            <option value="">Seleccione modelo...</option>
                             <option value="OEM_EMBEDDED">Embedded OEM Partner (Integración en producto)</option>
                             <option value="MSSP_PROVIDER">MSSP / Proveedor de Servicios Gestionados</option>
-                            <option value="SYSTEM_INTEGRATOR">Integrador de Sistemas Tier-1 / Consultora</option>
+                            <option value="SYSTEM_INTEGRATOR">Integrador de Sistemas / Consultora</option>
                             <option value="TECHNOLOGY_ALLIANCE">Alianza Tecnológica Estratégica</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="cs-form-group">
-                    <label>Descripción de la asociación / integración y ofertas de la empresa</label>
-                    <textarea id="partner-description" rows="3" required class="cs-textarea" placeholder="Describa brevemente su producto o servicio y cómo prevé integrar el motor SAARE Runtime PEP..."></textarea>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <div class="cs-form-group">
-                        <label>¿Cumple usted con el RGPD?</label>
-                        <select id="partner-gdpr" required class="cs-select">
-                            <option value="YES">Sí, conformidad total comprobada</option>
-                            <option value="IN_PROGRESS">En proceso de adecuación</option>
-                            <option value="NO">No aplicable por jurisdicción</option>
-                        </select>
-                    </div>
-                    <div class="cs-form-group">
-                        <label>Número de IVA / GST / Tax ID</label>
-                        <input type="text" id="partner-vat" placeholder="Ej. ESB12345678" required class="cs-input">
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <div class="cs-form-group">
-                        <label>Seleccione su(s) segmento(s) de clientes</label>
-                        <select id="partner-segment" required class="cs-select">
-                            <option value="ENTERPRISE">Empresa Corporativa / Fortune 500</option>
-                            <option value="MID_MARKET">Corporativo Mediano</option>
-                            <option value="SME">Pequeña y Mediana Empresa</option>
-                            <option value="ALL">Todos los segmentos</option>
-                        </select>
-                    </div>
-                    <div class="cs-form-group">
-                        <label>Seleccione su(s) sector(es) prioritario(s)</label>
-                        <select id="partner-sector" required class="cs-select">
-                            <option value="FINANCIAL">Servicios Bancarios y Financieros</option>
-                            <option value="HEALTHCARE">Cuidado de la salud / Farma</option>
-                            <option value="GOVERNMENT">Gobierno Federal / Estatal / Local</option>
-                            <option value="TELECOM">Telecomunicaciones y Medios</option>
-                            <option value="CRITICAL_INFRA">Energía e Infraestructuras Críticas</option>
-                        </select>
-                    </div>
+                    <label>Descripción del caso de uso / Producto a integrar</label>
+                    <textarea id="partner-description" rows="3" required class="cs-textarea" placeholder="Describa brevemente cómo prevé integrar la librería saare_runtime.dll o el SDK en su software..."></textarea>
                 </div>
 
                 <div class="cs-checkbox-group">
                     <input type="checkbox" id="partner-terms" required>
-                    <label for="partner-terms">Al marcar esta casilla, acepta los <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold);">Términos para Socios de MS3V S.A.A.R.E.</a> y reconoce el Aviso de Privacidad B2B.</label>
+                    <label for="partner-terms">Acepto los <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold);">Términos de Acuerdo para Socios ISV</a> de MS3V S.A.A.R.E.</label>
                 </div>
 
                 <button type="submit" id="btn-partner-submit" class="btn-cs-submit" style="background: var(--brand-purple);">
-                    Enviar Solicitud de Alianza Partner →
+                    Enviar Solicitud de Alianza ISV →
                 </button>
             </form>
         </div>
     </section>
 
-    <!-- DASHBOARD GRC STREAMLIT ENGINE -->
+    <!-- DASHBOARD STREAMLIT LIVE ENGINE -->
     <section class="dashboard-hero-container" id="dashboard-live">
         <div class="dashboard-header-bar">
             <span>🌐 SAARE RUNTIME CONSOLE & TELEMETRÍA EN TIEMPO REAL</span>
-            <a href="https://saare-grc-dashboard.streamlit.app/" target="_blank" rel="noopener" style="color: var(--brand-gold); font-weight: 700; text-decoration: none;">Abrir Consola en Pestaña Completa ↗</a>
+            <a href="https://saare-grc-dashboard.streamlit.app/" target="_blank" rel="noopener" style="color: var(--brand-gold); font-weight: 700; text-decoration: none;">Abrir Consola Completa ↗</a>
         </div>
         <iframe 
             id="grc-iframe"
@@ -727,25 +664,25 @@
         </iframe>
     </section>
 
-    <!-- RESEARCH & DATA ROOM -->
+    <!-- RECURSOS Y DOCUMENTACIÓN TÉCNICA -->
     <section id="data-room" class="docs-section-wrapper">
         <div style="margin-bottom: 24px;">
-            <h2 style="font-family: var(--font-serif); font-size: 26px; font-weight: 800; color: var(--text-title);">Research & Technical Documentation</h2>
-            <p style="color: var(--text-muted); font-size: 14px;">Centro de recursos técnicos para CISO, arquitectos de software y auditores.</p>
+            <h2 style="font-family: var(--font-serif); font-size: 26px; font-weight: 800; color: var(--text-title);">SDK Documentation & Technical Assets</h2>
+            <p style="color: var(--text-muted); font-size: 14px;">Recursos técnicos para arquitectos de software, desarrolladores e integradores ISV.</p>
         </div>
 
-        <nav class="docs-grid" aria-label="Documentos Aprobados">
-            <a href="CERTIFICADO%20DE%20INTEGRIDAD%20SAARE.png" target="_blank" class="doc-item">🏆 Registro de Propiedad Intelectual</a>
+        <nav class="docs-grid" aria-label="Documentación Técnica">
+            <a href="https://github.com/alfonsoferrertorres-cyber/saare-suite/releases/tag/v4.2" target="_blank" class="doc-item">📦 GitHub Release v4.2 Enterprise</a>
             <a href="SAARE_AI_Governance_Framework_V4.pdf" target="_blank" class="doc-item">📜 Framework V4 (ISO 42001 / EU AI Act)</a>
-            <a href="Whitepaper_Tecnico_SAARE_v7.pdf" target="_blank" class="doc-item">📄 Technical Whitepaper V7.0 (PDF)</a>
-            <a href="Derechos_Uso_y_Soberania_Algoritmica_SAARE.pdf" target="_blank" class="doc-item">📋 Soberanía y Derechos de Uso</a>
+            <a href="Whitepaper_Tecnico_SAARE_v7.pdf" target="_blank" class="doc-item">📄 Technical Whitepaper (PDF)</a>
+            <a href="CERTIFICADO%20DE%20INTEGRIDAD%20SAARE.png" target="_blank" class="doc-item">🏆 Registro de Propiedad Intelectual</a>
         </nav>
     </section>
 
     <!-- FOOTER INSTITUCIONAL -->
     <footer>
-        Master ID: MS3V-RECON-VALID-2026-ALF-0521 | Signature: SAARE-ISO-COMPLIANCE-NODE-FB3FE6A1-HASH2026<br>
-        © 2026 <a href="https://saare.es/" style="color: inherit; text-decoration: none; font-weight: bold;">MS3V S.A.A.R.E. SL</a> • The Independent AI Governance Infrastructure • Todos los derechos reservados.<br>
+        Master ID: MS3V-ISV-SUITE-V4.2-RELEASE | Tag: v4.2 | Commit: faf3f58<br>
+        © 2026 <a href="https://saare.es/" style="color: inherit; text-decoration: none; font-weight: bold;">MS3V S.A.A.R.E. SL</a> • Independent AI Governance Infrastructure SDK • Todos los derechos reservados.<br>
         <div style="margin-top: 10px; font-size: 10.5px;">
             <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold); text-decoration: none; margin: 0 10px;">Aviso Legal (LSSI)</a> | 
             <a href="#" onclick="openLegalModal('privacidad'); return false;" style="color: var(--brand-gold); text-decoration: none; margin: 0 10px;">Política de Privacidad (RGPD)</a> | 
@@ -754,16 +691,16 @@
     </footer>
 </div>
 
-<!-- MODAL LEGAL COMPLETO -->
+<!-- MODAL LEGAL -->
 <div id="legal-modal" class="lightbox-modal" onclick="closeLegalModal()">
     <div style="background: #FFFFFF; max-width: 780px; width: 90%; max-height: 85vh; border-radius: 14px; padding: 32px; overflow-y: auto; position: relative; color: #0F172A; text-align: left;" onclick="event.stopPropagation()">
         <span class="lightbox-close" onclick="closeLegalModal()" style="color: #0F172A; top: 15px; right: 20px;">&times;</span>
-        <div style="font-family: var(--font-serif); font-size: 18px; font-weight: bold; margin-bottom: 12px;">MS3V S.A.A.R.E. SL — Términos y Conformidad Legal</div>
-        <p style="font-size: 12px; color: #475569;">Provisión de infraestructura independiente de gobierno para Inteligencia Artificial. Contacto operativo: <code>legal@saare.es</code>.</p>
+        <div style="font-family: var(--font-serif); font-size: 18px; font-weight: bold; margin-bottom: 12px;">MS3V S.A.A.R.E. SL — Términos y Licenciamiento ISV</div>
+        <p style="font-size: 12px; color: #475569;">Provisión e integración de infraestructura independiente de gobierno para Inteligencia Artificial (S.A.A.R.E. ISV Suite v4.2). Contacto operativo: <code>legal@saare.es</code>.</p>
     </div>
 </div>
 
-<!-- SCRIPT DE AUTOMATIZACIÓN Y LÓGICA -->
+<!-- SCRIPT DE AUTOMATIZACIÓN Y DESCARGA v4.2 -->
 <script>
     function openLegalModal(tab) {
         const modal = document.getElementById('legal-modal');
@@ -775,7 +712,7 @@
         if (modal) modal.classList.remove('active'); 
     }
 
-    /* AUTOMATIZACIÓN DE SOLICITUD DE LICENCIA DISCOVERY (FORMULARIO 1) */
+    /* AUTOMATIZACIÓN DE DESCARGA SDK ISV v4.2 (FORMULARIO 1) */
     async function solicitarTrialAutomatico(event) {
         event.preventDefault();
         
@@ -787,71 +724,45 @@
         const email = emailInput ? emailInput.value.trim() : '';
 
         if (!empresa || !email) {
-            alert("⚠️ Por favor, introduce el nombre de tu Organización y un Email corporativo válido.");
+            alert("⚠️ Por favor, introduce el nombre de tu Empresa e Email corporativo.");
             return;
         }
 
         if (btn) {
-            btn.innerText = "⏳ Emitiendo Criptografía Ed25519 & Nodo Discovery...";
+            btn.innerText = "⏳ Descargando Paquete S.A.A.R.E. ISV Suite v4.2...";
             btn.disabled = true;
         }
 
-        const VERCEL_API_URL = 'https://saare-v7-iso42001-sable.vercel.app/api/trial';
+        const RELEASE_ZIP_URL = "https://github.com/alfonsoferrertorres-cyber/saare-suite/releases/download/v4.2/saare-suite-v4.2-dist.zip";
 
         try {
-            const response = await fetch(VERCEL_API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ 
-                    email: email, 
-                    empresa: empresa,
-                    plane: 'RUNTIME_ENGINE_SANDBOX',
-                    duration_days: 15,
-                    modules: ['MS3V_RAM_ENGINE', 'ED25519_LEDGER', 'PEP_L7_INTERCEPTOR']
-                })
-            });
-
-            if (!response.ok) throw new Error("Error del servidor de licencias");
-
-            const zipBlob = await response.blob();
-            const safeCompanyName = empresa.replace(/[^a-zA-Z0-9_-]/g, '_');
-            const fileName = `SAARE_v7.0_Discovery_Node_${safeCompanyName}.zip`;
-
-            const url = window.URL.createObjectURL(zipBlob);
             const a = document.createElement('a');
-            a.href = url;
-            a.download = fileName;
+            a.href = RELEASE_ZIP_URL;
+            a.download = "saare-suite-v4.2-dist.zip";
             document.body.appendChild(a);
             a.click();
             a.remove();
-            window.URL.revokeObjectURL(url);
 
-            alert("✅ ¡Paquete S.A.A.R.E. Discovery descargado con éxito!\n\nSe ha generado la licencia 'saare.lic' firmada por 15 días con capacidad de intercepción RAM (~1.16ms).");
+            alert("✅ ¡Paquete S.A.A.R.E. ISV Suite v4.2 iniciado con éxito!\n\nEl archivo 'saare-suite-v4.2-dist.zip' contiene los binarios (.exe, .dll), el wrapper Python ('saare_sdk.py') y el header C ('saare.h').");
 
         } catch (err) {
-            alert("⚠️ Servidor de licencias en mantenimiento. Descargando instalador base...");
-            const setupUrl = "https://github.com/alfonsoferrertorres-cyber/protocolo-saare/releases/download/v7.0.0/Setup_SAARE_v7.0_PRO.exe";
-            const aExe = document.createElement('a');
-            aExe.href = setupUrl;
-            aExe.download = "Setup_SAARE_v7.0_PRO.exe";
-            document.body.appendChild(aExe);
-            aExe.click();
-            aExe.remove();
+            alert("⚠️ Error al conectar con el servidor de descargas. Redirigiendo a las releases de GitHub...");
+            window.open("https://github.com/alfonsoferrertorres-cyber/saare-suite/releases/tag/v4.2", "_blank");
         } finally {
             if (btn) {
-                btn.innerText = "Solicitar Licencia Discovery Node →";
+                btn.innerText = "Descargar SDK v4.2 Enterprise Zip →";
                 btn.disabled = false;
             }
         }
     }
 
-    /* PROCESAMIENTO SOLICITUD DE SOCIO OEM / MSSP (FORMULARIO 2) */
+    /* PROCESAMIENTO DE SOLICITUD SOCIO OEM / ISV (FORMULARIO 2) */
     function solicitarRegistroSocio(event) {
         event.preventDefault();
         const partnerCompany = document.getElementById('partner-company').value;
         const partnerEmail = document.getElementById('partner-email').value;
 
-        alert(`✅ Solicitud de Alianza recibida correctamente para ${partnerCompany}.\n\nUn representante del equipo de alianzas ISV/OEM contactará con ${partnerEmail} en breve para coordinar el NDA y los esquemas de integración.`);
+        alert(`✅ Solicitud de Alianza ISV recibida correctamente para ${partnerCompany}.\n\nUn representante del equipo técnico contactará con ${partnerEmail} para coordinar la entrega de las claves RSA para LicenseGuard y el acuerdo OEM.`);
     }
 </script>
 
