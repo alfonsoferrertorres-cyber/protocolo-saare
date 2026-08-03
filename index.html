@@ -92,10 +92,10 @@
         .dropdown-menu:hover .megamenu-content { display: grid; }
 
         .megamenu-col h4 { font-family: var(--font-mono); font-size: 11px; color: var(--brand-gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; border-bottom: 1px solid var(--border-soft); padding-bottom: 6px; }
-        .megamenu-item { display: block; text-decoration: none; margin-bottom: 14px; }
+        .megamenu-item { display: block; text-decoration: none; margin-bottom: 12px; }
         .megamenu-item:last-child { margin-bottom: 0; }
         .megamenu-item-title { font-size: 13px; font-weight: 700; color: var(--text-title); }
-        .megamenu-item-desc { font-size: 11.5px; color: var(--text-muted); line-height: 1.35; margin-top: 2px; }
+        .megamenu-item-desc { font-size: 11px; color: var(--text-muted); line-height: 1.3; margin-top: 2px; }
         .megamenu-item:hover .megamenu-item-title { color: var(--brand-accent); }
 
         .nav-actions { display: flex; align-items: center; gap: 16px; }
@@ -155,7 +155,7 @@
         }
         .btn-hero-secondary:hover { background: rgba(255,255,255,0.2); border-color: #FFF; }
 
-        /* ESTILOS DE FORMULARIO ENTERPRISE */
+        /* FORMULARIO ENTERPRISE */
         .form-section-wrapper {
             background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px;
             padding: 48px; margin-bottom: 90px; box-shadow: var(--shadow-md);
@@ -183,34 +183,32 @@
         }
         .btn-cs-submit:hover { background: var(--brand-gold); color: #0F172A; }
 
-        /* SECCIONES Y TARJETAS */
+        /* SECCIONES Y TARJETAS DE MÓDULOS CON PRESETS */
         .vision-section { margin-bottom: 90px; }
         .section-title-center { text-align: center; margin-bottom: 48px; }
         .section-title-center h2 { font-family: var(--font-serif); font-size: 34px; font-weight: 800; color: var(--text-title); }
         .section-title-center p { color: var(--text-muted); font-size: 16px; margin-top: 8px; max-width: 760px; margin-left: auto; margin-right: auto; }
 
-        .gap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .gap-card { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 12px; padding: 32px; box-shadow: var(--shadow-sm); }
-        .gap-card h3 { font-family: var(--font-serif); font-size: 20px; color: var(--text-title); margin-bottom: 12px; }
-        .gap-card p { font-size: 14px; color: var(--text-body); line-height: 1.6; }
-
         .products-section { margin-bottom: 90px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .product-grid-9 { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 24px; }
         
-        .p-card {
-            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 14px; padding: 32px;
-            display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;
-            box-shadow: var(--shadow-sm); height: 100%;
+        .p-card-module {
+            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 14px; padding: 28px;
+            display: flex; flex-direction: column; justify-content: space-between; transition: all 0.25s ease;
+            box-shadow: var(--shadow-sm); position: relative;
         }
-        .p-card.featured { border: 2px solid var(--brand-gold); background: #FAF8F5; position: relative; }
-        .p-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--brand-navy); }
+        .p-card-module:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--brand-gold); }
 
-        .p-badge { font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--brand-navy); background: rgba(241,238,231,0.9); padding: 4px 12px; border-radius: 20px; width: fit-content; margin-bottom: 16px; border: 1px solid var(--border-soft); }
-        .p-title { font-family: var(--font-serif); font-size: 22px; font-weight: 800; color: var(--text-title); margin-bottom: 8px; }
-        .p-desc { font-size: 13.5px; color: var(--text-body); margin-bottom: 20px; line-height: 1.6; }
-        .p-features { list-style: none; margin-bottom: 28px; font-size: 12.5px; color: var(--text-body); }
-        .p-features li { margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
-        .p-features li::before { content: "✓"; color: var(--brand-green); font-weight: bold; }
+        .p-module-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .p-badge { font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--brand-navy); background: rgba(241,238,231,0.9); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border-soft); }
+        .p-title { font-family: var(--font-serif); font-size: 20px; font-weight: 800; color: var(--text-title); margin-bottom: 6px; }
+        .p-desc { font-size: 13px; color: var(--text-body); margin-bottom: 18px; line-height: 1.5; }
+
+        /* LISTA DE PRESETS DE CLI EN CADA MÓDULO */
+        .preset-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        .preset-item { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 10px 12px; }
+        .preset-tag { font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--brand-accent); background: #EFF6FF; padding: 2px 8px; border-radius: 4px; border: 1px solid #BFDBFE; display: inline-block; margin-bottom: 4px; }
+        .preset-desc { font-size: 12px; color: var(--text-body); line-height: 1.4; }
 
         .deploy-section { background: var(--bg-dark); color: #FFF; border-radius: 16px; padding: 60px 40px; margin-bottom: 90px; }
         .deploy-header { text-align: center; margin-bottom: 40px; }
@@ -256,38 +254,50 @@
     </a>
 
     <nav class="nav-links">
-        <!-- 1. PLATAFORMA & ARQUITECTURA -->
+        <!-- 1. MÓDULOS & PRESETS DEL MOTOR -->
         <div class="dropdown-menu">
-            <span class="dropdown-btn">Plataforma & SDKs ▾</span>
-            <div class="megamenu-content" style="width: 720px; grid-template-columns: 1fr 1fr;">
+            <span class="dropdown-btn">Módulos del Motor (9) ▾</span>
+            <div class="megamenu-content" style="width: 760px; grid-template-columns: 1fr 1fr;">
                 <div class="megamenu-col">
-                    <h4>Engine Core & Binarios</h4>
-                    <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">SAARE Workspace (9 Crates Rust)</div>
-                        <div class="megamenu-item-desc">Arquitectura modular en Rust con 0 warnings y velocidad nativa.</div>
+                    <h4>Módulos de Seguridad & RAG</h4>
+                    <a href="#mod-labengine" class="megamenu-item">
+                        <div class="megamenu-item-title">1. S.A.A.R.E. LabEngine</div>
+                        <div class="megamenu-item-desc">SDK & Developer Suite (Ahorro API, CircuitBreaker, RAG AST).</div>
                     </a>
-                    <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">C-ABI Dynamic Library (saare_runtime.dll)</div>
-                        <div class="megamenu-item-desc">Interfaz FFI estándar exportable a Python, C++, Go, C# y Node.js.</div>
+                    <a href="#mod-perimetershield" class="megamenu-item">
+                        <div class="megamenu-item-title">2. S.A.A.R.E. PerimeterShield</div>
+                        <div class="megamenu-item-desc">Active L7 Gateway (DLP Financiero, PHI, Anti-Jailbreak).</div>
                     </a>
-                    <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">LicenseGuard Engine</div>
-                        <div class="megamenu-item-desc">Validación criptográfica HMAC/RSA de licencias en memoria (Zero-Disk).</div>
+                    <a href="#mod-evidencevault" class="megamenu-item">
+                        <div class="megamenu-item-title">3. S.A.A.R.E. EvidenceVault</div>
+                        <div class="megamenu-item-desc">Crypto Ledger (Peritaje Judicial, Respuesta a Incidentes SOC).</div>
+                    </a>
+                    <a href="#mod-compliancesuite" class="megamenu-item">
+                        <div class="megamenu-item-title">4. S.A.A.R.E. ComplianceSuite</div>
+                        <div class="megamenu-item-desc">Automated GRC (Auditoría EU AI Act, ISO/IEC 42001).</div>
+                    </a>
+                    <a href="#mod-sovereignty" class="megamenu-item">
+                        <div class="megamenu-item-title">5. S.A.A.R.E. SovereigntyNode</div>
+                        <div class="megamenu-item-desc">Air-Gapped Gateway (Redes Militares, IoT/Edge <1.5ms).</div>
                     </a>
                 </div>
                 <div class="megamenu-col">
-                    <h4>Módulos Integrados</h4>
-                    <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">PerimeterShield & ComplianceSuite</div>
-                        <div class="megamenu-item-desc">Enmascaramiento DORA/PCI-DSS y auditoría automática EU AI Act.</div>
+                    <h4>Módulos de Negocio & DeepFake</h4>
+                    <a href="#mod-tokenmatrix" class="megamenu-item">
+                        <div class="megamenu-item-title">6. S.A.A.R.E. TokenMatrix</div>
+                        <div class="megamenu-item-desc">Smart LLM Router (Enrutador de costes -65%, Multi-LLM Failover).</div>
                     </a>
-                    <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">EvidenceVault & SovereigntyNode</div>
-                        <div class="megamenu-item-desc">Sellado de evidencia en tiempo de ejecución y aislamiento Air-Gap.</div>
+                    <a href="#mod-edututor" class="megamenu-item">
+                        <div class="megamenu-item-title">7. S.A.A.R.E. EduTutorGuard</div>
+                        <div class="megamenu-item-desc">Safe Learning (Filtro COPPA K-12, Verificación STEM Mates/Física).</div>
                     </a>
-                    <a href="#products" class="megamenu-item">
-                        <div class="megamenu-item-title">TokenMatrix, CodeSentinel & LabEngine</div>
-                        <div class="megamenu-item-desc">Optimización de costes de tokens, SAST de código e inspección de prompts.</div>
+                    <a href="#mod-authorvault" class="megamenu-item">
+                        <div class="megamenu-item-title">8. S.A.A.R.E. AuthorVault IP</div>
+                        <div class="megamenu-item-desc">Intellectual Property (Marca de Agua Ed25519, Opt-Out Checker).</div>
+                    </a>
+                    <a href="#mod-deepfakeshield" class="megamenu-item">
+                        <div class="megamenu-item-title">9. S.A.A.R.E. DeepFakeShield</div>
+                        <div class="megamenu-item-desc">Identity Authenticator (KYC Antifraude, C2PA, Anti Clonación Voz).</div>
                     </a>
                 </div>
             </div>
@@ -322,10 +332,8 @@
             </div>
         </div>
 
-        <!-- 3. ENLACES DIRECTOS -->
-        <a href="#architecture">Arquitectura v4.2</a>
+        <a href="#deployment">Despliegue</a>
         <a href="#data-room">Recursos SDK</a>
-        <a href="#products">Distribución</a>
     </nav>
 
     <div class="nav-actions">
@@ -333,7 +341,7 @@
             <div class="pulse-dot"></div>
             <span>[ISV SUITE v4.2 READY]</span>
         </div>
-        <a href="#try-saare" class="btn-header">Descargar SDK v4.2</a>
+        <a href="#try-saare" class="btn-header">Descargar SDK & License</a>
     </div>
 </header>
 
@@ -374,30 +382,261 @@
             <p>Del prototipo al producto comercial: desacople total de datos y ejecución en memoria volátil sin persistencia en disco.</p>
         </div>
 
-        <div class="gap-grid">
-            <div class="gap-card">
-                <h3>9 Módulos Especializados en Rust</h3>
-                <p>La suite agrupa 9 crates independientes (`PerimeterShield`, `EvidenceVault`, `ComplianceSuite`, `SovereigntyNode`, `TokenMatrix`, `EduTutorGuard`, `CodeSentinel`, `LabEngine` y `NexusOrchestrator`) bajo una workspace única lista para producción.</p>
+        <div class="deploy-grid">
+            <div class="deploy-card" style="background: #FFF; border: 1px solid var(--border-soft);">
+                <h4 style="color: var(--brand-navy);">9 Módulos Especializados</h4>
+                <p style="color: var(--text-body);">Suite unificada en Rust compuesta por 9 crates de alto rendimiento, optimizadas con un tiempo de procesamiento inferior a 1.5ms en ejecuciones perimetrales.</p>
             </div>
-            <div class="gap-card">
-                <h3>Exportación C-ABI y Wrapper Python</h3>
-                <p>Soporte multilenguaje real. Compilado con interfaz FFI estándar (`saare_runtime.dll`) y empaquetado con el wrapper `saare_sdk.py` y el header `saare.h` para integración directa en cualquier software comercial.</p>
+            <div class="deploy-card" style="background: #FFF; border: 1px solid var(--border-soft);">
+                <h4 style="color: var(--brand-navy);">Exportación C-ABI & Python SDK</h4>
+                <p style="color: var(--text-body);">Vinculación mediante FFI estándar (`saare_runtime.dll`), empaquetada con `saare_sdk.py` y `saare.h` para integración directa en C++, C#, Go y Python.</p>
             </div>
-            <div class="gap-card">
-                <h3>Verificación LicenseGuard en Memoria</h3>
-                <p>Motor de licencias integrado en RAM que valida tokens firmados criptográficamente HMAC/RSA sin requerir accesos a bases de datos ni escritura en disco, evaluando vigencia y módulos contratados ex-ante.</p>
+            <div class="deploy-card" style="background: #FFF; border: 1px solid var(--border-soft);">
+                <h4 style="color: var(--brand-navy);">Verificación LicenseGuard</h4>
+                <p style="color: var(--text-body);">Evaluación de licencias criptográficas `.lic` en memoria mediante hashing djb2 y firmas HMAC, garantizando la vigencia sin acceso a base de datos.</p>
             </div>
         </div>
     </section>
 
-    <!-- FORMULARIO 1: SOLICITUD Y DESCARGA SDK v4.2 -->
+    <!-- CATÁLOGO OFICIAL DE PRODUCTOS E INFRAESTRUCTURA (9 MÓDULOS DEL MOTOR) -->
+    <section class="products-section" id="products">
+        <div class="section-title-center">
+            <h2>Catálogo Oficial de Productos e Infraestructura de IA</h2>
+            <p>9 Módulos independientes y sus Presets de Entorno CLI integrados en el Runtime de S.A.A.R.E. (MS3V SL)</p>
+        </div>
+
+        <div class="product-grid-9">
+            
+            <!-- MÓDULO 1: LABENGINE -->
+            <div class="p-card-module" id="mod-labengine">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">SDK & DEV SUITE</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 01</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. LabEngine</div>
+                    <div class="p-desc">Entorno de desarrollo, simulación y control de gasto para ingenieros de LLMs.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset dev-lightweight</span>
+                            <div class="preset-desc"><strong>Ahorro de Costes API (FinOps):</strong> Comprime y limpia prompts en desarrollo reduciendo el gasto hasta un 45%.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset agent-circuitbreaker</span>
+                            <div class="preset-desc"><strong>Protección de Agentes:</strong> Detiene bucles infinitos y bloquea acciones destructivas en agentes autónomos.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset rag-zero-hallucination</span>
+                            <div class="preset-desc"><strong>Integridad AST en RAG:</strong> Garantiza respuestas deterministas basadas estrictamente en documentos corporativos.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 2: PERIMETERSHIELD -->
+            <div class="p-card-module" id="mod-perimetershield" style="border: 2px solid var(--brand-gold);">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge" style="background: var(--brand-navy); color: #FFF;">ACTIVE L7 GATEWAY</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 02</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. PerimeterShield</div>
+                    <div class="p-desc">Pasarela de inspección y anonimización de tráfico de datos en tiempo real (Capa 7).</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset banking-shield</span>
+                            <div class="preset-desc"><strong>DLP Financiero (DORA/PCI-DSS):</strong> Enmascara tarjetas, IBANs y datos crediticios en RAM antes de salir de la red.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset health-guard</span>
+                            <div class="preset-desc"><strong>Anonimización PHI (Salud):</strong> Sustituye historiales médicos y datos de pacientes cumpliendo HIPAA y RGPD.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset enterprise-anti-jailbreak</span>
+                            <div class="preset-desc"><strong>Protección L7:</strong> Bloquea inyecciones de prompt (Prompt Injection), bypasses y fugas de secretos.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 3: EVIDENCEVAULT -->
+            <div class="p-card-module" id="mod-evidencevault">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">FORENSIC CLI & LEDGER</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 03</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. EvidenceVault</div>
+                    <div class="p-desc">Registro forense inmutable y trazabilidad criptográfica para auditorías.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset court-verifier</span>
+                            <div class="preset-desc"><strong>Peritaje Judicial:</strong> Certificación offline para demostrar inalterabilidad de decisiones ante tribunales.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset incident-response-soc</span>
+                            <div class="preset-desc"><strong>Respuesta a Incidentes SOC:</strong> Sellado criptográfico instantáneo en RAM sin persistencia en disco (Zero-Disk).</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 4: COMPLIANCESUITE -->
+            <div class="p-card-module" id="mod-compliancesuite">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">AUTOMATED GRC</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 04</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. ComplianceSuite</div>
+                    <div class="p-desc">Generación continua de evidencias y evaluación técnica de marcos regulatorios.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset eu-ai-act-auditor</span>
+                            <div class="preset-desc"><strong>Auditoría Ley Europea de IA:</strong> Traduce requisitos de la EU AI Act (Arts. 9, 12, 14) en reglas activas para AEPD/AESIA.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset iso42001-certifier</span>
+                            <div class="preset-desc"><strong>Certificación ISO/IEC 42001:</strong> Genera la matriz de evidencias continua para la auditoría del SGIA.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 5: SOVEREIGNTYNODE -->
+            <div class="p-card-module" id="mod-sovereignty">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">AIR-GAPPED GATEWAY</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 05</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. SovereigntyNode</div>
+                    <div class="p-desc">Aislamiento crítico para infraestructuras gubernamentales, defensa y entornos Edge.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset military-airgapped</span>
+                            <div class="preset-desc"><strong>Aislamiento Absoluto (Defensa):</strong> Garantiza la nula emisión de datos hacia el exterior en redes aisladas.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset edge-iot-sovereign</span>
+                            <div class="preset-desc"><strong>Optimización Edge/IoT:</strong> Despliegue en hardware industrial restringido manteniendo latencias inferiores a 1.5ms.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 6: TOKENMATRIX -->
+            <div class="p-card-module" id="mod-tokenmatrix">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">SMART LLM ROUTER</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 06</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. TokenMatrix</div>
+                    <div class="p-desc">Enrutamiento inteligente de peticiones según costo, latencia y disponibilidad del modelo.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset smart-cost-router</span>
+                            <div class="preset-desc"><strong>Enrutamiento Financiero Optimizado:</strong> Redirige peticiones según complejidad (LLM local vs. Cloud), reduciendo costes un 65%.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset multi-llm-failover</span>
+                            <div class="preset-desc"><strong>Alta Disponibilidad Corporativa:</strong> Conmuta automáticamente entre proveedores ante caídas de servicio.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 7: EDUTUTORGUARD -->
+            <div class="p-card-module" id="mod-edututor">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">EDTECH & SAFE LEARNING</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 07</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. EduTutorGuard</div>
+                    <div class="p-desc">Filtro pedagógico, control de seguridad infantil y tutoría asistida para educación.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset edtech-k12-safe</span>
+                            <div class="preset-desc"><strong>Filtro Pedagógico & COPPA:</strong> Bloquea contenido no apto y guía razonamientos en lugar de dar respuestas directas.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset stem-multi-subject</span>
+                            <div class="preset-desc"><strong>Verificación STEM (Mates/Física/Química):</strong> Comprobación sintáctica y analítica determinista de respuestas.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 8: AUTHORVAULT IP -->
+            <div class="p-card-module" id="mod-authorvault">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">INTELLECTUAL PROPERTY</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 08</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. AuthorVault IP</div>
+                    <div class="p-desc">Auditoría de derechos de autor y protección de propiedad intelectual frente a IA.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset copyright-watermark-audit</span>
+                            <div class="preset-desc"><strong>Auditoría de Derechos de Autor:</strong> Contrasta salidas con patentes/marcas e inyecta firma Ed25519 de intervención humana.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset training-opt-out-checker</span>
+                            <div class="preset-desc"><strong>Verificación Opt-Out:</strong> Valida si obras protegidas han sido utilizadas sin consentimiento en el entrenamiento de modelos.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÓDULO 9: DEEPFAKESHIELD -->
+            <div class="p-card-module" id="mod-deepfakeshield">
+                <div>
+                    <div class="p-module-header">
+                        <span class="p-badge">SYNTHETIC MEDIA & IDENTITY</span>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);">Módulo 09</span>
+                    </div>
+                    <div class="p-title">S.A.A.R.E. DeepFakeShield</div>
+                    <div class="p-desc">Detección de medios sintéticos, clonación de voz y autenticación biométrica.</div>
+                    
+                    <div class="preset-list">
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset kyc-biometric-anti-spoofing</span>
+                            <div class="preset-desc"><strong>Antifraude Onboarding Bancario:</strong> Analiza vídeo/DNI en RAM a ultrabaja latencia para detectar suplantación facial.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset media-provenance-c2pa</span>
+                            <div class="preset-desc"><strong>Certificación C2PA:</strong> Inyecta sellos criptográficos inmutables para autenticar contenido original frente a generado por IA.</div>
+                        </div>
+                        <div class="preset-item">
+                            <span class="preset-tag">--preset voice-cloning-defense</span>
+                            <div class="preset-desc"><strong>Detección de Clonación de Voz:</strong> Intercepta llamadas de audio detectando imperfecciones sintéticas en autorizaciones bancarias.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORMULARIO 1: SOLICITUD Y DESCARGA SDK v4.2 + LICENCIA AUTOMÁTICA -->
     <section class="form-section-wrapper" id="try-saare">
         <div class="cs-form-grid">
             <div style="text-align: left;">
                 <div class="p-badge" style="background: var(--brand-gold); color: #0F172A;">ISV EVALUATION PACK</div>
                 <h2 style="font-family: var(--font-serif); font-size: 34px; font-weight: 800; color: var(--text-title); margin-bottom: 16px;">Obtén la Suite Comercial v4.2.</h2>
                 <p style="font-size: 15px; color: var(--text-body); margin-bottom: 28px; line-height: 1.6;">
-                    Evalúa la integración del motor S.A.A.R.E. en tus aplicaciones o infraestructura. El paquete incluye el ejecutable CLI, la DLL dinámica C-ABI, los SDKs y una licencia de prueba de 15 días.
+                    Evalúa la integración del motor S.A.A.R.E. en tus aplicaciones o infraestructura. El paquete incluye el ejecutable CLI, la DLL dinámica C-ABI, los SDKs y una licencia criptográfica `.lic` firmada de 15 días.
                 </p>
 
                 <h4 style="font-family: var(--font-serif); font-size: 18px; color: var(--text-title); margin-bottom: 16px;">Contenido del SDK Comercial:</h4>
@@ -405,15 +644,15 @@
                     <li><strong>saare-runtime.exe:</strong> Ejecutable autónomo CLI para despliegues perimetrales.</li>
                     <li><strong>saare_runtime.dll:</strong> Librería nativa dinámicamente enlazable con exportación C-ABI.</li>
                     <li><strong>saare_sdk.py & saare.h:</strong> SDK listo para usar en Python 3.x y desarrollos en C/C++.</li>
-                    <li><strong>LicenseGuard Trial Token:</strong> Token de evaluación preconfigurado para todos los presets.</li>
+                    <li><strong>saare.lic:</strong> Licencia criptográfica HMAC generada en vivo para tu entidad.</li>
                 </ul>
             </div>
 
             <form id="form-try-saare" onsubmit="solicitarTrialAutomatico(event)">
                 <div style="text-align: left; margin-bottom: 20px;">
-                    <span style="font-family: var(--font-mono); font-size: 11px; color: var(--brand-green); font-weight: 700; text-transform: uppercase;">Descarga Inmediata • Licencia Firmada Incluida</span>
+                    <span style="font-family: var(--font-mono); font-size: 11px; color: var(--brand-green); font-weight: 700; text-transform: uppercase;">Emisión Automática Serverless • Licencia Firmada</span>
                     <h3 style="font-family: var(--font-serif); font-size: 24px; font-weight: 800; color: var(--text-title); margin-top: 4px;">Solicita tu Paquete SDK v4.2</h3>
-                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Completa el formulario para descargar el paquete comprimido `saare-suite-v4.2-dist.zip`.</p>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Completa el formulario para descargar el SDK y recibir tu archivo `saare.lic` firmado.</p>
                 </div>
 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
@@ -462,64 +701,9 @@
                 </div>
 
                 <button type="submit" id="btn-trial-submit" class="btn-cs-submit">
-                    Descargar SDK v4.2 Enterprise Zip →
+                    Generar Licencia & Descargar SDK v4.2 →
                 </button>
             </form>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 2: PRODUCTS & PLATFORM STACK -->
-    <section class="products-section" id="products">
-        <div class="section-title-center">
-            <h2>Componentes del Paquete Comercial v4.2</h2>
-            <p>Entregables listos para su distribución y empaquetado comercial en sistemas cliente.</p>
-        </div>
-
-        <div class="product-grid">
-            <!-- SAARE CORE & FFI ENGINE -->
-            <div class="p-card featured">
-                <div>
-                    <div class="p-badge" style="background: var(--brand-navy); color: #FFF;">NATIVE BINARY & DLL</div>
-                    <div class="p-title">SAARE ISV Core Engine</div>
-                    <div class="p-desc">Workspace compilado en Rust (`release` profile, 0 warnings) que genera el ejecutable CLI y la librería dinámica `saare_runtime.dll`.</div>
-                    <ul class="p-features">
-                        <li>Intercepción perimetral en RAM (Zero-Disk)</li>
-                        <li>Soporte C-ABI exportado (`saare_verify_and_dispatch`)</li>
-                        <li>Enmascaramiento de datos financieros y PHI</li>
-                    </ul>
-                </div>
-                <a href="#try-saare" class="btn-header" style="width: 100%; text-align: center;">Obtener Artefactos Nativo (.dll) →</a>
-            </div>
-
-            <!-- SAARE PYTHON & C SDK -->
-            <div class="p-card">
-                <div>
-                    <div class="p-badge">MULTI-LANGUAGE SDK</div>
-                    <div class="p-title">SDK C/C++ & Python</div>
-                    <div class="p-desc">Capas de integración preparadas para embeber el motor en pipelines de datos, microservicios y aplicaciones escritas en Python o C/C++.</div>
-                    <ul class="p-features">
-                        <li>Header oficial `dist/include/saare.h`</li>
-                        <li>Wrapper Python `dist/sdk_python/saare_sdk.py`</li>
-                        <li>Gestión transparente de punteros de memoria</li>
-                    </ul>
-                </div>
-                <a href="#data-room" class="btn-hero-secondary" style="color: var(--brand-navy); text-align: center; border-color: var(--border-soft);">Ver Documentación de SDK →</a>
-            </div>
-
-            <!-- LICENSEGUARD ENGINE -->
-            <div class="p-card">
-                <div>
-                    <div class="p-badge">SECURITY & LICENSING</div>
-                    <div class="p-title">LicenseGuard Engine</div>
-                    <div class="p-desc">Sistema de control de licencias criptográfico para proteger la propiedad intelectual del ISV y restringir funciones según contrato.</div>
-                    <ul class="p-features">
-                        <li>Verificación HMAC/RSA de firma en memoria</li>
-                        <li>Validación de caducidad y Tenant ID</li>
-                        <li>Control granular de acceso por módulo</li>
-                    </ul>
-                </div>
-                <a href="#partner-program" class="btn-hero-secondary" style="color: var(--brand-navy); text-align: center; border-color: var(--border-soft);">Consultar Licenciamiento →</a>
-            </div>
         </div>
     </section>
 
@@ -544,8 +728,8 @@
                 <p>Ejecución del binario `saare-runtime.exe` como demonio perimetral o sidecar en entornos Kubernetes.</p>
             </div>
             <div class="deploy-card">
-                <h4>4. Rust Crate Dependency</h4>
-                <p>Inclusión directa de las crates de la workspace en el archivo `Cargo.toml` de aplicaciones cliente.</p>
+                <h4>4. Docker Closed Image</h4>
+                <p>Distribución en formato contenedor cerrado On-Premise o Cloud Gateway aislando la lógica C++/Rust.</p>
             </div>
         </div>
     </section>
@@ -681,7 +865,7 @@
 
     <!-- FOOTER INSTITUCIONAL -->
     <footer>
-        Master ID: MS3V-ISV-SUITE-V4.2-RELEASE | Tag: v4.2 | Commit: faf3f58<br>
+        Master ID: MS3V-ISV-SUITE-V4.2-RELEASE | Tag: v4.2 | Runtime Latency: <1.5ms (Zero-Disk)<br>
         © 2026 <a href="https://saare.es/" style="color: inherit; text-decoration: none; font-weight: bold;">MS3V S.A.A.R.E. SL</a> • Independent AI Governance Infrastructure SDK • Todos los derechos reservados.<br>
         <div style="margin-top: 10px; font-size: 10.5px;">
             <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold); text-decoration: none; margin: 0 10px;">Aviso Legal (LSSI)</a> | 
@@ -700,7 +884,7 @@
     </div>
 </div>
 
-<!-- SCRIPT DE AUTOMATIZACIÓN Y DESCARGA v4.2 -->
+<!-- SCRIPT DE AUTOMATIZACIÓN, CONEXIÓN CON VERCEL API Y DESCARGA -->
 <script>
     function openLegalModal(tab) {
         const modal = document.getElementById('legal-modal');
@@ -712,7 +896,7 @@
         if (modal) modal.classList.remove('active'); 
     }
 
-    /* AUTOMATIZACIÓN DE DESCARGA SDK ISV v4.2 (FORMULARIO 1) */
+    /* AUTOMATIZACIÓN DE EMISIÓN DE LICENCIA (VERCEL API) Y DESCARGA DEL SDK */
     async function solicitarTrialAutomatico(event) {
         event.preventDefault();
         
@@ -729,40 +913,73 @@
         }
 
         if (btn) {
-            btn.innerText = "⏳ Descargando Paquete S.A.A.R.E. ISV Suite v4.2...";
+            btn.innerText = "⏳ Emitiendo Licencia & Preparando SDK...";
             btn.disabled = true;
         }
 
+        const VERCEL_API_URL = "https://saare-suite.vercel.app/api/trial";
         const RELEASE_ZIP_URL = "https://github.com/alfonsoferrertorres-cyber/saare-suite/releases/download/v4.2/saare-suite-v4.2-dist.zip";
 
         try {
-            const a = document.createElement('a');
-            a.href = RELEASE_ZIP_URL;
-            a.download = "saare-suite-v4.2-dist.zip";
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
+            // 1. Petición al endpoint serverless de Vercel para generar la licencia criptográfica
+            const res = await fetch(VERCEL_API_URL, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    empresa: empresa,
+                    email: email,
+                    duration_days: 15,
+                    modules: ["*"]
+                })
+            });
 
-            alert("✅ ¡Paquete S.A.A.R.E. ISV Suite v4.2 iniciado con éxito!\n\nEl archivo 'saare-suite-v4.2-dist.zip' contiene los binarios (.exe, .dll), el wrapper Python ('saare_sdk.py') y el header C ('saare.h').");
+            if (!res.ok) throw new Error("Error en la respuesta de la API de Vercel.");
+
+            const data = await res.json();
+            const licenseText = data.license_key || data.license || JSON.stringify(data, null, 2);
+
+            // 2. Descargar automáticamente el archivo 'saare.lic' generado
+            const licBlob = new Blob([licenseText], { type: "text/plain;charset=utf-8" });
+            const licUrl = URL.createObjectURL(licBlob);
+            const aLic = document.createElement('a');
+            aLic.href = licUrl;
+            aLic.download = "saare.lic";
+            document.body.appendChild(aLic);
+            aLic.click();
+            aLic.remove();
+            URL.revokeObjectURL(licUrl);
+
+            // 3. Iniciar la descarga del archivo ZIP del SDK tras un breve retardo
+            setTimeout(() => {
+                const aZip = document.createElement('a');
+                aZip.href = RELEASE_ZIP_URL;
+                aZip.download = "saare-suite-v4.2-dist.zip";
+                document.body.appendChild(aZip);
+                aZip.click();
+                aZip.remove();
+            }, 1000);
+
+            alert("✅ ¡Licencia criptográfica 'saare.lic' generada con éxito y descarga del SDK iniciada!\n\nGuarda el archivo 'saare.lic' en el mismo directorio de 'saare_runtime.dll' o 'saare-runtime.exe'.");
 
         } catch (err) {
-            alert("⚠️ Error al conectar con el servidor de descargas. Redirigiendo a las releases de GitHub...");
-            window.open("https://github.com/alfonsoferrertorres-cyber/saare-suite/releases/tag/v4.2", "_blank");
+            console.error("Error al emitir licencia vía API:", err);
+            alert("⚠️ No se pudo obtener la licencia en tiempo real. Redirigiendo a la descarga directa del SDK...");
+            window.open(RELEASE_ZIP_URL, "_blank");
         } finally {
             if (btn) {
-                btn.innerText = "Descargar SDK v4.2 Enterprise Zip →";
+                btn.innerText = "Generar Licencia & Descargar SDK v4.2 →";
                 btn.disabled = false;
             }
         }
     }
 
-    /* PROCESAMIENTO DE SOLICITUD SOCIO OEM / ISV (FORMULARIO 2) */
+    /* PROCESAMIENTO DE SOLICITUD SOCIO OEM / ISV */
     function solicitarRegistroSocio(event) {
         event.preventDefault();
         const partnerCompany = document.getElementById('partner-company').value;
         const partnerEmail = document.getElementById('partner-email').value;
 
-        alert(`✅ Solicitud de Alianza ISV recibida correctamente para ${partnerCompany}.\n\nUn representante del equipo técnico contactará con ${partnerEmail} para coordinar la entrega de las claves RSA para LicenseGuard y el acuerdo OEM.`);
+        alert(`✅ Solicitud de Alianza ISV recibida correctamente para ${partnerCompany}.\n\nUn representante del equipo técnico contactará con ${partnerEmail} para coordinar la entrega de las claves para LicenseGuard y el acuerdo OEM.`);
     }
 </script>
 
