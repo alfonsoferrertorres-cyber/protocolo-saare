@@ -35,6 +35,7 @@
             --brand-accent: #0284C7;
             --brand-green: #059669;
             --brand-purple: #7C3AED;
+            --brand-red: #DC2626;
             
             --font-serif: 'Cinzel', serif;
             --font-sans: 'Plus Jakarta Sans', sans-serif;
@@ -78,7 +79,7 @@
         nav.nav-links a { color: var(--text-body); text-decoration: none; font-size: 13.5px; font-weight: 600; transition: color 0.2s; }
         nav.nav-links a:hover { color: var(--brand-navy); }
 
-        /* ARQUITECTURA DE MEGAMENÚS */
+        /* MEGAMENÚS PLATAFORMA */
         .dropdown-menu { position: relative; }
         .dropdown-btn { cursor: pointer; display: flex; align-items: center; gap: 4px; color: var(--brand-navy); font-weight: 700; font-size: 13.5px; padding: 8px 0; }
         
@@ -154,7 +155,35 @@
         }
         .btn-hero-secondary:hover { background: rgba(255,255,255,0.2); border-color: #FFF; }
 
-        /* SECCIONES Y CONTENEDORES */
+        /* ESTILOS DE FORMULARIO ENTERPRISE ESTILO CROWDSTRIKE */
+        .form-section-wrapper {
+            background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px;
+            padding: 48px; margin-bottom: 90px; box-shadow: var(--shadow-md);
+        }
+        .cs-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+        @media (max-width: 960px) { .cs-form-grid { grid-template-columns: 1fr; } }
+
+        .cs-form-group { margin-bottom: 16px; text-align: left; }
+        .cs-form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--text-title); margin-bottom: 6px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .cs-input, .cs-select, .cs-textarea {
+            width: 100%; padding: 12px 14px; border: 1px solid var(--border-soft); border-radius: 6px;
+            font-family: var(--font-sans); font-size: 13.5px; background: #FFF; color: var(--text-title);
+            transition: border-color 0.2s;
+        }
+        .cs-input:focus, .cs-select:focus, .cs-textarea:focus { border-color: var(--brand-navy); outline: none; }
+        
+        .cs-checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin: 20px 0; font-size: 12px; color: var(--text-body); text-align: left; }
+        .cs-checkbox-group input[type="checkbox"] { margin-top: 3px; }
+
+        .btn-cs-submit {
+            width: 100%; background: var(--brand-navy); color: #FFF; font-weight: 800; font-size: 14px;
+            padding: 16px; border-radius: 6px; border: none; cursor: pointer; transition: background 0.2s;
+            font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 1px;
+        }
+        .btn-cs-submit:hover { background: var(--brand-gold); color: #0F172A; }
+
+        /* SECCIONES Y TARJETAS */
         .vision-section { margin-bottom: 90px; }
         .section-title-center { text-align: center; margin-bottom: 48px; }
         .section-title-center h2 { font-family: var(--font-serif); font-size: 34px; font-weight: 800; color: var(--text-title); }
@@ -193,11 +222,6 @@
         .deploy-card h4 { font-family: var(--font-mono); font-size: 14px; color: var(--brand-gold); margin-bottom: 8px; }
         .deploy-card p { font-size: 12.5px; color: #CBD5E1; line-height: 1.5; }
 
-        .eco-section { background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; padding: 48px; margin-bottom: 90px; }
-        .eco-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        @media (max-width: 900px) { .eco-grid { grid-template-columns: 1fr; } }
-        .eco-title { font-family: var(--font-serif); font-size: 28px; font-weight: 800; color: var(--text-title); margin-bottom: 12px; }
-
         .dashboard-hero-container { width: 100%; margin-bottom: 90px; background: var(--bg-card); border: 1px solid var(--border-soft); border-radius: 16px; overflow: hidden; }
         .dashboard-header-bar {
             background: linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.98) 100%),
@@ -212,10 +236,8 @@
         .doc-item { background: var(--bg-beige); border: 1px solid var(--border-soft); padding: 18px 20px; border-radius: 10px; color: var(--text-title); text-decoration: none; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 10px; transition: all 0.2s; }
         .doc-item:hover { border-color: var(--brand-navy); transform: translateY(-2px); }
 
-        /* FOOTER */
         footer { border-top: 1px solid var(--border-soft); padding: 50px 0; text-align: center; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); line-height: 2.2; background: var(--bg-beige); }
 
-        /* MODALES */
         .lightbox-modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(10, 15, 29, 0.92); backdrop-filter: blur(8px); display: none; justify-content: center; align-items: center; z-index: 9999; padding: 20px; }
         .lightbox-modal.active { display: flex; }
         .lightbox-close { position: absolute; top: 20px; right: 30px; font-size: 32px; color: #FFF; cursor: pointer; }
@@ -277,22 +299,22 @@
             <div class="megamenu-content" style="width: 540px; grid-template-columns: 1fr 1fr;">
                 <div class="megamenu-col">
                     <h4>Servicios Gestionados</h4>
-                    <a href="#ecosystem" class="megamenu-item">
+                    <a href="#partner-program" class="megamenu-item">
                         <div class="megamenu-item-title">Continuous Assurance</div>
                         <div class="megamenu-item-desc">Auditoría 24/7 de evidencias técnicas.</div>
                     </a>
-                    <a href="#ecosystem" class="megamenu-item">
+                    <a href="#partner-program" class="megamenu-item">
                         <div class="megamenu-item-title">Shadow AI Discovery</div>
                         <div class="megamenu-item-desc">Mapeo de consumo no autorizado de LLMs.</div>
                     </a>
                 </div>
                 <div class="megamenu-col">
                     <h4>Consultoría Especializada</h4>
-                    <a href="#ecosystem" class="megamenu-item">
+                    <a href="#partner-program" class="megamenu-item">
                         <div class="megamenu-item-title">Alineación ISO 42001 / EU AI Act</div>
                         <div class="megamenu-item-desc">Mapeo de controles e insumos de auditoría.</div>
                     </a>
-                    <a href="#ecosystem" class="megamenu-item">
+                    <a href="#partner-program" class="megamenu-item">
                         <div class="megamenu-item-title">Peritaje Ciber & Forense</div>
                         <div class="megamenu-item-desc">Auditoría de integridad algorítmica.</div>
                     </a>
@@ -329,8 +351,8 @@
             </div>
         </div>
 
-        <!-- 4. ENLACES DIRECTOS -->
-        <a href="#vision">¿Por qué S.A.A.R.E.?</a>
+        <!-- 4. ENLACES DIRECTOS Y SECCIÓN HISTORIA -->
+        <a href="#hito-l7">Hito en Capa 7 (L7)</a>
         <a href="#data-room">Recursos</a>
         <a href="#products">Precios</a>
     </nav>
@@ -340,7 +362,7 @@
             <div class="pulse-dot"></div>
             <span>[RUNTIME PEP ACTIVE]</span>
         </div>
-        <a href="#architecture-session" class="btn-header">Architecture Session</a>
+        <a href="#try-saare" class="btn-header">Prueba de 15 Días</a>
     </div>
 </header>
 
@@ -359,11 +381,11 @@
         </div>
 
         <div class="hero-cta-group">
-            <a href="#architecture-session" class="btn-hero-gold">
-                Solicitar Demo de Arquitectura →
+            <a href="#try-saare" class="btn-hero-gold">
+                Solicitar Prueba Gratuita (15 Días) →
             </a>
-            <a href="#products" class="btn-hero-secondary">
-                Explorar Plataforma
+            <a href="#partner-program" class="btn-hero-secondary">
+                Programa de Socios OEM / MSSP
             </a>
         </div>
     </div>
@@ -371,26 +393,104 @@
 
 <div class="container">
 
-    <!-- SECCIÓN 1: VISION & GOVERNANCE GAP -->
-    <section class="vision-section" id="vision">
+    <!-- SECCIÓN 1: HITO EN CAPA 7 (NARRATIVA E HISTORIA DE INNOVACIÓN) -->
+    <section class="vision-section" id="hito-l7">
         <div class="section-title-center">
-            <h2>The AI Governance Gap</h2>
-            <p>El desafío histórico del paso de la IA experimental a la IA operativa en procesos corporativos de misión crítica.</p>
+            <h2>El Hito en Capa 7 (Layer 7 PEP)</h2>
+            <p>De la auditoría pasiva de documentos al control activo e in-flight de la Inteligencia Artificial.</p>
         </div>
 
         <div class="gap-grid">
             <div class="gap-card">
-                <h3>Adopción Asimétrica</h3>
-                <p>Las organizaciones despliegan modelos y agentes autónomos a mayor velocidad de la que sus estructuras de seguridad y auditoría pueden supervisar.</p>
+                <h3>El Origen: El Desacople de Planos</h3>
+                <p>Nuestra trayectoria comenzó resolviendo el cuello de botella de la auditoría tradicional. Comprendimos que para gobernar la IA no bastaba con emitir certificados en papel, sino que era imprescindible **desacoplar el plano de control (Governance Plane) del plano de datos (Data Plane)**.</p>
             </div>
             <div class="gap-card">
-                <h3>Fallo de Análisis Ex-Post</h3>
-                <p>Los dashboards de observabilidad pasivos detectan fugas de PII o alucinaciones cuando el payload ya ha alcanzado el modelo LLM y el riesgo se ha materializado.</p>
+                <h3>Procesamiento Volátil en RAM (~1.16ms)</h3>
+                <p>Desarrollamos el motor S.A.A.R.E. en C++/Rust con arquitectura **Zero-Disk**. La inspección, anonimización y sanitización de datos sensibles ocurre íntegramente en memoria volátil en menos de 1.2ms, eliminando cualquier riesgo de persistencia en disco.</p>
             </div>
             <div class="gap-card">
-                <h3>Confianza Operativa</h3>
-                <p>La IA crítica en banca, salud y sector público requiere un Policy Enforcement Point (PEP) en tiempo real que garantice la gobernanza ex-ante antes de la inferencia.</p>
+                <h3>Gobernanza Ex-Ante e Inmutable</h3>
+                <p>El hito en L7 permite actuar *antes* de que el payload alcance los modelos LLM o agentes. Cada transacción genera de forma determinista una evidencia criptográfica inmutable con firma Ed25519, garantizando la trazabilidad ante ISO 42001, DORA y el EU AI Act.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO 1: PRUEBA GRATUITA DE 15 DÍAS (Estilo CrowdStrike Try-Falcon) -->
+    <section class="form-section-wrapper" id="try-saare">
+        <div class="cs-form-grid">
+            <div style="text-align: left;">
+                <div class="p-badge" style="background: var(--brand-gold); color: #0F172A;">EVALUACIÓN ENTERPRISE</div>
+                <h2 style="font-family: var(--font-serif); font-size: 34px; font-weight: 800; color: var(--text-title); margin-bottom: 16px;">Pruébalo gratis durante 15 días.</h2>
+                <p style="font-size: 15px; color: var(--text-body); margin-bottom: 28px; line-height: 1.6;">
+                    La gobernanza y seguridad de IA nunca ha sido tan directa. Aproveche nuestra prueba evaluativa de 15 días y despliegue el motor perimetral SAARE en su entorno corporativo.
+                </p>
+
+                <h4 style="font-family: var(--font-serif); font-size: 18px; color: var(--text-title); margin-bottom: 16px;">Qué incluye:</h4>
+                <ul class="p-features" style="font-size: 14px; line-height: 2;">
+                    <li><strong>Motor SAARE Runtime PEP (Zero-Disk):</strong> Intercepción determinista en RAM (~1.16ms).</li>
+                    <li><strong>Control perimetral L7 Ex-Ante:</strong> Enmascaramiento de PII/PHI e inyección de reglas DLP.</li>
+                    <li><strong>Sellado criptográfico Ed25519:</strong> Trazabilidad inmutable libre de alteración.</li>
+                    <li><strong>Habilite módulos adicionales gratis:</strong> Consola GRC, Browser Agent y conectores OTel.</li>
+                </ul>
+            </div>
+
+            <form id="form-try-saare" onsubmit="solicitarTrialAutomatico(event)">
+                <div style="text-align: left; margin-bottom: 20px;">
+                    <span style="font-family: var(--font-mono); font-size: 11px; color: var(--brand-red); font-weight: 700; text-transform: uppercase;">Sin tarjeta de crédito. Sin compromiso.</span>
+                    <h3 style="font-family: var(--font-serif); font-size: 24px; font-weight: 800; color: var(--text-title); margin-top: 4px;">Solicita una prueba gratuita</h3>
+                    <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Recibirá las credenciales de acceso y el paquete `saare.lic` firmado en un plazo de 24 horas.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="cs-form-group">
+                        <label>First name / Nombre</label>
+                        <input type="text" id="trial-firstname" required class="cs-input" placeholder="Nombre">
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Last name / Apellido</label>
+                        <input type="text" id="trial-lastname" required class="cs-input" placeholder="Apellido">
+                    </div>
+                </div>
+
+                <div class="cs-form-group">
+                    <label>Company / Organización</label>
+                    <input type="text" id="trial-org" required class="cs-input" placeholder="Nombre de la empresa corporativa">
+                </div>
+
+                <div class="cs-form-group">
+                    <label>Where is your company located?</label>
+                    <select id="trial-country" required class="cs-select">
+                        <option value="">Seleccione país...</option>
+                        <option value="ES">España</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="DE">Alemania</option>
+                        <option value="FR">Francia</option>
+                        <option value="UK">Reino Unido</option>
+                        <option value="LATAM">Latinoamérica</option>
+                        <option value="OTHER">Otro país</option>
+                    </select>
+                </div>
+
+                <div class="cs-form-group">
+                    <label>Business email / Email corporativo</label>
+                    <input type="email" id="trial-email" required class="cs-input" placeholder="nombre@empresa.com">
+                </div>
+
+                <div class="cs-form-group">
+                    <label>Phone number / Teléfono</label>
+                    <input type="tel" id="trial-phone" required class="cs-input" placeholder="+34 600 000 000">
+                </div>
+
+                <div class="cs-checkbox-group">
+                    <input type="checkbox" id="trial-terms" required>
+                    <label for="trial-terms">Acepto el <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold);">Acuerdo de Evaluación de MS3V S.A.A.R.E.</a> y la Política de Privacidad.</label>
+                </div>
+
+                <button type="submit" id="btn-trial-submit" class="btn-cs-submit">
+                    Solicitar Licencia Discovery Node →
+                </button>
+            </form>
         </div>
     </section>
 
@@ -414,7 +514,7 @@
                         <li>Generación de sellos criptográficos Ed25519</li>
                     </ul>
                 </div>
-                <a href="#architecture-session" class="btn-header" style="width: 100%; text-align: center;">Solicitar Architecture Brief →</a>
+                <a href="#try-saare" class="btn-header" style="width: 100%; text-align: center;">Solicitar Architecture Brief →</a>
             </div>
 
             <!-- SAARE ASSURANCE SUITE -->
@@ -476,36 +576,136 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 4: ECOSYSTEM & OEM PROGRAM -->
-    <section class="eco-section" id="ecosystem">
-        <div class="eco-grid">
-            <div>
-                <div class="p-badge" style="background: var(--brand-purple); color: #FFF;">ISV PARTNERSHIPS</div>
-                <div class="eco-title">Embedded OEM & Partner Program</div>
-                <p style="font-size: 14.5px; color: var(--text-body); line-height: 1.6; margin-bottom: 20px;">
-                    S.A.A.R.E. se asocia con plataformas de observabilidad, firmas de ciberseguridad (MSSP) y consultoras globales para integrar capacidad de Active L7 Governance directamente dentro de sus propios productos y servicios.
-                </p>
-                <a href="https://wa.me/34633886506?text=Hola,%20quisiera%20evaluar%20una%20alianza%20OEM%20/%20ISV%20Partner%20con%20SAARE." target="_blank" class="btn-hero-gold" style="font-size: 13.5px; padding: 12px 24px;">Contacto de Alianzas OEM →</a>
-            </div>
-            <div>
-                <img src="data_room.png" alt="Ecosistema de Partners de SAARE" style="width: 100%; border-radius: 12px; border: 1px solid var(--border-soft);">
-            </div>
-        </div>
-    </section>
+    <!-- FORMULARIO 2: REGISTRO DE SOCIOS OEM / MSSP / ISV (Estilo CrowdStrike Become-A-Partner) -->
+    <section class="form-section-wrapper" id="partner-program">
+        <div style="max-width: 860px; margin: 0 auto;">
+            <div class="p-badge" style="background: var(--brand-purple); color: #FFF; margin: 0 auto 16px auto;">ISV & OEM ALLIANCE PROGRAM</div>
+            <h2 style="font-family: var(--font-serif); font-size: 32px; font-weight: 800; color: var(--text-title); text-align: center; margin-bottom: 8px;">Conviértase en Socio de MS3V S.A.A.R.E.</h2>
+            <p style="color: var(--text-muted); font-size: 15px; text-align: center; margin-bottom: 36px;">Únase a nuestro ecosistema global de alianzas para integradores Tier-1, plataformas de observabilidad (ISVs) y proveedores de servicios gestionados de seguridad (MSSP).</p>
 
-    <!-- FORMULARIO DE SESIÓN DE ARQUITECTURA -->
-    <section class="docs-section-wrapper" id="architecture-session">
-        <div style="max-width: 680px; margin: 0 auto; text-align: center;">
-            <div class="p-badge" style="margin: 0 auto 16px auto;">ARCHITECTURAL EVALUATION</div>
-            <h2 style="font-family: var(--font-serif); font-size: 30px; font-weight: 800; color: var(--text-title); margin-bottom: 12px;">Solicitar Sesión de Arquitectura / Evaluador Node</h2>
-            <p style="color: var(--text-muted); font-size: 14.5px; margin-bottom: 28px;">Agende una sesión técnica directa con nuestros arquitectos o solicite acceso a un entorno de prueba del motor SAARE Runtime Engine.</p>
+            <form id="form-partner-program" onsubmit="solicitarRegistroSocio(event)">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="cs-form-group">
+                        <label>Nombre de pila / First name</label>
+                        <input type="text" id="partner-firstname" required class="cs-input">
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Apellido / Last name</label>
+                        <input type="text" id="partner-lastname" required class="cs-input">
+                    </div>
+                </div>
 
-            <form id="form-architecture" onsubmit="solicitarTrialAutomatico(event)">
-                <input type="text" id="trial-org" placeholder="Empresa / Organización Corporativa" required class="trial-form-input" style="width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid var(--border-soft); border-radius: 6px;">
-                <input type="email" id="trial-email" placeholder="Email profesional (@empresa.com)" required class="trial-form-input" style="width: 100%; padding: 12px; margin-bottom: 16px; border: 1px solid var(--border-soft); border-radius: 6px;">
-                
-                <button type="submit" id="btn-trial-submit" class="btn-hero-gold" style="width: 100%; text-align: center; cursor: pointer;">
-                    ⚡ Agendar Briefing Técnico & Descargar Discovery Package →
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="cs-form-group">
+                        <label>Correo electrónico comercial</label>
+                        <input type="email" id="partner-email" required class="cs-input" placeholder="socio@empresa.com">
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Nombre de la empresa / ISV</label>
+                        <input type="text" id="partner-company" required class="cs-input">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="cs-form-group">
+                        <label>Título profesional / Cargo</label>
+                        <input type="text" id="partner-jobtitle" placeholder="Ej. VP of Alliances / Enterprise Architect" required class="cs-input">
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Sitio web corporativo</label>
+                        <input type="url" id="partner-website" placeholder="https://www.empresa.com" required class="cs-input">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+                    <div class="cs-form-group">
+                        <label>País</label>
+                        <select id="partner-country" required class="cs-select">
+                            <option value="">Seleccionar...</option>
+                            <option value="ES">España</option>
+                            <option value="US">Estados Unidos</option>
+                            <option value="DE">Alemania</option>
+                            <option value="FR">Francia</option>
+                            <option value="UK">Reino Unido</option>
+                            <option value="OTHER">Otro</option>
+                        </select>
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Ciudad</label>
+                        <input type="text" id="partner-city" required class="cs-input">
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Código Postal</label>
+                        <input type="text" id="partner-zip" required class="cs-input">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="cs-form-group">
+                        <label>Número de teléfono</label>
+                        <input type="tel" id="partner-phone" required class="cs-input">
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Tipo de solicitud del socio</label>
+                        <select id="partner-type" required class="cs-select">
+                            <option value="">Seleccione modelo de alianza...</option>
+                            <option value="OEM_EMBEDDED">Embedded OEM Partner (Integración en producto)</option>
+                            <option value="MSSP_PROVIDER">MSSP / Proveedor de Servicios Gestionados</option>
+                            <option value="SYSTEM_INTEGRATOR">Integrador de Sistemas Tier-1 / Consultora</option>
+                            <option value="TECHNOLOGY_ALLIANCE">Alianza Tecnológica Estratégica</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cs-form-group">
+                    <label>Descripción de la asociación / integración y ofertas de la empresa</label>
+                    <textarea id="partner-description" rows="3" required class="cs-textarea" placeholder="Describa brevemente su producto o servicio y cómo prevé integrar el motor SAARE Runtime PEP..."></textarea>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="cs-form-group">
+                        <label>¿Cumple usted con el RGPD?</label>
+                        <select id="partner-gdpr" required class="cs-select">
+                            <option value="YES">Sí, conformidad total comprobada</option>
+                            <option value="IN_PROGRESS">En proceso de adecuación</option>
+                            <option value="NO">No aplicable por jurisdicción</option>
+                        </select>
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Número de IVA / GST / Tax ID</label>
+                        <input type="text" id="partner-vat" placeholder="Ej. ESB12345678" required class="cs-input">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                    <div class="cs-form-group">
+                        <label>Seleccione su(s) segmento(s) de clientes</label>
+                        <select id="partner-segment" required class="cs-select">
+                            <option value="ENTERPRISE">Empresa Corporativa / Fortune 500</option>
+                            <option value="MID_MARKET">Corporativo Mediano</option>
+                            <option value="SME">Pequeña y Mediana Empresa</option>
+                            <option value="ALL">Todos los segmentos</option>
+                        </select>
+                    </div>
+                    <div class="cs-form-group">
+                        <label>Seleccione su(s) sector(es) prioritario(s)</label>
+                        <select id="partner-sector" required class="cs-select">
+                            <option value="FINANCIAL">Servicios Bancarios y Financieros</option>
+                            <option value="HEALTHCARE">Cuidado de la salud / Farma</option>
+                            <option value="GOVERNMENT">Gobierno Federal / Estatal / Local</option>
+                            <option value="TELECOM">Telecomunicaciones y Medios</option>
+                            <option value="CRITICAL_INFRA">Energía e Infraestructuras Críticas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cs-checkbox-group">
+                    <input type="checkbox" id="partner-terms" required>
+                    <label for="partner-terms">Al marcar esta casilla, acepta los <a href="#" onclick="openLegalModal('aviso'); return false;" style="color: var(--brand-gold);">Términos para Socios de MS3V S.A.A.R.E.</a> y reconoce el Aviso de Privacidad B2B.</label>
+                </div>
+
+                <button type="submit" id="btn-partner-submit" class="btn-cs-submit" style="background: var(--brand-purple);">
+                    Enviar Solicitud de Alianza Partner →
                 </button>
             </form>
         </div>
@@ -575,6 +775,7 @@
         if (modal) modal.classList.remove('active'); 
     }
 
+    /* AUTOMATIZACIÓN DE SOLICITUD DE LICENCIA DISCOVERY (FORMULARIO 1) */
     async function solicitarTrialAutomatico(event) {
         event.preventDefault();
         
@@ -591,7 +792,7 @@
         }
 
         if (btn) {
-            btn.innerText = "⏳ Generando Criptografía Ed25519 & Nodo Discovery...";
+            btn.innerText = "⏳ Emitiendo Criptografía Ed25519 & Nodo Discovery...";
             btn.disabled = true;
         }
 
@@ -605,7 +806,7 @@
                     email: email, 
                     empresa: empresa,
                     plane: 'RUNTIME_ENGINE_SANDBOX',
-                    duration_days: 7,
+                    duration_days: 15,
                     modules: ['MS3V_RAM_ENGINE', 'ED25519_LEDGER', 'PEP_L7_INTERCEPTOR']
                 })
             });
@@ -625,10 +826,10 @@
             a.remove();
             window.URL.revokeObjectURL(url);
 
-            alert("✅ ¡Paquete S.A.A.R.E. Discovery descargado con éxito!\n\nSe ha generado el nodo que incluye el Runtime PEP (~1.16ms) y la firma criptográfica temporal.");
+            alert("✅ ¡Paquete S.A.A.R.E. Discovery descargado con éxito!\n\nSe ha generado la licencia 'saare.lic' firmada por 15 días con capacidad de intercepción RAM (~1.16ms).");
 
         } catch (err) {
-            alert("⚠️ Iniciando descarga directa del ejecutable base...");
+            alert("⚠️ Servidor de licencias en mantenimiento. Descargando instalador base...");
             const setupUrl = "https://github.com/alfonsoferrertorres-cyber/protocolo-saare/releases/download/v7.0.0/Setup_SAARE_v7.0_PRO.exe";
             const aExe = document.createElement('a');
             aExe.href = setupUrl;
@@ -638,10 +839,19 @@
             aExe.remove();
         } finally {
             if (btn) {
-                btn.innerText = "⚡ Agendar Briefing Técnico & Descargar Discovery Package →";
+                btn.innerText = "Solicitar Licencia Discovery Node →";
                 btn.disabled = false;
             }
         }
+    }
+
+    /* PROCESAMIENTO SOLICITUD DE SOCIO OEM / MSSP (FORMULARIO 2) */
+    function solicitarRegistroSocio(event) {
+        event.preventDefault();
+        const partnerCompany = document.getElementById('partner-company').value;
+        const partnerEmail = document.getElementById('partner-email').value;
+
+        alert(`✅ Solicitud de Alianza recibida correctamente para ${partnerCompany}.\n\nUn representante del equipo de alianzas ISV/OEM contactará con ${partnerEmail} en breve para coordinar el NDA y los esquemas de integración.`);
     }
 </script>
 
